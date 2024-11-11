@@ -321,6 +321,9 @@ if ( ! class_exists( 'Branda_Data' ) ) {
 			if ( false !== $blog_id ) {
 				restore_current_blog();
 			}
+
+			// Delete SMTP secret key.
+			branda_delete_option( 'wpmudev_branda_smtp_encryption_key' );
 		}
 
 		/**

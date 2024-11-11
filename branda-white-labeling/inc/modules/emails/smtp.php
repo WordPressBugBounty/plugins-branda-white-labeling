@@ -26,6 +26,13 @@ if ( ! class_exists( 'Branda_SMTP' ) ) {
 		 */
 		protected $esc_callback = array( __CLASS__, 'esc_data' );
 
+		/**
+		 * The option name for encryption key.
+		 *
+		 * @var string
+		 */
+		protected $encryption_key_option = 'wpmudev_branda_smtp_encryption_key';
+
 		public function __construct() {
 			parent::__construct();
 			$this->check();
@@ -42,6 +49,8 @@ if ( ! class_exists( 'Branda_SMTP' ) ) {
 			add_filter( 'ultimatebranding_settings_smtp', array( $this, 'admin_options_page' ) );
 			add_filter( 'ultimatebranding_settings_smtp_process', array( $this, 'update' ) );
 			add_filter( 'ultimatebranding_settings_smtp_reset', array( $this, 'reset_module' ) );
+			add_filter( 'ultimatebranding_settings_smtp_preserve', array( $this, 'preserve' ) );
+			add_filter( 'branda_sanitize_input_by_type', array( $this, 'sanitize_input' ), 10, 7 );
 			/**
 			 * AJAX
 			 */
@@ -123,6 +132,7 @@ if ( ! class_exists( 'Branda_SMTP' ) ) {
 					}
 				}
 			}
+
 			$this->update_value( $data );
 		}
 
@@ -181,7 +191,6 @@ if ( ! class_exists( 'Branda_SMTP' ) ) {
 			}
 			$charset       = get_bloginfo( 'charset' );
 			$mail->CharSet = $charset;
-			$from_name     = $this->get_value( 'header', 'from_name', null, false );
 			$from_email    = $this->get_value( 'header', 'from_email', null, false );
 			$mail->IsSMTP();
 			// send plain text test email
@@ -192,9 +201,16 @@ if ( ! class_exists( 'Branda_SMTP' ) ) {
 			if ( 'on' === $use_auth ) {
 				$mail->SMTPAuth = true;
 				$mail->Username = $this->get_value( 'smtp_authentication', 'smtp_username', null, false );
-				$mail->Password = $this->get_value( 'smtp_authentication', 'smtp_password', null, false );
+				$mail->Password = $this->decrypt( $this->get_value( 'smtp_authentication', 'smtp_password', null, false ) );
 			}
-			
+
+			$force     = $this->get_value( 'header', 'from_name_force', null, false );
+			$from_name = $this->get_value( 'header', 'from_name', null, false );
+
+			if ( 'on' === $force && ! empty( $from_name ) ) {
+				$mail->FromName = $from_name;
+			}
+
 			/* Set the SMTPSecure value, if set to none, leave this blank */
 			$type = $this->get_value( 'server', 'smtp_type_encryption', null, false );
 			if ( 'none' !== $type ) {
@@ -216,7 +232,7 @@ if ( ! class_exists( 'Branda_SMTP' ) ) {
 			/* Set the other options */
 			$mail->Host = $this->get_value( 'server', 'smtp_host', null, false );
 			$mail->Port = $this->get_value( 'server', 'smtp_port', null, false );
-			$mail->SetFrom( $from_email, $from_name );
+			$mail->SetFrom( $from_email, $mail->FromName );
 
 			// Set Reply To header
 			$reply_to_email = $this->get_value( 'reply-to', 'email', null, false );
@@ -311,9 +327,11 @@ if ( ! class_exists( 'Branda_SMTP' ) ) {
 			 */
 			$from_name = $this->get_value( 'header', 'from_name', null, false );
 			$force     = $this->get_value( 'header', 'from_name_force', null, false );
-			if ( 'off' === $force && ! empty( $phpmailer->FromName ) ) {
-				$from_name = $phpmailer->FromName;
+
+			if ( 'on' === $force && ! empty( $from_name ) ) {
+				$phpmailer->FromName = $from_name;
 			}
+
 			/**
 			 * from email
 			 */
@@ -325,7 +343,6 @@ if ( ! class_exists( 'Branda_SMTP' ) ) {
 				$phpmailer->From = $from_email;
 			}
 
-			$phpmailer->FromName = $from_name;
 			$phpmailer->SetFrom( $phpmailer->From, $phpmailer->FromName );
 			/* Set the SMTPSecure value */
 			$type = $this->get_value( 'server', 'smtp_type_encryption' );
@@ -340,7 +357,7 @@ if ( ! class_exists( 'Branda_SMTP' ) ) {
 			if ( 'on' === $use_auth ) {
 				$phpmailer->SMTPAuth = true;
 				$phpmailer->Username = $this->get_value( 'smtp_authentication', 'smtp_username', null, false );
-				$phpmailer->Password = $this->get_value( 'smtp_authentication', 'smtp_password', null, false );
+				$phpmailer->Password = $this->decrypt( $this->get_value( 'smtp_authentication', 'smtp_password', null, false ) );
 			}
 			// PHPMailer 5.2.10 introduced this option. However, this might cause issues if the server is advertising TLS with an invalid certificate.
 			$phpmailer->SMTPAutoTLS = false;
@@ -382,6 +399,7 @@ if ( ! class_exists( 'Branda_SMTP' ) ) {
 		 * @since 2.0.0
 		 */
 		protected function set_options() {
+			//We have option for `raw`
 			$options = array(
 				'reset-module'        => true,
 				'plugins'             => array(),
@@ -469,13 +487,16 @@ if ( ! class_exists( 'Branda_SMTP' ) ) {
 							'display'      => 'sui-tab-content',
 						),
 						'smtp_password'       => array(
-							'type'         => 'password',
-							'label'        => __( 'Password', 'ub' ),
-							'placeholder'  => esc_attr__( 'Enter your SMTP password here', 'ub' ),
-							'master'       => 'smtp-authentication',
-							'master-value' => 'on',
-							'display'      => 'sui-tab-content',
-							'class'        => 'large-text',
+							'type'                            => 'password',
+							'label'                           => __( 'Password', 'ub' ),
+							'placeholder'                     => esc_attr__( 'Enter your SMTP password here', 'ub' ),
+							'master'                          => 'smtp-authentication',
+							'master-value'                    => 'on',
+							'display'                         => 'sui-tab-content',
+							'class'                           => 'large-text',
+							'field_protection'                => true,
+							'field_protection_show_message'   => esc_attr__( 'Set new SMTP password', 'ub' ),
+							'field_protection_cancel_message' => esc_attr__( 'Cancel', 'ub' ),
 						),
 						'smtp_authentication' => array(
 							'type'        => 'sui-tab',
@@ -485,6 +506,10 @@ if ( ! class_exists( 'Branda_SMTP' ) ) {
 							),
 							'default'     => 'on',
 							'slave-class' => 'smtp-authentication',
+						),
+						'encryption_method' => array(
+							'type'        => 'hidden',
+							'default'     => '',
 						),
 					),
 				),
@@ -522,6 +547,16 @@ if ( ! class_exists( 'Branda_SMTP' ) ) {
 		 * @since 2.0.0
 		 */
 		public function configure_credentials_notice() {
+			// Just checking the page so no need for nonce verification.
+			// phpcs:ignore WordPress.Security.NonceVerification
+			if ( ! $this->can_encrypt() && 'on' === $this->get_value( 'smtp_authentication', 'smtp_authentication', null, false ) && 'branding_group_emails' === $_GET['page'] ) {
+				$message      = array(
+					'can_dismiss' => true,
+					'message'     => __( 'The SMTP password cannot be encrypted when stored in the database, possibly due to a missing or outdated <a href="https://www.php.net/manual/en/sodium.installation.php" target="_blank">Sodium library</a>.', 'ub' ),
+				);
+				$this->uba->add_message( $message );
+			}
+
 			if ( true === $this->is_ready ) {
 				return;
 			}
@@ -741,6 +776,427 @@ if ( ! class_exists( 'Branda_SMTP' ) ) {
 			}
 
 			return esc_html( $data['value'] );
+		}
+
+		/**
+		 * Preserve fields. If the smtp password field is empty, it means that the user didn't change the password so the old one needs to be preserved.
+		 *
+		 * @param array $fields
+		 *
+		 * @return array
+		 */
+		public function preserve( array $fields = array() ) : array {
+			$smtp_password = $_POST['simple_options']['smtp_authentication']['smtp_password'];
+
+			if ( empty( $smtp_password ) ) {
+				$fields['smtp_authentication'] = array( 'smtp_password' );
+			}
+
+			// The encryption method is stored only by the plugin, so we need to preserve it.
+			$fields['smtp_authentication'] = array( 'encryption_method' );
+
+			return $fields;
+		}
+
+		/**
+		 * Encrypt input. This method is used to encrypt the smtp password before saving it to the database.
+		 * @param mixed $input
+		 * @return string
+		 */
+		public function encrypt( ?string $input = '' ): string {
+			if ( empty( $input ) || ! $this->can_encrypt() ) {
+				return $input;
+			}
+
+			if ( $this->encrypt_method_available( 'sodium' ) ) {
+				return $this->encrypt_sodium( $input );
+			}
+
+			if ( $this->encrypt_method_available( 'openssl' ) ) {
+				return $this->encrypt_openssl( $input );
+			}
+
+			return $input;
+		}
+
+		/**
+		 * Decrypt output. This method is used to decrypt the smtp password before usage.
+		 * @param mixed $input
+		 * @return string
+		 */
+		public function decrypt( ?string $input = '' ): string {
+			if ( empty( $input ) || ! $this->can_encrypt() ) {
+				return $input;
+			}
+
+			// In case the SMTP Password is already set before the encryption was introduced, we need to encrypt it.
+			// We can confirm if the password is encrypted by checking if.
+			$input = $this->handle_existing_password( $input );
+
+			if ( $this->encrypt_method_available( 'sodium' ) ) {
+				return $this->decrypt_sodium( $input );
+			}
+
+			if ( $this->encrypt_method_available( 'openssl' ) ) {
+				return $this->decrypt_openssl( $input );
+			}
+
+			return $input;
+		}
+
+		/**
+		 * Encrypt using sodium library.
+		 * @param mixed $input
+		 * @return string
+		 */
+		public function encrypt_sodium( ?string $input = '' ): string {
+			$key = $this->get_encryption_key();
+
+			// Random nonce, unique for each encryption.
+			$nonce = random_bytes( SODIUM_CRYPTO_SECRETBOX_NONCEBYTES );
+
+			// Encrypt input with secret key and nonce.
+			$ciphertext = sodium_crypto_secretbox( $input, $nonce, $key );
+
+			// We then convert the encrypted message with the nonce to base64 for safe transport or storage.
+			// Again we use a timing-safe variant of base64_encode() to do this.
+			$result = sodium_bin2base64( $nonce . $ciphertext, SODIUM_BASE64_VARIANT_ORIGINAL );
+
+			$this->set_encryption_method( 'sodium' );
+
+			// Overwrite $input, $nonce and $key with null bytes in order to prevent sensitive data leak.
+			// Let's use try-catch block to prevent following exception:
+			// Uncaught SodiumException: This is not implemented in sodium_compat, as it is not possible to securely wipe memory from PHP. To fix this error, make sure libsodium is installed and the PHP extension is enabled.
+			// We provide an alternative manual method to overwrite the data in case the sodium_memzero is not available.
+			try {
+				sodium_memzero( $input );
+				sodium_memzero( $nonce );
+				sodium_memzero( $key );
+			} catch ( \Exception $e ) {
+				$this->secure_zero( $input );
+				$this->secure_zero( $nonce );
+				$this->secure_zero( $key );
+			}
+
+			return $result;
+		}
+
+		/**
+		 * Encrypt using openssl library.
+		 * @param mixed $input
+		 * @return string
+		 */
+		public function encrypt_openssl( ?string $input = '' ): string {
+			$encryption_key     = $this->get_encryption_key(); // Or openssl_random_pseudo_bytes() for a random key.
+			$cipher_algo        = 'aes-256-cbc';
+			$iv                 = openssl_random_pseudo_bytes( openssl_cipher_iv_length( $cipher_algo ) );
+			$encrypted_password = openssl_encrypt( $input, $cipher_algo, $encryption_key, 0, $iv );
+
+			$this->set_encryption_method( 'openssl' );
+
+			return base64_encode( $encrypted_password . '::' . $iv );
+		}
+
+		/**
+		 * Decrypt using sodium library.
+		 * @param string $input
+		 * @param string $key
+		 * @return string
+		 */
+		public function decrypt_sodium( ?string $input = '', ?string $key ='' ): string {
+			// Fetch secret key.
+			$key = ! empty( $key ) ? $key : $this->get_encryption_key();
+
+			if ( strlen( $key ) !== SODIUM_CRYPTO_SECRETBOX_KEYBYTES ) {
+				return '';
+				//throw new Exception( 'Encryption Key must be 32 bytes long.' );
+			}
+
+			// Convert the base64 encoded message to binary using sodium_base642bin().
+			try {
+				$ciphertext = sodium_base642bin( $input, SODIUM_BASE64_VARIANT_ORIGINAL );
+			} catch ( \Exception $e ) {
+				return '';
+			}
+
+			// Extract nonce from the ciphertext by taking the first 24 (SODIUM_CRYPTO_SECRETBOX_NONCEBYTES) chars.
+			$nonce = mb_substr( $ciphertext, 0, SODIUM_CRYPTO_SECRETBOX_NONCEBYTES, '8bit' );
+
+			// Remaining part is the encrypted message.
+			$ciphertext = mb_substr( $ciphertext, SODIUM_CRYPTO_SECRETBOX_NONCEBYTES, null, '8bit' );
+
+			// Decrypt the message with the secret key and nonce.
+			$plaintext = sodium_crypto_secretbox_open( $ciphertext, $nonce, $key );
+			$plaintext = $plaintext !== false ? $plaintext : '';
+
+			// Overwrite $ciphertext, $nonce and $key with null bytes in order to prevent sensitive data leak.
+			// Let's use try-catch block to prevent following exception:
+			// Uncaught SodiumException: This is not implemented in sodium_compat, as it is not possible to securely wipe memory from PHP. To fix this error, make sure libsodium is installed and the PHP extension is enabled.
+			// We provide an alternative manual method to overwrite the data in case the sodium_memzero is not available.
+			try {
+				sodium_memzero( $nonce );
+				sodium_memzero( $key );
+				sodium_memzero( $ciphertext );
+			} catch ( \Exception $e ) {
+				$this->secure_zero( $nonce );
+				$this->secure_zero( $key );
+				$this->secure_zero( $ciphertext );
+			}
+
+			return $plaintext;
+		}
+
+		/**
+		 *
+		 * Decrypt openssl.
+		 * @param mixed $input
+		 * @return string
+		 */
+		public function decrypt_openssl( ?string $input = '' ): string {
+			$encryption_key              = $this->get_encryption_key();
+			$cipher_algo                 = 'aes-256-cbc';
+			list( $encrypted_data, $iv ) = explode( '::', base64_decode( $input ), 2 );
+
+			return openssl_decrypt( $encrypted_data, $cipher_algo, $encryption_key, 0, $iv );
+		}
+
+		/**
+		 * Get encryption key
+		 * @return string
+		 */
+		public function get_encryption_key(): string {
+			if ( defined( 'WPMU_DEV_UB_SMTP_ENCRYPTION_KEY' ) ) {
+				return WPMU_DEV_UB_SMTP_ENCRYPTION_KEY;
+			}
+
+			static $key = null;
+
+			if ( is_null( $key ) ) {
+				$encrypted_data = branda_get_option( $this->encryption_key_option );
+
+				if ( empty( $encrypted_data ) ) {
+					$encrypted_data = $this->set_encryption_data();
+				} else {
+					// If `encryption_data` is a string, it means it's the key set in previous format used in version 3.4.20.
+					// We need to pass the key as part of the new array format.
+					if ( is_string( $encrypted_data ) ) {
+						$encrypted_data = $this->set_encryption_data( array( 'key' => $encrypted_data ) );
+					}
+				}
+			}
+
+			return isset( $encrypted_data['key'] ) && is_string( $encrypted_data['key'] ) ? $encrypted_data['key'] : '';
+		}
+
+		/**
+		 *
+		 * Sets encryption data.
+		 * @return array
+		 */
+		protected function set_encryption_data( array $args = array() ): array {
+			$key			   = '';
+			$encryption_method = '';
+
+			if ( $this->encrypt_method_available( 'sodium' ) ) {
+				$key               = wp_generate_password( SODIUM_CRYPTO_SECRETBOX_KEYBYTES, false ); //sodium_crypto_secretbox_keygen();
+				$encryption_method = 'sodium';
+			} elseif ( $this->encrypt_method_available( 'openssl' ) ) {
+				$key               = wp_generate_password( 32, false );
+				$encryption_method = 'openssl';
+			}
+
+			$data = array(
+				'key'               => isset( $args['key'] ) && is_string( $args['key'] ) ? $args['key'] : $key,
+				'encryption_method' => isset( $args['encryption_method'] ) && is_string( $args['encryption_method'] ) ? $args['encryption_method'] : $encryption_method,
+			);
+
+			//branda_add_option( $this->encryption_key_option, $data, 'no' );
+			branda_update_option( $this->encryption_key_option, $data );
+
+			return $data;
+		}
+
+		/**
+		 * Gets encryption data.
+		 * @return array
+		 */
+		protected function get_encryption_data(): array {
+			static $encryption_data;
+
+			if ( ! is_null( $encryption_data ) && is_array( $encryption_data ) ) {
+				return $encryption_data;
+			}
+
+			$encryption_data = branda_get_option( $this->encryption_key_option );
+
+			if ( empty( $encryption_data ) || ! is_array( $encryption_data ) ) {
+				$encryption_args = array();
+
+				// If `encryption_data` is a string, it means it's the key set in previous format used in version 3.4.20.
+				// We need to pass the key as part of the new array format.
+				if (  is_string( $encryption_data ) ) {
+					$encryption_args['key'] = $encryption_data;
+				}
+
+				$encryption_data = $this->set_encryption_data( $encryption_args );
+			}
+
+			return $encryption_data;
+		}
+
+		/**
+		 * Encrypt existing password if it's not encrypted.
+		 *
+		 * @param mixed $input
+		 * @return string
+		 */
+		protected function handle_existing_password( ?string $input = '' ): string {
+			// If SMTP Password is empty we don't need to encrypt it.
+			if ( ! empty( $this->get_value( 'smtp_authentication', 'smtp_password', null, false ) ) ) {
+				$smtp_password       = $input;
+				$encryption_data     = branda_get_option( $this->encryption_key_option );
+
+				// If there is no encryption_data, it means the password is not encrypted so we need to encrypt it.
+				// If encryption_data is set but it is in string format, it means that the password has been encrypted with old key.
+				if ( empty( $encryption_data ) ) {
+					$input = $this->force_set_smtp_password( $smtp_password );
+				} elseif ( is_string( $encryption_data ) ) {
+					// If Sodium is not supported, it means that previous password has not been encrypted.
+					if ( ! $this->encrypt_method_available( 'sodium' ) ) {
+						// The $this->set_encryption_data() method is called indirectly through $this->get_encryption_key() which is called form $this->encrypt(), so we don't need to call it again.
+						$input = $this->force_set_smtp_password( $smtp_password );
+					} else {
+						// No need to change the $input value (the password), it's already encrypted and we are keeping the same encryption key so it can be decrypted.
+						$this->set_encryption_data( array( 'key' => $encryption_data ) );
+					}
+				}
+			}
+
+			return $input;
+		}
+
+		/**
+		 * Force set SMTP password.
+		 * @param string $password The new password.
+		 * @param bool $encrypt A boolean that indicates if the new password needs to be encrypted.
+		 * @return void
+		 */
+		protected function force_set_smtp_password( ?string $password = '', bool $encrypt = true ): string {
+			$smtp_options = branda_get_option( 'ub_smtp' );
+			$password     = $encrypt ? $this->encrypt( $password ) : $password;
+
+			$smtp_options['smtp_authentication']['smtp_password'] = $password;
+
+			branda_update_option( 'ub_smtp', $smtp_options );
+
+			return $password;
+		}
+
+		/**
+		 * Fetches the encryption method used to encrypt. Atm sodium or openssl
+		 *
+		 * @return string
+		 */
+		protected function get_encryption_method(): string {
+			$encryption_data   = $this->get_encryption_data();
+			$encryption_method = $encryption_data['encryption_method'] ?? '';
+
+			return in_array( $encryption_method, array( 'sodium', 'openssl' ) ) ? $encryption_method : '';
+		}
+
+		/**
+		 *
+		 * Set encryption method.
+		 * @param string $method
+		 * @return void
+		 */
+		protected function set_encryption_method( string $method = '' ): void {
+			if ( in_array( $method, array( 'sodium', 'openssl' ) ) ) {
+				$smtp_options                                             = branda_get_option( 'ub_smtp' );
+				$smtp_options['smtp_authentication']['encryption_method'] = $method;
+
+				branda_update_option( 'ub_smtp', $smtp_options );
+			}
+		}
+
+		/**
+		 * Check if encryption is available.
+		 * @return bool
+		 */
+		protected function can_encrypt(): bool {
+			return ! apply_filters( 'branda_smtp_password_encryption_disable', false );
+		}
+
+		protected function encrypt_method_available( ?string $method = 'sodium' ): bool {
+			switch ( $method ) {
+				case 'sodium':
+					return function_exists( 'sodium_crypto_secretbox' ) &&
+						function_exists( 'sodium_base642bin' ) &&
+						function_exists( 'sodium_crypto_secretbox_keygen' );
+				case 'openssl':
+					return function_exists( 'openssl_encrypt' ) &&
+						function_exists( 'openssl_decrypt' ) &&
+						function_exists( 'openssl_random_pseudo_bytes' ) &&
+						function_exists( 'openssl_cipher_iv_length' ) &&
+						function_exists( 'base64_encode' );
+				default:
+					return false;
+			}
+		}
+
+		/**
+		 * Manually overwrite sensitive data with zeros in memory.
+		 *
+		 * @param mixed $data
+		 * @return void
+		 */
+		protected function secure_zero( ?string &$data = '' ): void {
+			/*
+			When sensitive data like passwords or encryption keys are stored in memory,
+			setting the variable to 0 or an empty string ('') only replaces the reference to that memory location with a new value (like 0 or an empty string).
+			The original sensitive data may still exist in memory and can be recovered, even though the variable no longer references it.
+
+			By using str_repeat("\0", strlen($data)), we’re actively overwriting each byte of the original string with null bytes (\0).
+			This ensures that the sensitive data in memory is replaced with non-sensitive data.
+
+			When dealing with cryptographic data, the goal is to prevent recovery of the sensitive information.
+			Setting a variable to 0 or '' doesn’t actually ensure that the original sensitive data is gone from memory.
+			It just changes the value the variable holds.
+			What is does is simply reallocating the memory used by the variable to store the new value, but the old value might still be present in memory
+
+			Overwriting with null bytes (\0) is a well-established security practice to ensure that the memory used to store sensitive information is
+			thoroughly cleared before it’s deallocated or reused by the system.
+
+			The purpose of using str_repeat("\0", strlen($data)) is to overwrite each byte of the original data with a null byte.
+			This ensures that the entire memory previously allocated for the sensitive data is replaced, making recovery of the sensitive information much more difficult.
+
+			Setting it to just "\0" only overwrites the first byte of the memory, and doesn't address the remaining bytes where sensitive information might still be stored.
+			*/
+			$data = str_repeat( "\0", strlen( $data ) );  // Overwrite the string
+			unset( $data );  // Optionally unset
+		}
+
+		/**
+		 * Sanitize input.
+		 * @param mixed $value
+		 * @param mixed $type
+		 * @param mixed $section_key
+		 * @param mixed $key
+		 * @param mixed $current_value
+		 * @param mixed $data
+		 * @param mixed $module
+		 * @return mixed
+		 */
+		public function sanitize_input( $value, $type, $section_key, $key, $current_value, $data, $module ) {
+			// Let's not declare args types at this point.
+			// We do expect $value and $current_value to be of type array or null,
+			// however we need to inspect and confirm this first with all fields in all modules in order to avoid errors.
+			if ( 'smtp' === $module && 'smtp_password' === $key && 'smtp_authentication' === $section_key && ! empty( $value['smtp_authentication']['smtp_password'] ) ) {
+				$value['smtp_authentication']['smtp_password'] = $this->encrypt( $value['smtp_authentication']['smtp_password'] );
+			}
+
+			return $value;
+
 		}
 	}
 }

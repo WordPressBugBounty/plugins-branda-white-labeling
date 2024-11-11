@@ -250,11 +250,12 @@ if ( ! class_exists( 'Branda_Dashboard_Widgets' ) ) {
 					),
 				),
 			);
+
 			if ( empty( $available_widgets ) ) {
 				$options['visibility']['fields'] = array(
 					'info' => array(
 						'type'  => 'description',
-						'value' => Branda_Helper::sui_notice( esc_html__( 'If you do not see any widget here, please visit Dashboard page and come back on this page.', 'ub' ), 'info' ),
+						'value' => Branda_Helper::sui_notice( sprintf( __( 'If you do not see any widget here, please visit <a href="%s">Dashboard page</a> and come back on this page.', 'ub' ), admin_url() ), 'info' ),
 					),
 				);
 			} else {

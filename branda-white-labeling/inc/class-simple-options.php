@@ -1384,16 +1384,42 @@ if ( ! class_exists( 'Simple_Options' ) ) {
 								if ( isset( $data['field_before'] ) ) {
 									$field .= $data['field_before'];
 								}
-								$field .= sprintf(
-									'<input type="%s" id="%s" name="%s" value="%s" class="%s" id="%s" %s />',
-									esc_attr( $data['type'] ),
-									esc_attr( $html_id ),
-									esc_attr( $field_name ),
-									! empty( $value ) ? esc_attr( stripslashes( $value ) ) : '',
-									isset( $data['classes'] ) ? esc_attr( implode( ' ', $data['classes'] ) ) : '',
-									esc_attr( $html_id ),
-									implode( ' ', $extra )
-								);
+
+								/**
+								 * field field_protection
+								 */
+								if ( ! empty( $data['field_protection'] ) && ! empty( $value ) ) {
+									$show_message = ! empty( $data['field_protection_show_message'] ) ? esc_html( $data['field_protection_show_message'] ) : esc_html__( 'Show Password', 'ub' );
+									$cancel_message = ! empty( $data['field_protection_cancel_message'] ) ? esc_html( $data['field_protection_cancel_message'] ) : esc_html__( 'Cancel', 'ub' );
+									
+									$content .= '<button type="button" class="sui-button ub-button-field_protection  ub-button-field_protection-show" data-show-msg="\'' . $show_message . '\'" data-cancel-msg="\'' . $cancel_message . '\'">';
+									$content .= $show_message;
+									$content .= '</button>';
+								}
+
+								if ( empty( $data['field_protection'] ) ) {
+									$field .= sprintf(
+										'<input type="%s" id="%s" name="%s" value="%s" class="%s" id="%s" %s />',
+										esc_attr( $data['type'] ),
+										esc_attr( $html_id ),
+										esc_attr( $field_name ),
+										! empty( $value ) ? esc_attr( stripslashes( $value ) ) : '',
+										isset( $data['classes'] ) ? esc_attr( implode( ' ', $data['classes'] ) ) : '',
+										esc_attr( $html_id ),
+										implode( ' ', $extra )
+									);
+								} else {
+									$field .= sprintf(
+										'<input type="%s" id="%s" name="%s" class="%s" id="%s" %s />',
+										esc_attr( $data['type'] ),
+										esc_attr( $html_id ),
+										esc_attr( $field_name ),
+										isset( $data['classes'] ) ? esc_attr( implode( ' ', $data['classes'] ) ) : '',
+										esc_attr( $html_id ),
+										implode( ' ', $extra )
+									);
+								}
+								
 								/**
 								 * field after
 								 */
@@ -1401,20 +1427,37 @@ if ( ! class_exists( 'Simple_Options' ) ) {
 									$field .= $data['field_after'];
 								}
 								if ( 'password' === $data['type'] ) {
-									$content .= '<div class="sui-with-button sui-with-button-icon">';
-									$content .= $field;
-									$content .= '<button type="button" class="sui-button-icon">';
-									$content .= '<i aria-hidden="true" class="sui-icon-eye"></i>';
-									$content .= sprintf(
+									$pass_filed = '<div class="sui-with-button sui-with-button-icon">';
+									$pass_filed .= $field;
+									$pass_filed .= '<button type="button" class="sui-button-icon">';
+									$pass_filed .= '<i aria-hidden="true" class="sui-icon-eye"></i>';
+									$pass_filed .= sprintf(
 										'<span class="sui-password-text sui-screen-reader-text">%s</span>',
 										esc_html__( 'Show Password', 'ub' )
 									);
-									$content .= sprintf(
+									$pass_filed .= sprintf(
 										'<span class="sui-password-text sui-screen-reader-text sui-hidden">%s</span>',
 										esc_html__( 'Hide Password', 'ub' )
 									);
-									$content .= '</button>';
-									$content .= '</div>';
+									$pass_filed .= '</button>';
+									$pass_filed .= '</div>';
+
+									if ( ! empty( $data['field_protection'] ) && ! empty( $value ) ) {
+										$content .= '<div class="sui-row ub-field_protection-field-wrap sui-hidden">';
+										$content .= '<div class="sui-col-md-9">';
+										$content .= $pass_filed;
+										$content .= '</div>';
+
+										$content .= '<div class="sui-col-md-3">';
+										$content .= '<button type="button" class="sui-button sui-button-ghost ub-button-field_protection ub-button-field_protection-cancel" data-show-msg="\'' . $cancel_message . '\'" data-cancel-msg="\'' . $cancel_message . '\'">';
+										$content .= $cancel_message;
+										$content .= '</button>';
+										$content .= '</div>';
+										$content .= '</div>';
+									} else {
+										$content .= $pass_filed;
+									}
+									
 								} else {
 									$content .= $field;
 								}

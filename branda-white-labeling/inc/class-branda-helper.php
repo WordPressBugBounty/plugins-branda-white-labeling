@@ -5088,5 +5088,35 @@ if ( ! class_exists( 'Branda_Helper' ) ) {
 
 			return self::$debug;
 		}
+
+		/**
+		 * Checks if filename has an svg extension.
+		 * 
+		 * @param mixed $filename
+		 * @return bool
+		 */
+		public static function has_svg_ext( ?string $filename = "" ): bool {
+			return pathinfo( $filename, PATHINFO_EXTENSION ) === 'svg';
+			//return wp_check_filetype( $filename )['ext'] === 'svg';
+		}
+
+		/**
+		 * Checks if the given file is a valid SVG file. It doesn't check if it is a secure file. Use 3rd party plugins to allow secure SVG uploads.
+		 * 
+		 * @param mixed $filepath
+		 * @return bool
+		 */
+		public static function is_valid_svg( ?string $filepath = null ): bool {
+			if ( empty( $filepath ) ) {
+				return false;
+			}
+
+			$filename  = basename( $filepath );
+			$file_info = wp_check_filetype_and_ext( $filepath, $filename );
+
+			return ! empty( $file_info['type'] ) &&
+				( 'image/svg+xml' === $file_info['type'] || 'image/svg' === $file_info['type'] ) &&
+				in_array( 'svg', array_keys( get_allowed_mime_types() ), true );
+		}
 	}
 }

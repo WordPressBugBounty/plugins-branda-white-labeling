@@ -2,19 +2,20 @@
 # This file is distributed under the same license as the Branda Pro plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Branda Pro 3.4.19\n"
+"Project-Id-Version: Branda Pro 3.4.21\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ultimate-branding\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-07-10T11:54:35+00:00\n"
+"POT-Creation-Date: 2024-11-02T20:38:20+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.9.0\n"
+"X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: ub\n"
 
 #. Plugin Name of the plugin
+#: ultimate-branding.php
 #: inc/class-branda-admin.php:686
 #: inc/class-branda-admin.php:738
 #: inc/class-branda-admin.php:739
@@ -24,18 +25,22 @@ msgid "Branda Pro"
 msgstr ""
 
 #. Plugin URI of the plugin
+#: ultimate-branding.php
 msgid "https://wpmudev.com/project/ultimate-branding/"
 msgstr ""
 
 #. Description of the plugin
+#: ultimate-branding.php
 msgid "A complete white label and branding solution for multisite. Login images, favicons, remove WordPress links and branding, and much more."
 msgstr ""
 
 #. Author of the plugin
+#: ultimate-branding.php
 msgid "WPMU DEV"
 msgstr ""
 
 #. Author URI of the plugin
+#: ultimate-branding.php
 msgid "https://wpmudev.com/"
 msgstr ""
 
@@ -230,7 +235,7 @@ msgstr ""
 
 #: etc/config.php:434
 #: inc/modules/emails/google-oauth.php:721
-#: inc/modules/emails/smtp.php:389
+#: inc/modules/emails/smtp.php:407
 msgid "From Headers"
 msgstr ""
 
@@ -507,15 +512,15 @@ msgstr ""
 #: inc/class-branda-helper.php:1748
 #: inc/class-branda-helper.php:3748
 #: inc/class-simple-options.php:1199
-#: inc/class-simple-options.php:1721
-#: inc/class-simple-options.php:1791
+#: inc/class-simple-options.php:1764
+#: inc/class-simple-options.php:1834
 msgid "Something went wrong!"
 msgstr ""
 
 #: inc/class-branda-admin.php:109
 #: inc/class-branda-admin.php:1766
-#: inc/class-simple-options.php:1764
-#: inc/class-simple-options.php:1825
+#: inc/class-simple-options.php:1807
+#: inc/class-simple-options.php:1868
 msgid "Nope! Security check failed!"
 msgstr ""
 
@@ -762,11 +767,11 @@ msgstr ""
 #: inc/modules/content/header.php:214
 #: inc/modules/front-end/author-box.php:1283
 #: inc/modules/front-end/author-box.php:1348
-#: inc/modules/front-end/cookie-notice.php:537
-#: inc/modules/front-end/cookie-notice.php:591
-#: inc/modules/front-end/cookie-notice.php:614
-#: inc/modules/front-end/cookie-notice.php:637
-#: inc/modules/front-end/cookie-notice.php:660
+#: inc/modules/front-end/cookie-notice.php:548
+#: inc/modules/front-end/cookie-notice.php:602
+#: inc/modules/front-end/cookie-notice.php:625
+#: inc/modules/front-end/cookie-notice.php:648
+#: inc/modules/front-end/cookie-notice.php:671
 #: inc/modules/login-screen/login-screen.php:2632
 #: views/admin/modules/color-schemes/dialogs/edit.php:34
 #: views/admin/modules/color-schemes/dialogs/edit.php:627
@@ -814,7 +819,7 @@ msgstr ""
 #: inc/class-branda-base.php:107
 #: inc/class-branda-helper.php:3142
 #: inc/modules/emails/google-oauth.php:146
-#: inc/modules/emails/smtp.php:579
+#: inc/modules/emails/smtp.php:614
 #: inc/modules/utilities/tracking-codes-list-table.php:45
 #: inc/modules/utilities/tracking-codes-list-table.php:47
 msgid "Unknown"
@@ -1017,8 +1022,8 @@ msgstr ""
 #: inc/modules/widgets/dashboard-feeds.php:347
 #: inc/modules/widgets/dashboard-feeds.php:364
 #: inc/modules/widgets/dashboard-feeds.php:375
-#: inc/modules/widgets/dashboard-widgets.php:743
-#: inc/modules/widgets/dashboard-widgets.php:754
+#: inc/modules/widgets/dashboard-widgets.php:744
+#: inc/modules/widgets/dashboard-widgets.php:755
 #: views/admin/modules/admin-bar/tmpl/panes/visibility.php:44
 #: views/admin/modules/admin-panel-tips/tip.php:3
 #: views/admin/modules/dashboard-widgets/tmpl/panes/visibility.php:8
@@ -1050,8 +1055,8 @@ msgstr ""
 #: inc/modules/widgets/dashboard-feeds.php:348
 #: inc/modules/widgets/dashboard-feeds.php:365
 #: inc/modules/widgets/dashboard-feeds.php:376
-#: inc/modules/widgets/dashboard-widgets.php:742
-#: inc/modules/widgets/dashboard-widgets.php:753
+#: inc/modules/widgets/dashboard-widgets.php:743
+#: inc/modules/widgets/dashboard-widgets.php:754
 #: views/admin/modules/admin-bar/tmpl/panes/visibility.php:42
 #: views/admin/modules/dashboard-widgets/tmpl/panes/visibility.php:7
 #: views/admin/modules/dashboard-widgets/tmpl/panes/visibility.php:19
@@ -1096,7 +1101,7 @@ msgid "Minutes"
 msgstr ""
 
 #: inc/class-branda-helper.php:1849
-#: inc/class-simple-options.php:1598
+#: inc/class-simple-options.php:1641
 #: inc/modules/admin/help-content.php:435
 #: inc/modules/utilities/data.php:89
 #: inc/modules/utilities/data.php:134
@@ -1114,10 +1119,10 @@ msgstr ""
 #: inc/class-branda-helper.php:1898
 #: inc/class-branda-helper.php:2004
 #: inc/class-branda-helper.php:2144
-#: inc/modules/admin/bar.php:851
-#: inc/modules/admin/bar.php:977
-#: inc/modules/admin/bar.php:990
-#: inc/modules/admin/bar.php:997
+#: inc/modules/admin/bar.php:860
+#: inc/modules/admin/bar.php:986
+#: inc/modules/admin/bar.php:999
+#: inc/modules/admin/bar.php:1006
 #: inc/modules/admin/menu.php:636
 #: inc/modules/admin/menu.php:686
 #: views/admin/modules/admin-bar/dialogs/submenu.php:42
@@ -1167,7 +1172,7 @@ msgstr ""
 #: inc/class-branda-helper.php:2003
 #: inc/class-branda-helper.php:2143
 #: inc/class-branda-helper.php:3993
-#: inc/class-simple-options.php:2041
+#: inc/class-simple-options.php:2084
 #: views/admin/modules/admin-bar/dialogs/submenu.php:8
 #: views/admin/modules/admin-bar/tmpl/panes/submenu.php:44
 #: views/admin/modules/color-schemes/dialogs/edit.php:27
@@ -1204,8 +1209,10 @@ msgstr ""
 
 #: inc/class-branda-helper.php:2104
 #: inc/class-branda-helper.php:3908
-#: inc/modules/admin/bar.php:704
-#: inc/modules/admin/bar.php:1705
+#: inc/class-simple-options.php:1393
+#: inc/modules/admin/bar.php:713
+#: inc/modules/admin/bar.php:1714
+#: inc/modules/emails/smtp.php:499
 #: inc/modules/emails/template.php:1091
 #: inc/modules/front-end/author-box.php:1482
 #: inc/modules/login-screen/login-screen.php:2685
@@ -1584,10 +1591,10 @@ msgstr ""
 #: inc/modules/front-end/author-box.php:1120
 #: inc/modules/front-end/author-box.php:1206
 #: inc/modules/front-end/author-box.php:1336
-#: inc/modules/front-end/cookie-notice.php:586
-#: inc/modules/front-end/cookie-notice.php:609
-#: inc/modules/front-end/cookie-notice.php:632
-#: inc/modules/front-end/cookie-notice.php:655
+#: inc/modules/front-end/cookie-notice.php:597
+#: inc/modules/front-end/cookie-notice.php:620
+#: inc/modules/front-end/cookie-notice.php:643
+#: inc/modules/front-end/cookie-notice.php:666
 #: inc/modules/login-screen/login-screen.php:1923
 msgid "Border"
 msgstr ""
@@ -1598,16 +1605,16 @@ msgstr ""
 #: inc/modules/content/header.php:94
 #: inc/modules/content/header.php:206
 #: inc/modules/front-end/cookie-notice.php:181
-#: inc/modules/front-end/cookie-notice.php:523
-#: inc/modules/front-end/cookie-notice.php:572
-#: inc/modules/front-end/cookie-notice.php:600
-#: inc/modules/front-end/cookie-notice.php:623
-#: inc/modules/front-end/cookie-notice.php:646
-#: inc/modules/front-end/cookie-notice.php:696
-#: inc/modules/front-end/cookie-notice.php:714
-#: inc/modules/front-end/cookie-notice.php:727
-#: inc/modules/front-end/cookie-notice.php:740
-#: inc/modules/front-end/cookie-notice.php:753
+#: inc/modules/front-end/cookie-notice.php:534
+#: inc/modules/front-end/cookie-notice.php:583
+#: inc/modules/front-end/cookie-notice.php:611
+#: inc/modules/front-end/cookie-notice.php:634
+#: inc/modules/front-end/cookie-notice.php:657
+#: inc/modules/front-end/cookie-notice.php:707
+#: inc/modules/front-end/cookie-notice.php:725
+#: inc/modules/front-end/cookie-notice.php:738
+#: inc/modules/front-end/cookie-notice.php:751
+#: inc/modules/front-end/cookie-notice.php:764
 #: inc/modules/utilities/site-generator.php:67
 #: inc/modules/utilities/text-replacement-list-table.php:37
 msgid "Text"
@@ -1626,8 +1633,8 @@ msgid "Link"
 msgstr ""
 
 #: inc/class-branda-helper.php:2810
-#: inc/modules/front-end/cookie-notice.php:626
-#: inc/modules/front-end/cookie-notice.php:743
+#: inc/modules/front-end/cookie-notice.php:637
+#: inc/modules/front-end/cookie-notice.php:754
 #: inc/modules/login-screen/login-screen.php:2351
 #: inc/modules/login-screen/login-screen.php:2532
 #: inc/modules/utilities/tracking-codes-list-table.php:61
@@ -1637,7 +1644,7 @@ msgid "Active"
 msgstr ""
 
 #: inc/class-branda-helper.php:2823
-#: inc/modules/front-end/cookie-notice.php:649
+#: inc/modules/front-end/cookie-notice.php:660
 #: inc/modules/login-screen/login-screen.php:2391
 #: inc/modules/login-screen/login-screen.php:2557
 #: views/admin/modules/color-schemes/dialogs/edit.php:409
@@ -1693,7 +1700,7 @@ msgid "On"
 msgstr ""
 
 #: inc/class-branda-helper.php:3195
-#: inc/modules/admin/bar.php:945
+#: inc/modules/admin/bar.php:954
 #: inc/modules/admin/help-content.php:416
 #: inc/modules/front-end/author-box.php:1240
 #: inc/modules/front-end/db-error-page.php:609
@@ -1747,8 +1754,8 @@ msgid "Background Transparency"
 msgstr ""
 
 #: inc/class-branda-helper.php:3329
-#: inc/modules/admin/bar.php:867
-#: inc/modules/admin/bar.php:958
+#: inc/modules/admin/bar.php:876
+#: inc/modules/admin/bar.php:967
 #: inc/modules/admin/menu.php:710
 #: views/admin/modules/admin-bar/dialogs/submenu.php:26
 #: views/admin/modules/admin-bar/tmpl/panes/general.php:53
@@ -1757,8 +1764,8 @@ msgid "Same Tab"
 msgstr ""
 
 #: inc/class-branda-helper.php:3330
-#: inc/modules/admin/bar.php:866
-#: inc/modules/admin/bar.php:957
+#: inc/modules/admin/bar.php:875
+#: inc/modules/admin/bar.php:966
 #: inc/modules/admin/menu.php:711
 #: views/admin/modules/admin-bar/dialogs/submenu.php:25
 #: views/admin/modules/admin-bar/tmpl/panes/general.php:51
@@ -1799,7 +1806,7 @@ msgid "Do you really want to delete selected item?"
 msgstr ""
 
 #: inc/class-branda-helper.php:3890
-#: inc/modules/admin/bar.php:722
+#: inc/modules/admin/bar.php:731
 msgid "Are you sure?"
 msgstr ""
 
@@ -1886,66 +1893,67 @@ msgstr ""
 msgid "[no title]"
 msgstr ""
 
-#: inc/class-simple-options.php:1410
+#: inc/class-simple-options.php:1392
+#: inc/class-simple-options.php:1436
 msgid "Show Password"
 msgstr ""
 
-#: inc/class-simple-options.php:1414
+#: inc/class-simple-options.php:1440
 msgid "Hide Password"
 msgstr ""
 
-#: inc/class-simple-options.php:1479
+#: inc/class-simple-options.php:1522
 msgid "Default is: <code><strong>%s</strong></code>"
 msgstr ""
 
-#: inc/class-simple-options.php:1484
+#: inc/class-simple-options.php:1527
 msgid "Default color is: <code><strong>%s</strong></code>"
 msgstr ""
 
-#: inc/class-simple-options.php:1655
+#: inc/class-simple-options.php:1698
 msgid "There is no defined options here."
 msgstr ""
 
-#: inc/class-simple-options.php:1668
+#: inc/class-simple-options.php:1711
 msgid "Reset to Default"
 msgstr ""
 
-#: inc/class-simple-options.php:1718
+#: inc/class-simple-options.php:1761
 msgid "Wrong action!"
 msgstr ""
 
-#: inc/class-simple-options.php:1760
-#: inc/class-simple-options.php:1822
+#: inc/class-simple-options.php:1803
+#: inc/class-simple-options.php:1865
 msgid "Missing required parameters."
 msgstr ""
 
-#: inc/class-simple-options.php:1779
+#: inc/class-simple-options.php:1822
 msgid "Section is already in default state!"
 msgstr ""
 
-#: inc/class-simple-options.php:1786
+#: inc/class-simple-options.php:1829
 msgid "Section data was reset."
 msgstr ""
 
-#: inc/class-simple-options.php:1805
+#: inc/class-simple-options.php:1848
 #: views/admin/modules/admin-bar/dashicons.php:21
 msgid "Select"
 msgstr ""
 
-#: inc/class-simple-options.php:1841
+#: inc/class-simple-options.php:1884
 msgid "Source section is not saved yet and there is nothing to copy!"
 msgstr ""
 
-#: inc/class-simple-options.php:1861
+#: inc/class-simple-options.php:1904
 msgid "Section data was copied successfully."
 msgstr ""
 
-#: inc/class-simple-options.php:1994
+#: inc/class-simple-options.php:2037
 #: views/admin/modules/admin_menu/dialogs/custom-admin-menu-media-template.php:15
 msgid "Upload image"
 msgstr ""
 
-#: inc/class-simple-options.php:1995
+#: inc/class-simple-options.php:2038
 #: views/admin/common/options/file.php:6
 #: views/admin/modules/admin_menu/dialogs/custom-admin-menu-media-template.php:21
 msgid "Remove file"
@@ -2024,7 +2032,7 @@ msgid "Choose the menu items which needs to be hidden."
 msgstr ""
 
 #: inc/modules/admin/bar.php:532
-#: inc/modules/admin/bar.php:895
+#: inc/modules/admin/bar.php:904
 #: inc/modules/utilities/permissions.php:113
 #: views/admin/modules/admin-bar/tmpl/panes/visibility.php:3
 msgid "User Roles"
@@ -2035,13 +2043,13 @@ msgid "Choose the user roles to hide the chosen menu items."
 msgstr ""
 
 #: inc/modules/admin/bar.php:542
-#: inc/modules/admin/bar.php:889
+#: inc/modules/admin/bar.php:898
 #: inc/modules/front-end/author-box.php:314
 #: inc/modules/front-end/author-box.php:974
 #: inc/modules/front-end/author-box.php:1061
 #: inc/modules/utilities/maintenance.php:807
 #: inc/modules/widgets/dashboard-feeds.php:356
-#: inc/modules/widgets/dashboard-widgets.php:734
+#: inc/modules/widgets/dashboard-widgets.php:735
 #: views/admin/modules/admin-bar/dialogs/edit.php:19
 #: views/admin/modules/dashboard-widgets/dialogs/edit.php:18
 msgid "Visibility"
@@ -2112,35 +2120,35 @@ msgstr ""
 msgid "Add parameters one per line. If you are having trouble locating the GET parameters for your page builder, you can find parameters for popular builders %1$shere%2$s."
 msgstr ""
 
-#: inc/modules/admin/bar.php:684
+#: inc/modules/admin/bar.php:693
 msgid "Reorder Menus"
 msgstr ""
 
-#: inc/modules/admin/bar.php:691
+#: inc/modules/admin/bar.php:700
 msgid "Reset Default Order"
 msgstr ""
 
-#: inc/modules/admin/bar.php:712
+#: inc/modules/admin/bar.php:721
 msgid "Yes, reset!"
 msgstr ""
 
-#: inc/modules/admin/bar.php:723
+#: inc/modules/admin/bar.php:732
 msgid "Are you sure to reset custom order?"
 msgstr ""
 
-#: inc/modules/admin/bar.php:752
-#: inc/modules/admin/bar.php:786
+#: inc/modules/admin/bar.php:761
+#: inc/modules/admin/bar.php:795
 msgid "Add Custom Item"
 msgstr ""
 
-#: inc/modules/admin/bar.php:794
+#: inc/modules/admin/bar.php:803
 msgid "No custom menu item added yet. Click on “+ Add custom Item” to add your first custom menu item using a simple wizard."
 msgstr ""
 
-#: inc/modules/admin/bar.php:813
-#: inc/modules/front-end/cookie-notice.php:526
+#: inc/modules/admin/bar.php:822
+#: inc/modules/front-end/cookie-notice.php:537
 #: inc/modules/widgets/dashboard-feeds.php:272
-#: inc/modules/widgets/dashboard-widgets.php:718
+#: inc/modules/widgets/dashboard-widgets.php:719
 #: views/admin/modules/admin-bar/dialogs/edit.php:17
 #: views/admin/modules/color-schemes/dialogs/edit.php:25
 #: views/admin/modules/dashboard-widgets/dialogs/edit.php:17
@@ -2148,16 +2156,16 @@ msgstr ""
 msgid "General"
 msgstr ""
 
-#: inc/modules/admin/bar.php:817
+#: inc/modules/admin/bar.php:826
 msgid "Menu title"
 msgstr ""
 
-#: inc/modules/admin/bar.php:820
+#: inc/modules/admin/bar.php:829
 #: views/admin/modules/admin-bar/tmpl/panes/general.php:8
 msgid "You can also paste the full URL of an image instead of text title. For e.g. http://example.com/img.png"
 msgstr ""
 
-#: inc/modules/admin/bar.php:828
+#: inc/modules/admin/bar.php:837
 #: inc/modules/admin/menu.php:671
 #: views/admin/modules/admin-bar/tmpl/panes/general.php:13
 #: views/admin/modules/color-schemes/dialogs/edit.php:438
@@ -2167,26 +2175,26 @@ msgstr ""
 msgid "Icon"
 msgstr ""
 
-#: inc/modules/admin/bar.php:832
+#: inc/modules/admin/bar.php:841
 #: views/admin/modules/admin-bar/tmpl/panes/general.php:15
 msgid "Choose an icon for your custom menu item."
 msgstr ""
 
-#: inc/modules/admin/bar.php:839
+#: inc/modules/admin/bar.php:848
 msgid "Redirect users to"
 msgstr ""
 
-#: inc/modules/admin/bar.php:841
+#: inc/modules/admin/bar.php:850
 #: inc/modules/admin/menu.php:679
 #: inc/modules/admin/menu.php:698
-#: inc/modules/emails/smtp.php:434
+#: inc/modules/emails/smtp.php:452
 #: inc/modules/login-screen/login-screen.php:1992
 #: inc/modules/utilities/permissions.php:162
 #: views/admin/modules/admin-bar/tmpl/panes/general.php:23
 msgid "None"
 msgstr ""
 
-#: inc/modules/admin/bar.php:842
+#: inc/modules/admin/bar.php:851
 #: inc/modules/admin/menu.php:699
 #: inc/modules/content/footer.php:280
 #: inc/modules/content/header.php:271
@@ -2195,33 +2203,33 @@ msgstr ""
 msgid "Main Site"
 msgstr ""
 
-#: inc/modules/admin/bar.php:843
+#: inc/modules/admin/bar.php:852
 #: views/admin/modules/admin-bar/tmpl/panes/general.php:29
 msgid "Current Site"
 msgstr ""
 
-#: inc/modules/admin/bar.php:844
+#: inc/modules/admin/bar.php:853
 #: inc/modules/admin/menu.php:700
 msgid "WP Admin Area"
 msgstr ""
 
-#: inc/modules/admin/bar.php:845
+#: inc/modules/admin/bar.php:854
 #: inc/modules/admin/menu.php:701
 #: views/admin/modules/admin-bar/tmpl/panes/general.php:36
 msgid "Custom URL"
 msgstr ""
 
-#: inc/modules/admin/bar.php:852
-#: inc/modules/admin/bar.php:991
-#: inc/modules/admin/bar.php:998
+#: inc/modules/admin/bar.php:861
+#: inc/modules/admin/bar.php:1000
+#: inc/modules/admin/bar.php:1007
 #: views/admin/modules/admin-bar/dialogs/submenu.php:55
 #: views/admin/modules/admin-bar/dialogs/submenu.php:59
 #: views/admin/modules/admin-bar/tmpl/panes/general.php:44
 msgid "E.g. http://example.com"
 msgstr ""
 
-#: inc/modules/admin/bar.php:864
-#: inc/modules/admin/bar.php:955
+#: inc/modules/admin/bar.php:873
+#: inc/modules/admin/bar.php:964
 #: inc/modules/admin/menu.php:708
 #: views/admin/modules/admin-bar/dialogs/submenu.php:22
 #: views/admin/modules/admin-bar/tmpl/panes/general.php:47
@@ -2229,81 +2237,81 @@ msgstr ""
 msgid "Open link in"
 msgstr ""
 
-#: inc/modules/admin/bar.php:878
+#: inc/modules/admin/bar.php:887
 #: views/admin/modules/admin-bar/dialogs/edit.php:18
 #: views/admin/modules/admin_menu/dialogs/custom-admin-menu-item.php:139
 msgid "Submenu"
 msgstr ""
 
-#: inc/modules/admin/bar.php:882
+#: inc/modules/admin/bar.php:891
 #: views/admin/modules/admin-bar/tmpl/panes/submenu.php:3
 msgid "Reorder the submenu items by dragging and dropping as per your need."
 msgstr ""
 
-#: inc/modules/admin/bar.php:896
+#: inc/modules/admin/bar.php:905
 #: views/admin/modules/admin-bar/tmpl/panes/visibility.php:4
 msgid "Select the user roles which are allowed to see this menu."
 msgstr ""
 
-#: inc/modules/admin/bar.php:968
+#: inc/modules/admin/bar.php:977
 #: views/admin/modules/admin-bar/tmpl/panes/submenu.php:79
 msgid "Admin Page"
 msgstr ""
 
-#: inc/modules/admin/bar.php:969
+#: inc/modules/admin/bar.php:978
 #: views/admin/modules/admin-bar/tmpl/panes/submenu.php:81
 msgid "Site Page"
 msgstr ""
 
-#: inc/modules/admin/bar.php:970
+#: inc/modules/admin/bar.php:979
 #: views/admin/modules/admin-bar/tmpl/panes/submenu.php:83
 msgid "External"
 msgstr ""
 
-#: inc/modules/admin/bar.php:978
+#: inc/modules/admin/bar.php:987
 #: views/admin/modules/admin-bar/dialogs/submenu.php:43
 msgid "E.g. media.php"
 msgstr ""
 
-#: inc/modules/admin/bar.php:982
+#: inc/modules/admin/bar.php:991
 #: views/admin/modules/admin-bar/dialogs/submenu.php:47
 #: views/admin/modules/admin-bar/tmpl/panes/submenu.php:89
 msgid "URL is relative to %s"
 msgstr ""
 
-#: inc/modules/admin/bar.php:1070
-#: inc/modules/admin/bar.php:1097
+#: inc/modules/admin/bar.php:1079
+#: inc/modules/admin/bar.php:1106
 #: views/admin/modules/admin-bar/tmpl/panes/submenu.php:11
 #: views/admin/modules/admin-bar/tmpl/panes/submenu.php:23
 #: views/admin/modules/admin_menu/dialogs/custom-admin-menu-item-container.php:79
 msgid "Add Item"
 msgstr ""
 
-#: inc/modules/admin/bar.php:1080
+#: inc/modules/admin/bar.php:1089
 #: views/admin/modules/admin-bar/tmpl/panes/submenu.php:15
 msgid "No submenu item added yet. Click on “+ Add Item” to add a submenu item"
 msgstr ""
 
-#: inc/modules/admin/bar.php:1308
+#: inc/modules/admin/bar.php:1317
 msgid "Selected item was successfully deleted"
 msgstr ""
 
-#: inc/modules/admin/bar.php:1314
-#: inc/modules/admin/bar.php:1759
+#: inc/modules/admin/bar.php:1323
+#: inc/modules/admin/bar.php:1768
 #: inc/modules/admin/help-content.php:576
-#: inc/modules/widgets/dashboard-widgets.php:808
+#: inc/modules/widgets/dashboard-widgets.php:809
 msgid "Selected item does not exists!"
 msgstr ""
 
-#: inc/modules/admin/bar.php:1668
+#: inc/modules/admin/bar.php:1677
 msgid "Delete Custom Menu Item"
 msgstr ""
 
-#: inc/modules/admin/bar.php:1669
+#: inc/modules/admin/bar.php:1678
 msgid "Are you sure you wish to permanently delete this custom menu item?"
 msgstr ""
 
-#: inc/modules/admin/bar.php:1710
+#: inc/modules/admin/bar.php:1719
 #: inc/modules/utilities/images.php:189
 #: inc/modules/utilities/maintenance.php:211
 #: inc/modules/utilities/text-replacement.php:353
@@ -2316,7 +2324,7 @@ msgstr ""
 msgid "Add"
 msgstr ""
 
-#: inc/modules/admin/bar.php:1725
+#: inc/modules/admin/bar.php:1734
 msgid "Builder GET parameters"
 msgstr ""
 
@@ -2451,7 +2459,7 @@ msgstr ""
 
 #: inc/modules/admin/help-content.php:193
 #: inc/modules/admin/help-content.php:422
-#: inc/modules/widgets/dashboard-widgets.php:729
+#: inc/modules/widgets/dashboard-widgets.php:730
 msgid "Add your help sidebar content here…"
 msgstr ""
 
@@ -2892,9 +2900,9 @@ msgstr ""
 #: inc/modules/content/header.php:243
 #: inc/modules/content/header.php:253
 #: inc/modules/emails/google-oauth.php:752
-#: inc/modules/emails/smtp.php:414
-#: inc/modules/emails/smtp.php:454
-#: inc/modules/emails/smtp.php:484
+#: inc/modules/emails/smtp.php:432
+#: inc/modules/emails/smtp.php:472
+#: inc/modules/emails/smtp.php:505
 #: inc/modules/front-end/author-box.php:307
 #: inc/modules/front-end/author-box.php:833
 #: inc/modules/front-end/cookie-notice.php:271
@@ -2916,9 +2924,9 @@ msgstr ""
 #: inc/modules/content/header.php:244
 #: inc/modules/content/header.php:254
 #: inc/modules/emails/google-oauth.php:751
-#: inc/modules/emails/smtp.php:413
-#: inc/modules/emails/smtp.php:453
-#: inc/modules/emails/smtp.php:483
+#: inc/modules/emails/smtp.php:431
+#: inc/modules/emails/smtp.php:471
+#: inc/modules/emails/smtp.php:504
 #: inc/modules/front-end/author-box.php:306
 #: inc/modules/front-end/author-box.php:834
 #: inc/modules/front-end/cookie-notice.php:272
@@ -3240,31 +3248,31 @@ msgid "Send a dummy email to test the Gmail API configurations."
 msgstr ""
 
 #: inc/modules/emails/google-oauth.php:182
-#: inc/modules/emails/smtp.php:169
+#: inc/modules/emails/smtp.php:179
 #: inc/modules/emails/template.php:967
 msgid "Unable to send: wrong email address."
 msgstr ""
 
 #. translators: %s: site title
 #: inc/modules/emails/google-oauth.php:210
-#: inc/modules/emails/smtp.php:227
+#: inc/modules/emails/smtp.php:243
 msgid "This is test email sent from \"%s\""
 msgstr ""
 
 #: inc/modules/emails/google-oauth.php:212
-#: inc/modules/emails/smtp.php:228
+#: inc/modules/emails/smtp.php:244
 msgid "This is a test mail..."
 msgstr ""
 
 #. translators: %s: send date
 #: inc/modules/emails/google-oauth.php:216
-#: inc/modules/emails/smtp.php:231
+#: inc/modules/emails/smtp.php:247
 msgid "Send date: %s."
 msgstr ""
 
 #. translators: %s: site url
 #: inc/modules/emails/google-oauth.php:222
-#: inc/modules/emails/smtp.php:236
+#: inc/modules/emails/smtp.php:252
 msgid "Site: %s."
 msgstr ""
 
@@ -3274,7 +3282,7 @@ msgid "Test email sent to <strong>%s</strong>."
 msgstr ""
 
 #: inc/modules/emails/google-oauth.php:632
-#: inc/modules/emails/smtp.php:142
+#: inc/modules/emails/smtp.php:152
 #: inc/modules/emails/template.php:1156
 msgid "Send Test Email"
 msgstr ""
@@ -3306,33 +3314,33 @@ msgstr ""
 
 #: inc/modules/emails/google-oauth.php:730
 #: inc/modules/emails/headers.php:94
-#: inc/modules/emails/smtp.php:393
+#: inc/modules/emails/smtp.php:411
 msgid "Sender email address"
 msgstr ""
 
 #: inc/modules/emails/google-oauth.php:731
-#: inc/modules/emails/smtp.php:394
+#: inc/modules/emails/smtp.php:412
 msgid "You can specify the email address that emails should be sent from."
 msgstr ""
 
 #: inc/modules/emails/google-oauth.php:736
 #: inc/modules/emails/headers.php:98
-#: inc/modules/emails/smtp.php:398
+#: inc/modules/emails/smtp.php:416
 msgid "Sender name"
 msgstr ""
 
 #: inc/modules/emails/google-oauth.php:737
-#: inc/modules/emails/smtp.php:399
+#: inc/modules/emails/smtp.php:417
 msgid "Enter the sender name"
 msgstr ""
 
 #: inc/modules/emails/google-oauth.php:739
-#: inc/modules/emails/smtp.php:401
+#: inc/modules/emails/smtp.php:419
 msgid "For example, you can use your website’s title as the default sender name."
 msgstr ""
 
 #: inc/modules/emails/google-oauth.php:748
-#: inc/modules/emails/smtp.php:410
+#: inc/modules/emails/smtp.php:428
 msgid "From name replacement"
 msgstr ""
 
@@ -3509,130 +3517,138 @@ msgstr ""
 msgid "Blog registration has been disabled. Click <a href=\"%s\">here</a> to enable the site registration for your network."
 msgstr ""
 
-#: inc/modules/emails/smtp.php:84
+#: inc/modules/emails/smtp.php:93
 msgid "Field \"To\" can not be empty!"
 msgstr ""
 
-#: inc/modules/emails/smtp.php:85
+#: inc/modules/emails/smtp.php:94
 msgid "Sending message, please wait..."
 msgstr ""
 
-#: inc/modules/emails/smtp.php:86
+#: inc/modules/emails/smtp.php:95
 msgid "The test message was send successful."
 msgstr ""
 
-#: inc/modules/emails/smtp.php:255
+#: inc/modules/emails/smtp.php:271
 msgid "Hey! Failed to send the test email. Please check your SMTP credentials and try again."
 msgstr ""
 
-#: inc/modules/emails/smtp.php:260
+#: inc/modules/emails/smtp.php:276
 msgid "Test email sent to %s."
 msgstr ""
 
-#: inc/modules/emails/smtp.php:279
+#: inc/modules/emails/smtp.php:295
 msgid "Please configure credentials first."
 msgstr ""
 
-#: inc/modules/emails/smtp.php:390
+#: inc/modules/emails/smtp.php:408
 msgid "Choose the default from email id and from name for all of your WordPress outgoing emails."
 msgstr ""
 
-#: inc/modules/emails/smtp.php:411
+#: inc/modules/emails/smtp.php:429
 msgid "Set your own from name for each email sent from your website. Be carefully since it will override the from name provided by other plugins such as Contact Form."
 msgstr ""
 
-#: inc/modules/emails/smtp.php:422
+#: inc/modules/emails/smtp.php:440
 msgid "SMTP Server"
 msgstr ""
 
-#: inc/modules/emails/smtp.php:423
+#: inc/modules/emails/smtp.php:441
 msgid "Choose the SMTP server options such as host, port details, encryption etc."
 msgstr ""
 
-#: inc/modules/emails/smtp.php:426
+#: inc/modules/emails/smtp.php:444
 msgid "Host"
 msgstr ""
 
-#: inc/modules/emails/smtp.php:427
+#: inc/modules/emails/smtp.php:445
 msgid "Enter the host name of your mail server."
 msgstr ""
 
-#: inc/modules/emails/smtp.php:428
+#: inc/modules/emails/smtp.php:446
 msgid "E.g. smtp.example.com"
 msgstr ""
 
-#: inc/modules/emails/smtp.php:432
+#: inc/modules/emails/smtp.php:450
 msgid "Encryption"
 msgstr ""
 
-#: inc/modules/emails/smtp.php:435
+#: inc/modules/emails/smtp.php:453
 msgid "SSL"
 msgstr ""
 
-#: inc/modules/emails/smtp.php:436
+#: inc/modules/emails/smtp.php:454
 msgid "TLS"
 msgstr ""
 
-#: inc/modules/emails/smtp.php:439
+#: inc/modules/emails/smtp.php:457
 msgid "Choose the encryption for your mail server. For most servers, SSL is recommended."
 msgstr ""
 
-#: inc/modules/emails/smtp.php:443
+#: inc/modules/emails/smtp.php:461
 msgid "Port"
 msgstr ""
 
-#: inc/modules/emails/smtp.php:444
+#: inc/modules/emails/smtp.php:462
 msgid "Choose the SMTP port as recommended by your mail server."
 msgstr ""
 
-#: inc/modules/emails/smtp.php:450
+#: inc/modules/emails/smtp.php:468
 msgid "Insecure SSL certificates"
 msgstr ""
 
-#: inc/modules/emails/smtp.php:451
+#: inc/modules/emails/smtp.php:469
 msgid "You can enable the insecure and self-signed SSL certificates on SMTP server. However, it's highly recommended to keep this option disabled."
 msgstr ""
 
-#: inc/modules/emails/smtp.php:461
+#: inc/modules/emails/smtp.php:479
 msgid "SMTP Authentication"
 msgstr ""
 
-#: inc/modules/emails/smtp.php:462
+#: inc/modules/emails/smtp.php:480
 msgid "Choose whether you want to use SMTPAuth or not. It is recommended to keep this enabled."
 msgstr ""
 
-#: inc/modules/emails/smtp.php:465
+#: inc/modules/emails/smtp.php:483
 msgid "Username"
 msgstr ""
 
-#: inc/modules/emails/smtp.php:466
+#: inc/modules/emails/smtp.php:484
 msgid "Enter your SMTP username here"
 msgstr ""
 
-#: inc/modules/emails/smtp.php:473
+#: inc/modules/emails/smtp.php:491
 #: inc/modules/login-screen/login-screen.php:1523
 #: views/admin/modules/signup-password/password-fields.php:2
 msgid "Password"
 msgstr ""
 
-#: inc/modules/emails/smtp.php:474
+#: inc/modules/emails/smtp.php:492
 msgid "Enter your SMTP password here"
 msgstr ""
 
-#: inc/modules/emails/smtp.php:501
+#: inc/modules/emails/smtp.php:498
+msgid "Set new SMTP password"
+msgstr ""
+
+#: inc/modules/emails/smtp.php:526
 msgid "Conflicted Plugins"
 msgstr ""
 
-#: inc/modules/emails/smtp.php:502
-#: inc/modules/emails/smtp.php:506
+#: inc/modules/emails/smtp.php:527
+#: inc/modules/emails/smtp.php:531
 msgid "Branda has detected the following plugins are activated. Please deactivate them to prevent conflicts."
 msgstr ""
 
-#: inc/modules/emails/smtp.php:548
+#: inc/modules/emails/smtp.php:555
+msgid "The SMTP password cannot be encrypted when stored in the database, possibly due to a missing or outdated <a href=\"https://www.php.net/manual/en/sodium.installation.php\" target=\"_blank\">Sodium library</a>."
+msgstr ""
+
+#: inc/modules/emails/smtp.php:583
 msgid "Please configure your <a href=\"%s\">SMTP credentials</a> in order to send email using SMTP module."
 msgstr ""
 
-#: inc/modules/emails/smtp.php:570
+#: inc/modules/emails/smtp.php:605
 msgid "Send a dummy email to test the SMTP configurations."
 msgstr ""
 
@@ -4207,12 +4223,12 @@ msgstr ""
 msgid "Choose a version number for the cookie. Update this to invalidate the previous cookie and force all users to view the notification again."
 msgstr ""
 
-#: inc/modules/front-end/cookie-notice.php:576
+#: inc/modules/front-end/cookie-notice.php:587
 msgid "Accept Cookies Button"
 msgstr ""
 
-#: inc/modules/front-end/cookie-notice.php:580
-#: inc/modules/front-end/cookie-notice.php:704
+#: inc/modules/front-end/cookie-notice.php:591
+#: inc/modules/front-end/cookie-notice.php:715
 #: views/admin/modules/color-schemes/dialogs/edit.php:61
 #: views/admin/modules/color-schemes/dialogs/edit.php:185
 #: views/admin/modules/color-schemes/dialogs/edit.php:307
@@ -4221,8 +4237,8 @@ msgstr ""
 msgid "Static"
 msgstr ""
 
-#: inc/modules/front-end/cookie-notice.php:603
-#: inc/modules/front-end/cookie-notice.php:730
+#: inc/modules/front-end/cookie-notice.php:614
+#: inc/modules/front-end/cookie-notice.php:741
 #: inc/modules/login-screen/login-screen.php:2431
 #: inc/modules/login-screen/login-screen.php:2582
 #: views/admin/modules/color-schemes/dialogs/edit.php:62
@@ -4233,16 +4249,16 @@ msgstr ""
 msgid "Hover"
 msgstr ""
 
-#: inc/modules/front-end/cookie-notice.php:700
+#: inc/modules/front-end/cookie-notice.php:711
 #: views/admin/modules/color-schemes/dialogs/edit.php:51
 msgid "Links"
 msgstr ""
 
-#: inc/modules/front-end/cookie-notice.php:717
+#: inc/modules/front-end/cookie-notice.php:728
 msgid "Visited"
 msgstr ""
 
-#: inc/modules/front-end/cookie-notice.php:756
+#: inc/modules/front-end/cookie-notice.php:767
 msgid "focus"
 msgstr ""
 
@@ -4257,7 +4273,7 @@ msgstr ""
 
 #: inc/modules/front-end/db-error-page.php:448
 #: inc/modules/front-end/site-status-page.php:364
-#: inc/modules/widgets/dashboard-widgets.php:836
+#: inc/modules/widgets/dashboard-widgets.php:837
 msgid "Whoops! Something went wrong."
 msgstr ""
 
@@ -5064,27 +5080,11 @@ msgctxt "button"
 msgid "Add Signup Code"
 msgstr ""
 
-#: inc/modules/login-screen/signup-password.php:80
+#: inc/modules/login-screen/signup-password.php:79
 msgid "Passwords do not match."
 msgstr ""
 
-#: inc/modules/login-screen/signup-password.php:199
-msgid ""
-"Howdy USERNAME,\n"
-"\n"
-"Your new account is set up.\n"
-"\n"
-"You can log in with the following information:\n"
-"Username: USERNAME\n"
-"Password: PASSWORD\n"
-"LOGINLINK\n"
-"\n"
-"Thanks!\n"
-"\n"
-"--The Team @ SITE_NAME"
-msgstr ""
-
-#: inc/modules/login-screen/signup-password.php:218
+#: inc/modules/login-screen/signup-password.php:196
 msgid ""
 "Howdy USERNAME,\n"
 "\n"
@@ -5228,7 +5228,7 @@ msgid "Delete Subsites Data"
 msgstr ""
 
 #: inc/modules/utilities/data.php:118
-#: inc/modules/utilities/data.php:393
+#: inc/modules/utilities/data.php:396
 #: views/admin/modules/data/progress-bar.php:1
 msgid "Want to delete the data of all the subsites? Use this option to manually delete data from all the subsites."
 msgstr ""
@@ -5254,15 +5254,15 @@ msgstr ""
 msgid "Control what to do with your settings."
 msgstr ""
 
-#: inc/modules/utilities/data.php:395
+#: inc/modules/utilities/data.php:398
 msgid "Successfully deleted data from all the subsites."
 msgstr ""
 
-#: inc/modules/utilities/data.php:426
+#: inc/modules/utilities/data.php:429
 msgid "Deleting data from %s"
 msgstr ""
 
-#: inc/modules/utilities/data.php:467
+#: inc/modules/utilities/data.php:470
 msgid "Ups... Missing configuration..."
 msgstr ""
 
@@ -6116,7 +6116,7 @@ msgid "Show the creation date of feed item or not."
 msgstr ""
 
 #: inc/modules/widgets/dashboard-feeds.php:360
-#: inc/modules/widgets/dashboard-widgets.php:739
+#: inc/modules/widgets/dashboard-widgets.php:740
 #: views/admin/modules/dashboard-widgets/tmpl/panes/visibility.php:3
 msgid "Site Dashboard"
 msgstr ""
@@ -6126,7 +6126,7 @@ msgid "Choose whether to show this feed on site dashboard or not."
 msgstr ""
 
 #: inc/modules/widgets/dashboard-feeds.php:371
-#: inc/modules/widgets/dashboard-widgets.php:750
+#: inc/modules/widgets/dashboard-widgets.php:751
 #: views/admin/modules/dashboard-widgets/tmpl/panes/visibility.php:15
 msgid "Network Dashboard"
 msgstr ""
@@ -6216,62 +6216,62 @@ msgstr ""
 msgid "Add text widgets to the WordPress dashboard with your custom content."
 msgstr ""
 
-#: inc/modules/widgets/dashboard-widgets.php:257
-msgid "If you do not see any widget here, please visit Dashboard page and come back on this page."
+#: inc/modules/widgets/dashboard-widgets.php:258
+msgid "If you do not see any widget here, please visit <a href=\"%s\">Dashboard page</a> and come back on this page."
 msgstr ""
 
-#: inc/modules/widgets/dashboard-widgets.php:263
+#: inc/modules/widgets/dashboard-widgets.php:264
 msgid "Reset list"
 msgstr ""
 
-#: inc/modules/widgets/dashboard-widgets.php:410
-#: inc/modules/widgets/dashboard-widgets.php:424
+#: inc/modules/widgets/dashboard-widgets.php:411
+#: inc/modules/widgets/dashboard-widgets.php:425
 #: views/admin/modules/dashboard-widgets/dialogs/edit.php:10
 msgid "Add Text Widget"
 msgstr ""
 
-#: inc/modules/widgets/dashboard-widgets.php:473
+#: inc/modules/widgets/dashboard-widgets.php:474
 msgid "Delete Text Widget"
 msgstr ""
 
-#: inc/modules/widgets/dashboard-widgets.php:474
+#: inc/modules/widgets/dashboard-widgets.php:475
 msgid "Are you sure you wish to permanently delete this text widget?"
 msgstr ""
 
-#: inc/modules/widgets/dashboard-widgets.php:541
+#: inc/modules/widgets/dashboard-widgets.php:542
 msgid "Dashboard Widget was created."
 msgstr ""
 
-#: inc/modules/widgets/dashboard-widgets.php:548
+#: inc/modules/widgets/dashboard-widgets.php:549
 msgid "Dashboard Widget was updated."
 msgstr ""
 
-#: inc/modules/widgets/dashboard-widgets.php:701
+#: inc/modules/widgets/dashboard-widgets.php:702
 msgid "Dashboard Widget was deleted."
 msgstr ""
 
-#: inc/modules/widgets/dashboard-widgets.php:705
+#: inc/modules/widgets/dashboard-widgets.php:706
 msgid "Selected widget does not exists!"
 msgstr ""
 
-#: inc/modules/widgets/dashboard-widgets.php:722
+#: inc/modules/widgets/dashboard-widgets.php:723
 msgid "Widget Title"
 msgstr ""
 
-#: inc/modules/widgets/dashboard-widgets.php:726
+#: inc/modules/widgets/dashboard-widgets.php:727
 msgid "Widget Content"
 msgstr ""
 
-#: inc/modules/widgets/dashboard-widgets.php:740
+#: inc/modules/widgets/dashboard-widgets.php:741
 msgid "Choose whether to show this text widget on site dashboard or not."
 msgstr ""
 
-#: inc/modules/widgets/dashboard-widgets.php:751
+#: inc/modules/widgets/dashboard-widgets.php:752
 #: views/admin/modules/dashboard-widgets/tmpl/panes/visibility.php:16
 msgid "Choose whether to show this text widget on the network dashboard or not."
 msgstr ""
 
-#: inc/modules/widgets/dashboard-widgets.php:805
+#: inc/modules/widgets/dashboard-widgets.php:806
 msgid "Selected item was successfully restored!"
 msgstr ""
 

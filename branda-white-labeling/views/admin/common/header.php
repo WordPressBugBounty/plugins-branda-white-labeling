@@ -6,7 +6,7 @@
 <?php } ?>
 <?php if ( $documentation_chapter && ! empty( $helps ) ) : ?>
 		<a target="_blank" class="sui-button sui-button-ghost"
-		   href="https://wpmudev.com/docs/wpmu-dev-plugins/branda/#<?php echo esc_attr( $documentation_chapter ); ?>">
+		   href="https://wpmudev.com/docs/wpmu-dev-plugins/branda/?utm_source=branda&utm_medium=plugin&utm_campaign=branda_<?php echo esc_attr( $documentation_chapter ); ?>_docs#<?php echo esc_attr( $documentation_chapter ); ?>">
 			<i class="sui-icon-academy"></i>
 			<?php esc_html_e( 'View Documentation', 'ub' ); ?>
 		</a>

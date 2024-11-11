@@ -539,6 +539,32 @@ SUI.brandaSaveSettings = function($, form) {
 jQuery( window.document ).ready(function($){
     "use strict";
 
+     /**
+     * Advanced Password field.
+     * Show/hide password.
+     */
+     $( '.smtp-authentication' ).each(function() {
+        var $this = $(this),
+            field_wrap = $this.find( '.ub-field_protection-field-wrap' ),
+            pass_field = field_wrap.find('input'),
+            show_button = $this.find( '.ub-button-field_protection-show' ),
+            hide_button = $this.find( '.ub-button-field_protection-cancel' );
+
+        show_button.on('click', function(e) {
+            e.preventDefault();
+            show_button.hide();
+            field_wrap.removeClass( 'sui-hidden' );
+            // Setting type as it keeps toggling to text and password after each hide/show.
+            pass_field.attr('type', 'password' ).trigger('focus');
+        } );
+
+        hide_button.on('click', function(e) {
+            show_button.show();
+            e.preventDefault();
+            field_wrap.addClass( 'sui-hidden' ).find('input').val('');
+        } );
+     });
+
     /**
      * add editor content
      */

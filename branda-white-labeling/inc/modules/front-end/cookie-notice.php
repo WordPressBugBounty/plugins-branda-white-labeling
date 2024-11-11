@@ -331,6 +331,10 @@ if ( ! class_exists( 'Branda_Cookie_Notice' ) ) {
 		 * @since 2.2.0
 		 */
 		public function wp_enqueue_scripts() {
+			if ( ! $this->show_cookie_notice() ) {
+				return;
+			}
+			
 			$slug = $this->get_name( 'front' );
 			// Javascript.
 			$file = branda_files_url( 'modules/front-end/assets/js/cookie-notice-front.js' );
@@ -427,18 +431,25 @@ if ( ! class_exists( 'Branda_Cookie_Notice' ) ) {
 		 * @since 2.2.0
 		 */
 		private function show_cookie_notice() {
-			$time = filter_input( INPUT_COOKIE, $this->cookie_name, FILTER_SANITIZE_NUMBER_INT );
+			static $show_notice = null;
+
+			if ( is_bool( $show_notice ) ) {
+				return $show_notice;
+			}
+
+			$show_notice = true;
+			$time        = filter_input( INPUT_COOKIE, $this->cookie_name, FILTER_SANITIZE_NUMBER_INT );
 			if ( ! empty( $time ) ) {
 				$now = $this->get_now();
 				if ( $time > $now ) {
-					return false;
+					$show_notice = false;
 				}
 			}
 			// Check settings for logged user.
 			if ( is_user_logged_in() ) {
 				$show = $this->get_value( 'configuration', 'logged' );
 				if ( 'off' === $show ) {
-					return false;
+					$show_notice = false;
 				}
 				$user_time = 0;
 				$time      = get_user_meta( get_current_user_id(), $this->user_meta_name, true );
@@ -449,11 +460,11 @@ if ( ! class_exists( 'Branda_Cookie_Notice' ) ) {
 				if ( 0 < $user_time ) {
 					$now = $this->get_now();
 					if ( $user_time > $now ) {
-						return false;
+						$show_notice = false;
 					}
 				}
 			}
-			return true;
+			return $show_notice;
 		}
 
 		/**

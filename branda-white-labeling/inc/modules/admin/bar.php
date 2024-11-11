@@ -630,9 +630,18 @@ if ( ! class_exists( 'Branda_Admin_Bar' ) ) {
 					$src = $img[0];
 				}
 			}
-			if ( empty( $src ) || false === wp_getimagesize( $src ) ) {
+
+			$has_svg_ext = self::has_svg_ext( $src );
+
+			// Spitting conditions for better readability and maintainability.
+			if ( empty( $src ) ) {
+				return;
+			} elseif ( $has_svg_ext && ! self::is_valid_svg( $src ) ) {
+				return;
+			} elseif ( ! $has_svg_ext && false === wp_getimagesize( $src ) ) {
 				return;
 			}
+
 			/**
 			 * CSS template
 			 */

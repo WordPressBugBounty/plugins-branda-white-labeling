@@ -9,7 +9,6 @@ if ( ! class_exists( 'Branda_Signup_Password' ) ) {
 
 	class Branda_Signup_Password extends Branda_Helper {
 		var $signup_password_use_encryption = 'yes'; // Either 'yes' OR 'no'
-		private $password                   = null;
 
 		public function __construct() {
 			if ( is_user_logged_in() ) {
@@ -87,7 +86,6 @@ if ( ! class_exists( 'Branda_Signup_Password' ) ) {
 			global $signup_password_use_encryption;
 			$password_1 = isset( $_POST['password_1'] ) ? $_POST['password_1'] : '';
 			if ( ! empty( $password_1 ) ) {
-				$this->password = $password_1;
 				if ( 'yes' === $signup_password_use_encryption ) {
 					$password_1 = $this->wpmu_signup_password_encrypt( $password_1 );
 				}
@@ -119,7 +117,7 @@ if ( ! class_exists( 'Branda_Signup_Password' ) ) {
 						} else {
 							$password = $meta['password'];
 						}
-						$this->password = $password;
+
 						unset( $meta['password'] );
 						$meta = maybe_serialize( $meta );
 						$wpdb->update(
@@ -192,10 +190,9 @@ if ( ! class_exists( 'Branda_Signup_Password' ) ) {
 		 * @since 1.9.4
 		 */
 		public function new_user_notification_email( $email, $user, $blogname ) {
-			$password = $this->password;
-			if ( isset( $_POST['password_1'] ) && ! empty( $_POST['password_1'] ) ) {
-				$password = $_POST['password_1'];
-			}
+			/**
+			 * Email message.
+			 */
 			$text = __(
 				'Howdy USERNAME,
 
@@ -203,7 +200,7 @@ Your new account is set up.
 
 You can log in with the following information:
 Username: USERNAME
-Password: PASSWORD
+
 LOGINLINK
 
 Thanks!
@@ -211,29 +208,8 @@ Thanks!
 --The Team @ SITE_NAME',
 				'ub'
 			);
-			/**
-			 * fallback message for empty $password
-			 */
-			if ( empty( $password ) ) {
-				$text = __(
-					'Howdy USERNAME,
-
-Your new account is set up.
-
-You can log in with the following information:
-Username: USERNAME
-
-LOGINLINK
-
-Thanks!
-
---The Team @ SITE_NAME',
-					'ub'
-				);
-			}
 
 			$text             = preg_replace( '/USERNAME/', $user->user_login, $text );
-			$text             = preg_replace( '/PASSWORD/', $password, $text );
 			$text             = preg_replace( '/LOGINLINK/', network_site_url( 'wp-login.php' ), $text );
 			$text             = preg_replace( '/SITE_NAME/', $blogname, $text );
 			$email['message'] = $text;
@@ -269,8 +245,7 @@ Thanks!
 				return $data;
 			}
 			if ( empty( $data['user_pass'] ) && empty( $_POST['password_1'] ) ) {
-				$this->password    = wp_generate_password( 20, false );
-				$data['user_pass'] = wp_hash_password( $this->password );
+				$data['user_pass'] = wp_hash_password( wp_generate_password( 20, false ) );
 			}
 			return $data;
 		}
