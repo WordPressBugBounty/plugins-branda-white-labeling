@@ -1870,7 +1870,7 @@ if ( ! class_exists( 'Branda_Admin' ) ) {
 				);
 				$content .= sprintf(
 					'<form action="%s" method="%s" class="module-%s"%s>',
-					remove_query_arg( array( 'module' ) ),
+					esc_url( remove_query_arg( array( 'module' ) ) ),
 					apply_filters( 'ultimatebranding_settings_form_method', 'post' ),
 					esc_attr( implode( ' ', $classes ) ),
 					$enctype
