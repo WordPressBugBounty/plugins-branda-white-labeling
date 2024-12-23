@@ -4,6 +4,9 @@
      */
     $( document ).ready( function () {
         var value;
+
+        $( ub_cookie_notice.id + '-wrap' ).show();
+
         $( ub_cookie_notice.id + ' .ub-cn-set-cookie' ).on( 'click', function ( e ) {
             e.preventDefault();
             $( this ).setUBCookieNotice();
@@ -14,6 +17,8 @@
         value = $.fn.BrandaGetCookieValue( ub_cookie_notice.cookie.name + '_close' );
         if ( 'hide' === value ) {
             $( ub_cookie_notice.id ).hide();
+        } else {
+            $( ub_cookie_notice.id ).show();
         }
     } );
 

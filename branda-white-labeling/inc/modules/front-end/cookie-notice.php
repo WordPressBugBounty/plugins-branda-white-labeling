@@ -377,7 +377,11 @@ if ( ! class_exists( 'Branda_Cookie_Notice' ) ) {
 				'ub-position-' . $this->get_value( 'design', 'location', 'bottom' ),
 				'ub-style-' . $this->get_value( 'design', 'style', 'none' ),
 			);
-			$content  = sprintf(
+			$content = sprintf(
+				'<div id="%s-wrap" style="display: none;">',
+				esc_attr( $this->get_name() )
+			);
+			$content .= sprintf(
 				'<div id="%s" role="banner" class="%s">',
 				esc_attr( $this->get_name() ),
 				implode( ' ', $classes )
@@ -410,6 +414,7 @@ if ( ! class_exists( 'Branda_Cookie_Notice' ) ) {
 					}
 				}
 			}
+			$content .= '</div>';
 			$content .= '</div>';
 			$content .= '</div>';
 			$content .= '</div>';

@@ -83,7 +83,7 @@ if ( ! class_exists( 'Branda_Admin' ) ) {
 			 */
 			$this->modules = apply_filters( 'ultimatebranding_available_modules', $this->modules );
 			add_action( 'plugins_loaded', array( $this, 'load_modules' ), 11 );
-			add_action( 'plugins_loaded', array( $this, 'setup_translation' ) );
+			add_action( 'init', array( $this, 'setup_translation' ) );
 			add_action( 'network_admin_menu', array( $this, 'network_admin_page' ) );
 			add_action( 'admin_menu', array( $this, 'admin_page' ) );
 			add_filter( 'admin_title', array( $this, 'admin_title' ), 10, 2 );

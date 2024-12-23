@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the Branda Pro plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Branda Pro 3.4.22\n"
+"Project-Id-Version: Branda Pro 3.4.23\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ultimate-branding\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-11-03T07:38:22+00:00\n"
+"POT-Creation-Date: 2024-12-16T15:11:52+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: ub\n"
@@ -767,11 +767,11 @@ msgstr ""
 #: inc/modules/content/header.php:214
 #: inc/modules/front-end/author-box.php:1283
 #: inc/modules/front-end/author-box.php:1348
-#: inc/modules/front-end/cookie-notice.php:548
-#: inc/modules/front-end/cookie-notice.php:602
-#: inc/modules/front-end/cookie-notice.php:625
-#: inc/modules/front-end/cookie-notice.php:648
-#: inc/modules/front-end/cookie-notice.php:671
+#: inc/modules/front-end/cookie-notice.php:553
+#: inc/modules/front-end/cookie-notice.php:607
+#: inc/modules/front-end/cookie-notice.php:630
+#: inc/modules/front-end/cookie-notice.php:653
+#: inc/modules/front-end/cookie-notice.php:676
 #: inc/modules/login-screen/login-screen.php:2632
 #: views/admin/modules/color-schemes/dialogs/edit.php:34
 #: views/admin/modules/color-schemes/dialogs/edit.php:627
@@ -1591,10 +1591,10 @@ msgstr ""
 #: inc/modules/front-end/author-box.php:1120
 #: inc/modules/front-end/author-box.php:1206
 #: inc/modules/front-end/author-box.php:1336
-#: inc/modules/front-end/cookie-notice.php:597
-#: inc/modules/front-end/cookie-notice.php:620
-#: inc/modules/front-end/cookie-notice.php:643
-#: inc/modules/front-end/cookie-notice.php:666
+#: inc/modules/front-end/cookie-notice.php:602
+#: inc/modules/front-end/cookie-notice.php:625
+#: inc/modules/front-end/cookie-notice.php:648
+#: inc/modules/front-end/cookie-notice.php:671
 #: inc/modules/login-screen/login-screen.php:1923
 msgid "Border"
 msgstr ""
@@ -1605,16 +1605,16 @@ msgstr ""
 #: inc/modules/content/header.php:94
 #: inc/modules/content/header.php:206
 #: inc/modules/front-end/cookie-notice.php:181
-#: inc/modules/front-end/cookie-notice.php:534
-#: inc/modules/front-end/cookie-notice.php:583
-#: inc/modules/front-end/cookie-notice.php:611
-#: inc/modules/front-end/cookie-notice.php:634
-#: inc/modules/front-end/cookie-notice.php:657
-#: inc/modules/front-end/cookie-notice.php:707
-#: inc/modules/front-end/cookie-notice.php:725
-#: inc/modules/front-end/cookie-notice.php:738
-#: inc/modules/front-end/cookie-notice.php:751
-#: inc/modules/front-end/cookie-notice.php:764
+#: inc/modules/front-end/cookie-notice.php:539
+#: inc/modules/front-end/cookie-notice.php:588
+#: inc/modules/front-end/cookie-notice.php:616
+#: inc/modules/front-end/cookie-notice.php:639
+#: inc/modules/front-end/cookie-notice.php:662
+#: inc/modules/front-end/cookie-notice.php:712
+#: inc/modules/front-end/cookie-notice.php:730
+#: inc/modules/front-end/cookie-notice.php:743
+#: inc/modules/front-end/cookie-notice.php:756
+#: inc/modules/front-end/cookie-notice.php:769
 #: inc/modules/utilities/site-generator.php:67
 #: inc/modules/utilities/text-replacement-list-table.php:37
 msgid "Text"
@@ -1633,8 +1633,8 @@ msgid "Link"
 msgstr ""
 
 #: inc/class-branda-helper.php:2810
-#: inc/modules/front-end/cookie-notice.php:637
-#: inc/modules/front-end/cookie-notice.php:754
+#: inc/modules/front-end/cookie-notice.php:642
+#: inc/modules/front-end/cookie-notice.php:759
 #: inc/modules/login-screen/login-screen.php:2351
 #: inc/modules/login-screen/login-screen.php:2532
 #: inc/modules/utilities/tracking-codes-list-table.php:61
@@ -1644,7 +1644,7 @@ msgid "Active"
 msgstr ""
 
 #: inc/class-branda-helper.php:2823
-#: inc/modules/front-end/cookie-notice.php:660
+#: inc/modules/front-end/cookie-notice.php:665
 #: inc/modules/login-screen/login-screen.php:2391
 #: inc/modules/login-screen/login-screen.php:2557
 #: views/admin/modules/color-schemes/dialogs/edit.php:409
@@ -2146,7 +2146,7 @@ msgid "No custom menu item added yet. Click on “+ Add custom Item” to add yo
 msgstr ""
 
 #: inc/modules/admin/bar.php:822
-#: inc/modules/front-end/cookie-notice.php:537
+#: inc/modules/front-end/cookie-notice.php:542
 #: inc/modules/widgets/dashboard-feeds.php:272
 #: inc/modules/widgets/dashboard-widgets.php:719
 #: views/admin/modules/admin-bar/dialogs/edit.php:17
@@ -4223,12 +4223,12 @@ msgstr ""
 msgid "Choose a version number for the cookie. Update this to invalidate the previous cookie and force all users to view the notification again."
 msgstr ""
 
-#: inc/modules/front-end/cookie-notice.php:587
+#: inc/modules/front-end/cookie-notice.php:592
 msgid "Accept Cookies Button"
 msgstr ""
 
-#: inc/modules/front-end/cookie-notice.php:591
-#: inc/modules/front-end/cookie-notice.php:715
+#: inc/modules/front-end/cookie-notice.php:596
+#: inc/modules/front-end/cookie-notice.php:720
 #: views/admin/modules/color-schemes/dialogs/edit.php:61
 #: views/admin/modules/color-schemes/dialogs/edit.php:185
 #: views/admin/modules/color-schemes/dialogs/edit.php:307
@@ -4237,8 +4237,8 @@ msgstr ""
 msgid "Static"
 msgstr ""
 
-#: inc/modules/front-end/cookie-notice.php:614
-#: inc/modules/front-end/cookie-notice.php:741
+#: inc/modules/front-end/cookie-notice.php:619
+#: inc/modules/front-end/cookie-notice.php:746
 #: inc/modules/login-screen/login-screen.php:2431
 #: inc/modules/login-screen/login-screen.php:2582
 #: views/admin/modules/color-schemes/dialogs/edit.php:62
@@ -4249,16 +4249,16 @@ msgstr ""
 msgid "Hover"
 msgstr ""
 
-#: inc/modules/front-end/cookie-notice.php:711
+#: inc/modules/front-end/cookie-notice.php:716
 #: views/admin/modules/color-schemes/dialogs/edit.php:51
 msgid "Links"
 msgstr ""
 
-#: inc/modules/front-end/cookie-notice.php:728
+#: inc/modules/front-end/cookie-notice.php:733
 msgid "Visited"
 msgstr ""
 
-#: inc/modules/front-end/cookie-notice.php:767
+#: inc/modules/front-end/cookie-notice.php:772
 msgid "focus"
 msgstr ""
 
