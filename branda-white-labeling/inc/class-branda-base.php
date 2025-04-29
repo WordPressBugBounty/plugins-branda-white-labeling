@@ -52,6 +52,13 @@ if ( ! class_exists( 'Branda_Base' ) ) {
 			 * @since 3.0.0
 			 */
 			add_filter( 'branda_version', array( $this, 'version' ) );
+
+			/**
+			 * Load submodules upon init
+			 *
+			 * @since 3.4.24
+			 */
+			add_action( 'init', array( $this, 'load_submodules' ) );
 		}
 
 		/**
@@ -79,6 +86,61 @@ if ( ! class_exists( 'Branda_Base' ) ) {
 					'parent' => 'network-admin',
 				);
 				$wp_admin_bar->add_node( $args );
+			}
+		}
+		/**
+		 * Load submodules
+		 *
+		 * @since 3.4.24
+		 */
+		public function load_submodules() {
+			static $loaded_modules = false;
+			if ( $loaded_modules ) {
+				return;
+			}
+
+			$loaded_modules = true;
+
+			// Use of $_GLOBALS to avoid duplicate cross sell sub menus.
+			if ( empty( $GLOBALS['branda_submodules_loaded']['cross_sell'] ) ) {
+				// Load the cross-sell page.
+				$this->register_cross_sell_page();
+				$GLOBALS['branda_submodules_loaded']['cross_sell'] = true;
+			}
+		}
+
+		/**
+		 * Register cross-sell page.
+		 *
+		 * @return void
+		 */
+		public function register_cross_sell_page() {
+			if ( Branda_Helper::is_pro() ) {
+				return;
+			}
+
+			$cross_sell_path = WPMUDEV_BRANDA_DIR . '/external/plugins-cross-sell-page/plugin-cross-sell.php';
+
+			if ( ! file_exists( $cross_sell_path ) ) {
+				return;
+			}
+			static $cross_sell = null;
+			
+			if ( is_null( $cross_sell ) ) {
+				if ( ! class_exists( '\WPMUDEV\Modules\Plugin_Cross_Sell' ) ) {
+					require_once $cross_sell_path;
+				}
+
+				$submenu_params = array(
+					'slug'            => 'branda-white-labeling', // Required.
+					'parent_slug'     => 'branding', // Required.
+					'capability'      => 'manage_options', // Optional.
+					'menu_slug'       => 'branding_cross_sell', // Optional - Strongly recommended to set in order to avoid admin page conflicts with other WPMU DEV plugins.
+					'position'        => 7, // Optional – Usually a specific position will be required.
+					'translation_dir' => WPMUDEV_BRANDA_DIR . '/languages',
+				);
+
+				$cross_sell = new \WPMUDEV\Modules\Plugin_Cross_Sell( $submenu_params );
 			}
 		}
 

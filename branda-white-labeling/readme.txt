@@ -1,13 +1,13 @@
 === Branda – Branda – White Label & Branding, Custom Login Page Customizer ===
 Plugin Name: Branda – White Label & Branding, Custom Login Page Customizer
-Version: 3.4.23
+Version: 3.4.24
 Author: WPMU DEV
 Author URI: https://profiles.wordpress.org/wpmudev/
 Contributors: WPMUDEV
 Tags: white label wordpress, custom login page, login page customizer, whitelabel, customize system emails, customize default emails, rebrand, rebranding, coming soon page, maintenance mode, under construction page, coming soon template, login screen
 Requires at least: 6.4
-Tested up to: 6.7
-Stable tag: 3.4.23
+Tested up to: 6.8
+Stable tag: 3.4.24
 Requires PHP: 7.4
 License: GPL v2 - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
@@ -163,12 +163,18 @@ We take plugin security incredibly seriously; if you have a bug or vulnerability
 
 == Screenshots ==
 
-1. Customize the WordPress login screen
-2. Make your own dashboard widgets feed
-3. Give your emails a makeover with templates or custom HTML
-4. Build amazing Coming Soon and Maintenance pages
+1. Customize your login screen
+2. Create customized dashboard widgets
+3. Use email templates or create your own
+4. Coming Soon and maintenance page editor
+5. Manage email & SMTP settings
+6. Customize admin menu
 
 == Changelog ==
+= 3.4.24 ( 2025-04-29 ) =
+Enhance: Compatibility with WordPress 6.8.
+Enhance: Add a new menu item to help you discover other free plugins by WPMU DEV and more.
+
 = 3.4.23 ( 2024-12-23 ) =
 Fix: Notice for _load_textdomain_just_in_time called incorrectly
 Enhance: Improved compatibility between cookie notice behavior and Hummingbird Asset Optimization.
