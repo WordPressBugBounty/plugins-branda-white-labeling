@@ -59,7 +59,7 @@ if ( ! class_exists( 'Branda_Admin' ) ) {
 			/**
 			 * set and sanitize variables
 			 */
-			add_action( 'plugins_loaded', array( $this, 'set_and_sanitize_variables' ), 2 );
+			add_action( 'init', array( $this, 'set_and_sanitize_variables' ), 11 );
 			/**
 			 * run stats
 			 */
@@ -82,11 +82,12 @@ if ( ! class_exists( 'Branda_Admin' ) ) {
 			 * @param array $modules available modules array.
 			 */
 			$this->modules = apply_filters( 'ultimatebranding_available_modules', $this->modules );
-			add_action( 'plugins_loaded', array( $this, 'load_modules' ), 11 );
+			add_action( 'init', array( $this, 'load_modules' ), 11 );
 			add_action( 'init', array( $this, 'setup_translation' ) );
 			add_action( 'network_admin_menu', array( $this, 'network_admin_page' ) );
 			add_action( 'admin_menu', array( $this, 'admin_page' ) );
 			add_filter( 'admin_title', array( $this, 'admin_title' ), 10, 2 );
+			add_action( 'admin_head', array( $this, 'menu_style' ) );
 			/**
 			 * AJAX
 			 */
@@ -236,7 +237,7 @@ if ( ! class_exists( 'Branda_Admin' ) ) {
 			} else {
 				if ( is_network_admin() || ! is_multisite() ) {
 					$url              = 'https://wpmudev.com/project/ultimate-branding/?utm_source=branda&utm_medium=plugin&utm_campaign=branda_pluginlist_upgrade';
-					$links['upgrade'] = '<a href="' . esc_url( $url ) . '" aria-label="' . esc_attr( __( 'Upgrade For 80% Off!', 'ub' ) ) . '" target="_blank" style="color: #8D00B1;">' . esc_html__( 'Upgrade For 80% Off!', 'ub' ) . '</a>';
+					$links['upgrade'] = '<a href="' . esc_url( $url ) . '" aria-label="' . esc_attr( __( 'Limited-time Offer', 'ub' ) ) . '" target="_blank" style="color: #8D00B1;">' . esc_html__( 'Limited-time Offer', 'ub' ) . '</a>';
 				}
 			}
 			$actions = array_merge( $links, $actions );
@@ -735,11 +736,10 @@ if ( ! class_exists( 'Branda_Admin' ) ) {
 			if ( ! Branda_Helper::is_member() ) {
 				$menu = add_submenu_page(
 					'branding',
-					__( 'Branda Pro', 'ub' ),
-					__( 'Branda Pro', 'ub' ),
+					esc_html__( 'Limited-time Offer', 'ub' ),
+					esc_html__( 'Limited-time Offer', 'ub' ),
 					$capability,
-					'branda_pro',
-					array( $this, 'handle_branda_pro' )
+					'https://wpmudev.com/project/ultimate-branding/?utm_source=branda&utm_medium=plugin&utm_campaign=branda_submenu_upsell',
 				);
 				add_action( 'load-' . $menu, array( $this, 'add_admin_header_branding' ) );
 			}
@@ -782,6 +782,18 @@ if ( ! class_exists( 'Branda_Admin' ) ) {
 			if ( $this->is_network && $this->check_user_access() ) {
 				$this->menu( 'read' );
 			}
+		}
+
+		/**
+		 * Adds custom style to the menu item.
+		 */
+		public function menu_style() {
+			echo '<style>
+			   #toplevel_page_branding ul.wp-submenu li:last-child a[href^="https://wpmudev.com"] { color: #fff !important; background: #8D00B1 !important; letter-spacing: -0.25px !important; font-weight: 500 !important; padding-right: 5px !important; }
+		   </style>';
+			echo '<script>
+			jQuery(function() {jQuery(\'#toplevel_page_branding ul.wp-submenu li:last-child a[href^="https://wpmudev.com"]\').attr("target", "_blank");});
+			</script>';
 		}
 
 		/**
@@ -920,21 +932,6 @@ if ( ! class_exists( 'Branda_Admin' ) ) {
 				$modules[ $group ]['modules'] = $data['modules'];
 			}
 			return $modules;
-		}
-
-		public function handle_branda_pro() {
-			add_filter( 'branda_show_manage_all_modules_button', '__return_false' );
-			$classes  = apply_filters( 'branda_sui_wrap_class', array(), $this->module );
-			$template = 'admin/branda-pro';
-			printf(
-				'<main class="%s">',
-				esc_attr( implode( ' ', $classes ) )
-			);
-			$this->render( $template );
-
-			$this->footer();
-
-			echo '</main>';
 		}
 
 		public function handle_main_page() {

@@ -173,7 +173,7 @@ if ( ! class_exists( 'Branda_Admin_Menu' ) ) {
 
 				if ( ! empty( $submenu[ $menu_slug ] ) ) {
 					foreach ( $submenu[ $menu_slug ] as $submenu_item_index => $submenu_item ) {
-						if ( count( $submenu_item ) < 3 ) {
+						if ( ! is_countable( $submenu_item ) || count( $submenu_item ) < 3 ) {
 							continue;
 						}
 
@@ -824,7 +824,7 @@ if ( ! class_exists( 'Branda_Admin_Menu' ) ) {
 					$submenu_items = $wp_submenu[ $menu_slug ];
 
 					foreach ( $submenu_items as $submenu_item ) {
-						if ( count( $submenu_item ) < 3 ) {
+						if ( ! is_countable( $submenu_item ) || count( $submenu_item ) < 3 ) {
 							continue;
 						}
 

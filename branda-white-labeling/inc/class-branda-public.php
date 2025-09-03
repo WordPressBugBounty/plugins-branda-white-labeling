@@ -8,7 +8,7 @@ if ( ! class_exists( 'Branda_Public' ) ) {
 		 */
 		public function __construct() {
 			parent::__construct();
-			add_action( 'plugins_loaded', array( $this, 'load_modules' ) );
+			add_action( 'init', array( $this, 'load_modules' ), 11 );
 			/**
 			 * Add Branda submenu to Customize on Admin Bar
 			 *

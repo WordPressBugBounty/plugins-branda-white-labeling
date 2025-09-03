@@ -1,25 +1,23 @@
-# Copyright (C) 2024 WPMU DEV
+# Copyright (C) 2025 WPMU DEV
 # This file is distributed under the same license as the Branda Pro plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Branda Pro 3.4.23\n"
+"Project-Id-Version: Branda Pro 3.4.25\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ultimate-branding\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-12-16T15:11:52+00:00\n"
+"POT-Creation-Date: 2025-09-02T15:39:25+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.11.0\n"
+"X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: ub\n"
 
 #. Plugin Name of the plugin
 #: ultimate-branding.php
-#: inc/class-branda-admin.php:686
-#: inc/class-branda-admin.php:738
-#: inc/class-branda-admin.php:739
-#: inc/class-branda-base.php:77
+#: inc/class-branda-admin.php:687
+#: inc/class-branda-base.php:84
 #: views/admin/dashboard/modules/upsell.php:15
 msgid "Branda Pro"
 msgstr ""
@@ -495,19 +493,19 @@ msgstr ""
 msgid "Misc"
 msgstr ""
 
-#: inc/class-branda-admin.php:105
+#: inc/class-branda-admin.php:106
 msgid "Success! Your changes were successfully saved!"
 msgstr ""
 
-#: inc/class-branda-admin.php:106
+#: inc/class-branda-admin.php:107
 msgid "There was an error, please try again."
 msgstr ""
 
-#: inc/class-branda-admin.php:107
+#: inc/class-branda-admin.php:108
 msgid "Section was reset to defaults."
 msgstr ""
 
-#: inc/class-branda-admin.php:108
+#: inc/class-branda-admin.php:109
 #: inc/class-branda-helper.php:408
 #: inc/class-branda-helper.php:1748
 #: inc/class-branda-helper.php:3748
@@ -517,93 +515,95 @@ msgstr ""
 msgid "Something went wrong!"
 msgstr ""
 
-#: inc/class-branda-admin.php:109
-#: inc/class-branda-admin.php:1766
+#: inc/class-branda-admin.php:110
+#: inc/class-branda-admin.php:1763
 #: inc/class-simple-options.php:1807
 #: inc/class-simple-options.php:1868
 msgid "Nope! Security check failed!"
 msgstr ""
 
-#: inc/class-branda-admin.php:110
+#: inc/class-branda-admin.php:111
 msgid "Missing required data!"
 msgstr ""
 
-#: inc/class-branda-admin.php:111
+#: inc/class-branda-admin.php:112
 msgid "This user login doesn't exist!"
 msgstr ""
 
-#: inc/class-branda-admin.php:192
+#: inc/class-branda-admin.php:193
 msgctxt "admin title"
 msgid "Branda"
 msgstr ""
 
-#: inc/class-branda-admin.php:193
-#: inc/class-branda-admin.php:204
+#: inc/class-branda-admin.php:194
+#: inc/class-branda-admin.php:205
 msgctxt "admin title separator"
 msgid " &lsaquo; "
 msgstr ""
 
-#: inc/class-branda-admin.php:229
-#: inc/class-branda-admin.php:701
+#: inc/class-branda-admin.php:230
 #: inc/class-branda-admin.php:702
+#: inc/class-branda-admin.php:703
 #: inc/modules/widgets/dashboard-feeds.php:389
 #: views/admin/dashboard.php:9
 #: views/admin/dashboard/subsite.php:3
 msgid "Dashboard"
 msgstr ""
 
-#: inc/class-branda-admin.php:231
+#: inc/class-branda-admin.php:232
 #: views/admin/common/footer.php:15
 #: views/admin/common/footer.php:29
 msgid "Docs"
 msgstr ""
 
-#: inc/class-branda-admin.php:234
+#: inc/class-branda-admin.php:235
 msgid "Renew Membership"
 msgstr ""
 
-#: inc/class-branda-admin.php:239
-msgid "Upgrade For 80% Off!"
+#: inc/class-branda-admin.php:240
+#: inc/class-branda-admin.php:739
+#: inc/class-branda-admin.php:740
+msgid "Limited-time Offer"
 msgstr ""
 
-#: inc/class-branda-admin.php:259
+#: inc/class-branda-admin.php:260
 msgid "View Details"
 msgstr ""
 
-#: inc/class-branda-admin.php:261
+#: inc/class-branda-admin.php:262
 msgid "Premium Support"
 msgstr ""
 
-#: inc/class-branda-admin.php:264
+#: inc/class-branda-admin.php:265
 msgid "By"
 msgstr ""
 
-#: inc/class-branda-admin.php:266
+#: inc/class-branda-admin.php:267
 msgid "Rate Branda"
 msgstr ""
 
-#: inc/class-branda-admin.php:267
+#: inc/class-branda-admin.php:268
 #: views/admin/common/footer.php:14
 msgid "Support"
 msgstr ""
 
-#: inc/class-branda-admin.php:271
+#: inc/class-branda-admin.php:272
 #: views/admin/common/footer.php:13
 #: views/admin/common/footer.php:28
 msgid "Roadmap"
 msgstr ""
 
-#: inc/class-branda-admin.php:450
+#: inc/class-branda-admin.php:451
 #: inc/modules/front-end/document.php:211
 #: views/admin/modules/admin-bar/dashicons.php:51
 msgid "Clear"
 msgstr ""
 
-#: inc/class-branda-admin.php:451
+#: inc/class-branda-admin.php:452
 msgid "Clear color"
 msgstr ""
 
-#: inc/class-branda-admin.php:452
+#: inc/class-branda-admin.php:453
 #: inc/class-branda-helper.php:2780
 #: inc/modules/content/footer.php:126
 #: inc/modules/content/footer.php:234
@@ -620,140 +620,146 @@ msgstr ""
 msgid "Default"
 msgstr ""
 
-#: inc/class-branda-admin.php:453
+#: inc/class-branda-admin.php:454
 msgid "Select default color"
 msgstr ""
 
-#: inc/class-branda-admin.php:454
+#: inc/class-branda-admin.php:455
 msgid "Select Color"
 msgstr ""
 
-#: inc/class-branda-admin.php:455
+#: inc/class-branda-admin.php:456
 msgid "Color value"
 msgstr ""
 
-#: inc/class-branda-admin.php:465
+#: inc/class-branda-admin.php:466
 msgid "Are you sure to replace all section data?"
 msgstr ""
 
-#: inc/class-branda-admin.php:466
+#: inc/class-branda-admin.php:467
 msgid "Please select a source module first."
 msgstr ""
 
-#: inc/class-branda-admin.php:469
+#: inc/class-branda-admin.php:470
 msgid "Are you sure? This will replace all entered data by defaults."
 msgstr ""
 
-#: inc/class-branda-admin.php:472
+#: inc/class-branda-admin.php:473
 msgid "Please select some modules first or skip this step."
 msgstr ""
 
-#: inc/class-branda-admin.php:476
+#: inc/class-branda-admin.php:477
 msgid "Entered value is above field limit!"
 msgstr ""
 
-#: inc/class-branda-admin.php:477
+#: inc/class-branda-admin.php:478
 msgid "Entered value is below field limit!"
 msgstr ""
 
-#: inc/class-branda-admin.php:480
+#: inc/class-branda-admin.php:481
 msgid "Changes are not saved, are you sure you want to navigate away?"
 msgstr ""
 
-#: inc/class-branda-admin.php:482
+#: inc/class-branda-admin.php:483
 msgid "Try to fetch feeds data, please wait..."
 msgstr ""
 
-#: inc/class-branda-admin.php:483
+#: inc/class-branda-admin.php:484
 msgid "No feed found, try to another site or enter data manually."
 msgstr ""
 
-#: inc/class-branda-admin.php:486
+#: inc/class-branda-admin.php:487
 msgid "Whoops, only .json filetypes are allowed."
 msgstr ""
 
-#: inc/class-branda-admin.php:489
+#: inc/class-branda-admin.php:490
 msgid "Whoops, only images are allowed."
 msgstr ""
 
-#: inc/class-branda-admin.php:493
-#: inc/class-branda-admin.php:1339
-#: inc/class-branda-admin.php:1518
-#: inc/class-branda-admin.php:1900
+#: inc/class-branda-admin.php:494
+#: inc/class-branda-admin.php:1336
+#: inc/class-branda-admin.php:1515
+#: inc/class-branda-admin.php:1897
 msgid "Save Changes"
 msgstr ""
 
-#: inc/class-branda-admin.php:566
+#: inc/class-branda-admin.php:567
+#, php-format
 msgid "%d new module was activated successfully."
 msgid_plural "%d new modules was activated successfully."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/class-branda-admin.php:580
+#: inc/class-branda-admin.php:581
+#, php-format
 msgid "%d module was deactivated successfully."
 msgid_plural "%d modules was deactivated successfully."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/class-branda-admin.php:598
+#: inc/class-branda-admin.php:599
 msgid "42: The answer to life, the universe and everything."
 msgstr ""
 
-#: inc/class-branda-admin.php:599
+#: inc/class-branda-admin.php:600
 msgid "Douglas Adams"
 msgstr ""
 
-#: inc/class-branda-admin.php:603
+#: inc/class-branda-admin.php:604
 msgid "Nothing was changed, nothing to activate or deactivate."
 msgstr ""
 
-#: inc/class-branda-admin.php:686
+#: inc/class-branda-admin.php:687
 #: inc/class-branda-public.php:54
 #: inc/modules/admin/color-schemes.php:528
 msgid "Branda"
 msgstr ""
 
-#: inc/class-branda-admin.php:950
+#: inc/class-branda-admin.php:947
 msgid "none"
 msgstr ""
 
-#: inc/class-branda-admin.php:1325
+#: inc/class-branda-admin.php:1322
 #: inc/modules/utilities/tracking-codes-list-table.php:113
 #: views/admin/modules/smtp/plugins-list.php:5
 #: views/admin/modules/smtp/plugins-list.php:13
 msgid "Deactivate"
 msgstr ""
 
-#: inc/class-branda-admin.php:1362
+#: inc/class-branda-admin.php:1359
 #: inc/modules/utilities/tracking-codes-list-table.php:112
 msgid "Activate"
 msgstr ""
 
-#: inc/class-branda-admin.php:1493
+#: inc/class-branda-admin.php:1490
+#, php-format
 msgid "Made with %s by WPMU DEV"
 msgstr ""
 
-#: inc/class-branda-admin.php:1592
+#: inc/class-branda-admin.php:1589
 msgid "There is no modules in selected group!"
 msgstr ""
 
-#: inc/class-branda-admin.php:1781
+#: inc/class-branda-admin.php:1778
+#, php-format
 msgid "%s module is active now."
 msgstr ""
 
-#: inc/class-branda-admin.php:1792
+#: inc/class-branda-admin.php:1789
+#, php-format
 msgid "Module %s was deactivated without errors."
 msgstr ""
 
-#: inc/class-branda-admin.php:1828
+#: inc/class-branda-admin.php:1825
 msgid "This module is not active!"
 msgstr ""
 
-#: inc/class-branda-admin.php:2128
+#: inc/class-branda-admin.php:2125
+#, php-format
 msgid "%s module was reset."
 msgstr ""
 
-#: inc/class-branda-admin.php:2457
+#: inc/class-branda-admin.php:2454
 #: inc/class-branda-helper.php:1758
 #: inc/class-branda-helper.php:2322
 #: inc/class-branda-helper.php:2709
@@ -778,7 +784,7 @@ msgstr ""
 msgid "Background"
 msgstr ""
 
-#: inc/class-branda-admin.php:2458
+#: inc/class-branda-admin.php:2455
 #: inc/class-branda-helper.php:1882
 #: inc/class-branda-helper.php:2196
 #: inc/modules/admin/bar.php:489
@@ -788,35 +794,36 @@ msgstr ""
 msgid "Logo"
 msgstr ""
 
-#: inc/class-branda-admin.php:2459
+#: inc/class-branda-admin.php:2456
 #: inc/class-branda-helper.php:2907
 msgid "Social Media Settings"
 msgstr ""
 
-#: inc/class-branda-admin.php:2460
+#: inc/class-branda-admin.php:2457
 #: inc/modules/front-end/author-box.php:1569
 #: inc/modules/front-end/db-error-page.php:655
 #: inc/modules/utilities/maintenance.php:999
 msgid "Social Media"
 msgstr ""
 
-#: inc/class-branda-admin.php:2512
+#: inc/class-branda-admin.php:2509
 msgid "Please configure source module first!"
 msgstr ""
 
-#: inc/class-branda-admin.php:2609
+#: inc/class-branda-admin.php:2606
+#, php-format
 msgid "Module %s was updated."
 msgstr ""
 
-#: inc/class-branda-admin.php:2659
+#: inc/class-branda-admin.php:2656
 msgid "Activate Modules"
 msgstr ""
 
-#: inc/class-branda-admin.php:2660
+#: inc/class-branda-admin.php:2657
 msgid "Choose the modules you want to activate. Each module helps you white label a specific part of your website. If you’re not sure or forget to activate any module now, you can always do that later."
 msgstr ""
 
-#: inc/class-branda-base.php:107
+#: inc/class-branda-base.php:169
 #: inc/class-branda-helper.php:3142
 #: inc/modules/emails/google-oauth.php:146
 #: inc/modules/emails/smtp.php:614
@@ -825,8 +832,8 @@ msgstr ""
 msgid "Unknown"
 msgstr ""
 
-#: inc/class-branda-base.php:151
-#: inc/class-branda-base.php:175
+#: inc/class-branda-base.php:213
+#: inc/class-branda-base.php:237
 msgid "Module does not exists."
 msgstr ""
 
@@ -1830,6 +1837,7 @@ msgid "Template file does not exists!"
 msgstr ""
 
 #: inc/class-branda-helper.php:4719
+#, php-format
 msgid "Template file %s does not exists!"
 msgstr ""
 
@@ -1838,6 +1846,7 @@ msgid "Pro"
 msgstr ""
 
 #: inc/class-branda-helper.php:4854
+#, php-format
 msgid "User registration has been disabled. Click <a href=\"%s\">here</a> to enable the user registration for your site."
 msgstr ""
 
@@ -1870,12 +1879,14 @@ msgid "Select All"
 msgstr ""
 
 #: inc/class-branda-list-table.php:252
+#, php-format
 msgid "%s item"
 msgid_plural "%s items"
 msgstr[0] ""
 msgstr[1] ""
 
 #: inc/class-branda-loader.php:176
+#, php-format
 msgid "Module \"<b>%1$s</b>\" was turned off because module \"<b>%2$s</b>\" is active."
 msgstr ""
 
@@ -1903,10 +1914,12 @@ msgid "Hide Password"
 msgstr ""
 
 #: inc/class-simple-options.php:1522
+#, php-format
 msgid "Default is: <code><strong>%s</strong></code>"
 msgstr ""
 
 #: inc/class-simple-options.php:1527
+#, php-format
 msgid "Default color is: <code><strong>%s</strong></code>"
 msgstr ""
 
@@ -1960,10 +1973,12 @@ msgid "Remove file"
 msgstr ""
 
 #: inc/functions.php:308
+#, php-format
 msgid "%1$s module is deprecated. Please use %2$s module."
 msgstr ""
 
 #: inc/functions.php:317
+#, php-format
 msgid "Module will be removed in <b>Branda %s version</b>."
 msgstr ""
 
@@ -2117,6 +2132,7 @@ msgid "Add GET parameters here"
 msgstr ""
 
 #: inc/modules/admin/bar.php:605
+#, php-format
 msgid "Add parameters one per line. If you are having trouble locating the GET parameters for your page builder, you can find parameters for popular builders %1$shere%2$s."
 msgstr ""
 
@@ -2276,6 +2292,7 @@ msgstr ""
 #: inc/modules/admin/bar.php:991
 #: views/admin/modules/admin-bar/dialogs/submenu.php:47
 #: views/admin/modules/admin-bar/tmpl/panes/submenu.php:89
+#, php-format
 msgid "URL is relative to %s"
 msgstr ""
 
@@ -2365,11 +2382,13 @@ msgid "Choose a color scheme to be used for every user across network."
 msgstr ""
 
 #: inc/modules/admin/color-schemes.php:439
+#, php-format
 msgctxt "Label for link to edit custom theme"
 msgid "Customize \"%s\" scheme"
 msgstr ""
 
 #: inc/modules/admin/color-schemes.php:710
+#, php-format
 msgid "%s was successfully updated."
 msgstr ""
 
@@ -2622,6 +2641,7 @@ msgid "Enter the URL of your icon. This should preferably be a PNG file."
 msgstr ""
 
 #: inc/modules/admin/menu.php:655
+#, php-format
 msgid "Upload an icon to override the default menu item icon. The recommended size is %s."
 msgstr ""
 
@@ -2692,6 +2712,7 @@ msgid "Add the admin message here…"
 msgstr ""
 
 #: inc/modules/admin/theme-additional-css.php:26
+#, php-format
 msgid "To add custom CSS, go to your theme's <a href=\"%s\">Customizer</a> menu."
 msgstr ""
 
@@ -3240,6 +3261,7 @@ msgid "Get detailed information about your emails with Branda Pro. You can check
 msgstr ""
 
 #: inc/modules/emails/email-logs.php:739
+#, php-format
 msgid "Enable %1$sthe SMTP module%2$s to start storing the email log history."
 msgstr ""
 
@@ -3256,6 +3278,7 @@ msgstr ""
 #. translators: %s: site title
 #: inc/modules/emails/google-oauth.php:210
 #: inc/modules/emails/smtp.php:243
+#, php-format
 msgid "This is test email sent from \"%s\""
 msgstr ""
 
@@ -3267,17 +3290,20 @@ msgstr ""
 #. translators: %s: send date
 #: inc/modules/emails/google-oauth.php:216
 #: inc/modules/emails/smtp.php:247
+#, php-format
 msgid "Send date: %s."
 msgstr ""
 
 #. translators: %s: site url
 #: inc/modules/emails/google-oauth.php:222
 #: inc/modules/emails/smtp.php:252
+#, php-format
 msgid "Site: %s."
 msgstr ""
 
 #. translators: %s: email string
 #: inc/modules/emails/google-oauth.php:242
+#, php-format
 msgid "Test email sent to <strong>%s</strong>."
 msgstr ""
 
@@ -3293,6 +3319,7 @@ msgstr ""
 
 #. translators: %s: Google Workspace Create Project url
 #: inc/modules/emails/google-oauth.php:691
+#, php-format
 msgid "A Google Cloud Platform project with the Gmail API enabled is required. To create a project and enable an API, refer to <a href=\"%s\" target=\"_blank\">Create a project and enable API <span class=\"sui-icon-open-new-window sui-info\" aria-hidden=\"true\"></span></a>."
 msgstr ""
 
@@ -3350,6 +3377,7 @@ msgstr ""
 
 #. translators: %s: current page url
 #: inc/modules/emails/google-oauth.php:871
+#, php-format
 msgid "Please configure your <a href=\"%s\">Google OAuth 2.0</a> in order to send email using Gmail API."
 msgstr ""
 
@@ -3359,11 +3387,13 @@ msgstr ""
 
 #. translators: %s: error description
 #: inc/modules/emails/google-oauth.php:922
+#, php-format
 msgid "%s. Please check your Google Account and API configurations again."
 msgstr ""
 
 #. translators: %s: authorization url
 #: inc/modules/emails/google-oauth.php:943
+#, php-format
 msgid "Token does not exist or has expired. Please <a href=\"%s\">retrieve token</a> again."
 msgstr ""
 
@@ -3401,10 +3431,12 @@ msgstr ""
 
 #: inc/modules/emails/headers.php:126
 #: inc/modules/emails/headers.php:127
+#, php-format
 msgid "e. g. %s"
 msgstr ""
 
 #: inc/modules/emails/registration.php:153
+#, php-format
 msgid ""
 "To activate your blog, please click the following link:\n"
 "\n"
@@ -3418,11 +3450,13 @@ msgid ""
 msgstr ""
 
 #: inc/modules/emails/registration.php:154
+#, php-format
 msgctxt "New site notification email subject"
 msgid "[%1$s] Activate %2$s"
 msgstr ""
 
 #: inc/modules/emails/registration.php:155
+#, php-format
 msgid ""
 "To activate your user, please click the following link:\n"
 "\n"
@@ -3432,6 +3466,7 @@ msgid ""
 msgstr ""
 
 #: inc/modules/emails/registration.php:156
+#, php-format
 msgctxt "New user notification email subject"
 msgid "[%1$s] Activate %2$s"
 msgstr ""
@@ -3509,11 +3544,13 @@ msgid "Customize new site activation email"
 msgstr ""
 
 #: inc/modules/emails/registration.php:262
+#, php-format
 msgid "New %1$s Site: %2$s"
 msgstr ""
 
 #: inc/modules/emails/registration.php:292
 #: inc/modules/login-screen/signup-code.php:224
+#, php-format
 msgid "Blog registration has been disabled. Click <a href=\"%s\">here</a> to enable the site registration for your network."
 msgstr ""
 
@@ -3534,6 +3571,7 @@ msgid "Hey! Failed to send the test email. Please check your SMTP credentials an
 msgstr ""
 
 #: inc/modules/emails/smtp.php:276
+#, php-format
 msgid "Test email sent to %s."
 msgstr ""
 
@@ -3645,6 +3683,7 @@ msgid "The SMTP password cannot be encrypted when stored in the database, possib
 msgstr ""
 
 #: inc/modules/emails/smtp.php:583
+#, php-format
 msgid "Please configure your <a href=\"%s\">SMTP credentials</a> in order to send email using SMTP module."
 msgstr ""
 
@@ -3816,6 +3855,7 @@ msgid ""
 msgstr ""
 
 #: inc/modules/emails/template.php:978
+#, php-format
 msgid "Test email sent to %s!"
 msgstr ""
 
@@ -3881,6 +3921,7 @@ msgid "Author Box Widget"
 msgstr ""
 
 #: inc/modules/front-end/author-box.php:298
+#, php-format
 msgid "Go to <b>Appearance &gt; <a href=\"%s\">Widgets</a></b> to add the author box widget into your theme's sidebars. All customization done in this module will affect the author box widget as well as the inline content author box."
 msgstr ""
 
@@ -3918,6 +3959,7 @@ msgid "This will be added to the header of every Login page."
 msgstr ""
 
 #: inc/modules/front-end/author-box.php:403
+#, php-format
 msgid "Enter %s URL here…"
 msgstr ""
 
@@ -4114,6 +4156,7 @@ msgid "Accept"
 msgstr ""
 
 #: inc/modules/front-end/cookie-notice.php:175
+#, php-format
 msgid "The currently selected Privacy Policy page does not exist. Please %1$screate or select a new page%2$s."
 msgstr ""
 
@@ -4278,10 +4321,12 @@ msgid "Whoops! Something went wrong."
 msgstr ""
 
 #: inc/modules/front-end/db-error-page.php:451
+#, php-format
 msgid "Directory %s is not writable, we are unable to create db-error.php file."
 msgstr ""
 
 #: inc/modules/front-end/db-error-page.php:456
+#, php-format
 msgid "File %s is not writable, we are unable to change it."
 msgstr ""
 
@@ -4369,6 +4414,7 @@ msgid "Format"
 msgstr ""
 
 #: inc/modules/front-end/document.php:199
+#, php-format
 msgid "Protected: %s"
 msgstr ""
 
@@ -4566,6 +4612,7 @@ msgid "In a few words, explain what this site is about. Default will be used if 
 msgstr ""
 
 #: inc/modules/front-end/site-status-page.php:367
+#, php-format
 msgid "Directory %s is not writable, we are unable to create files."
 msgstr ""
 
@@ -4610,6 +4657,7 @@ msgid "Adjust the default content of your error pages."
 msgstr ""
 
 #: inc/modules/front-end/site-status-page.php:485
+#, php-format
 msgid "%s preview is not available. Save settings first!"
 msgstr ""
 
@@ -4693,6 +4741,7 @@ msgid "Start from scratch"
 msgstr ""
 
 #: inc/modules/login-screen/login-screen.php:1019
+#, php-format
 msgid "Failed to load \"%s\" template configuration!"
 msgstr ""
 
@@ -4762,6 +4811,7 @@ msgid "Lost your password?"
 msgstr ""
 
 #: inc/modules/login-screen/login-screen.php:1611
+#, php-format
 msgid "<strong>ERROR</strong>: The password you entered for the username %s is incorrect."
 msgstr ""
 
@@ -4966,6 +5016,7 @@ msgid "You can now start from scratch!"
 msgstr ""
 
 #: inc/modules/login-screen/login-screen.php:2761
+#, php-format
 msgid "\"%s\" theme configuration was successfully loaded!"
 msgstr ""
 
@@ -5179,6 +5230,7 @@ msgid "Comments are closed."
 msgstr ""
 
 #: inc/modules/utilities/comments-control.php:466
+#, php-format
 msgid "The <em>Comments Control</em> module is active, but is not properly configured. Visit the <a href=\"%s\">configuration page</a> to choose which post types to disable comments on."
 msgstr ""
 
@@ -5259,6 +5311,7 @@ msgid "Successfully deleted data from all the subsites."
 msgstr ""
 
 #: inc/modules/utilities/data.php:429
+#, php-format
 msgid "Deleting data from %s"
 msgstr ""
 
@@ -5283,6 +5336,7 @@ msgid "Choose whether the favicon defined here should override the site icon def
 msgstr ""
 
 #: inc/modules/utilities/images.php:217
+#, php-format
 msgid "Choose whether the favicon defined here should override the site icon defined in <b><a href=\"%1$s\">Appearance</a> &gt; <a href=\"%2$s\">Customize</a></b>."
 msgstr ""
 
@@ -5338,6 +5392,7 @@ msgid "Image Filesize Limit"
 msgstr ""
 
 #: inc/modules/utilities/images.php:297
+#, php-format
 msgid "Override the default WordPress upload limit of %dMb for different user roles."
 msgstr ""
 
@@ -5371,6 +5426,7 @@ msgid "Ultimate Branding"
 msgstr ""
 
 #: inc/modules/utilities/import.php:289
+#, php-format
 msgid "%s module imported and configured successfully."
 msgid_plural "%s modules imported and configured successfully."
 msgstr[0] ""
@@ -5480,6 +5536,7 @@ msgid "Till Time"
 msgstr ""
 
 #: inc/modules/utilities/maintenance.php:797
+#, php-format
 msgid "The timezone set in your WordPress settings shows the current time as %s."
 msgstr ""
 
@@ -5773,10 +5830,12 @@ msgid "Duplicate"
 msgstr ""
 
 #: inc/modules/utilities/tracking-codes-list-table.php:141
+#, php-format
 msgid "Tracking Codes: %s was activated."
 msgstr ""
 
 #: inc/modules/utilities/tracking-codes-list-table.php:150
+#, php-format
 msgid "Tracking Codes: %s was deactivated."
 msgstr ""
 
@@ -5785,10 +5844,12 @@ msgid " (copy)"
 msgstr ""
 
 #: inc/modules/utilities/tracking-codes-list-table.php:164
+#, php-format
 msgid "Tracking Codes: %s was duplicated. New codes are inactive."
 msgstr ""
 
 #: inc/modules/utilities/tracking-codes-list-table.php:173
+#, php-format
 msgid "Tracking Codes: %s was deleted."
 msgstr ""
 
@@ -5956,6 +6017,7 @@ msgstr ""
 
 #: inc/modules/utilities/tracking-codes.php:835
 #: inc/modules/utilities/tracking-codes.php:838
+#, php-format
 msgid "%s Archives"
 msgstr ""
 
@@ -5985,15 +6047,18 @@ msgid "Edit Tracking Code"
 msgstr ""
 
 #: inc/modules/utilities/tracking-codes.php:1104
+#, php-format
 msgid "Tracking Code %s was updated."
 msgstr ""
 
 #: inc/modules/utilities/tracking-codes.php:1106
+#, php-format
 msgid "Tracking Code %s was created."
 msgstr ""
 
 #: inc/modules/utilities/tracking-codes.php:1219
 #: inc/modules/utilities/tracking-codes.php:1257
+#, php-format
 msgid "Tracking Code %s was deleted."
 msgid_plural "Tracking Codes %s was deleted."
 msgstr[0] ""
@@ -6048,6 +6113,7 @@ msgid "You haven’t added any dashboard feed yet. Click on the “+ Add Feed”
 msgstr ""
 
 #: inc/modules/widgets/dashboard-feeds-widget.php:70
+#, php-format
 msgid "<strong>Feed Error</strong>: %s"
 msgstr ""
 
@@ -6217,6 +6283,7 @@ msgid "Add text widgets to the WordPress dashboard with your custom content."
 msgstr ""
 
 #: inc/modules/widgets/dashboard-widgets.php:258
+#, php-format
 msgid "If you do not see any widget here, please visit <a href=\"%s\">Dashboard page</a> and come back on this page."
 msgstr ""
 
@@ -6309,119 +6376,12 @@ msgid "Comments <abbr title=\"Really Simple Syndication\">RSS</abbr>"
 msgstr ""
 
 #: inc/modules/widgets/meta-widget.php:83
+#, php-format
 msgid "Powered by %s"
 msgstr ""
 
 #: inc/modules/widgets/meta-widget.php:100
 msgid "Title:"
-msgstr ""
-
-#: views/admin/branda-pro.php:16
-msgid "Upgrade to Branda Pro"
-msgstr ""
-
-#: views/admin/branda-pro.php:17
-msgid "Get everything you need to white label your sites with Branda Pro."
-msgstr ""
-
-#: views/admin/branda-pro.php:18
-msgid "Plus – you'll get a WPMU DEV membership, which includes white label reports, early access to new features in Branda, award-winning image optimization with Smush Pro, 24/7 live support for all things WordPress, unlimited usage of all our premium plugins, managed hosting credits, and more."
-msgstr ""
-
-#: views/admin/branda-pro.php:20
-#: views/admin/branda-pro.php:90
-msgid "UNLOCK NOW WITH PRO"
-msgstr ""
-
-#: views/admin/branda-pro.php:24
-msgid "5.0 rating from"
-msgstr ""
-
-#: views/admin/branda-pro.php:24
-msgid "customers"
-msgstr ""
-
-#: views/admin/branda-pro.php:36
-msgid "Pro Features"
-msgstr ""
-
-#: views/admin/branda-pro.php:37
-msgid "Upgrading to Pro will get you the following benefits."
-msgstr ""
-
-#: views/admin/branda-pro.php:44
-#: views/admin/dashboard/modules/upsell.php:24
-msgid "SMTP email logging"
-msgstr ""
-
-#: views/admin/branda-pro.php:45
-msgid "Get detailed information about your emails with Branda Pro. Track information about your recipients and view and export log history."
-msgstr ""
-
-#: views/admin/branda-pro.php:49
-msgid "White label automated reporting"
-msgstr ""
-
-#: views/admin/branda-pro.php:50
-msgid "Customize, style, schedule and send white label client and developer reports in just a few clicks with embedded performance, security, SEO, and analytics data."
-msgstr ""
-
-#: views/admin/branda-pro.php:54
-msgid "Smush Pro and Hummingbird Pro - the ultimate site optimization & performance package"
-msgstr ""
-
-#: views/admin/branda-pro.php:55
-msgid "Smush’s award-winning image optimization + Hummingbird’s performance optimization gives you the fastest possible WordPress site. It’s a powerful combination that your visitors, customers, and search engines will love."
-msgstr ""
-
-#: views/admin/branda-pro.php:59
-msgid "Premium WordPress plugins"
-msgstr ""
-
-#: views/admin/branda-pro.php:60
-msgid "In addition to Branda Pro, you'll get our full suite of premium WordPress plugins. From security to backups to marketing and SEO, you've got all the WordPress solutions you'll need to build, promote and manage your website. Get access to unlimited usage across all your sites. Join more than 1 million users with our plugins."
-msgstr ""
-
-#: views/admin/branda-pro.php:64
-msgid "The Hub - Manage unlimited WordPress sites"
-msgstr ""
-
-#: views/admin/branda-pro.php:65
-msgid "You can manage unlimited WordPress sites with automated updates, backups, security, and performance checks, all in one place. All of this can be white labeled for your clients, and you even get our 24/7 live WordPress support."
-msgstr ""
-
-#: views/admin/branda-pro.php:69
-#: views/admin/dashboard/modules/upsell.php:30
-msgid "24/7 live WordPress support"
-msgstr ""
-
-#: views/admin/branda-pro.php:70
-msgid "We can’t stress this enough: our outstanding WordPress support is available with live chat 24/7, and we’ll help you with absolutely any WordPress issue – not just our products. It’s an expert WordPress team on call for you, whenever you need them."
-msgstr ""
-
-#: views/admin/branda-pro.php:74
-#: views/admin/dashboard/modules/upsell.php:31
-msgid "The WPMU DEV Guarantee"
-msgstr ""
-
-#: views/admin/branda-pro.php:75
-msgid "You'll be delighted with Branda Pro! 🙂 However, if you're not happy in any way, we have a 100%, 30-day money-back guarantee. Cancel within the first 30 days and we'll refund your money, no questions asked."
-msgstr ""
-
-#: views/admin/branda-pro.php:81
-msgid "Join 771,093 Happy Members"
-msgstr ""
-
-#: views/admin/branda-pro.php:82
-msgid "97% of customers are happy with WPMU DEV's service, and it's a great time to join them! Branda users can unlock our full suite of Pro WP plugins, time-saving site management, and integrated client billing/management tools."
-msgstr ""
-
-#: views/admin/branda-pro.php:84
-msgid "Get Branda Pro and get a better WordPress"
-msgstr ""
-
-#: views/admin/branda-pro.php:87
-msgid "Get Branda Pro"
 msgstr ""
 
 #: views/admin/common/copy.php:5
@@ -6489,6 +6449,7 @@ msgid "Reset Module"
 msgstr ""
 
 #: views/admin/common/dialogs/reset-module.php:15
+#, php-format
 msgid "Are you sure you wish to reset %s module to default state?"
 msgstr ""
 
@@ -6505,6 +6466,7 @@ msgid "Reset Section"
 msgstr ""
 
 #: views/admin/common/dialogs/reset.php:12
+#, php-format
 msgid "Are you sure you wish to reset %s section to default state?"
 msgstr ""
 
@@ -6525,6 +6487,7 @@ msgid "SMTP Log"
 msgstr ""
 
 #: views/admin/common/dialogs/show-new-features-34.php:34
+#, php-format
 msgid "With the %1$sSMTP log%2$s feature you will be able to gather detailed information about your emails. You can track recipients' email histories and export the log history."
 msgstr ""
 
@@ -6625,6 +6588,7 @@ msgid "Go to last page"
 msgstr ""
 
 #: views/admin/common/modules/subsite-configuration.php:12
+#, php-format
 msgid "This module can be overridden by subsite admins as per your <a href=\"%s\">Permissions Settings</a>."
 msgstr ""
 
@@ -6750,6 +6714,10 @@ msgstr ""
 msgid "Branda Pro white labeling for unlimited sites"
 msgstr ""
 
+#: views/admin/dashboard/modules/upsell.php:24
+msgid "SMTP email logging"
+msgstr ""
+
 #: views/admin/dashboard/modules/upsell.php:25
 msgid "Early access to new white label branding features"
 msgstr ""
@@ -6770,11 +6738,20 @@ msgstr ""
 msgid "Manage unlimited WordPress sites from the Hub"
 msgstr ""
 
+#: views/admin/dashboard/modules/upsell.php:30
+msgid "24/7 live WordPress support"
+msgstr ""
+
+#: views/admin/dashboard/modules/upsell.php:31
+msgid "The WPMU DEV Guarantee"
+msgstr ""
+
 #: views/admin/dashboard/modules/upsell.php:35
 msgid "Upgrade to Pro"
 msgstr ""
 
 #: views/admin/dashboard/subsite.php:33
+#, php-format
 msgid "%1$s, only modules you have allowed subsite access to will be available here. You can add or remove modules from the %2$sPermissions Settings%3$s."
 msgstr ""
 
@@ -6923,10 +6900,12 @@ msgid "Customize the admin menu by user role or separately for custom users. You
 msgstr ""
 
 #: views/admin/modules/admin_menu/dialogs/custom-admin-menu-dialog.php:72
+#, php-format
 msgid "Take your custom admin menu one step further by controlling what your users can and can't do using the %1$sUser Role Editor%2$s plugin."
 msgstr ""
 
 #: views/admin/modules/admin_menu/dialogs/custom-admin-menu-item-container.php:8
+#, php-format
 msgid "If you don't see any admin menu item here, please visit your main site's %1$sdashboard page%2$s and come back on this page to customize the admin menu items."
 msgstr ""
 
@@ -7212,6 +7191,7 @@ msgstr ""
 
 #. translators: entry id
 #: views/admin/modules/email-logs/main-list.php:65
+#, php-format
 msgid "%1$sSelect entry number%2$s"
 msgstr ""
 
@@ -7245,6 +7225,7 @@ msgstr ""
 
 #. translators: result count
 #: views/admin/modules/email-logs/pagination-section.php:51
+#, php-format
 msgid "%d result"
 msgid_plural "%d results"
 msgstr[0] ""
@@ -7328,14 +7309,17 @@ msgid "Configuration is not possible!"
 msgstr ""
 
 #: views/admin/modules/import/errors/invalid-file.php:6
+#, php-format
 msgid "The file %s you are trying to import doesn’t belong to Branda! Please check your file or upload another file."
 msgstr ""
 
 #: views/admin/modules/import/errors/no-configuration.php:6
+#, php-format
 msgid "The file %s you are trying to import doesn’t have any module configurations. Please check your file or upload another file."
 msgstr ""
 
 #: views/admin/modules/import/errors/unknown.php:6
+#, php-format
 msgid "During uploading %s an unknown error occurred. Please try again."
 msgstr ""
 
@@ -7344,6 +7328,7 @@ msgid "Import Error"
 msgstr ""
 
 #: views/admin/modules/import/errors/version.php:6
+#, php-format
 msgid "The file you are trying to import is for %1$s version %2$s. Please upgrade source site to Branda and export again."
 msgstr ""
 

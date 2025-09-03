@@ -789,11 +789,11 @@ if ( ! class_exists( 'Branda_SMTP' ) ) {
 			$smtp_password = $_POST['simple_options']['smtp_authentication']['smtp_password'];
 
 			if ( empty( $smtp_password ) ) {
-				$fields['smtp_authentication'] = array( 'smtp_password' );
+				$fields['smtp_authentication'][] = 'smtp_password';
 			}
 
 			// The encryption method is stored only by the plugin, so we need to preserve it.
-			$fields['smtp_authentication'] = array( 'encryption_method' );
+			$fields['smtp_authentication'][] = 'encryption_method';
 
 			return $fields;
 		}
