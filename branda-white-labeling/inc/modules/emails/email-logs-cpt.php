@@ -256,36 +256,5 @@ if ( ! class_exists( 'Branda_Email_Logs_CPT' ) ) {
 				wp_delete_post( $id, true );
 			}
 		}
-		/**
-		 * Register Custom Post Type for Email Logs
-		 */
-		public static function register_email_logs_cpt() {
-			$labels = array(
-				'name'          => _x( 'Email Logs', 'Post Type General Name', 'ub' ),
-				'singular_name' => _x( 'Email Log', 'Post Type Singular Name', 'ub' ),
-			);
-			$args   = array(
-				'label'               => __( 'Email Log', 'ub' ),
-				'description'         => __( 'Post Type Description', 'ub' ),
-				'labels'              => $labels,
-				'supports'            => array( 'title', 'editor', 'custom-fields' ),
-				'hierarchical'        => false,
-				'public'              => false,
-				'show_ui'             => false,
-				'show_in_menu'        => false,
-				'menu_position'       => 5,
-				'show_in_admin_bar'   => false,
-				'show_in_nav_menus'   => false,
-				'can_export'          => false,
-				'has_archive'         => false,
-				'exclude_from_search' => true,
-				'publicly_queryable'  => false,
-				'rewrite'             => false,
-				'capability_type'     => 'page',
-				'show_in_rest'        => false,
-			);
-
-			register_post_type( self::CPT_NAME, $args );
-		}
 	}
 }

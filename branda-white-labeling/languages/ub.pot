@@ -2,21 +2,21 @@
 # This file is distributed under the same license as the Branda Pro plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Branda Pro 3.4.25\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ultimate-branding\n"
+"Project-Id-Version: Branda Pro 3.4.29\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/build\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-09-02T15:39:25+00:00\n"
+"POT-Creation-Date: 2025-12-29T08:41:11+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: ub\n"
 
 #. Plugin Name of the plugin
 #: ultimate-branding.php
-#: inc/class-branda-admin.php:687
+#: inc/class-branda-admin.php:688
 #: inc/class-branda-base.php:84
 #: views/admin/dashboard/modules/upsell.php:15
 msgid "Branda Pro"
@@ -83,7 +83,7 @@ msgstr ""
 #: inc/modules/content/footer.php:243
 #: inc/modules/content/header.php:134
 #: inc/modules/content/header.php:235
-#: inc/modules/emails/email-logs.php:228
+#: inc/modules/emails/email-logs.php:226
 #: inc/modules/utilities/data.php:84
 #: views/admin/modules/admin_menu/dialogs/custom-admin-menu-dialog.php:31
 #: views/admin/modules/admin_menu/dialogs/custom-admin-menu-item.php:138
@@ -233,7 +233,7 @@ msgstr ""
 
 #: etc/config.php:434
 #: inc/modules/emails/google-oauth.php:721
-#: inc/modules/emails/smtp.php:407
+#: inc/modules/emails/smtp.php:415
 msgid "From Headers"
 msgstr ""
 
@@ -341,7 +341,7 @@ msgid "Enable support for any available accessibility enhancements."
 msgstr ""
 
 #: etc/config.php:666
-#: inc/modules/emails/email-logs.php:285
+#: inc/modules/emails/email-logs.php:283
 #: inc/modules/utilities/export.php:227
 #: inc/modules/utilities/export.php:245
 #: views/admin/modules/email-logs/main-list.php:146
@@ -493,19 +493,19 @@ msgstr ""
 msgid "Misc"
 msgstr ""
 
-#: inc/class-branda-admin.php:106
+#: inc/class-branda-admin.php:107
 msgid "Success! Your changes were successfully saved!"
 msgstr ""
 
-#: inc/class-branda-admin.php:107
+#: inc/class-branda-admin.php:108
 msgid "There was an error, please try again."
 msgstr ""
 
-#: inc/class-branda-admin.php:108
+#: inc/class-branda-admin.php:109
 msgid "Section was reset to defaults."
 msgstr ""
 
-#: inc/class-branda-admin.php:109
+#: inc/class-branda-admin.php:110
 #: inc/class-branda-helper.php:408
 #: inc/class-branda-helper.php:1748
 #: inc/class-branda-helper.php:3748
@@ -515,95 +515,95 @@ msgstr ""
 msgid "Something went wrong!"
 msgstr ""
 
-#: inc/class-branda-admin.php:110
-#: inc/class-branda-admin.php:1763
+#: inc/class-branda-admin.php:111
+#: inc/class-branda-admin.php:1764
 #: inc/class-simple-options.php:1807
 #: inc/class-simple-options.php:1868
 msgid "Nope! Security check failed!"
 msgstr ""
 
-#: inc/class-branda-admin.php:111
+#: inc/class-branda-admin.php:112
 msgid "Missing required data!"
 msgstr ""
 
-#: inc/class-branda-admin.php:112
+#: inc/class-branda-admin.php:113
 msgid "This user login doesn't exist!"
 msgstr ""
 
-#: inc/class-branda-admin.php:193
+#: inc/class-branda-admin.php:194
 msgctxt "admin title"
 msgid "Branda"
 msgstr ""
 
-#: inc/class-branda-admin.php:194
-#: inc/class-branda-admin.php:205
+#: inc/class-branda-admin.php:195
+#: inc/class-branda-admin.php:206
 msgctxt "admin title separator"
 msgid " &lsaquo; "
 msgstr ""
 
-#: inc/class-branda-admin.php:230
-#: inc/class-branda-admin.php:702
+#: inc/class-branda-admin.php:231
 #: inc/class-branda-admin.php:703
+#: inc/class-branda-admin.php:704
 #: inc/modules/widgets/dashboard-feeds.php:389
 #: views/admin/dashboard.php:9
 #: views/admin/dashboard/subsite.php:3
 msgid "Dashboard"
 msgstr ""
 
-#: inc/class-branda-admin.php:232
+#: inc/class-branda-admin.php:233
 #: views/admin/common/footer.php:15
 #: views/admin/common/footer.php:29
 msgid "Docs"
 msgstr ""
 
-#: inc/class-branda-admin.php:235
+#: inc/class-branda-admin.php:236
 msgid "Renew Membership"
 msgstr ""
 
-#: inc/class-branda-admin.php:240
-#: inc/class-branda-admin.php:739
+#: inc/class-branda-admin.php:241
 #: inc/class-branda-admin.php:740
-msgid "Limited-time Offer"
+#: inc/class-branda-admin.php:741
+msgid "Get Branda Pro"
 msgstr ""
 
-#: inc/class-branda-admin.php:260
+#: inc/class-branda-admin.php:261
 msgid "View Details"
 msgstr ""
 
-#: inc/class-branda-admin.php:262
+#: inc/class-branda-admin.php:263
 msgid "Premium Support"
 msgstr ""
 
-#: inc/class-branda-admin.php:265
+#: inc/class-branda-admin.php:266
 msgid "By"
 msgstr ""
 
-#: inc/class-branda-admin.php:267
+#: inc/class-branda-admin.php:268
 msgid "Rate Branda"
 msgstr ""
 
-#: inc/class-branda-admin.php:268
+#: inc/class-branda-admin.php:269
 #: views/admin/common/footer.php:14
 msgid "Support"
 msgstr ""
 
-#: inc/class-branda-admin.php:272
+#: inc/class-branda-admin.php:273
 #: views/admin/common/footer.php:13
 #: views/admin/common/footer.php:28
 msgid "Roadmap"
 msgstr ""
 
-#: inc/class-branda-admin.php:451
+#: inc/class-branda-admin.php:452
 #: inc/modules/front-end/document.php:211
 #: views/admin/modules/admin-bar/dashicons.php:51
 msgid "Clear"
 msgstr ""
 
-#: inc/class-branda-admin.php:452
+#: inc/class-branda-admin.php:453
 msgid "Clear color"
 msgstr ""
 
-#: inc/class-branda-admin.php:453
+#: inc/class-branda-admin.php:454
 #: inc/class-branda-helper.php:2780
 #: inc/modules/content/footer.php:126
 #: inc/modules/content/footer.php:234
@@ -620,146 +620,146 @@ msgstr ""
 msgid "Default"
 msgstr ""
 
-#: inc/class-branda-admin.php:454
+#: inc/class-branda-admin.php:455
 msgid "Select default color"
 msgstr ""
 
-#: inc/class-branda-admin.php:455
+#: inc/class-branda-admin.php:456
 msgid "Select Color"
 msgstr ""
 
-#: inc/class-branda-admin.php:456
+#: inc/class-branda-admin.php:457
 msgid "Color value"
 msgstr ""
 
-#: inc/class-branda-admin.php:466
+#: inc/class-branda-admin.php:467
 msgid "Are you sure to replace all section data?"
 msgstr ""
 
-#: inc/class-branda-admin.php:467
+#: inc/class-branda-admin.php:468
 msgid "Please select a source module first."
 msgstr ""
 
-#: inc/class-branda-admin.php:470
+#: inc/class-branda-admin.php:471
 msgid "Are you sure? This will replace all entered data by defaults."
 msgstr ""
 
-#: inc/class-branda-admin.php:473
+#: inc/class-branda-admin.php:474
 msgid "Please select some modules first or skip this step."
 msgstr ""
 
-#: inc/class-branda-admin.php:477
+#: inc/class-branda-admin.php:478
 msgid "Entered value is above field limit!"
 msgstr ""
 
-#: inc/class-branda-admin.php:478
+#: inc/class-branda-admin.php:479
 msgid "Entered value is below field limit!"
 msgstr ""
 
-#: inc/class-branda-admin.php:481
+#: inc/class-branda-admin.php:482
 msgid "Changes are not saved, are you sure you want to navigate away?"
 msgstr ""
 
-#: inc/class-branda-admin.php:483
+#: inc/class-branda-admin.php:484
 msgid "Try to fetch feeds data, please wait..."
 msgstr ""
 
-#: inc/class-branda-admin.php:484
+#: inc/class-branda-admin.php:485
 msgid "No feed found, try to another site or enter data manually."
 msgstr ""
 
-#: inc/class-branda-admin.php:487
+#: inc/class-branda-admin.php:488
 msgid "Whoops, only .json filetypes are allowed."
 msgstr ""
 
-#: inc/class-branda-admin.php:490
+#: inc/class-branda-admin.php:491
 msgid "Whoops, only images are allowed."
 msgstr ""
 
-#: inc/class-branda-admin.php:494
-#: inc/class-branda-admin.php:1336
-#: inc/class-branda-admin.php:1515
-#: inc/class-branda-admin.php:1897
+#: inc/class-branda-admin.php:495
+#: inc/class-branda-admin.php:1337
+#: inc/class-branda-admin.php:1516
+#: inc/class-branda-admin.php:1898
 msgid "Save Changes"
 msgstr ""
 
-#: inc/class-branda-admin.php:567
+#: inc/class-branda-admin.php:568
 #, php-format
 msgid "%d new module was activated successfully."
 msgid_plural "%d new modules was activated successfully."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/class-branda-admin.php:581
+#: inc/class-branda-admin.php:582
 #, php-format
 msgid "%d module was deactivated successfully."
 msgid_plural "%d modules was deactivated successfully."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/class-branda-admin.php:599
+#: inc/class-branda-admin.php:600
 msgid "42: The answer to life, the universe and everything."
 msgstr ""
 
-#: inc/class-branda-admin.php:600
+#: inc/class-branda-admin.php:601
 msgid "Douglas Adams"
 msgstr ""
 
-#: inc/class-branda-admin.php:604
+#: inc/class-branda-admin.php:605
 msgid "Nothing was changed, nothing to activate or deactivate."
 msgstr ""
 
-#: inc/class-branda-admin.php:687
+#: inc/class-branda-admin.php:688
 #: inc/class-branda-public.php:54
 #: inc/modules/admin/color-schemes.php:528
 msgid "Branda"
 msgstr ""
 
-#: inc/class-branda-admin.php:947
+#: inc/class-branda-admin.php:948
 msgid "none"
 msgstr ""
 
-#: inc/class-branda-admin.php:1322
+#: inc/class-branda-admin.php:1323
 #: inc/modules/utilities/tracking-codes-list-table.php:113
 #: views/admin/modules/smtp/plugins-list.php:5
 #: views/admin/modules/smtp/plugins-list.php:13
 msgid "Deactivate"
 msgstr ""
 
-#: inc/class-branda-admin.php:1359
+#: inc/class-branda-admin.php:1360
 #: inc/modules/utilities/tracking-codes-list-table.php:112
 msgid "Activate"
 msgstr ""
 
-#: inc/class-branda-admin.php:1490
+#: inc/class-branda-admin.php:1491
 #, php-format
 msgid "Made with %s by WPMU DEV"
 msgstr ""
 
-#: inc/class-branda-admin.php:1589
+#: inc/class-branda-admin.php:1590
 msgid "There is no modules in selected group!"
 msgstr ""
 
-#: inc/class-branda-admin.php:1778
+#: inc/class-branda-admin.php:1779
 #, php-format
 msgid "%s module is active now."
 msgstr ""
 
-#: inc/class-branda-admin.php:1789
+#: inc/class-branda-admin.php:1790
 #, php-format
 msgid "Module %s was deactivated without errors."
 msgstr ""
 
-#: inc/class-branda-admin.php:1825
+#: inc/class-branda-admin.php:1826
 msgid "This module is not active!"
 msgstr ""
 
-#: inc/class-branda-admin.php:2125
+#: inc/class-branda-admin.php:2126
 #, php-format
 msgid "%s module was reset."
 msgstr ""
 
-#: inc/class-branda-admin.php:2454
+#: inc/class-branda-admin.php:2455
 #: inc/class-branda-helper.php:1758
 #: inc/class-branda-helper.php:2322
 #: inc/class-branda-helper.php:2709
@@ -784,7 +784,7 @@ msgstr ""
 msgid "Background"
 msgstr ""
 
-#: inc/class-branda-admin.php:2455
+#: inc/class-branda-admin.php:2456
 #: inc/class-branda-helper.php:1882
 #: inc/class-branda-helper.php:2196
 #: inc/modules/admin/bar.php:489
@@ -794,39 +794,57 @@ msgstr ""
 msgid "Logo"
 msgstr ""
 
-#: inc/class-branda-admin.php:2456
+#: inc/class-branda-admin.php:2457
 #: inc/class-branda-helper.php:2907
 msgid "Social Media Settings"
 msgstr ""
 
-#: inc/class-branda-admin.php:2457
+#: inc/class-branda-admin.php:2458
 #: inc/modules/front-end/author-box.php:1569
 #: inc/modules/front-end/db-error-page.php:655
 #: inc/modules/utilities/maintenance.php:999
 msgid "Social Media"
 msgstr ""
 
-#: inc/class-branda-admin.php:2509
+#: inc/class-branda-admin.php:2510
 msgid "Please configure source module first!"
 msgstr ""
 
-#: inc/class-branda-admin.php:2606
+#: inc/class-branda-admin.php:2607
 #, php-format
 msgid "Module %s was updated."
 msgstr ""
 
-#: inc/class-branda-admin.php:2656
+#: inc/class-branda-admin.php:2657
 msgid "Activate Modules"
 msgstr ""
 
-#: inc/class-branda-admin.php:2657
+#: inc/class-branda-admin.php:2658
 msgid "Choose the modules you want to activate. Each module helps you white label a specific part of your website. If you’re not sure or forget to activate any module now, you can always do that later."
+msgstr ""
+
+#: inc/class-branda-admin.php:2902
+msgctxt "Post Type General Name"
+msgid "Email Logs"
+msgstr ""
+
+#: inc/class-branda-admin.php:2903
+msgctxt "Post Type Singular Name"
+msgid "Email Log"
+msgstr ""
+
+#: inc/class-branda-admin.php:2906
+msgid "Email Log"
+msgstr ""
+
+#: inc/class-branda-admin.php:2907
+msgid "Post Type Description"
 msgstr ""
 
 #: inc/class-branda-base.php:169
 #: inc/class-branda-helper.php:3142
 #: inc/modules/emails/google-oauth.php:146
-#: inc/modules/emails/smtp.php:614
+#: inc/modules/emails/smtp.php:622
 #: inc/modules/utilities/tracking-codes-list-table.php:45
 #: inc/modules/utilities/tracking-codes-list-table.php:47
 msgid "Unknown"
@@ -1219,7 +1237,7 @@ msgstr ""
 #: inc/class-simple-options.php:1393
 #: inc/modules/admin/bar.php:713
 #: inc/modules/admin/bar.php:1714
-#: inc/modules/emails/smtp.php:499
+#: inc/modules/emails/smtp.php:507
 #: inc/modules/emails/template.php:1091
 #: inc/modules/front-end/author-box.php:1482
 #: inc/modules/login-screen/login-screen.php:2685
@@ -2203,7 +2221,7 @@ msgstr ""
 #: inc/modules/admin/bar.php:850
 #: inc/modules/admin/menu.php:679
 #: inc/modules/admin/menu.php:698
-#: inc/modules/emails/smtp.php:452
+#: inc/modules/emails/smtp.php:460
 #: inc/modules/login-screen/login-screen.php:1992
 #: inc/modules/utilities/permissions.php:162
 #: views/admin/modules/admin-bar/tmpl/panes/general.php:23
@@ -2921,9 +2939,9 @@ msgstr ""
 #: inc/modules/content/header.php:243
 #: inc/modules/content/header.php:253
 #: inc/modules/emails/google-oauth.php:752
-#: inc/modules/emails/smtp.php:432
-#: inc/modules/emails/smtp.php:472
-#: inc/modules/emails/smtp.php:505
+#: inc/modules/emails/smtp.php:440
+#: inc/modules/emails/smtp.php:480
+#: inc/modules/emails/smtp.php:513
 #: inc/modules/front-end/author-box.php:307
 #: inc/modules/front-end/author-box.php:833
 #: inc/modules/front-end/cookie-notice.php:271
@@ -2945,9 +2963,9 @@ msgstr ""
 #: inc/modules/content/header.php:244
 #: inc/modules/content/header.php:254
 #: inc/modules/emails/google-oauth.php:751
-#: inc/modules/emails/smtp.php:431
-#: inc/modules/emails/smtp.php:471
-#: inc/modules/emails/smtp.php:504
+#: inc/modules/emails/smtp.php:439
+#: inc/modules/emails/smtp.php:479
+#: inc/modules/emails/smtp.php:512
 #: inc/modules/front-end/author-box.php:306
 #: inc/modules/front-end/author-box.php:834
 #: inc/modules/front-end/cookie-notice.php:272
@@ -3051,216 +3069,198 @@ msgstr ""
 msgid "Insert any content that you like into the header of all of the subsites on your network."
 msgstr ""
 
-#: inc/modules/emails/email-logs-cpt.php:264
-msgctxt "Post Type General Name"
-msgid "Email Logs"
-msgstr ""
-
-#: inc/modules/emails/email-logs-cpt.php:265
-msgctxt "Post Type Singular Name"
-msgid "Email Log"
-msgstr ""
-
-#: inc/modules/emails/email-logs-cpt.php:268
-msgid "Email Log"
-msgstr ""
-
-#: inc/modules/emails/email-logs-cpt.php:269
-msgid "Post Type Description"
-msgstr ""
-
-#: inc/modules/emails/email-logs.php:140
+#: inc/modules/emails/email-logs.php:138
 msgid "Today"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:141
+#: inc/modules/emails/email-logs.php:139
 msgid "Yesterday"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:142
+#: inc/modules/emails/email-logs.php:140
 msgid "Last 7 Days"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:143
+#: inc/modules/emails/email-logs.php:141
 msgid "Last 30 Days"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:144
+#: inc/modules/emails/email-logs.php:142
 msgid "This Month"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:145
+#: inc/modules/emails/email-logs.php:143
 msgid "Last Month"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:170
+#: inc/modules/emails/email-logs.php:168
 msgid "Su"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:171
+#: inc/modules/emails/email-logs.php:169
 msgid "Mo"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:172
+#: inc/modules/emails/email-logs.php:170
 msgid "Tu"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:173
+#: inc/modules/emails/email-logs.php:171
 msgid "We"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:174
+#: inc/modules/emails/email-logs.php:172
 msgid "Th"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:175
+#: inc/modules/emails/email-logs.php:173
 msgid "Fr"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:176
+#: inc/modules/emails/email-logs.php:174
 msgid "Sa"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:179
+#: inc/modules/emails/email-logs.php:177
 msgid "January"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:180
+#: inc/modules/emails/email-logs.php:178
 msgid "February"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:181
+#: inc/modules/emails/email-logs.php:179
 msgid "March"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:182
+#: inc/modules/emails/email-logs.php:180
 msgid "April"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:183
+#: inc/modules/emails/email-logs.php:181
 msgid "May"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:184
+#: inc/modules/emails/email-logs.php:182
 msgid "June"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:185
+#: inc/modules/emails/email-logs.php:183
 msgid "July"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:186
+#: inc/modules/emails/email-logs.php:184
 msgid "August"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:187
+#: inc/modules/emails/email-logs.php:185
 msgid "September"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:188
+#: inc/modules/emails/email-logs.php:186
 msgid "October"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:189
+#: inc/modules/emails/email-logs.php:187
 msgid "November"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:190
+#: inc/modules/emails/email-logs.php:188
 msgid "December"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:205
+#: inc/modules/emails/email-logs.php:203
 msgid "Send Email"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:277
+#: inc/modules/emails/email-logs.php:275
 msgid "Export Logs"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:278
+#: inc/modules/emails/email-logs.php:276
 msgid "Export all email log data to CSV file."
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:299
+#: inc/modules/emails/email-logs.php:297
 msgid "Log limit"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:301
+#: inc/modules/emails/email-logs.php:299
 msgid "Set the limit to 0 if you would like to keep your entire log history."
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:311
+#: inc/modules/emails/email-logs.php:309
 msgid "Clear log"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:312
+#: inc/modules/emails/email-logs.php:310
 msgid "Set the limit, after which the history of logs will be cleared."
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:485
+#: inc/modules/emails/email-logs.php:483
 msgid "Delete log"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:486
+#: inc/modules/emails/email-logs.php:484
 msgid "Are you sure you wish to permanently delete this log?"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:488
+#: inc/modules/emails/email-logs.php:486
 msgid "Delete logs"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:489
+#: inc/modules/emails/email-logs.php:487
 msgid "Are you sure you wish to permanently delete these logs?"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:508
+#: inc/modules/emails/email-logs.php:506
 msgid "Email log was deleted."
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:530
+#: inc/modules/emails/email-logs.php:528
 msgid "Selected Email logs were deleted!"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:553
+#: inc/modules/emails/email-logs.php:551
 msgid "Descending"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:554
+#: inc/modules/emails/email-logs.php:552
 msgid "Ascending"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:671
+#: inc/modules/emails/email-logs.php:669
 #: inc/modules/emails/template.php:189
 msgid "From Name"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:672
+#: inc/modules/emails/email-logs.php:670
 #: inc/modules/emails/template.php:190
 #: views/admin/modules/email-logs/pagination-section.php:102
 msgid "From Email"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:673
+#: inc/modules/emails/email-logs.php:671
 #: views/admin/modules/email-logs/pagination-section.php:115
 msgid "Recipient"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:674
+#: inc/modules/emails/email-logs.php:672
 msgid "Sent at"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:675
+#: inc/modules/emails/email-logs.php:673
 #: inc/modules/emails/registration.php:192
 #: inc/modules/emails/registration.php:226
 #: inc/modules/emails/registration.php:260
 msgid "Subject"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:716
+#: inc/modules/emails/email-logs.php:714
 msgid "Get detailed information about your emails with Branda Pro. You can check recipients information and export all log history. Try it today with a WPMU DEV Membership!"
 msgstr ""
 
-#: inc/modules/emails/email-logs.php:739
+#: inc/modules/emails/email-logs.php:737
 #, php-format
 msgid "Enable %1$sthe SMTP module%2$s to start storing the email log history."
 msgstr ""
@@ -3270,33 +3270,33 @@ msgid "Send a dummy email to test the Gmail API configurations."
 msgstr ""
 
 #: inc/modules/emails/google-oauth.php:182
-#: inc/modules/emails/smtp.php:179
+#: inc/modules/emails/smtp.php:182
 #: inc/modules/emails/template.php:967
 msgid "Unable to send: wrong email address."
 msgstr ""
 
 #. translators: %s: site title
 #: inc/modules/emails/google-oauth.php:210
-#: inc/modules/emails/smtp.php:243
+#: inc/modules/emails/smtp.php:241
 #, php-format
 msgid "This is test email sent from \"%s\""
 msgstr ""
 
 #: inc/modules/emails/google-oauth.php:212
-#: inc/modules/emails/smtp.php:244
+#: inc/modules/emails/smtp.php:242
 msgid "This is a test mail..."
 msgstr ""
 
 #. translators: %s: send date
 #: inc/modules/emails/google-oauth.php:216
-#: inc/modules/emails/smtp.php:247
+#: inc/modules/emails/smtp.php:245
 #, php-format
 msgid "Send date: %s."
 msgstr ""
 
 #. translators: %s: site url
 #: inc/modules/emails/google-oauth.php:222
-#: inc/modules/emails/smtp.php:252
+#: inc/modules/emails/smtp.php:250
 #, php-format
 msgid "Site: %s."
 msgstr ""
@@ -3308,7 +3308,7 @@ msgid "Test email sent to <strong>%s</strong>."
 msgstr ""
 
 #: inc/modules/emails/google-oauth.php:632
-#: inc/modules/emails/smtp.php:152
+#: inc/modules/emails/smtp.php:155
 #: inc/modules/emails/template.php:1156
 msgid "Send Test Email"
 msgstr ""
@@ -3341,33 +3341,33 @@ msgstr ""
 
 #: inc/modules/emails/google-oauth.php:730
 #: inc/modules/emails/headers.php:94
-#: inc/modules/emails/smtp.php:411
+#: inc/modules/emails/smtp.php:419
 msgid "Sender email address"
 msgstr ""
 
 #: inc/modules/emails/google-oauth.php:731
-#: inc/modules/emails/smtp.php:412
+#: inc/modules/emails/smtp.php:420
 msgid "You can specify the email address that emails should be sent from."
 msgstr ""
 
 #: inc/modules/emails/google-oauth.php:736
 #: inc/modules/emails/headers.php:98
-#: inc/modules/emails/smtp.php:416
+#: inc/modules/emails/smtp.php:424
 msgid "Sender name"
 msgstr ""
 
 #: inc/modules/emails/google-oauth.php:737
-#: inc/modules/emails/smtp.php:417
+#: inc/modules/emails/smtp.php:425
 msgid "Enter the sender name"
 msgstr ""
 
 #: inc/modules/emails/google-oauth.php:739
-#: inc/modules/emails/smtp.php:419
+#: inc/modules/emails/smtp.php:427
 msgid "For example, you can use your website’s title as the default sender name."
 msgstr ""
 
 #: inc/modules/emails/google-oauth.php:748
-#: inc/modules/emails/smtp.php:428
+#: inc/modules/emails/smtp.php:436
 msgid "From name replacement"
 msgstr ""
 
@@ -3554,140 +3554,140 @@ msgstr ""
 msgid "Blog registration has been disabled. Click <a href=\"%s\">here</a> to enable the site registration for your network."
 msgstr ""
 
-#: inc/modules/emails/smtp.php:93
+#: inc/modules/emails/smtp.php:96
 msgid "Field \"To\" can not be empty!"
 msgstr ""
 
-#: inc/modules/emails/smtp.php:94
+#: inc/modules/emails/smtp.php:97
 msgid "Sending message, please wait..."
 msgstr ""
 
-#: inc/modules/emails/smtp.php:95
+#: inc/modules/emails/smtp.php:98
 msgid "The test message was send successful."
 msgstr ""
 
-#: inc/modules/emails/smtp.php:271
+#: inc/modules/emails/smtp.php:269
 msgid "Hey! Failed to send the test email. Please check your SMTP credentials and try again."
 msgstr ""
 
-#: inc/modules/emails/smtp.php:276
+#: inc/modules/emails/smtp.php:274
 #, php-format
 msgid "Test email sent to %s."
 msgstr ""
 
-#: inc/modules/emails/smtp.php:295
+#: inc/modules/emails/smtp.php:293
 msgid "Please configure credentials first."
 msgstr ""
 
-#: inc/modules/emails/smtp.php:408
+#: inc/modules/emails/smtp.php:416
 msgid "Choose the default from email id and from name for all of your WordPress outgoing emails."
 msgstr ""
 
-#: inc/modules/emails/smtp.php:429
+#: inc/modules/emails/smtp.php:437
 msgid "Set your own from name for each email sent from your website. Be carefully since it will override the from name provided by other plugins such as Contact Form."
 msgstr ""
 
-#: inc/modules/emails/smtp.php:440
+#: inc/modules/emails/smtp.php:448
 msgid "SMTP Server"
 msgstr ""
 
-#: inc/modules/emails/smtp.php:441
+#: inc/modules/emails/smtp.php:449
 msgid "Choose the SMTP server options such as host, port details, encryption etc."
 msgstr ""
 
-#: inc/modules/emails/smtp.php:444
+#: inc/modules/emails/smtp.php:452
 msgid "Host"
 msgstr ""
 
-#: inc/modules/emails/smtp.php:445
+#: inc/modules/emails/smtp.php:453
 msgid "Enter the host name of your mail server."
 msgstr ""
 
-#: inc/modules/emails/smtp.php:446
+#: inc/modules/emails/smtp.php:454
 msgid "E.g. smtp.example.com"
 msgstr ""
 
-#: inc/modules/emails/smtp.php:450
+#: inc/modules/emails/smtp.php:458
 msgid "Encryption"
 msgstr ""
 
-#: inc/modules/emails/smtp.php:453
+#: inc/modules/emails/smtp.php:461
 msgid "SSL"
 msgstr ""
 
-#: inc/modules/emails/smtp.php:454
+#: inc/modules/emails/smtp.php:462
 msgid "TLS"
 msgstr ""
 
-#: inc/modules/emails/smtp.php:457
+#: inc/modules/emails/smtp.php:465
 msgid "Choose the encryption for your mail server. For most servers, SSL is recommended."
 msgstr ""
 
-#: inc/modules/emails/smtp.php:461
+#: inc/modules/emails/smtp.php:469
 msgid "Port"
 msgstr ""
 
-#: inc/modules/emails/smtp.php:462
+#: inc/modules/emails/smtp.php:470
 msgid "Choose the SMTP port as recommended by your mail server."
 msgstr ""
 
-#: inc/modules/emails/smtp.php:468
+#: inc/modules/emails/smtp.php:476
 msgid "Insecure SSL certificates"
 msgstr ""
 
-#: inc/modules/emails/smtp.php:469
+#: inc/modules/emails/smtp.php:477
 msgid "You can enable the insecure and self-signed SSL certificates on SMTP server. However, it's highly recommended to keep this option disabled."
 msgstr ""
 
-#: inc/modules/emails/smtp.php:479
+#: inc/modules/emails/smtp.php:487
 msgid "SMTP Authentication"
 msgstr ""
 
-#: inc/modules/emails/smtp.php:480
+#: inc/modules/emails/smtp.php:488
 msgid "Choose whether you want to use SMTPAuth or not. It is recommended to keep this enabled."
 msgstr ""
 
-#: inc/modules/emails/smtp.php:483
+#: inc/modules/emails/smtp.php:491
 msgid "Username"
 msgstr ""
 
-#: inc/modules/emails/smtp.php:484
+#: inc/modules/emails/smtp.php:492
 msgid "Enter your SMTP username here"
 msgstr ""
 
-#: inc/modules/emails/smtp.php:491
+#: inc/modules/emails/smtp.php:499
 #: inc/modules/login-screen/login-screen.php:1523
 #: views/admin/modules/signup-password/password-fields.php:2
 msgid "Password"
 msgstr ""
 
-#: inc/modules/emails/smtp.php:492
+#: inc/modules/emails/smtp.php:500
 msgid "Enter your SMTP password here"
 msgstr ""
 
-#: inc/modules/emails/smtp.php:498
+#: inc/modules/emails/smtp.php:506
 msgid "Set new SMTP password"
 msgstr ""
 
-#: inc/modules/emails/smtp.php:526
+#: inc/modules/emails/smtp.php:534
 msgid "Conflicted Plugins"
 msgstr ""
 
-#: inc/modules/emails/smtp.php:527
-#: inc/modules/emails/smtp.php:531
+#: inc/modules/emails/smtp.php:535
+#: inc/modules/emails/smtp.php:539
 msgid "Branda has detected the following plugins are activated. Please deactivate them to prevent conflicts."
 msgstr ""
 
-#: inc/modules/emails/smtp.php:555
+#: inc/modules/emails/smtp.php:563
 msgid "The SMTP password cannot be encrypted when stored in the database, possibly due to a missing or outdated <a href=\"https://www.php.net/manual/en/sodium.installation.php\" target=\"_blank\">Sodium library</a>."
 msgstr ""
 
-#: inc/modules/emails/smtp.php:583
+#: inc/modules/emails/smtp.php:591
 #, php-format
 msgid "Please configure your <a href=\"%s\">SMTP credentials</a> in order to send email using SMTP module."
 msgstr ""
 
-#: inc/modules/emails/smtp.php:605
+#: inc/modules/emails/smtp.php:613
 msgid "Send a dummy email to test the SMTP configurations."
 msgstr ""
 
@@ -5131,11 +5131,11 @@ msgctxt "button"
 msgid "Add Signup Code"
 msgstr ""
 
-#: inc/modules/login-screen/signup-password.php:79
+#: inc/modules/login-screen/signup-password.php:80
 msgid "Passwords do not match."
 msgstr ""
 
-#: inc/modules/login-screen/signup-password.php:196
+#: inc/modules/login-screen/signup-password.php:198
 msgid ""
 "Howdy USERNAME,\n"
 "\n"

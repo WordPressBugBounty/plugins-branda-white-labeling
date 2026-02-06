@@ -59,7 +59,7 @@ if ( ! class_exists( 'Branda_Admin' ) ) {
 			/**
 			 * set and sanitize variables
 			 */
-			add_action( 'init', array( $this, 'set_and_sanitize_variables' ), 11 );
+			add_action( 'init', array( $this, 'set_and_sanitize_variables' ) );
 			/**
 			 * run stats
 			 */
@@ -82,12 +82,13 @@ if ( ! class_exists( 'Branda_Admin' ) ) {
 			 * @param array $modules available modules array.
 			 */
 			$this->modules = apply_filters( 'ultimatebranding_available_modules', $this->modules );
-			add_action( 'init', array( $this, 'load_modules' ), 11 );
+			add_action( 'init', array( $this, 'load_modules' ) );
 			add_action( 'init', array( $this, 'setup_translation' ) );
 			add_action( 'network_admin_menu', array( $this, 'network_admin_page' ) );
 			add_action( 'admin_menu', array( $this, 'admin_page' ) );
 			add_filter( 'admin_title', array( $this, 'admin_title' ), 10, 2 );
 			add_action( 'admin_head', array( $this, 'menu_style' ) );
+			add_action( 'init', array( $this, 'register_email_logs_cpt' ) );
 			/**
 			 * AJAX
 			 */
@@ -237,7 +238,7 @@ if ( ! class_exists( 'Branda_Admin' ) ) {
 			} else {
 				if ( is_network_admin() || ! is_multisite() ) {
 					$url              = 'https://wpmudev.com/project/ultimate-branding/?utm_source=branda&utm_medium=plugin&utm_campaign=branda_pluginlist_upgrade';
-					$links['upgrade'] = '<a href="' . esc_url( $url ) . '" aria-label="' . esc_attr( __( 'Limited-time Offer', 'ub' ) ) . '" target="_blank" style="color: #8D00B1;">' . esc_html__( 'Limited-time Offer', 'ub' ) . '</a>';
+					$links['upgrade'] = '<a href="' . esc_url( $url ) . '" aria-label="' . esc_attr( __( 'Get Branda Pro', 'ub' ) ) . '" target="_blank" style="color: #8D00B1;">' . esc_html__( 'Get Branda Pro', 'ub' ) . '</a>';
 				}
 			}
 			$actions = array_merge( $links, $actions );
@@ -736,8 +737,8 @@ if ( ! class_exists( 'Branda_Admin' ) ) {
 			if ( ! Branda_Helper::is_member() ) {
 				$menu = add_submenu_page(
 					'branding',
-					esc_html__( 'Limited-time Offer', 'ub' ),
-					esc_html__( 'Limited-time Offer', 'ub' ),
+					esc_html__( 'Get Branda Pro', 'ub' ),
+					esc_html__( 'Get Branda Pro', 'ub' ),
 					$capability,
 					'https://wpmudev.com/project/ultimate-branding/?utm_source=branda&utm_medium=plugin&utm_campaign=branda_submenu_upsell',
 				);
@@ -2891,6 +2892,38 @@ if ( ! class_exists( 'Branda_Admin' ) ) {
 				network_admin_url( 'admin.php' )
 			);
 			return $url;
+		}
+
+		/**
+		 * Register Custom Post Type for Email Logs
+		 */
+		public static function register_email_logs_cpt() {
+			$labels = array(
+				'name'          => _x( 'Email Logs', 'Post Type General Name', 'ub' ),
+				'singular_name' => _x( 'Email Log', 'Post Type Singular Name', 'ub' ),
+			);
+			$args   = array(
+				'label'               => __( 'Email Log', 'ub' ),
+				'description'         => __( 'Post Type Description', 'ub' ),
+				'labels'              => $labels,
+				'supports'            => array( 'title', 'editor', 'custom-fields' ),
+				'hierarchical'        => false,
+				'public'              => false,
+				'show_ui'             => false,
+				'show_in_menu'        => false,
+				'menu_position'       => 5,
+				'show_in_admin_bar'   => false,
+				'show_in_nav_menus'   => false,
+				'can_export'          => false,
+				'has_archive'         => false,
+				'exclude_from_search' => true,
+				'publicly_queryable'  => false,
+				'rewrite'             => false,
+				'capability_type'     => 'page',
+				'show_in_rest'        => false,
+			);
+
+			register_post_type( 'branda_email_log', $args );
 		}
 	}
 }

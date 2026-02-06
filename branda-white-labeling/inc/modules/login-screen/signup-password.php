@@ -21,7 +21,8 @@ if ( ! class_exists( 'Branda_Signup_Password' ) ) {
 			add_filter( 'wpmu_validate_user_signup', array( $this, 'password_filter' ) );
 			add_filter( 'signup_blogform', array( $this, 'password_fields_pass_through' ) );
 			add_filter( 'add_signup_meta', array( $this, 'password_meta_filter' ), 99 );
-			add_filter( 'random_password', array( $this, 'password_random_password_filter' ) );
+			add_action( 'wpmu_activate_user', array( $this, 'wpmu_activate_user_set_password' ), 10, 3 );
+			add_action( 'register_new_user', array( $this, 'register_new_user_set_password' ), 10, 1 );
 			add_filter( 'wp_new_user_notification_email', array( $this, 'new_user_notification_email' ), 10, 3 );
 			add_action( 'login_enqueue_scripts', array( $this, 'enqueue_style' ) );
 			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_style' ) );
@@ -87,7 +88,7 @@ if ( ! class_exists( 'Branda_Signup_Password' ) ) {
 			$password_1 = isset( $_POST['password_1'] ) ? $_POST['password_1'] : '';
 			if ( ! empty( $password_1 ) ) {
 				if ( 'yes' === $signup_password_use_encryption ) {
-					$password_1 = $this->wpmu_signup_password_encrypt( $password_1 );
+					$password_1 = $this->password_encrypt( $password_1 );
 				}
 				$add_meta = array( 'password' => $password_1 );
 				$meta     = array_merge( $add_meta, $meta );
@@ -95,43 +96,44 @@ if ( ! class_exists( 'Branda_Signup_Password' ) ) {
 			return $meta;
 		}
 
-		public function password_random_password_filter( $password ) {
-			global $wpdb, $signup_password_use_encryption;
-			if ( isset( $_GET['key'] ) && ! empty( $_GET['key'] ) ) {
-				$key = $_GET['key'];
-			} elseif ( isset( $_POST['key'] ) && ! empty( $_POST['key'] ) ) {
-				$key = $_POST['key'];
-			}
-			if ( ! empty( $_POST['password_1'] ) ) {
-				$password = $_POST['password_1'];
-			} elseif ( ! empty( $key ) ) {
-				$signup = $wpdb->get_row(
-					$wpdb->prepare( "SELECT * FROM $wpdb->signups WHERE activation_key = '%s'", $key )
-				);
-				if ( ! ( empty( $signup ) || $signup->active ) ) {
-					// check for password in signup meta
-					$meta = maybe_unserialize( $signup->meta );
-					if ( ! empty( $meta['password'] ) ) {
-						if ( 'yes' === $signup_password_use_encryption ) {
-							$password = $this->password_decrypt( $meta['password'] );
-						} else {
-							$password = $meta['password'];
-						}
+        /**
+         * Set a password for multisite user activation.
+         *
+         * @param int $user_id User ID.
+         * @param string $password Password (will be replaced if stored in meta).
+         * @param array $meta Signup meta.
+         *
+         * @since 3.4.29
+         */
+        public function wpmu_activate_user_set_password( $user_id, $password, $meta ) {
+            global $wpdb, $signup_password_use_encryption;
 
-						unset( $meta['password'] );
-						$meta = maybe_serialize( $meta );
-						$wpdb->update(
-							$wpdb->signups,
-							array( 'meta' => $meta ),
-							array( 'activation_key' => $key ),
-							array( '%s' ),
-							array( '%s' )
-						);
-					}
-				}
-			}
-			return $password;
-		}
+            if ( ! empty( $meta['password'] ) ) {
+                $stored_password = $meta['password'];
+                if ( 'yes' === $signup_password_use_encryption ) {
+                    $stored_password = $this->password_decrypt( $stored_password );
+                }
+
+                if ( ! empty( $stored_password ) ) {
+                    // Update user password
+                    wp_set_password( $stored_password, $user_id );
+                }
+            }
+        }
+
+        /**
+         * Set a password for single site user registration.
+         *
+         * @param int $user_id User ID.
+         *
+         * @since 3.4.29
+         */
+        public function register_new_user_set_password( $user_id ) {
+            $password_1 = $_POST['password_1'] ?? '';
+            if ( ! empty( $password_1 ) ) {
+                wp_set_password( $password_1, $user_id );
+            }
+        }
 
 		public function password_fields_pass_through() {
 			$password = '';
@@ -222,32 +224,44 @@ Thanks!
 			wp_enqueue_style( __CLASS__, $file, false, $ub_version );
 		}
 
-		/**
-		 * generate new password if is empty
-		 *
-		 * @since 1.9.6
-		 */
-		public function pre_insert_user_data( $data, $update, $id ) {
-			if ( is_multisite() ) {
-				global $wpdb;
-				$query  = $wpdb->prepare( "select meta from {$wpdb->signups} where user_login = %s", $data['user_login'] );
-				$result = $wpdb->get_var( $query );
-				$meta   = maybe_unserialize( $result );
-				if ( is_array( $meta ) && isset( $meta['password'] ) ) {
-					$data['user_pass'] = wp_hash_password( $meta['password'] );
-					unset( $meta['password'] );
-					$wpdb->update(
-						$wpdb->signups,
-						array( 'meta' => maybe_serialize( $meta ) ),
-						array( 'user_login' => $data['user_login'] )
-					);
-				}
-				return $data;
-			}
-			if ( empty( $data['user_pass'] ) && empty( $_POST['password_1'] ) ) {
-				$data['user_pass'] = wp_hash_password( wp_generate_password( 20, false ) );
-			}
-			return $data;
-		}
+        /**
+         * generate new password if is empty
+         *
+         * @since 1.9.6
+         */
+        public function pre_insert_user_data( $data, $update, $id ) {
+            if ( is_multisite() ) {
+                global $wpdb;
+                $query  = $wpdb->prepare( "select meta from {$wpdb->signups} where user_login = %s", $data['user_login'] );
+                $result = $wpdb->get_var( $query );
+                $meta   = maybe_unserialize( $result );
+                if ( is_array( $meta ) && isset( $meta['password'] ) ) {
+                    $stored_password = $meta['password'];
+                    global $signup_password_use_encryption;
+                    if ( 'yes' === $signup_password_use_encryption ) {
+                        $stored_password = $this->password_decrypt( $stored_password );
+                    }
+                    if ( ! empty( $stored_password ) ) {
+                        $data['user_pass'] = wp_hash_password( $stored_password );
+                    }
+                    unset( $meta['password'] );
+                    $wpdb->update(
+                            $wpdb->signups,
+                            array( 'meta' => maybe_serialize( $meta ) ),
+                            array( 'user_login' => $data['user_login'] )
+                    );
+                }
+
+                return $data;
+            }
+            if ( empty( $data['user_pass'] ) && empty( $_POST['password_1'] ) ) {
+                $data['user_pass'] = wp_hash_password( wp_generate_password( 20, false ) );
+            } elseif ( ! empty( $_POST['password_1'] ) ) {
+                // Set the password from POST data
+                $data['user_pass'] = wp_hash_password( $_POST['password_1'] );
+            }
+
+            return $data;
+        }
 	}
 }

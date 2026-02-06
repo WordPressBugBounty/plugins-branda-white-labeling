@@ -35,8 +35,6 @@ if ( ! class_exists( 'Branda_Email_Logs' ) ) {
 			// Change module content.
 			add_filter( 'branda_get_module_content', array( $this, 'change_main_content' ), 10, 2 );
 
-			add_action( 'init', array( 'Branda_Email_Logs_CPT', 'register_email_logs_cpt' ), 0 );
-
 			// `Delete` dialog attrs.
 			add_filter( 'branda_dialog_delete_attr', array( $this, 'dialog_delete_attr_filter' ), 10, 3 );
 

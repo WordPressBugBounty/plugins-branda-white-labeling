@@ -4,7 +4,7 @@ Plugin Name: Branda
 Plugin URI: https://wpmudev.com/project/ultimate-branding/
 Description: A complete white label and branding solution for multisite. Login images, favicons, remove WordPress links and branding, and much more.
 Author: WPMU DEV
-Version: 3.4.25
+Version: 3.4.29
 Author URI: https://wpmudev.com/
 Requires PHP: 7.4
 Text_domain: ub
@@ -85,7 +85,7 @@ if ( ! function_exists( 'branda_set_ub_version' ) ) {
 // Set up my location.
 add_action( 'init', function () {
 	set_ultimate_branding( __FILE__ );
-} );
+}, 9 );
 
 if ( ! defined( 'BRANDA_SUI_VERSION' ) ) {
 	define( 'BRANDA_SUI_VERSION', '2.12.23' );

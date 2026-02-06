@@ -58,7 +58,7 @@ if ( ! class_exists( 'Branda_Base' ) ) {
 			 *
 			 * @since 3.4.24
 			 */
-			add_action( 'init', array( $this, 'load_submodules' ), 11 );
+			add_action( 'init', array( $this, 'load_submodules' ) );
 		}
 
 		/**

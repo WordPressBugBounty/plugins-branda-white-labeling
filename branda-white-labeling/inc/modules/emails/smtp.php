@@ -46,6 +46,9 @@ if ( ! class_exists( 'Branda_SMTP' ) ) {
 				add_action( 'admin_notices', array( $this, 'configure_credentials_notice' ) );
 			}
 			add_action( 'phpmailer_init', array( $this, 'init_smtp' ), 999 );
+			// Use high priority to ensure our filters run after other plugins, allowing proper filter chain execution.
+			add_filter( 'wp_mail_from', array( $this, 'filter_mail_from_email' ), PHP_INT_MAX );
+			add_filter( 'wp_mail_from_name', array( $this, 'filter_mail_from_name' ), PHP_INT_MAX );
 			add_filter( 'ultimatebranding_settings_smtp', array( $this, 'admin_options_page' ) );
 			add_filter( 'ultimatebranding_settings_smtp_process', array( $this, 'update' ) );
 			add_filter( 'ultimatebranding_settings_smtp_reset', array( $this, 'reset_module' ) );
@@ -191,7 +194,9 @@ if ( ! class_exists( 'Branda_SMTP' ) ) {
 			}
 			$charset       = get_bloginfo( 'charset' );
 			$mail->CharSet = $charset;
-			$from_email    = $this->get_value( 'header', 'from_email', null, false );
+			// Use filtered values to ensure consistency with wp_mail() behavior
+			$from_email    = apply_filters( 'wp_mail_from', get_option( 'admin_email' ) );
+			$from_name     = apply_filters( 'wp_mail_from_name', get_option( 'blogname' ) );
 			$mail->IsSMTP();
 			// send plain text test email
 			$mail->ContentType = 'text/plain';
@@ -202,13 +207,6 @@ if ( ! class_exists( 'Branda_SMTP' ) ) {
 				$mail->SMTPAuth = true;
 				$mail->Username = $this->get_value( 'smtp_authentication', 'smtp_username', null, false );
 				$mail->Password = $this->decrypt( $this->get_value( 'smtp_authentication', 'smtp_password', null, false ) );
-			}
-
-			$force     = $this->get_value( 'header', 'from_name_force', null, false );
-			$from_name = $this->get_value( 'header', 'from_name', null, false );
-
-			if ( 'on' === $force && ! empty( $from_name ) ) {
-				$mail->FromName = $from_name;
 			}
 
 			/* Set the SMTPSecure value, if set to none, leave this blank */
@@ -232,7 +230,7 @@ if ( ! class_exists( 'Branda_SMTP' ) ) {
 			/* Set the other options */
 			$mail->Host = $this->get_value( 'server', 'smtp_host', null, false );
 			$mail->Port = $this->get_value( 'server', 'smtp_port', null, false );
-			$mail->SetFrom( $from_email, $mail->FromName );
+			$mail->SetFrom( $from_email, $from_name );
 
 			// Set Reply To header
 			$reply_to_email = $this->get_value( 'reply-to', 'email', null, false );
@@ -309,6 +307,37 @@ if ( ! class_exists( 'Branda_SMTP' ) ) {
 		}
 
 		/**
+		 * Filter the from email address.
+		 *
+		 * @param string $from_email The from email address.
+		 *
+		 * @return string
+		 */
+		public function filter_mail_from_email( $from_email ) {
+			$value = $this->get_value( 'header', 'from_email' );
+			if ( ! empty( $value ) && is_email( $value ) ) {
+				return $value;
+			}
+			return $from_email;
+		}
+
+		/**
+		 * Filter the from name.
+		 *
+		 * @param string $from_name The from name.
+		 *
+		 * @return string
+		 */
+		public function filter_mail_from_name( $from_name ) {
+			$force     = $this->get_value( 'header', 'from_name_force', null, false );
+			$value     = $this->get_value( 'header', 'from_name', null, false );
+			if ( 'on' === $force && ! empty( $value ) ) {
+				return $value;
+			}
+			return $from_name;
+		}
+
+		/**
 		 * Init SMTP
 		 *
 		 * @since 2.0.0
@@ -322,27 +351,6 @@ if ( ! class_exists( 'Branda_SMTP' ) ) {
 			}
 			/* Set the mailer type as per config above, this overrides the already called isMail method */
 			$phpmailer->IsSMTP();
-			/**
-			 * from name
-			 */
-			$from_name = $this->get_value( 'header', 'from_name', null, false );
-			$force     = $this->get_value( 'header', 'from_name_force', null, false );
-
-			if ( 'on' === $force && ! empty( $from_name ) ) {
-				$phpmailer->FromName = $from_name;
-			}
-
-			/**
-			 * from email
-			 */
-			$from_email = $this->get_value( 'header', 'from_email' );
-			/**
-			 * set PHPMailer
-			 */
-			if ( ! empty( $from_email ) ) {
-				$phpmailer->From = $from_email;
-			}
-
 			$phpmailer->SetFrom( $phpmailer->From, $phpmailer->FromName );
 			/* Set the SMTPSecure value */
 			$type = $this->get_value( 'server', 'smtp_type_encryption' );

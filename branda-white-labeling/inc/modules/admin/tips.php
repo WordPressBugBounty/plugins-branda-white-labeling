@@ -303,7 +303,7 @@ if ( ! class_exists( 'Branda_Admin_Panel_Tips' ) ) {
 						'nonce_dismiss' => $this->get_nonce_value( $post->ID, 'dismiss' ),
 						'nonce_hide'    => $this->get_nonce_value( $post->ID, 'hide' ),
 						'content'       => $content,
-						'title'         => apply_filters( 'the_title', $post->post_title ),
+						'title'         => apply_filters( 'the_title', $post->post_title, $post->ID ),
 						'user_id'       => get_current_user_id(),
 					);
 					$template = $this->get_template_name( 'tip' );

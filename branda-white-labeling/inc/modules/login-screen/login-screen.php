@@ -89,7 +89,7 @@ if ( ! class_exists( 'Branda_Login_Screen' ) ) {
 			 *
 			 * @since 1.9.5
 			 */
-			add_action( 'after_setup_theme', array( $this, 'signup_password_init' ) );
+			add_action( 'init', array( $this, 'signup_password_init' ), 11 );
 			/**
 			 * Force language on login form
 			 *

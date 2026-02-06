@@ -721,8 +721,10 @@ if ( ! class_exists( 'Branda_Color_Schemes' ) ) {
 		 * @since 3.1.0
 		 */
 		public function bar_logo_args( $args ) {
-			$colors       = array_merge( $this->defaults, $this->get_value( 'settings', 'ultimate' ) );
+			$ultimate     = $this->get_value( 'settings', 'ultimate' ) ?: array();
+			$colors       = array_merge( $this->defaults, $ultimate );
 			$args['base'] = $colors['admin_bar_icon_color'];
+
 			return $args;
 		}
 	}
