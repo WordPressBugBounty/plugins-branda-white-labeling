@@ -1,15 +1,15 @@
-# Copyright (C) 2025 WPMU DEV
+# Copyright (C) 2026 WPMU DEV
 # This file is distributed under the same license as the Branda Pro plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Branda Pro 3.4.29\n"
+"Project-Id-Version: Branda Pro 3.4.31\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/build\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-12-29T08:41:11+00:00\n"
+"POT-Creation-Date: 2026-06-11T04:09:00+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: ub\n"
@@ -162,7 +162,7 @@ msgid "Choose which color schemes will be available within the user profile, for
 msgstr ""
 
 #: etc/config.php:263
-#: inc/class-branda-helper.php:4663
+#: inc/class-branda-helper.php:4665
 #: inc/modules/admin/bar.php:578
 msgid "Custom CSS"
 msgstr ""
@@ -493,18 +493,22 @@ msgstr ""
 msgid "Misc"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:106
 #: inc/class-branda-admin.php:107
 msgid "Success! Your changes were successfully saved!"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:107
 #: inc/class-branda-admin.php:108
 msgid "There was an error, please try again."
 msgstr ""
 
+#: inc/class-branda-admin-free.php:108
 #: inc/class-branda-admin.php:109
 msgid "Section was reset to defaults."
 msgstr ""
 
+#: inc/class-branda-admin-free.php:109
 #: inc/class-branda-admin.php:110
 #: inc/class-branda-helper.php:408
 #: inc/class-branda-helper.php:1748
@@ -515,6 +519,8 @@ msgstr ""
 msgid "Something went wrong!"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:110
+#: inc/class-branda-admin-free.php:1681
 #: inc/class-branda-admin.php:111
 #: inc/class-branda-admin.php:1764
 #: inc/class-simple-options.php:1807
@@ -522,25 +528,33 @@ msgstr ""
 msgid "Nope! Security check failed!"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:111
 #: inc/class-branda-admin.php:112
 msgid "Missing required data!"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:112
 #: inc/class-branda-admin.php:113
 msgid "This user login doesn't exist!"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:193
 #: inc/class-branda-admin.php:194
 msgctxt "admin title"
 msgid "Branda"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:194
+#: inc/class-branda-admin-free.php:205
 #: inc/class-branda-admin.php:195
 #: inc/class-branda-admin.php:206
 msgctxt "admin title separator"
 msgid " &lsaquo; "
 msgstr ""
 
+#: inc/class-branda-admin-free.php:230
+#: inc/class-branda-admin-free.php:689
+#: inc/class-branda-admin-free.php:690
 #: inc/class-branda-admin.php:231
 #: inc/class-branda-admin.php:703
 #: inc/class-branda-admin.php:704
@@ -550,59 +564,60 @@ msgstr ""
 msgid "Dashboard"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:232
 #: inc/class-branda-admin.php:233
+#: views/admin/common/footer-free.php:14
 #: views/admin/common/footer.php:15
 #: views/admin/common/footer.php:29
 msgid "Docs"
 msgstr ""
 
-#: inc/class-branda-admin.php:236
-msgid "Renew Membership"
-msgstr ""
-
+#: inc/class-branda-admin-free.php:235
+#: inc/class-branda-admin-free.php:725
+#: inc/class-branda-admin-free.php:726
 #: inc/class-branda-admin.php:241
 #: inc/class-branda-admin.php:740
 #: inc/class-branda-admin.php:741
 msgid "Get Branda Pro"
 msgstr ""
 
-#: inc/class-branda-admin.php:261
-msgid "View Details"
-msgstr ""
-
-#: inc/class-branda-admin.php:263
-msgid "Premium Support"
-msgstr ""
-
+#: inc/class-branda-admin-free.php:253
 #: inc/class-branda-admin.php:266
 msgid "By"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:255
 #: inc/class-branda-admin.php:268
 msgid "Rate Branda"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:256
 #: inc/class-branda-admin.php:269
 #: views/admin/common/footer.php:14
 msgid "Support"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:259
 #: inc/class-branda-admin.php:273
+#: views/admin/common/footer-free.php:13
 #: views/admin/common/footer.php:13
 #: views/admin/common/footer.php:28
 msgid "Roadmap"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:438
 #: inc/class-branda-admin.php:452
 #: inc/modules/front-end/document.php:211
 #: views/admin/modules/admin-bar/dashicons.php:51
 msgid "Clear"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:439
 #: inc/class-branda-admin.php:453
 msgid "Clear color"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:440
 #: inc/class-branda-admin.php:454
 #: inc/class-branda-helper.php:2780
 #: inc/modules/content/footer.php:126
@@ -620,62 +635,80 @@ msgstr ""
 msgid "Default"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:441
 #: inc/class-branda-admin.php:455
 msgid "Select default color"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:442
 #: inc/class-branda-admin.php:456
 msgid "Select Color"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:443
 #: inc/class-branda-admin.php:457
 msgid "Color value"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:453
 #: inc/class-branda-admin.php:467
 msgid "Are you sure to replace all section data?"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:454
 #: inc/class-branda-admin.php:468
 msgid "Please select a source module first."
 msgstr ""
 
+#: inc/class-branda-admin-free.php:457
 #: inc/class-branda-admin.php:471
 msgid "Are you sure? This will replace all entered data by defaults."
 msgstr ""
 
+#: inc/class-branda-admin-free.php:460
 #: inc/class-branda-admin.php:474
 msgid "Please select some modules first or skip this step."
 msgstr ""
 
+#: inc/class-branda-admin-free.php:464
 #: inc/class-branda-admin.php:478
 msgid "Entered value is above field limit!"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:465
 #: inc/class-branda-admin.php:479
 msgid "Entered value is below field limit!"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:468
 #: inc/class-branda-admin.php:482
 msgid "Changes are not saved, are you sure you want to navigate away?"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:470
 #: inc/class-branda-admin.php:484
 msgid "Try to fetch feeds data, please wait..."
 msgstr ""
 
+#: inc/class-branda-admin-free.php:471
 #: inc/class-branda-admin.php:485
 msgid "No feed found, try to another site or enter data manually."
 msgstr ""
 
+#: inc/class-branda-admin-free.php:474
 #: inc/class-branda-admin.php:488
 msgid "Whoops, only .json filetypes are allowed."
 msgstr ""
 
+#: inc/class-branda-admin-free.php:477
 #: inc/class-branda-admin.php:491
 msgid "Whoops, only images are allowed."
 msgstr ""
 
+#: inc/class-branda-admin-free.php:481
+#: inc/class-branda-admin-free.php:1321
+#: inc/class-branda-admin-free.php:1463
+#: inc/class-branda-admin-free.php:1815
 #: inc/class-branda-admin.php:495
 #: inc/class-branda-admin.php:1337
 #: inc/class-branda-admin.php:1516
@@ -683,6 +716,7 @@ msgstr ""
 msgid "Save Changes"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:554
 #: inc/class-branda-admin.php:568
 #, php-format
 msgid "%d new module was activated successfully."
@@ -690,6 +724,7 @@ msgid_plural "%d new modules was activated successfully."
 msgstr[0] ""
 msgstr[1] ""
 
+#: inc/class-branda-admin-free.php:568
 #: inc/class-branda-admin.php:582
 #, php-format
 msgid "%d module was deactivated successfully."
@@ -697,28 +732,34 @@ msgid_plural "%d modules was deactivated successfully."
 msgstr[0] ""
 msgstr[1] ""
 
+#: inc/class-branda-admin-free.php:586
 #: inc/class-branda-admin.php:600
 msgid "42: The answer to life, the universe and everything."
 msgstr ""
 
+#: inc/class-branda-admin-free.php:587
 #: inc/class-branda-admin.php:601
 msgid "Douglas Adams"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:591
 #: inc/class-branda-admin.php:605
 msgid "Nothing was changed, nothing to activate or deactivate."
 msgstr ""
 
+#: inc/class-branda-admin-free.php:674
 #: inc/class-branda-admin.php:688
 #: inc/class-branda-public.php:54
 #: inc/modules/admin/color-schemes.php:528
 msgid "Branda"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:932
 #: inc/class-branda-admin.php:948
 msgid "none"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:1307
 #: inc/class-branda-admin.php:1323
 #: inc/modules/utilities/tracking-codes-list-table.php:113
 #: views/admin/modules/smtp/plugins-list.php:5
@@ -726,39 +767,47 @@ msgstr ""
 msgid "Deactivate"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:1344
 #: inc/class-branda-admin.php:1360
 #: inc/modules/utilities/tracking-codes-list-table.php:112
 msgid "Activate"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:1444
 #: inc/class-branda-admin.php:1491
 #, php-format
 msgid "Made with %s by WPMU DEV"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:1537
 #: inc/class-branda-admin.php:1590
 msgid "There is no modules in selected group!"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:1696
 #: inc/class-branda-admin.php:1779
 #, php-format
 msgid "%s module is active now."
 msgstr ""
 
+#: inc/class-branda-admin-free.php:1707
 #: inc/class-branda-admin.php:1790
 #, php-format
 msgid "Module %s was deactivated without errors."
 msgstr ""
 
+#: inc/class-branda-admin-free.php:1743
 #: inc/class-branda-admin.php:1826
 msgid "This module is not active!"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:2043
 #: inc/class-branda-admin.php:2126
 #, php-format
 msgid "%s module was reset."
 msgstr ""
 
+#: inc/class-branda-admin-free.php:2372
 #: inc/class-branda-admin.php:2455
 #: inc/class-branda-helper.php:1758
 #: inc/class-branda-helper.php:2322
@@ -784,6 +833,7 @@ msgstr ""
 msgid "Background"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:2373
 #: inc/class-branda-admin.php:2456
 #: inc/class-branda-helper.php:1882
 #: inc/class-branda-helper.php:2196
@@ -794,11 +844,13 @@ msgstr ""
 msgid "Logo"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:2374
 #: inc/class-branda-admin.php:2457
 #: inc/class-branda-helper.php:2907
 msgid "Social Media Settings"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:2375
 #: inc/class-branda-admin.php:2458
 #: inc/modules/front-end/author-box.php:1569
 #: inc/modules/front-end/db-error-page.php:655
@@ -806,42 +858,62 @@ msgstr ""
 msgid "Social Media"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:2427
 #: inc/class-branda-admin.php:2510
 msgid "Please configure source module first!"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:2524
 #: inc/class-branda-admin.php:2607
 #, php-format
 msgid "Module %s was updated."
 msgstr ""
 
+#: inc/class-branda-admin-free.php:2574
 #: inc/class-branda-admin.php:2657
 msgid "Activate Modules"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:2575
 #: inc/class-branda-admin.php:2658
 msgid "Choose the modules you want to activate. Each module helps you white label a specific part of your website. If you’re not sure or forget to activate any module now, you can always do that later."
 msgstr ""
 
+#: inc/class-branda-admin-free.php:2819
 #: inc/class-branda-admin.php:2902
 msgctxt "Post Type General Name"
 msgid "Email Logs"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:2820
 #: inc/class-branda-admin.php:2903
 msgctxt "Post Type Singular Name"
 msgid "Email Log"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:2823
 #: inc/class-branda-admin.php:2906
 msgid "Email Log"
 msgstr ""
 
+#: inc/class-branda-admin-free.php:2824
 #: inc/class-branda-admin.php:2907
 msgid "Post Type Description"
 msgstr ""
 
-#: inc/class-branda-base.php:169
+#: inc/class-branda-admin.php:236
+msgid "Renew Membership"
+msgstr ""
+
+#: inc/class-branda-admin.php:261
+msgid "View Details"
+msgstr ""
+
+#: inc/class-branda-admin.php:263
+msgid "Premium Support"
+msgstr ""
+
+#: inc/class-branda-base.php:170
 #: inc/class-branda-helper.php:3142
 #: inc/modules/emails/google-oauth.php:146
 #: inc/modules/emails/smtp.php:622
@@ -850,8 +922,8 @@ msgstr ""
 msgid "Unknown"
 msgstr ""
 
-#: inc/class-branda-base.php:213
-#: inc/class-branda-base.php:237
+#: inc/class-branda-base.php:214
+#: inc/class-branda-base.php:238
 msgid "Module does not exists."
 msgstr ""
 
@@ -1663,7 +1735,7 @@ msgstr ""
 #: inc/modules/login-screen/login-screen.php:2351
 #: inc/modules/login-screen/login-screen.php:2532
 #: inc/modules/utilities/tracking-codes-list-table.php:61
-#: views/admin/dashboard/modules/one-row.php:9
+#: views/admin/dashboard/modules/one-row.php:15
 #: views/admin/modules/tracking-codes/dialogs/edit.php:34
 msgid "Active"
 msgstr ""
@@ -1846,29 +1918,29 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
-#: inc/class-branda-helper.php:4654
+#: inc/class-branda-helper.php:4656
 msgid "For more advanced customization options use custom CSS."
 msgstr ""
 
-#: inc/class-branda-helper.php:4715
+#: inc/class-branda-helper.php:4717
 msgid "Template file does not exists!"
 msgstr ""
 
-#: inc/class-branda-helper.php:4719
+#: inc/class-branda-helper.php:4721
 #, php-format
 msgid "Template file %s does not exists!"
 msgstr ""
 
-#: inc/class-branda-helper.php:4740
+#: inc/class-branda-helper.php:4746
 msgid "Pro"
 msgstr ""
 
-#: inc/class-branda-helper.php:4854
+#: inc/class-branda-helper.php:4857
 #, php-format
 msgid "User registration has been disabled. Click <a href=\"%s\">here</a> to enable the user registration for your site."
 msgstr ""
 
-#: inc/class-branda-helper.php:4886
+#: inc/class-branda-helper.php:4889
 msgid "Network Administrator"
 msgstr ""
 
@@ -1990,12 +2062,12 @@ msgstr ""
 msgid "Remove file"
 msgstr ""
 
-#: inc/functions.php:308
+#: inc/functions.php:313
 #, php-format
 msgid "%1$s module is deprecated. Please use %2$s module."
 msgstr ""
 
-#: inc/functions.php:317
+#: inc/functions.php:322
 #, php-format
 msgid "Module will be removed in <b>Branda %s version</b>."
 msgstr ""
@@ -3069,6 +3141,11 @@ msgstr ""
 msgid "Insert any content that you like into the header of all of the subsites on your network."
 msgstr ""
 
+#: inc/modules/emails/email-logs-free.php:61
+#: inc/modules/emails/email-logs.php:714
+msgid "Get detailed information about your emails with Branda Pro. You can check recipients information and export all log history. Try it today with a WPMU DEV Membership!"
+msgstr ""
+
 #: inc/modules/emails/email-logs.php:138
 msgid "Today"
 msgstr ""
@@ -3254,10 +3331,6 @@ msgstr ""
 #: inc/modules/emails/registration.php:226
 #: inc/modules/emails/registration.php:260
 msgid "Subject"
-msgstr ""
-
-#: inc/modules/emails/email-logs.php:714
-msgid "Get detailed information about your emails with Branda Pro. You can check recipients information and export all log history. Try it today with a WPMU DEV Membership!"
 msgstr ""
 
 #: inc/modules/emails/email-logs.php:737
@@ -4122,6 +4195,7 @@ msgstr ""
 #: inc/modules/login-screen/login-screen.php:2543
 #: inc/modules/login-screen/login-screen.php:2568
 #: inc/modules/login-screen/login-screen.php:2593
+#: views/admin/common/footer-free.php:17
 #: views/admin/common/footer.php:19
 #: views/admin/common/footer.php:32
 msgid "Privacy Policy"
@@ -6519,9 +6593,26 @@ msgstr ""
 msgid "Send"
 msgstr ""
 
+#: views/admin/common/footer-free.php:11
+#: views/admin/common/footer.php:26
+msgid "Free Plugins"
+msgstr ""
+
+#: views/admin/common/footer-free.php:12
+#: views/admin/common/footer.php:27
+msgid "Membership"
+msgstr ""
+
+#: views/admin/common/footer-free.php:15
 #: views/admin/common/footer.php:11
 #: views/admin/common/footer.php:30
 msgid "The Hub"
+msgstr ""
+
+#: views/admin/common/footer-free.php:16
+#: views/admin/common/footer.php:18
+#: views/admin/common/footer.php:31
+msgid "Terms of Service"
 msgstr ""
 
 #: views/admin/common/footer.php:12
@@ -6537,19 +6628,6 @@ msgstr ""
 msgid "Academy"
 msgstr ""
 
-#: views/admin/common/footer.php:18
-#: views/admin/common/footer.php:31
-msgid "Terms of Service"
-msgstr ""
-
-#: views/admin/common/footer.php:26
-msgid "Free Plugins"
-msgstr ""
-
-#: views/admin/common/footer.php:27
-msgid "Membership"
-msgstr ""
-
 #: views/admin/common/header.php:5
 msgctxt "button"
 msgid "Manage All Modules"
@@ -6559,11 +6637,11 @@ msgstr ""
 msgid "View Documentation"
 msgstr ""
 
-#: views/admin/common/modules/header.php:28
+#: views/admin/common/modules/header.php:29
 msgid "Unsaved changes"
 msgstr ""
 
-#: views/admin/common/modules/header.php:32
+#: views/admin/common/modules/header.php:33
 msgid "Saved"
 msgstr ""
 
@@ -6689,7 +6767,7 @@ msgid "Never"
 msgstr ""
 
 #: views/admin/dashboard/modules/import-export-row.php:23
-#: views/admin/dashboard/modules/one-row.php:36
+#: views/admin/dashboard/modules/one-row.php:42
 msgid "Edit Module"
 msgstr ""
 
@@ -6795,11 +6873,13 @@ msgctxt "button"
 msgid "Activate"
 msgstr ""
 
+#: views/admin/dashboard/widget-modules-free.php:66
 #: views/admin/dashboard/widget-modules.php:67
 msgctxt "&lt;span&gt; tag is the placeholder for searching string."
 msgid "No results for \"<span></span>\""
 msgstr ""
 
+#: views/admin/dashboard/widget-modules-free.php:67
 #: views/admin/dashboard/widget-modules.php:68
 msgid "We couldn't find any modules matching your search. Perhaps try again?"
 msgstr ""

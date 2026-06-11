@@ -115,10 +115,7 @@ if ( ! class_exists( 'Branda_Base' ) ) {
 		 * @return void
 		 */
 		public function register_cross_sell_page() {
-			if ( Branda_Helper::is_pro() ) {
-				return;
-			}
-
+			
 			$cross_sell_path = WPMUDEV_BRANDA_DIR . '/external/plugins-cross-sell-page/plugin-cross-sell.php';
 
 			if ( ! file_exists( $cross_sell_path ) ) {

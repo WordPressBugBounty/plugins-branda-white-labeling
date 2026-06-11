@@ -1,14 +1,14 @@
 === Branda – White Label & Branding, Free Login Page Customizer ===
 Plugin Name: Branda – White Label & Branding, Custom Login Page Customizer
-Version: 3.4.29
+Version: 3.4.31
 Plugin URI: https://wpmudev.com/project/ultimate-branding/
 Author: WPMU DEV
 Author URI: https://wpmudev.com/
 Contributors: WPMUDEV
 Tags: White label,rebranding WordPress,custom login page,login-page-customizer,Custom dashboard
 Requires at least: 6.4
-Tested up to: 6.9
-Stable tag: 3.4.29
+Tested up to: 7.0
+Stable tag: 3.4.31
 Requires PHP: 7.4
 License: GPL v2 - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
@@ -113,7 +113,7 @@ With Branda, you can add your own message, logo, and styles to the DB error page
 
 ### Import/Export
 
-Customize your dashboard just once, export and move it to all your websites with the Branda Import and Export tool. Think of all the time you’ll save giving your agency sites a consistent look and feel. 
+Customize your dashboard just once, export and move it to all your websites with the Branda Import and Export tool. Think of all the time you’ll save giving your agency sites a consistent look and feel.
 
 ### White Label Multisite
 
@@ -171,105 +171,109 @@ We take plugin security incredibly seriously; if you have a bug or vulnerability
 
 == Changelog ==
 
+= 3.4.31 ( 2026-06-11 ) =
+- Fix: Security improvements
+- Fix: Color picker field alignment issue in the admin interface.
+
 = 3.4.29 ( 2025-12-29 ) =
-Fix: Security improvements
-Fix: Registration password field not showing.
+- Fix: Security improvements
+- Fix: Registration password field not showing.
 
 = 3.4.28 ( 2025-12-17 ) =
-Fix: SMTP email issues related to WordPress 6.9 compatibility.
-Fix: Backend error caused by a conflict with Presto Player.
+- Fix: SMTP email issues related to WordPress 6.9 compatibility.
+- Fix: Backend error caused by a conflict with Presto Player.
 
 = 3.4.27 ( 2025-11-20 ) =
-Enhance: Miscellaneousness improvements
+- Enhance: Miscellaneousness improvements
 
 = 3.4.26 ( 2025-10-14 ) =
-Fix: Email logs are not recorded when SMTP is active.
-Fix: Fatal error when uploading an image in Branda.
+- Fix: Email logs are not recorded when SMTP is active.
+- Fix: Fatal error when uploading an image in Branda.
 
 = 3.4.25 ( 2025-09-03 ) =
-Fix: Resolved a fatal error in multisite setups caused when the switch_theme capability was removed from certain roles.
-Fix: Resolved an issue where the email password field was unintentionally reset whenever settings were updated.
+- Fix: Resolved a fatal error in multisite setups caused when the switch_theme capability was removed from certain roles.
+- Fix: Resolved an issue where the email password field was unintentionally reset whenever settings were updated.
 
 = 3.4.24 ( 2025-04-29 ) =
-Enhance: Compatibility with WordPress 6.8.
-Enhance: Add a new menu item to help you discover other free plugins by WPMU DEV and more.
+- Enhance: Compatibility with WordPress 6.8.
+- Enhance: Add a new menu item to help you discover other free plugins by WPMU DEV and more.
 
 = 3.4.23 ( 2024-12-23 ) =
-Fix: Notice for _load_textdomain_just_in_time called incorrectly
-Enhance: Improved compatibility between cookie notice behavior and Hummingbird Asset Optimization.
+- Fix: Notice for _load_textdomain_just_in_time called incorrectly
+- Enhance: Improved compatibility between cookie notice behavior and Hummingbird Asset Optimization.
 
 = 3.4.22 ( 2024-11-12 ) =
-Enhance: Security improvements.
+- Enhance: Security improvements.
 
 = 3.4.20 ( 2024-11-11 ) =
-Fix: SVG warnings in Admin bar logos.
-Enhance: Security improvements.
+- Fix: SVG warnings in Admin bar logos.
+- Enhance: Security improvements.
 
 = 3.4.19 ( 2024-07-10 ) =
-Enhance: Security improvements
+- Enhance: Security improvements
 
 = 3.4.18 ( 2024-06-20 ) =
-Enhance: Security improvements
+- Enhance: Security improvements
 
 = 3.4.17 ( 2024-03-12 ) =
-Fix: Branda Color Scheme can no longer be customized
+- Fix: Branda Color Scheme can no longer be customized
 
 = 3.4.16 ( 2024-02-27 ) =
-Fix: PHP 8.0 Depreciation Errors
-Fix: Summary Box Logo sizing
-Fix: Missing placeholder in Link field for site generator
-Fix: Security Hardening in Search module
-Enhance: Twitter Logo replacement
-Enhance: Mascot replacement
+- Fix: PHP 8.0 Depreciation Errors
+- Fix: Summary Box Logo sizing
+- Fix: Missing placeholder in Link field for site generator
+- Fix: Security Hardening in Search module
+- Enhance: Twitter Logo replacement
+- Enhance: Mascot replacement
 
 = 3.4.15 ( 2023-12-15 ) =
-Improvement: Security hardening use trusted IP tracking.
+- Improvement: Security hardening use trusted IP tracking.
 
 = 3.4.14 ( 2023-12-07 ) =
-Improvement: Security hardening in comments blacklist.
+- Improvement: Security hardening in comments blacklist.
 
 = 3.4.13 ( 2023-10-09 ) =
-Enhance: Tracking Code scripts for users with unfiltered_html caps
-Enhance: Input options with a small list of Tracking Providers for users without unfiltered_html caps
-Fix: Login pages create image duplicates in media library
-Fix: Text Replacement not working on plugin's labels
-Fix: SMTP error thrown when the Sender Email is Empty
-Fix: From Name replacement doesn't support single or double quotes
-Fix: View Documentation button not redirected to email section
-Fix: Minor issue on Bulk activation of modules
-Fix: Deprecation warnings in Admin Bar and Comments modules
-Fix: Various typos
+- Enhance: Tracking Code scripts for users with unfiltered_html caps
+- Enhance: Input options with a small list of Tracking Providers for users without unfiltered_html caps
+- Fix: Login pages create image duplicates in media library
+- Fix: Text Replacement not working on plugin's labels
+- Fix: SMTP error thrown when the Sender Email is Empty
+- Fix: From Name replacement doesn't support single or double quotes
+- Fix: View Documentation button not redirected to email section
+- Fix: Minor issue on Bulk activation of modules
+- Fix: Deprecation warnings in Admin Bar and Comments modules
+- Fix: Various typos
 
 = 3.4.11 ( 2023-08-03 ) =
-Fix: Special characters causing issues in Text Replacement
+- Fix: Special characters causing issues in Text Replacement
 
 = 3.4.10 ( 2023-07-12 ) =
-Fix: Style tag removed from Admin Footer
-Fix: PHP 8 Deprecation warnings
-Fix: PHP 8 error message when special char used in Text Replacement
-Fix: Utilities Comments reset not working
-Fix: Subsites reset will also reset main site
-Fix: Subsite favicon can not be added
+- Fix: Style tag removed from Admin Footer
+- Fix: PHP 8 Deprecation warnings
+- Fix: PHP 8 error message when special char used in Text Replacement
+- Fix: Utilities Comments reset not working
+- Fix: Subsites reset will also reset main site
+- Fix: Subsite favicon can not be added
 
 = 3.4.9.3 ( 2023-03-15 ) =
-Fix: Login page missing logo and broken button
+- Fix: Login page missing logo and broken button
 
 = 3.4.9.2 ( 2023-03-15 ) =
-Fix: Wrong file path
+- Fix: Wrong file path
 
 = 3.4.9.1 ( 2023-03-15 ) =
-Fix: Admin CSS not escaped properly
-Fix: Text replacement security patch affecting site performance
-Enhance: Replace Tracking code with Measurement id
+- Fix: Admin CSS not escaped properly
+- Fix: Text replacement security patch affecting site performance
+- Enhance: Replace Tracking code with Measurement id
 
 = 3.4.9 ( 2023-03-02 ) =
-Enhance: Security improvements
+- Enhance: Security improvements
 
 = 3.4.8.1 ( 2022-11-18 ) =
-Enhance: Minor performance improvements
+- Enhance: Minor performance improvements
 
 = 3.4.8 ( 2022-08-08 ) =
-Fix: PHP 8 warnings and errors
+- Fix: PHP 8 warnings and errors
 
 = 3.4.7 ( 2022-03-22 ) =
 - Fix: Login page alignment issue

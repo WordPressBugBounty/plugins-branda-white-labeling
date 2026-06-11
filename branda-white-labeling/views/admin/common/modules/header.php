@@ -15,10 +15,11 @@ $buttons          = empty( $buttons ) ? '' : $buttons;
 		<div class="sui-status">
 			<div class="sui-status-module">
 				<h2 class="sui-box-title"><?php echo esc_html( $box_title ); ?>
-													 <?php
-														if ( ! empty( $module['only_pro'] ) ) {
-															echo Branda_Helper::maybe_pro_tag(); }
-														?>
+				 <?php
+					if ( ! empty( $module['only_pro'] ) ) {
+						echo Branda_Helper::maybe_pro_tag();
+					}
+					?>
 				</h2>
 			</div>
 

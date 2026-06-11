@@ -101,17 +101,22 @@ function branda_get_option_filtered( $option ) {
 
 function branda_update_option( $option, $value = null ) {
 	global $branda_network;
-	do_action( 'branda_admin_stats_write', $option );
 	if ( $branda_network ) {
 		$force_local = apply_filters( 'branda_force_local_option', false, $option );
 		if ( $force_local ) {
-			return update_option( $option, $value );
+			$result = update_option( $option, $value );
 		} else {
-			return update_site_option( $option, $value );
+			$result = update_site_option( $option, $value );
 		}
 	} else {
-		return update_option( $option, $value );
+		$result = update_option( $option, $value );
 	}
+	// Only trigger stats write if the option was actually updated
+	if ( $result ) {
+		do_action( 'branda_admin_stats_write', $option );
+	}
+
+	return $result;
 }
 
 function branda_add_option( $option, $value = null, $autoload = 'yes' ) {

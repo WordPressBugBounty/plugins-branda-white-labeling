@@ -4,17 +4,14 @@ Plugin Name: Branda
 Plugin URI: https://wpmudev.com/project/ultimate-branding/
 Description: A complete white label and branding solution for multisite. Login images, favicons, remove WordPress links and branding, and much more.
 Author: WPMU DEV
-Version: 3.4.29
+Version: 3.4.31
 Author URI: https://wpmudev.com/
 Requires PHP: 7.4
 Text_domain: ub
 
 
 Copyright 2009-2024 Incsub (https://incsub.com)
-
-Lead Developer - Marcin Pietrzak (Incsub)
-
-Contributors - Sam Najian (Incsub), Ve Bailovity (Incsub), Barry (Incsub), Andrew Billits, Ulrich Sossou, Marko Miljus, Joseph Fusco (Incsub), Calum Brash (Incsub), Joel James ( Incsub)
+Author – WPMU DEV
 
 This program is free software; you can redistribute it and/or modify it under
 the terms of the GNU General Public License (Version 2 - GPLv2) as published
@@ -35,16 +32,11 @@ if ( defined( 'BRANDA_BUILD_TYPE' ) ) {
 	return;
 }
 
+const BRANDA_BUILD_TYPE = 'free';
 /**
  * Branda Version
  */
 $ub_version = null;
-
-if ( file_exists( dirname(__FILE__) . '/build.php' ) ) {
-	require_once 'build.php';
-} else if ( file_exists( dirname(__FILE__) . '/build-free.php' ) ) {
-	require_once 'build-free.php';
-}
 
 // Define WPMUDEV_BRANDA_PLUGIN_FILE.
 if ( ! defined( 'WPMUDEV_BRANDA_PLUGIN_FILE' ) ) {

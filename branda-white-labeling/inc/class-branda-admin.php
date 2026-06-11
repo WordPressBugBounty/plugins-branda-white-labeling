@@ -99,7 +99,6 @@ if ( ! class_exists( 'Branda_Admin' ) ) {
 			add_action( 'wp_ajax_branda_welcome_get_modules', array( $this, 'ajax_welcome' ) );
 			add_action( 'wp_ajax_branda_dismiss_black_friday_notice', array( $this, 'dismiss_black_friday_2021' ) );
 			add_filter( 'branda_admin_messages_array', array( $this, 'add_admin_notices' ) );
-			add_action( 'wp_ajax_ultimate_branding_new_feature_dismiss', array( $this, 'new_feature_dismiss' ) );
 			/**
 			 * default messages
 			 */
@@ -231,15 +230,9 @@ if ( ! class_exists( 'Branda_Admin' ) ) {
 				$links['dashboard'] = '<a href="' . $dash_url . '">' . __( 'Dashboard', 'ub' ) . '</a>';
 			}
 			$links['docs'] = '<a href="https://wpmudev.com/docs/wpmu-dev-plugins/branda/?utm_source=branda&utm_medium=plugin&utm_campaign=branda_pluginlist_docs" target="_blank">' . __( 'Docs', 'ub' ) . '</a>';
-			if ( Branda_Helper::is_pro() ) {
-				if ( ! Branda_Helper::is_member() ) {
-					$links['renew'] = '<a href="https://wpmudev.com/project/ultimate-branding/?utm_source=branda&utm_medium=plugin&utm_campaign=branda_pluginlist_renew" target="_blank" style="color: #8D00B1;">' . __( 'Renew Membership', 'ub' ) . '</a>';
-				}
-			} else {
-				if ( is_network_admin() || ! is_multisite() ) {
-					$url              = 'https://wpmudev.com/project/ultimate-branding/?utm_source=branda&utm_medium=plugin&utm_campaign=branda_pluginlist_upgrade';
-					$links['upgrade'] = '<a href="' . esc_url( $url ) . '" aria-label="' . esc_attr( __( 'Get Branda Pro', 'ub' ) ) . '" target="_blank" style="color: #8D00B1;">' . esc_html__( 'Get Branda Pro', 'ub' ) . '</a>';
-				}
+			if ( is_network_admin() || ! is_multisite() ) {
+				$url              = 'https://wpmudev.com/project/ultimate-branding/?utm_source=branda&utm_medium=plugin&utm_campaign=branda_pluginlist_upgrade';
+				$links['upgrade'] = '<a href="' . esc_url( $url ) . '" aria-label="' . esc_attr( __( 'Get Branda Pro', 'ub' ) ) . '" target="_blank" style="color: #8D00B1;">' . esc_html__( 'Get Branda Pro', 'ub' ) . '</a>';
 			}
 			$actions = array_merge( $links, $actions );
 
@@ -257,18 +250,11 @@ if ( ! class_exists( 'Branda_Admin' ) ) {
 		public function plugin_row_meta( $plugin_meta, $plugin_file, $plugin_data, $status ) {
 			global $branda_plugin_file;
 			if ( $branda_plugin_file === $plugin_file ) {
-				if ( Branda_Helper::is_pro() ) {
-					$plugin_meta[2] = '<a href="https://wpmudev.com/project/ultimate-branding/" target="_blank">' . esc_html__( 'View Details', 'ub' ) . '</a>';
-					$row_meta       = array(
-						'support' => '<a href="https://wpmudev.com/hub/support/#wpmud-chat-pre-survey-modal" target="_blank">' . esc_html__( 'Premium Support', 'ub' ) . '</a>',
-					);
-				} else {
-					$plugin_meta[1] = esc_html__( 'By', 'ub' ) . ' <a href="https://profiles.wordpress.org/wpmudev/" target="_blank">WPMU DEV</a>';
-					$row_meta       = array(
-						'rate'    => '<a href="https://wordpress.org/support/plugin/branda-white-labeling/reviews/#new-post" target="_blank">' . esc_html__( 'Rate Branda', 'ub' ) . '</a>',
-						'support' => '<a href="https://wordpress.org/support/plugin/branda-white-labeling/" target="_blank">' . esc_html__( 'Support', 'ub' ) . '</a>',
-					);
-				}
+				$plugin_meta[1] = esc_html__( 'By', 'ub' ) . ' <a href="https://profiles.wordpress.org/wpmudev/" target="_blank">WPMU DEV</a>';
+				$row_meta       = array(
+					'rate'    => '<a href="https://wordpress.org/support/plugin/branda-white-labeling/reviews/#new-post" target="_blank">' . esc_html__( 'Rate Branda', 'ub' ) . '</a>',
+					'support' => '<a href="https://wordpress.org/support/plugin/branda-white-labeling/" target="_blank">' . esc_html__( 'Support', 'ub' ) . '</a>',
+				);
 
 				$row_meta['roadmap'] = '<a href="https://wpmudev.com/roadmap/" target="_blank">' . esc_html__( 'Roadmap', 'ub' ) . '</a>';
 
@@ -637,7 +623,7 @@ if ( ! class_exists( 'Branda_Admin' ) ) {
 						continue;
 					}
 					branda_load_single_module( $module );
-					
+
 					if ( 'utilities/text-replacement.php' === $module ) {
 						$repeat_config = true;
 					}
@@ -685,7 +671,7 @@ if ( ! class_exists( 'Branda_Admin' ) ) {
 		 * @param string $capability Capability.
 		 */
 		private function menu( $capability ) {
-			$parent_menu_title = Branda_Helper::is_pro() ? __( 'Branda Pro', 'ub' ) : __( 'Branda', 'ub' );
+			$parent_menu_title = __( 'Branda', 'ub' );
 
 			// Add in our menu page
 			$this->top_page_slug = add_menu_page(
@@ -734,16 +720,14 @@ if ( ! class_exists( 'Branda_Admin' ) ) {
 				add_action( 'load-' . $menu, array( $this, 'add_admin_header_branding' ) );
 			}
 
-			if ( ! Branda_Helper::is_member() ) {
-				$menu = add_submenu_page(
-					'branding',
-					esc_html__( 'Get Branda Pro', 'ub' ),
-					esc_html__( 'Get Branda Pro', 'ub' ),
-					$capability,
-					'https://wpmudev.com/project/ultimate-branding/?utm_source=branda&utm_medium=plugin&utm_campaign=branda_submenu_upsell',
-				);
-				add_action( 'load-' . $menu, array( $this, 'add_admin_header_branding' ) );
-			}
+			$menu = add_submenu_page(
+				'branding',
+				esc_html__( 'Get Branda Pro', 'ub' ),
+				esc_html__( 'Get Branda Pro', 'ub' ),
+				$capability,
+				'https://wpmudev.com/project/ultimate-branding/?utm_source=branda&utm_medium=plugin&utm_campaign=branda_submenu_upsell',
+			);
+			add_action( 'load-' . $menu, array( $this, 'add_admin_header_branding' ) );
 
 			do_action( 'ultimate_branding_add_menu_pages' );
 		}
@@ -1438,35 +1422,6 @@ if ( ! class_exists( 'Branda_Admin' ) ) {
 		}
 
 		/**
-		 * Show New feature dialog if it's available to show
-		 *
-		 * @return null
-		 */
-		private function maybe_show_new_feature_dialog() {
-			if ( ! Branda_Helper::is_full_pro() ) {
-				return;
-			}
-
-			$major_minor_version = $this->get_major_minor_version();
-			if ( $this->to_major_minor( $this->get_first_installed_version() ) === $major_minor_version ) {
-				// Only need to show after an upgrade, not fresh installation
-				return;
-			}
-
-			$meta_key = 'branda_hide_new_features';
-
-			$dismissed_dialog_version = get_user_meta( get_current_user_id(), $meta_key, true );
-
-			if ( version_compare( $major_minor_version, $dismissed_dialog_version, '<=' ) ) {
-				return;
-			}
-
-			$template_suffix = str_replace( '.', '', $major_minor_version );
-			$template        = 'admin/common/dialogs/show-new-features-' . $template_suffix;
-			$this->render( $template, array() );
-		}
-
-		/**
 		 * Add notice template and footer "In love by WPMU DEV".
 		 *
 		 * @since 3.0.0
@@ -1485,16 +1440,8 @@ if ( ! class_exists( 'Branda_Admin' ) ) {
 				$this->render( $template, $args );
 			}
 
-			$this->maybe_show_new_feature_dialog();
-
 			$hide_footer = false;
 			$footer_text = sprintf( __( 'Made with %s by WPMU DEV', 'ub' ), ' <i class="sui-icon-heart"></i>' );
-			if ( Branda_Helper::is_member() ) {
-				$hide_footer = apply_filters( 'wpmudev_branding_change_footer', $hide_footer );
-				$footer_text = apply_filters( 'wpmudev_branding_footer_text', $footer_text );
-				$hide_footer = apply_filters( 'branda_change_footer', $hide_footer, $this->module );
-				$footer_text = apply_filters( 'branda_footer_text', $footer_text, $this->module );
-			}
 			$args     = array(
 				'hide_footer' => $hide_footer,
 				'footer_text' => $footer_text,
@@ -1710,36 +1657,6 @@ if ( ! class_exists( 'Branda_Admin' ) ) {
 		}
 
 		/**
-		 * Dismiss New Feature dialogs.
-		 */
-		public function new_feature_dismiss() {
-			$dialog_id = filter_input( INPUT_POST, 'id' );
-			$nonce     = filter_input( INPUT_POST, '_ajax_nonce' );
-			if ( ! ( $nonce && $dialog_id ) ) {
-				wp_send_json_error( array( 'message' => $this->messages['wrong'] ) );
-			}
-
-			check_ajax_referer( 'new-feature' );
-			$user_id  = get_current_user_id();
-			$meta_key = 'branda_hide_new_features';
-
-			update_user_meta( $user_id, $meta_key, $this->get_major_minor_version() );
-		}
-
-		private function get_major_minor_version() {
-			return $this->to_major_minor( $this->build );
-		}
-
-		private function to_major_minor( $version ) {
-			if ( substr_count( $version, '.' ) > 1 ) {
-				list( $major, $minor, $patch ) = explode( '.', $version );
-				return "{$major}.{$minor}";
-			}
-
-			return $version;
-		}
-
-		/**
 		 * Activate/deactivate single module AJAX action.
 		 *
 		 * @since 1.9.6
@@ -1804,10 +1721,10 @@ if ( ! class_exists( 'Branda_Admin' ) ) {
 		}
 
 		/**
-		* Sort module by menu_title or page_title.
-		*
-		* @since 2.0.0
-		*/
+		 * Sort module by menu_title or page_title.
+		 *
+		 * @since 2.0.0
+		 */
 		public function sort_modules_by_name( $a, $b ) {
 			$an = $a['name'];
 			$bn = $b['name'];
@@ -2568,8 +2485,8 @@ if ( ! class_exists( 'Branda_Admin' ) ) {
 						break;
 					case 'social_media':
 						if (
-						isset( $source_module_configuration['content'] )
-						&& is_array( $source_module_configuration['content'] )
+							isset( $source_module_configuration['content'] )
+							&& is_array( $source_module_configuration['content'] )
 						) {
 							foreach ( $source_module_configuration['content'] as $key => $value ) {
 								if ( ! preg_match( '/^social_media_/', $key ) ) {
@@ -2674,7 +2591,7 @@ if ( ! class_exists( 'Branda_Admin' ) ) {
 			// Get accessibility settings.
 			$accessibility_options = branda_get_option( 'ub_accessibility', array() );
 			if ( isset( $accessibility_options['accessibility']['high_contrast'] )
-				&& 'on' === $accessibility_options['accessibility']['high_contrast'] ) {
+			     && 'on' === $accessibility_options['accessibility']['high_contrast'] ) {
 				return true;
 			}
 			return false;

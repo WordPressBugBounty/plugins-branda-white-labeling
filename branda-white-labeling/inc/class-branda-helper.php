@@ -4538,66 +4538,7 @@ if ( ! class_exists( 'Branda_Helper' ) ) {
 			return $sitename;
 		}
 
-		/**
-		 * Check if it's pro version and it's paid user
-		 *
-		 * @return bool
-		 */
-		public static function is_full_pro() {
-			return self::is_pro() && self::is_member();
-		}
-
-		/**
-		 * Check if it's pro or free version
-		 *
-		 * @return bool
-		 */
-		public static function is_pro() {
-			$is_pro = defined( 'BRANDA_BUILD_TYPE' ) && 'full' === BRANDA_BUILD_TYPE;
-
-			return $is_pro;
-		}
-
-		/**
-		 * Check if user is a paid one in WPMU DEV
-		 *
-		 * @return bool
-		 */
-		public static function is_member() {
-			if ( self::membership_includes_branda() ) {
-				return true;
-			}
-			
-			if ( function_exists( 'is_wpmudev_member' ) ) {
-				return is_wpmudev_member();
-			}
-			return false;
-		}
-
-		private static function membership_includes_branda() {
-			if ( class_exists( 'WPMUDEV_Dashboard' ) && method_exists( \WPMUDEV_Dashboard::$upgrader, 'user_can_install' ) ) {
-				return \WPMUDEV_Dashboard::$upgrader->user_can_install( 9135, true );
-			}
-
-			// For a little while we can return deprecated method. After a period we can return false instead;
-			return self::membership_includes_branda_deprecated();
-		}
-
-		private static function membership_includes_branda_deprecated() {
-			if (
-				! method_exists( 'WPMUDEV_Dashboard_Api', 'get_membership_projects' )
-				|| ! method_exists( 'WPMUDEV_Dashboard_Api', 'get_membership_type' )
-			) {
-				return false;
-			}
-
-			$branda_project_id = 9135;
-			$type = WPMUDEV_Dashboard::$api->get_membership_type();
-			$projects = WPMUDEV_Dashboard::$api->get_membership_projects();
-
-			return ( 'unit' === $type && in_array( $branda_project_id, $projects, true ) )
-			       || ( 'single' === $type && $branda_project_id === $projects );
-		}
+		
 
 		/**
 		 * Check is users can register.
@@ -4734,14 +4675,11 @@ if ( ! class_exists( 'Branda_Helper' ) ) {
 		 * @return string
 		 */
 		public static function maybe_pro_tag() {
-			$html = '';
-			if ( ! self::is_full_pro() ) {
-				$html = '<span class="sui-tag sui-tag-pro" style="font-size: 9px; top: 10px; right: 8px;">' .
-					esc_html__( 'Pro', 'ub' ) .
-				'</span>';
-			}
+			
 
-			return $html;
+			return '<span class="sui-tag sui-tag-pro" style="font-size: 9px; top: 10px; right: 8px;">' .
+			       esc_html__( 'Pro', 'ub' ) .
+			       '</span>';
 		}
 
 		/**

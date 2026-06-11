@@ -39,9 +39,8 @@ if ( isset( $modules['data'] ) ) {
 	</div>
 	<div class="sui-col-sm-12 sui-col-md-6">
 <?php
-if ( ! Branda_Helper::is_member() ) {
-	$this->render( 'admin/dashboard/modules/upsell' );
-}
+$this->render( 'admin/dashboard/modules/upsell' );
+
 $set = array( 'admin', 'emails', 'utilities' );
 foreach ( $set as $one ) {
 	if ( ! isset( $groups[ $one ] ) ) {
@@ -68,8 +67,4 @@ foreach ( $set as $one ) {
 		<p><?php _e( 'We couldn\'t find any modules matching your search. Perhaps try again?', 'ub' ); ?></p>
 	</div>
 </div>
-<?php
-if ( ! Branda_Helper::is_member() ) {
-	$this->render( 'admin/dashboard/footer-free' );
-}
-?>
+<?php $this->render( 'admin/dashboard/footer-free' ); ?>
