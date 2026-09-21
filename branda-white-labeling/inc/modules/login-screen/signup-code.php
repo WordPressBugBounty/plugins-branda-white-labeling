@@ -627,7 +627,8 @@ if ( ! class_exists( 'Branda_Signup_Codes' ) ) {
 				);
 			}
 			foreach ( $data as $key => $one ) {
-				$data[ $key ]['id'] = $key;
+				$data[ $key ]['id']        = $key;
+				$data[ $key ]['is_locked'] = ! $this->current_user_can_assign_role( isset( $one['role'] ) ? $one['role'] : '-' );
 				if ( ! isset( $one['case'] ) ) {
 					$data[ $key ]['case'] = 'insensitive';
 				}
@@ -638,6 +639,7 @@ if ( ! class_exists( 'Branda_Signup_Codes' ) ) {
 				'items'           => $data,
 				'container_class' => $this->get_name( $type . '-container' ),
 				'roles'           => $roles,
+				'roles_disabled'  => $this->get_not_assignable_roles(),
 			);
 			$template = $this->get_template_name( 'items' );
 			$content  = $this->render( $template, $args, true );
@@ -683,15 +685,17 @@ if ( ! class_exists( 'Branda_Signup_Codes' ) ) {
 			/**
 			 * Custom Item Row
 			 */
+			$this->set_roles();
 			$roles    = array(
 				'-' => __( 'Choose a user role', 'ub' ),
 			);
 			$roles   += $this->roles;
 			$template = $this->get_template_name( 'tmpl/row-user' );
 			$args     = array(
-				'name'     => $this->get_name( 'row' ),
-				'template' => $this->get_template_name( 'row-user' ),
-				'roles'    => $roles,
+				'name'           => $this->get_name( 'row' ),
+				'template'       => $this->get_template_name( 'row-user' ),
+				'roles'          => $roles,
+				'roles_disabled' => $this->get_not_assignable_roles(),
 			);
 			$content .= $this->render( $template, $args, true );
 			if ( $this->is_network ) {
@@ -707,6 +711,52 @@ if ( ! class_exists( 'Branda_Signup_Codes' ) ) {
 		}
 
 		/**
+		 * Get roles the current user is not allowed to give to new users.
+		 *
+		 * @return array List of role slugs.
+		 */
+		private function get_not_assignable_roles() {
+			$this->set_roles();
+			$disabled = array();
+			foreach ( array_keys( $this->roles ) as $slug ) {
+				if ( ! $this->current_user_can_assign_role( $slug ) ) {
+					$disabled[] = $slug;
+				}
+			}
+			return $disabled;
+		}
+
+		/**
+		 * Check if the current user is allowed to assign a given role to new users.
+		 *
+		 * @param string $role Role slug, or a default placeholder.
+		 *
+		 * @return boolean
+		 */
+		private function current_user_can_assign_role( $role ) {
+			if ( ! is_string( $role ) || in_array( $role, array( '', '-', 'wp-default' ), true ) ) {
+				return true;
+			}
+			if ( is_multisite() && is_super_admin() ) {
+				return true;
+			}
+			if ( 'super' === $role ) {
+				return false;
+			}
+			$role_object = wp_roles()->get_role( $role );
+			$user        = wp_get_current_user();
+			if ( ! is_a( $role_object, 'WP_Role' ) || ! $user->exists() ) {
+				return false;
+			}
+			foreach ( $role_object->capabilities as $capability => $granted ) {
+				if ( ! empty( $granted ) && empty( $user->allcaps[ $capability ] ) ) {
+					return false;
+				}
+			}
+			return true;
+		}
+
+		/**
 		 * Update Items
 		 *
 		 * @since 3.1.0
@@ -718,7 +768,11 @@ if ( ! class_exists( 'Branda_Signup_Codes' ) ) {
 			$this->set_roles();
 			$types = array( 'user', 'blog' );
 			foreach ( $types as $type ) {
-				$items = array();
+				$posted = array();
+				$saved  = $this->get_value( $type, 'items', array(), false );
+				if ( ! is_array( $saved ) ) {
+					$saved = array();
+				}
 				if (
 					isset( $_POST['simple_options'][ $type ] )
 					&& is_array( $_POST['simple_options'][ $type ] )
@@ -732,21 +786,14 @@ if ( ! class_exists( 'Branda_Signup_Codes' ) ) {
 						} else {
 							continue;
 						}
+						if ( isset( $saved[ $key ]['role'] ) && ! $this->current_user_can_assign_role( $saved[ $key ]['role'] ) ) {
+							continue;
+						}
 						if (
 							! isset( $data['code'] )
 							|| empty( $data['code'] )
 						) {
 							continue;
-						}
-						/**
-						 * Sanitize role
-						 */
-						$role = '-';
-						if (
-							isset( $data['role'] )
-							&& array_key_exists( $data['role'], $this->roles )
-						) {
-							$role = $data['role'];
 						}
 						/**
 						 * Sanitize case match
@@ -758,11 +805,43 @@ if ( ! class_exists( 'Branda_Signup_Codes' ) ) {
 						) {
 							$case = 'sensitive';
 						}
-						$items[ $key ] = array(
+						/**
+						 * Sanitize role
+						 */
+						$role = '-';
+						if (
+							isset( $data['role'] )
+							&& array_key_exists( $data['role'], $this->roles )
+							&& $this->current_user_can_assign_role( $data['role'] )
+						) {
+							$role = $data['role'];
+						}
+						$posted[ $key ] = array(
 							'code' => sanitize_text_field( $data['code'] ),
 							'role' => $role,
 							'case' => $case,
 						);
+					}
+				}
+				$items = array();
+				foreach ( $saved as $key => $item ) {
+					if ( ! is_array( $item ) ) {
+						continue;
+					}
+					$saved_role = isset( $item['role'] ) ? $item['role'] : '-';
+					if ( ! $this->current_user_can_assign_role( $saved_role ) ) {
+						$items[ $key ] = array(
+							'code' => isset( $item['code'] ) ? $item['code'] : '',
+							'role' => $saved_role,
+							'case' => isset( $item['case'] ) ? $item['case'] : 'insensitive',
+						);
+					} elseif ( isset( $posted[ $key ] ) ) {
+						$items[ $key ] = $posted[ $key ];
+					}
+				}
+				foreach ( $posted as $key => $item ) {
+					if ( ! isset( $items[ $key ] ) ) {
+						$items[ $key ] = $item;
 					}
 				}
 				$this->set_value( $type, 'items', $items );

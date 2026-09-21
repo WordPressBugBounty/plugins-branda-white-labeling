@@ -56,6 +56,9 @@
 	setTimeout(
 		function() {
 			// Datepicker.
+			if ( 'function' !== typeof $.fn.daterangepicker ) {
+				return;
+			}
 			$( 'input.branda-filter-date' ).daterangepicker({
 				autoUpdateInput: false,
 				autoApply: true,

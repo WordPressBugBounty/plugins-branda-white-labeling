@@ -2,21 +2,21 @@
 # This file is distributed under the same license as the Branda Pro plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Branda Pro 3.4.31\n"
+"Project-Id-Version: Branda Pro 3.4.32\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/build\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-06-11T04:09:00+00:00\n"
+"POT-Creation-Date: 2026-09-15T05:03:42+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: ub\n"
 
 #. Plugin Name of the plugin
 #: ultimate-branding.php
-#: inc/class-branda-admin.php:688
+#: inc/class-branda-admin.php:695
 #: inc/class-branda-base.php:84
 #: views/admin/dashboard/modules/upsell.php:15
 msgid "Branda Pro"
@@ -344,8 +344,8 @@ msgstr ""
 #: inc/modules/emails/email-logs.php:283
 #: inc/modules/utilities/export.php:227
 #: inc/modules/utilities/export.php:245
-#: views/admin/modules/email-logs/main-list.php:146
-#: views/admin/modules/email-logs/main-list.php:150
+#: views/admin/modules/email-logs/main-list.php:148
+#: views/admin/modules/email-logs/main-list.php:152
 msgid "Export"
 msgstr ""
 
@@ -520,9 +520,9 @@ msgid "Something went wrong!"
 msgstr ""
 
 #: inc/class-branda-admin-free.php:110
-#: inc/class-branda-admin-free.php:1681
+#: inc/class-branda-admin-free.php:1688
 #: inc/class-branda-admin.php:111
-#: inc/class-branda-admin.php:1764
+#: inc/class-branda-admin.php:1775
 #: inc/class-simple-options.php:1807
 #: inc/class-simple-options.php:1868
 msgid "Nope! Security check failed!"
@@ -553,12 +553,12 @@ msgid " &lsaquo; "
 msgstr ""
 
 #: inc/class-branda-admin-free.php:230
-#: inc/class-branda-admin-free.php:689
-#: inc/class-branda-admin-free.php:690
+#: inc/class-branda-admin-free.php:696
+#: inc/class-branda-admin-free.php:697
 #: inc/class-branda-admin.php:231
-#: inc/class-branda-admin.php:703
-#: inc/class-branda-admin.php:704
-#: inc/modules/widgets/dashboard-feeds.php:389
+#: inc/class-branda-admin.php:710
+#: inc/class-branda-admin.php:711
+#: inc/modules/widgets/dashboard-feeds.php:392
 #: views/admin/dashboard.php:9
 #: views/admin/dashboard/subsite.php:3
 msgid "Dashboard"
@@ -573,11 +573,11 @@ msgid "Docs"
 msgstr ""
 
 #: inc/class-branda-admin-free.php:235
-#: inc/class-branda-admin-free.php:725
-#: inc/class-branda-admin-free.php:726
+#: inc/class-branda-admin-free.php:732
+#: inc/class-branda-admin-free.php:733
 #: inc/class-branda-admin.php:241
-#: inc/class-branda-admin.php:740
-#: inc/class-branda-admin.php:741
+#: inc/class-branda-admin.php:747
+#: inc/class-branda-admin.php:748
 msgid "Get Branda Pro"
 msgstr ""
 
@@ -605,20 +605,20 @@ msgstr ""
 msgid "Roadmap"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:438
-#: inc/class-branda-admin.php:452
+#: inc/class-branda-admin-free.php:445
+#: inc/class-branda-admin.php:459
 #: inc/modules/front-end/document.php:211
 #: views/admin/modules/admin-bar/dashicons.php:51
 msgid "Clear"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:439
-#: inc/class-branda-admin.php:453
+#: inc/class-branda-admin-free.php:446
+#: inc/class-branda-admin.php:460
 msgid "Clear color"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:440
-#: inc/class-branda-admin.php:454
+#: inc/class-branda-admin-free.php:447
+#: inc/class-branda-admin.php:461
 #: inc/class-branda-helper.php:2780
 #: inc/modules/content/footer.php:126
 #: inc/modules/content/footer.php:234
@@ -635,180 +635,180 @@ msgstr ""
 msgid "Default"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:441
-#: inc/class-branda-admin.php:455
+#: inc/class-branda-admin-free.php:448
+#: inc/class-branda-admin.php:462
 msgid "Select default color"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:442
-#: inc/class-branda-admin.php:456
+#: inc/class-branda-admin-free.php:449
+#: inc/class-branda-admin.php:463
 msgid "Select Color"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:443
-#: inc/class-branda-admin.php:457
+#: inc/class-branda-admin-free.php:450
+#: inc/class-branda-admin.php:464
 msgid "Color value"
-msgstr ""
-
-#: inc/class-branda-admin-free.php:453
-#: inc/class-branda-admin.php:467
-msgid "Are you sure to replace all section data?"
-msgstr ""
-
-#: inc/class-branda-admin-free.php:454
-#: inc/class-branda-admin.php:468
-msgid "Please select a source module first."
-msgstr ""
-
-#: inc/class-branda-admin-free.php:457
-#: inc/class-branda-admin.php:471
-msgid "Are you sure? This will replace all entered data by defaults."
 msgstr ""
 
 #: inc/class-branda-admin-free.php:460
 #: inc/class-branda-admin.php:474
-msgid "Please select some modules first or skip this step."
+msgid "Are you sure to replace all section data?"
+msgstr ""
+
+#: inc/class-branda-admin-free.php:461
+#: inc/class-branda-admin.php:475
+msgid "Please select a source module first."
 msgstr ""
 
 #: inc/class-branda-admin-free.php:464
 #: inc/class-branda-admin.php:478
-msgid "Entered value is above field limit!"
+msgid "Are you sure? This will replace all entered data by defaults."
 msgstr ""
 
-#: inc/class-branda-admin-free.php:465
-#: inc/class-branda-admin.php:479
-msgid "Entered value is below field limit!"
-msgstr ""
-
-#: inc/class-branda-admin-free.php:468
-#: inc/class-branda-admin.php:482
-msgid "Changes are not saved, are you sure you want to navigate away?"
-msgstr ""
-
-#: inc/class-branda-admin-free.php:470
-#: inc/class-branda-admin.php:484
-msgid "Try to fetch feeds data, please wait..."
+#: inc/class-branda-admin-free.php:467
+#: inc/class-branda-admin.php:481
+msgid "Please select some modules first or skip this step."
 msgstr ""
 
 #: inc/class-branda-admin-free.php:471
 #: inc/class-branda-admin.php:485
-msgid "No feed found, try to another site or enter data manually."
+msgid "Entered value is above field limit!"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:474
-#: inc/class-branda-admin.php:488
-msgid "Whoops, only .json filetypes are allowed."
+#: inc/class-branda-admin-free.php:472
+#: inc/class-branda-admin.php:486
+msgid "Entered value is below field limit!"
+msgstr ""
+
+#: inc/class-branda-admin-free.php:475
+#: inc/class-branda-admin.php:489
+msgid "Changes are not saved, are you sure you want to navigate away?"
 msgstr ""
 
 #: inc/class-branda-admin-free.php:477
 #: inc/class-branda-admin.php:491
-msgid "Whoops, only images are allowed."
+msgid "Try to fetch feeds data, please wait..."
+msgstr ""
+
+#: inc/class-branda-admin-free.php:478
+#: inc/class-branda-admin.php:492
+msgid "No feed found, try to another site or enter data manually."
 msgstr ""
 
 #: inc/class-branda-admin-free.php:481
-#: inc/class-branda-admin-free.php:1321
-#: inc/class-branda-admin-free.php:1463
-#: inc/class-branda-admin-free.php:1815
 #: inc/class-branda-admin.php:495
-#: inc/class-branda-admin.php:1337
-#: inc/class-branda-admin.php:1516
-#: inc/class-branda-admin.php:1898
+msgid "Whoops, only .json filetypes are allowed."
+msgstr ""
+
+#: inc/class-branda-admin-free.php:484
+#: inc/class-branda-admin.php:498
+msgid "Whoops, only images are allowed."
+msgstr ""
+
+#: inc/class-branda-admin-free.php:488
+#: inc/class-branda-admin-free.php:1328
+#: inc/class-branda-admin-free.php:1470
+#: inc/class-branda-admin-free.php:1822
+#: inc/class-branda-admin.php:502
+#: inc/class-branda-admin.php:1344
+#: inc/class-branda-admin.php:1527
+#: inc/class-branda-admin.php:1909
 msgid "Save Changes"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:554
-#: inc/class-branda-admin.php:568
+#: inc/class-branda-admin-free.php:561
+#: inc/class-branda-admin.php:575
 #, php-format
 msgid "%d new module was activated successfully."
 msgid_plural "%d new modules was activated successfully."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/class-branda-admin-free.php:568
-#: inc/class-branda-admin.php:582
+#: inc/class-branda-admin-free.php:575
+#: inc/class-branda-admin.php:589
 #, php-format
 msgid "%d module was deactivated successfully."
 msgid_plural "%d modules was deactivated successfully."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/class-branda-admin-free.php:586
-#: inc/class-branda-admin.php:600
+#: inc/class-branda-admin-free.php:593
+#: inc/class-branda-admin.php:607
 msgid "42: The answer to life, the universe and everything."
 msgstr ""
 
-#: inc/class-branda-admin-free.php:587
-#: inc/class-branda-admin.php:601
+#: inc/class-branda-admin-free.php:594
+#: inc/class-branda-admin.php:608
 msgid "Douglas Adams"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:591
-#: inc/class-branda-admin.php:605
+#: inc/class-branda-admin-free.php:598
+#: inc/class-branda-admin.php:612
 msgid "Nothing was changed, nothing to activate or deactivate."
 msgstr ""
 
-#: inc/class-branda-admin-free.php:674
-#: inc/class-branda-admin.php:688
+#: inc/class-branda-admin-free.php:681
+#: inc/class-branda-admin.php:695
 #: inc/class-branda-public.php:54
-#: inc/modules/admin/color-schemes.php:528
+#: inc/modules/admin/color-schemes.php:529
 msgid "Branda"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:932
-#: inc/class-branda-admin.php:948
+#: inc/class-branda-admin-free.php:939
+#: inc/class-branda-admin.php:955
 msgid "none"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:1307
-#: inc/class-branda-admin.php:1323
+#: inc/class-branda-admin-free.php:1314
+#: inc/class-branda-admin.php:1330
 #: inc/modules/utilities/tracking-codes-list-table.php:113
 #: views/admin/modules/smtp/plugins-list.php:5
 #: views/admin/modules/smtp/plugins-list.php:13
 msgid "Deactivate"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:1344
-#: inc/class-branda-admin.php:1360
+#: inc/class-branda-admin-free.php:1351
+#: inc/class-branda-admin.php:1367
 #: inc/modules/utilities/tracking-codes-list-table.php:112
 msgid "Activate"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:1444
-#: inc/class-branda-admin.php:1491
+#: inc/class-branda-admin-free.php:1451
+#: inc/class-branda-admin.php:1502
 #, php-format
 msgid "Made with %s by WPMU DEV"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:1537
-#: inc/class-branda-admin.php:1590
+#: inc/class-branda-admin-free.php:1544
+#: inc/class-branda-admin.php:1601
 msgid "There is no modules in selected group!"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:1696
-#: inc/class-branda-admin.php:1779
+#: inc/class-branda-admin-free.php:1703
+#: inc/class-branda-admin.php:1790
 #, php-format
 msgid "%s module is active now."
 msgstr ""
 
-#: inc/class-branda-admin-free.php:1707
-#: inc/class-branda-admin.php:1790
+#: inc/class-branda-admin-free.php:1714
+#: inc/class-branda-admin.php:1801
 #, php-format
 msgid "Module %s was deactivated without errors."
 msgstr ""
 
-#: inc/class-branda-admin-free.php:1743
-#: inc/class-branda-admin.php:1826
+#: inc/class-branda-admin-free.php:1750
+#: inc/class-branda-admin.php:1837
 msgid "This module is not active!"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:2043
-#: inc/class-branda-admin.php:2126
+#: inc/class-branda-admin-free.php:2050
+#: inc/class-branda-admin.php:2137
 #, php-format
 msgid "%s module was reset."
 msgstr ""
 
-#: inc/class-branda-admin-free.php:2372
-#: inc/class-branda-admin.php:2455
+#: inc/class-branda-admin-free.php:2379
+#: inc/class-branda-admin.php:2466
 #: inc/class-branda-helper.php:1758
 #: inc/class-branda-helper.php:2322
 #: inc/class-branda-helper.php:2709
@@ -833,8 +833,8 @@ msgstr ""
 msgid "Background"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:2373
-#: inc/class-branda-admin.php:2456
+#: inc/class-branda-admin-free.php:2380
+#: inc/class-branda-admin.php:2467
 #: inc/class-branda-helper.php:1882
 #: inc/class-branda-helper.php:2196
 #: inc/modules/admin/bar.php:489
@@ -844,60 +844,60 @@ msgstr ""
 msgid "Logo"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:2374
-#: inc/class-branda-admin.php:2457
+#: inc/class-branda-admin-free.php:2381
+#: inc/class-branda-admin.php:2468
 #: inc/class-branda-helper.php:2907
 msgid "Social Media Settings"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:2375
-#: inc/class-branda-admin.php:2458
+#: inc/class-branda-admin-free.php:2382
+#: inc/class-branda-admin.php:2469
 #: inc/modules/front-end/author-box.php:1569
 #: inc/modules/front-end/db-error-page.php:655
 #: inc/modules/utilities/maintenance.php:999
 msgid "Social Media"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:2427
-#: inc/class-branda-admin.php:2510
+#: inc/class-branda-admin-free.php:2434
+#: inc/class-branda-admin.php:2521
 msgid "Please configure source module first!"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:2524
-#: inc/class-branda-admin.php:2607
+#: inc/class-branda-admin-free.php:2531
+#: inc/class-branda-admin.php:2618
 #, php-format
 msgid "Module %s was updated."
 msgstr ""
 
-#: inc/class-branda-admin-free.php:2574
-#: inc/class-branda-admin.php:2657
+#: inc/class-branda-admin-free.php:2581
+#: inc/class-branda-admin.php:2668
 msgid "Activate Modules"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:2575
-#: inc/class-branda-admin.php:2658
+#: inc/class-branda-admin-free.php:2582
+#: inc/class-branda-admin.php:2669
 msgid "Choose the modules you want to activate. Each module helps you white label a specific part of your website. If you’re not sure or forget to activate any module now, you can always do that later."
 msgstr ""
 
-#: inc/class-branda-admin-free.php:2819
-#: inc/class-branda-admin.php:2902
+#: inc/class-branda-admin-free.php:2826
+#: inc/class-branda-admin.php:2913
 msgctxt "Post Type General Name"
 msgid "Email Logs"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:2820
-#: inc/class-branda-admin.php:2903
+#: inc/class-branda-admin-free.php:2827
+#: inc/class-branda-admin.php:2914
 msgctxt "Post Type Singular Name"
 msgid "Email Log"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:2823
-#: inc/class-branda-admin.php:2906
+#: inc/class-branda-admin-free.php:2830
+#: inc/class-branda-admin.php:2917
 msgid "Email Log"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:2824
-#: inc/class-branda-admin.php:2907
+#: inc/class-branda-admin-free.php:2831
+#: inc/class-branda-admin.php:2918
 msgid "Post Type Description"
 msgstr ""
 
@@ -1115,12 +1115,12 @@ msgstr ""
 #: inc/modules/login-screen/login-screen.php:1701
 #: inc/modules/login-screen/login-screen.php:1710
 #: inc/modules/utilities/maintenance.php:809
-#: inc/modules/widgets/dashboard-feeds.php:336
-#: inc/modules/widgets/dashboard-feeds.php:347
-#: inc/modules/widgets/dashboard-feeds.php:364
-#: inc/modules/widgets/dashboard-feeds.php:375
-#: inc/modules/widgets/dashboard-widgets.php:744
-#: inc/modules/widgets/dashboard-widgets.php:755
+#: inc/modules/widgets/dashboard-feeds.php:339
+#: inc/modules/widgets/dashboard-feeds.php:350
+#: inc/modules/widgets/dashboard-feeds.php:367
+#: inc/modules/widgets/dashboard-feeds.php:378
+#: inc/modules/widgets/dashboard-widgets.php:747
+#: inc/modules/widgets/dashboard-widgets.php:758
 #: views/admin/modules/admin-bar/tmpl/panes/visibility.php:44
 #: views/admin/modules/admin-panel-tips/tip.php:3
 #: views/admin/modules/dashboard-widgets/tmpl/panes/visibility.php:8
@@ -1148,12 +1148,12 @@ msgstr ""
 #: inc/modules/login-screen/login-screen.php:1702
 #: inc/modules/login-screen/login-screen.php:1711
 #: inc/modules/utilities/maintenance.php:810
-#: inc/modules/widgets/dashboard-feeds.php:337
-#: inc/modules/widgets/dashboard-feeds.php:348
-#: inc/modules/widgets/dashboard-feeds.php:365
-#: inc/modules/widgets/dashboard-feeds.php:376
-#: inc/modules/widgets/dashboard-widgets.php:743
-#: inc/modules/widgets/dashboard-widgets.php:754
+#: inc/modules/widgets/dashboard-feeds.php:340
+#: inc/modules/widgets/dashboard-feeds.php:351
+#: inc/modules/widgets/dashboard-feeds.php:368
+#: inc/modules/widgets/dashboard-feeds.php:379
+#: inc/modules/widgets/dashboard-widgets.php:746
+#: inc/modules/widgets/dashboard-widgets.php:757
 #: views/admin/modules/admin-bar/tmpl/panes/visibility.php:42
 #: views/admin/modules/dashboard-widgets/tmpl/panes/visibility.php:7
 #: views/admin/modules/dashboard-widgets/tmpl/panes/visibility.php:19
@@ -1246,8 +1246,8 @@ msgid "For best results, image should have a minimum width of 1024px. You can up
 msgstr ""
 
 #: inc/class-branda-helper.php:1961
-#: inc/modules/front-end/site-status-page.php:503
-#: inc/modules/front-end/site-status-page.php:532
+#: inc/modules/front-end/site-status-page.php:502
+#: inc/modules/front-end/site-status-page.php:531
 #: inc/modules/utilities/maintenance.php:740
 msgid "Title (optional)"
 msgstr ""
@@ -1255,8 +1255,8 @@ msgstr ""
 #: inc/class-branda-helper.php:1965
 #: inc/modules/front-end/db-error-page.php:575
 #: inc/modules/front-end/db-error-page.php:613
-#: inc/modules/front-end/site-status-page.php:507
-#: inc/modules/front-end/site-status-page.php:579
+#: inc/modules/front-end/site-status-page.php:506
+#: inc/modules/front-end/site-status-page.php:578
 #: inc/modules/login-screen/signup-code.php:129
 #: inc/modules/login-screen/signup-code.php:188
 msgid "Error Message"
@@ -1313,10 +1313,10 @@ msgstr ""
 #: inc/modules/emails/template.php:1091
 #: inc/modules/front-end/author-box.php:1482
 #: inc/modules/login-screen/login-screen.php:2685
-#: inc/modules/utilities/text-replacement.php:343
+#: inc/modules/utilities/text-replacement.php:348
 #: inc/modules/utilities/tracking-codes.php:1028
-#: inc/modules/widgets/dashboard-feeds.php:407
-#: inc/modules/widgets/dashboard-feeds.php:458
+#: inc/modules/widgets/dashboard-feeds.php:410
+#: inc/modules/widgets/dashboard-feeds.php:461
 #: views/admin/modules/admin-bar/dialogs/edit.php:31
 #: views/admin/modules/admin-help-content/dialogs/edit.php:36
 #: views/admin/modules/color-schemes/dialogs/edit.php:874
@@ -1654,7 +1654,7 @@ msgstr ""
 #: inc/modules/front-end/author-box.php:338
 #: inc/modules/front-end/cookie-notice.php:257
 #: inc/modules/front-end/db-error-page.php:521
-#: inc/modules/front-end/site-status-page.php:458
+#: inc/modules/front-end/site-status-page.php:457
 #: inc/modules/login-screen/login-screen.php:698
 #: inc/modules/utilities/maintenance.php:288
 #: views/admin/modules/color-schemes/dialogs/edit.php:19
@@ -1802,7 +1802,7 @@ msgstr ""
 #: inc/modules/front-end/author-box.php:1240
 #: inc/modules/front-end/db-error-page.php:609
 #: inc/modules/front-end/document.php:202
-#: inc/modules/front-end/site-status-page.php:576
+#: inc/modules/front-end/site-status-page.php:575
 #: inc/modules/utilities/tracking-codes-list-table.php:93
 #: inc/modules/widgets/dashboard-feeds-table.php:38
 #: views/admin/modules/admin-bar/dialogs/submenu.php:15
@@ -1835,12 +1835,12 @@ msgstr ""
 #: inc/modules/front-end/document.php:143
 #: inc/modules/front-end/document.php:167
 #: inc/modules/front-end/document.php:336
-#: inc/modules/front-end/site-status-page.php:446
-#: inc/modules/front-end/site-status-page.php:585
+#: inc/modules/front-end/site-status-page.php:445
+#: inc/modules/front-end/site-status-page.php:584
 #: inc/modules/login-screen/login-screen.php:662
 #: inc/modules/utilities/maintenance.php:276
 #: inc/modules/utilities/maintenance.php:998
-#: inc/modules/widgets/dashboard-feeds.php:321
+#: inc/modules/widgets/dashboard-feeds.php:324
 #: views/admin/modules/admin-help-content/dialogs/edit.php:20
 #: views/admin/modules/dashboard-widgets/dialogs/edit.php:28
 msgid "Content"
@@ -1914,7 +1914,7 @@ msgstr ""
 #: inc/modules/widgets/dashboard-feeds-table.php:362
 #: views/admin/modules/admin_menu/dialogs/custom-admin-menu-item.php:31
 #: views/admin/modules/admin_menu/dialogs/custom-admin-menu-item.php:35
-#: views/admin/modules/email-logs/main-list.php:141
+#: views/admin/modules/email-logs/main-list.php:143
 msgid "Delete"
 msgstr ""
 
@@ -2094,7 +2094,7 @@ msgstr ""
 
 #: inc/modules/admin/bar.php:463
 #: inc/modules/admin/tips.php:117
-#: inc/modules/utilities/text-replacement.php:271
+#: inc/modules/utilities/text-replacement.php:276
 msgid "Add New"
 msgstr ""
 
@@ -2153,8 +2153,8 @@ msgstr ""
 #: inc/modules/front-end/author-box.php:974
 #: inc/modules/front-end/author-box.php:1061
 #: inc/modules/utilities/maintenance.php:807
-#: inc/modules/widgets/dashboard-feeds.php:356
-#: inc/modules/widgets/dashboard-widgets.php:735
+#: inc/modules/widgets/dashboard-feeds.php:359
+#: inc/modules/widgets/dashboard-widgets.php:738
 #: views/admin/modules/admin-bar/dialogs/edit.php:19
 #: views/admin/modules/dashboard-widgets/dialogs/edit.php:18
 msgid "Visibility"
@@ -2253,8 +2253,8 @@ msgstr ""
 
 #: inc/modules/admin/bar.php:822
 #: inc/modules/front-end/cookie-notice.php:542
-#: inc/modules/widgets/dashboard-feeds.php:272
-#: inc/modules/widgets/dashboard-widgets.php:719
+#: inc/modules/widgets/dashboard-feeds.php:275
+#: inc/modules/widgets/dashboard-widgets.php:722
 #: views/admin/modules/admin-bar/dialogs/edit.php:17
 #: views/admin/modules/color-schemes/dialogs/edit.php:25
 #: views/admin/modules/dashboard-widgets/dialogs/edit.php:17
@@ -2406,7 +2406,7 @@ msgstr ""
 #: inc/modules/admin/bar.php:1323
 #: inc/modules/admin/bar.php:1768
 #: inc/modules/admin/help-content.php:576
-#: inc/modules/widgets/dashboard-widgets.php:809
+#: inc/modules/widgets/dashboard-widgets.php:812
 msgid "Selected item does not exists!"
 msgstr ""
 
@@ -2421,9 +2421,9 @@ msgstr ""
 #: inc/modules/admin/bar.php:1719
 #: inc/modules/utilities/images.php:189
 #: inc/modules/utilities/maintenance.php:211
-#: inc/modules/utilities/text-replacement.php:353
+#: inc/modules/utilities/text-replacement.php:358
 #: inc/modules/utilities/tracking-codes.php:1038
-#: inc/modules/widgets/dashboard-feeds.php:420
+#: inc/modules/widgets/dashboard-feeds.php:423
 #: views/admin/modules/admin-bar/dialogs/edit.php:34
 #: views/admin/modules/admin-help-content/dialogs/edit.php:39
 #: views/admin/modules/dashboard-widgets/dialogs/edit.php:51
@@ -2471,13 +2471,13 @@ msgstr ""
 msgid "Choose a color scheme to be used for every user across network."
 msgstr ""
 
-#: inc/modules/admin/color-schemes.php:439
+#: inc/modules/admin/color-schemes.php:440
 #, php-format
 msgctxt "Label for link to edit custom theme"
 msgid "Customize \"%s\" scheme"
 msgstr ""
 
-#: inc/modules/admin/color-schemes.php:710
+#: inc/modules/admin/color-schemes.php:711
 #, php-format
 msgid "%s was successfully updated."
 msgstr ""
@@ -2568,7 +2568,7 @@ msgstr ""
 
 #: inc/modules/admin/help-content.php:193
 #: inc/modules/admin/help-content.php:422
-#: inc/modules/widgets/dashboard-widgets.php:730
+#: inc/modules/widgets/dashboard-widgets.php:733
 msgid "Add your help sidebar content here…"
 msgstr ""
 
@@ -2617,7 +2617,7 @@ msgid "Item was updated."
 msgstr ""
 
 #: inc/modules/admin/help-content.php:541
-#: inc/modules/utilities/text-replacement.php:568
+#: inc/modules/utilities/text-replacement.php:573
 msgid "Item was deleted."
 msgstr ""
 
@@ -2967,7 +2967,7 @@ msgstr ""
 #: inc/modules/front-end/cookie-notice.php:211
 #: inc/modules/front-end/db-error-page.php:512
 #: inc/modules/front-end/document.php:304
-#: inc/modules/front-end/site-status-page.php:452
+#: inc/modules/front-end/site-status-page.php:451
 #: inc/modules/login-screen/login-screen.php:679
 #: inc/modules/utilities/maintenance.php:282
 msgid "Design"
@@ -3019,8 +3019,8 @@ msgstr ""
 #: inc/modules/front-end/cookie-notice.php:271
 #: inc/modules/front-end/document.php:156
 #: inc/modules/front-end/document.php:180
-#: inc/modules/front-end/site-status-page.php:401
-#: inc/modules/front-end/site-status-page.php:411
+#: inc/modules/front-end/site-status-page.php:400
+#: inc/modules/front-end/site-status-page.php:410
 #: inc/modules/utilities/comments-control.php:244
 #: views/admin/modules/tracking-codes/dialogs/edit.php:166
 msgid "Disable"
@@ -3043,8 +3043,8 @@ msgstr ""
 #: inc/modules/front-end/cookie-notice.php:272
 #: inc/modules/front-end/document.php:157
 #: inc/modules/front-end/document.php:181
-#: inc/modules/front-end/site-status-page.php:400
-#: inc/modules/front-end/site-status-page.php:410
+#: inc/modules/front-end/site-status-page.php:399
+#: inc/modules/front-end/site-status-page.php:409
 #: inc/modules/utilities/comments-control.php:243
 #: views/admin/modules/tracking-codes/dialogs/edit.php:174
 msgid "Enable"
@@ -3141,7 +3141,7 @@ msgstr ""
 msgid "Insert any content that you like into the header of all of the subsites on your network."
 msgstr ""
 
-#: inc/modules/emails/email-logs-free.php:61
+#: inc/modules/emails/email-logs-free.php:69
 #: inc/modules/emails/email-logs.php:714
 msgid "Get detailed information about your emails with Branda Pro. You can check recipients information and export all log history. Try it today with a WPMU DEV Membership!"
 msgstr ""
@@ -3786,7 +3786,7 @@ msgstr ""
 
 #: inc/modules/emails/template.php:195
 #: inc/modules/widgets/dashboard-feeds-table.php:40
-#: inc/modules/widgets/dashboard-feeds.php:277
+#: inc/modules/widgets/dashboard-feeds.php:280
 msgid "Site URL"
 msgstr ""
 
@@ -3826,7 +3826,7 @@ msgstr ""
 #: inc/modules/emails/template.php:230
 #: inc/modules/front-end/db-error-page.php:485
 #: inc/modules/front-end/db-error-page.php:491
-#: inc/modules/front-end/site-status-page.php:418
+#: inc/modules/front-end/site-status-page.php:417
 #: views/admin/modules/email-template/dialogs/preview.php:9
 msgid "Preview"
 msgstr ""
@@ -4389,8 +4389,8 @@ msgid "We're currently experiencing technical issues &mdash; Please check back s
 msgstr ""
 
 #: inc/modules/front-end/db-error-page.php:448
-#: inc/modules/front-end/site-status-page.php:364
-#: inc/modules/widgets/dashboard-widgets.php:837
+#: inc/modules/front-end/site-status-page.php:363
+#: inc/modules/widgets/dashboard-widgets.php:840
 msgid "Whoops! Something went wrong."
 msgstr ""
 
@@ -4413,7 +4413,7 @@ msgid "We're currently experiencing technical issues connecting to the database.
 msgstr ""
 
 #: inc/modules/front-end/db-error-page.php:486
-#: inc/modules/front-end/site-status-page.php:419
+#: inc/modules/front-end/site-status-page.php:418
 msgid "You can preview your custom error page here. Note that the preview keeps updating as you save your changes."
 msgstr ""
 
@@ -4426,14 +4426,14 @@ msgid "Customize the design of each element of your DB Error screen."
 msgstr ""
 
 #: inc/modules/front-end/db-error-page.php:522
-#: inc/modules/front-end/site-status-page.php:459
+#: inc/modules/front-end/site-status-page.php:458
 #: inc/modules/login-screen/login-screen.php:699
 #: inc/modules/utilities/maintenance.php:289
 msgid "Adjust the default colour combinations as per your liking."
 msgstr ""
 
 #: inc/modules/front-end/db-error-page.php:547
-#: inc/modules/front-end/site-status-page.php:484
+#: inc/modules/front-end/site-status-page.php:483
 msgid "Preview is not available. Save settings first!"
 msgstr ""
 
@@ -4685,76 +4685,76 @@ msgstr ""
 msgid "In a few words, explain what this site is about. Default will be used if left blank."
 msgstr ""
 
-#: inc/modules/front-end/site-status-page.php:367
+#: inc/modules/front-end/site-status-page.php:366
 #, php-format
 msgid "Directory %s is not writable, we are unable to create files."
 msgstr ""
 
-#: inc/modules/front-end/site-status-page.php:374
+#: inc/modules/front-end/site-status-page.php:373
 msgid "Custom Sites Pages"
 msgstr ""
 
-#: inc/modules/front-end/site-status-page.php:378
+#: inc/modules/front-end/site-status-page.php:377
 msgid "Error"
 msgstr ""
 
-#: inc/modules/front-end/site-status-page.php:392
+#: inc/modules/front-end/site-status-page.php:391
 msgid "Modes"
 msgstr ""
 
-#: inc/modules/front-end/site-status-page.php:393
+#: inc/modules/front-end/site-status-page.php:392
 msgid "Enable the custom error pages for sites on your multisite network that have been suspended or deleted."
 msgstr ""
 
-#: inc/modules/front-end/site-status-page.php:397
-#: inc/modules/front-end/site-status-page.php:424
+#: inc/modules/front-end/site-status-page.php:396
+#: inc/modules/front-end/site-status-page.php:423
 msgid "Suspended/Archived"
 msgstr ""
 
-#: inc/modules/front-end/site-status-page.php:398
+#: inc/modules/front-end/site-status-page.php:397
 msgid "Enable a custom error page for sites which have been suspended or archived on your network."
 msgstr ""
 
-#: inc/modules/front-end/site-status-page.php:407
-#: inc/modules/front-end/site-status-page.php:435
-#: inc/modules/front-end/site-status-page.php:535
+#: inc/modules/front-end/site-status-page.php:406
+#: inc/modules/front-end/site-status-page.php:434
+#: inc/modules/front-end/site-status-page.php:534
 msgid "Deleted"
 msgstr ""
 
-#: inc/modules/front-end/site-status-page.php:408
+#: inc/modules/front-end/site-status-page.php:407
 msgid "Enable a custom error page for sites which have been deleted on your network."
 msgstr ""
 
-#: inc/modules/front-end/site-status-page.php:447
-#: inc/modules/front-end/site-status-page.php:453
+#: inc/modules/front-end/site-status-page.php:446
+#: inc/modules/front-end/site-status-page.php:452
 msgid "Adjust the default content of your error pages."
 msgstr ""
 
-#: inc/modules/front-end/site-status-page.php:485
+#: inc/modules/front-end/site-status-page.php:484
 #, php-format
 msgid "%s preview is not available. Save settings first!"
 msgstr ""
 
-#: inc/modules/front-end/site-status-page.php:504
+#: inc/modules/front-end/site-status-page.php:503
 msgid "This site has been archived or suspended."
 msgstr ""
 
-#: inc/modules/front-end/site-status-page.php:519
+#: inc/modules/front-end/site-status-page.php:518
 msgid "Archived/Suspended"
 msgstr ""
 
-#: inc/modules/front-end/site-status-page.php:525
-#: inc/modules/front-end/site-status-page.php:541
+#: inc/modules/front-end/site-status-page.php:524
+#: inc/modules/front-end/site-status-page.php:540
 #: inc/modules/utilities/maintenance.php:748
 msgid "Content (optional)"
 msgstr ""
 
-#: inc/modules/front-end/site-status-page.php:526
-#: inc/modules/front-end/site-status-page.php:542
+#: inc/modules/front-end/site-status-page.php:525
+#: inc/modules/front-end/site-status-page.php:541
 msgid "You can write description for the page here…"
 msgstr ""
 
-#: inc/modules/front-end/site-status-page.php:533
+#: inc/modules/front-end/site-status-page.php:532
 msgid "This site has been archived or deleted."
 msgstr ""
 
@@ -5196,11 +5196,11 @@ msgid "User Create Code"
 msgstr ""
 
 #: inc/modules/login-screen/signup-code.php:615
-#: inc/modules/login-screen/signup-code.php:687
+#: inc/modules/login-screen/signup-code.php:690
 msgid "Choose a user role"
 msgstr ""
 
-#: inc/modules/login-screen/signup-code.php:661
+#: inc/modules/login-screen/signup-code.php:663
 msgctxt "button"
 msgid "Add Signup Code"
 msgstr ""
@@ -5709,13 +5709,13 @@ msgstr ""
 msgid "You haven’t defined any text replacement rule yet. Click on the “+ Add Rule” button to add one."
 msgstr ""
 
-#: inc/modules/utilities/text-replacement.php:303
+#: inc/modules/utilities/text-replacement.php:308
 msgid "Add Rule"
 msgstr ""
 
-#: inc/modules/utilities/text-replacement.php:353
+#: inc/modules/utilities/text-replacement.php:358
 #: inc/modules/utilities/tracking-codes.php:1038
-#: inc/modules/widgets/dashboard-feeds.php:470
+#: inc/modules/widgets/dashboard-feeds.php:473
 #: views/admin/modules/admin-bar/dialogs/edit.php:35
 #: views/admin/modules/admin-help-content/dialogs/edit.php:40
 #: views/admin/modules/color-schemes/dialogs/edit.php:876
@@ -5723,126 +5723,126 @@ msgstr ""
 msgid "Update"
 msgstr ""
 
-#: inc/modules/utilities/text-replacement.php:365
+#: inc/modules/utilities/text-replacement.php:370
 msgid "Add Text Replacement Rule"
 msgstr ""
 
-#: inc/modules/utilities/text-replacement.php:365
+#: inc/modules/utilities/text-replacement.php:370
 msgid "Edit Text Replacement Rule"
 msgstr ""
 
-#: inc/modules/utilities/text-replacement.php:386
+#: inc/modules/utilities/text-replacement.php:391
 msgid "Enter the text domain to replace the text for specific plugin/theme only. For example, the text domain of Branda is “ub”."
 msgstr ""
 
-#: inc/modules/utilities/text-replacement.php:389
+#: inc/modules/utilities/text-replacement.php:394
 msgid "https://codex.wordpress.org/I18n_for_WordPress_Developers#Text_Domains"
 msgstr ""
 
-#: inc/modules/utilities/text-replacement.php:390
+#: inc/modules/utilities/text-replacement.php:395
 msgid "Click here to read more on text domains."
 msgstr ""
 
-#: inc/modules/utilities/text-replacement.php:397
+#: inc/modules/utilities/text-replacement.php:402
 msgid "Find text"
 msgstr ""
 
-#: inc/modules/utilities/text-replacement.php:398
+#: inc/modules/utilities/text-replacement.php:403
 msgid "E.g. Posts"
 msgstr ""
 
-#: inc/modules/utilities/text-replacement.php:403
+#: inc/modules/utilities/text-replacement.php:408
 msgid "Replace with"
 msgstr ""
 
-#: inc/modules/utilities/text-replacement.php:404
+#: inc/modules/utilities/text-replacement.php:409
 msgid "E.g. Blog Articles"
 msgstr ""
 
-#: inc/modules/utilities/text-replacement.php:407
+#: inc/modules/utilities/text-replacement.php:412
 msgid "If you want to hide the text, leave this input blank."
 msgstr ""
 
-#: inc/modules/utilities/text-replacement.php:412
+#: inc/modules/utilities/text-replacement.php:417
 msgid "Text domain (optional)"
 msgstr ""
 
-#: inc/modules/utilities/text-replacement.php:413
+#: inc/modules/utilities/text-replacement.php:418
 msgid " E.g. ub"
 msgstr ""
 
-#: inc/modules/utilities/text-replacement.php:421
+#: inc/modules/utilities/text-replacement.php:426
 msgid "Scope"
 msgstr ""
 
-#: inc/modules/utilities/text-replacement.php:424
+#: inc/modules/utilities/text-replacement.php:429
 msgid "All Pages"
 msgstr ""
 
-#: inc/modules/utilities/text-replacement.php:425
+#: inc/modules/utilities/text-replacement.php:430
 msgid "Admin Pages"
 msgstr ""
 
-#: inc/modules/utilities/text-replacement.php:426
+#: inc/modules/utilities/text-replacement.php:431
 msgid "Front-end Pages"
 msgstr ""
 
-#: inc/modules/utilities/text-replacement.php:432
+#: inc/modules/utilities/text-replacement.php:437
 msgid "Case matching"
 msgstr ""
 
-#: inc/modules/utilities/text-replacement.php:435
+#: inc/modules/utilities/text-replacement.php:440
 msgid "Case Insensitive"
 msgstr ""
 
-#: inc/modules/utilities/text-replacement.php:436
+#: inc/modules/utilities/text-replacement.php:441
 #: views/admin/modules/signup-code/row-blog.php:10
-#: views/admin/modules/signup-code/row-user.php:25
+#: views/admin/modules/signup-code/row-user.php:34
 msgid "Case Sensitive"
 msgstr ""
 
-#: inc/modules/utilities/text-replacement.php:442
+#: inc/modules/utilities/text-replacement.php:447
 msgid "Links text"
 msgstr ""
 
-#: inc/modules/utilities/text-replacement.php:445
+#: inc/modules/utilities/text-replacement.php:450
 msgid "Include"
 msgstr ""
 
-#: inc/modules/utilities/text-replacement.php:446
+#: inc/modules/utilities/text-replacement.php:451
 msgid "Exclude"
 msgstr ""
 
-#: inc/modules/utilities/text-replacement.php:450
+#: inc/modules/utilities/text-replacement.php:455
 msgid "Choose whether to replace the text within the &lt;a&gt; tag."
 msgstr ""
 
-#: inc/modules/utilities/text-replacement.php:493
-#: inc/modules/widgets/dashboard-feeds.php:617
+#: inc/modules/utilities/text-replacement.php:498
+#: inc/modules/widgets/dashboard-feeds.php:620
 msgid "This field cannot be empty!"
 msgstr ""
 
-#: inc/modules/utilities/text-replacement.php:500
+#: inc/modules/utilities/text-replacement.php:505
 msgid "This field seems to have an invalid value!"
 msgstr ""
 
-#: inc/modules/utilities/text-replacement.php:590
+#: inc/modules/utilities/text-replacement.php:595
 msgid "Selected rules were deleted!"
 msgstr ""
 
-#: inc/modules/utilities/text-replacement.php:603
+#: inc/modules/utilities/text-replacement.php:608
 msgid "Delete Text Replacement Rule"
 msgstr ""
 
-#: inc/modules/utilities/text-replacement.php:604
+#: inc/modules/utilities/text-replacement.php:609
 msgid "Are you sure you wish to permanently delete this text replacement rule?"
 msgstr ""
 
-#: inc/modules/utilities/text-replacement.php:606
+#: inc/modules/utilities/text-replacement.php:611
 msgid "Delete Text Replacement Rules"
 msgstr ""
 
-#: inc/modules/utilities/text-replacement.php:607
+#: inc/modules/utilities/text-replacement.php:612
 msgid "Are you sure you wish to permanently delete selected text replacement rules?"
 msgstr ""
 
@@ -6155,7 +6155,7 @@ msgid "Are you sure you wish to permanently delete selected tracking codes?"
 msgstr ""
 
 #: inc/modules/widgets/dashboard-feeds-table.php:39
-#: inc/modules/widgets/dashboard-feeds.php:302
+#: inc/modules/widgets/dashboard-feeds.php:305
 msgid "Feed URL"
 msgstr ""
 
@@ -6169,12 +6169,12 @@ msgid "Edit"
 msgstr ""
 
 #: inc/modules/widgets/dashboard-feeds-table.php:129
-#: inc/modules/widgets/dashboard-feeds.php:716
+#: inc/modules/widgets/dashboard-feeds.php:719
 msgid "Delete Dashboard Feed"
 msgstr ""
 
 #: inc/modules/widgets/dashboard-feeds-table.php:130
-#: inc/modules/widgets/dashboard-feeds.php:717
+#: inc/modules/widgets/dashboard-feeds.php:720
 msgid "Are you sure you wish to permanently delete this dashboard feed?"
 msgstr ""
 
@@ -6191,116 +6191,116 @@ msgstr ""
 msgid "<strong>Feed Error</strong>: %s"
 msgstr ""
 
-#: inc/modules/widgets/dashboard-feeds.php:248
+#: inc/modules/widgets/dashboard-feeds.php:251
 msgid "Add Feed"
 msgstr ""
 
-#: inc/modules/widgets/dashboard-feeds.php:278
+#: inc/modules/widgets/dashboard-feeds.php:281
 msgid "E.g. http://www.example.com"
 msgstr ""
 
-#: inc/modules/widgets/dashboard-feeds.php:295
+#: inc/modules/widgets/dashboard-feeds.php:298
 msgid "Feed title (optional)"
 msgstr ""
 
-#: inc/modules/widgets/dashboard-feeds.php:296
+#: inc/modules/widgets/dashboard-feeds.php:299
 msgid "(options)"
 msgstr ""
 
-#: inc/modules/widgets/dashboard-feeds.php:297
+#: inc/modules/widgets/dashboard-feeds.php:300
 msgid "E.g. Daily Jobs Feed."
 msgstr ""
 
-#: inc/modules/widgets/dashboard-feeds.php:303
+#: inc/modules/widgets/dashboard-feeds.php:306
 msgid "E.g. http://www.example.com/feed"
 msgstr ""
 
-#: inc/modules/widgets/dashboard-feeds.php:310
+#: inc/modules/widgets/dashboard-feeds.php:313
 msgid "Display"
 msgstr ""
 
-#: inc/modules/widgets/dashboard-feeds.php:315
+#: inc/modules/widgets/dashboard-feeds.php:318
 msgid "Count"
 msgstr ""
 
-#: inc/modules/widgets/dashboard-feeds.php:316
+#: inc/modules/widgets/dashboard-feeds.php:319
 msgid "The number of feed items you’d like to display."
 msgstr ""
 
-#: inc/modules/widgets/dashboard-feeds.php:322
+#: inc/modules/widgets/dashboard-feeds.php:325
 msgid "Choose whether to show full content or only the excerpt."
 msgstr ""
 
-#: inc/modules/widgets/dashboard-feeds.php:325
+#: inc/modules/widgets/dashboard-feeds.php:328
 msgid "Excerpt"
 msgstr ""
 
-#: inc/modules/widgets/dashboard-feeds.php:326
+#: inc/modules/widgets/dashboard-feeds.php:329
 msgid "Full Content"
 msgstr ""
 
-#: inc/modules/widgets/dashboard-feeds.php:332
+#: inc/modules/widgets/dashboard-feeds.php:335
 msgid "Author"
 msgstr ""
 
-#: inc/modules/widgets/dashboard-feeds.php:333
+#: inc/modules/widgets/dashboard-feeds.php:336
 msgid "Show the Author of the feed item if available or not."
 msgstr ""
 
-#: inc/modules/widgets/dashboard-feeds.php:343
+#: inc/modules/widgets/dashboard-feeds.php:346
 msgid "Date"
 msgstr ""
 
-#: inc/modules/widgets/dashboard-feeds.php:344
+#: inc/modules/widgets/dashboard-feeds.php:347
 msgid "Show the creation date of feed item or not."
 msgstr ""
 
-#: inc/modules/widgets/dashboard-feeds.php:360
-#: inc/modules/widgets/dashboard-widgets.php:740
+#: inc/modules/widgets/dashboard-feeds.php:363
+#: inc/modules/widgets/dashboard-widgets.php:743
 #: views/admin/modules/dashboard-widgets/tmpl/panes/visibility.php:3
 msgid "Site Dashboard"
 msgstr ""
 
-#: inc/modules/widgets/dashboard-feeds.php:361
+#: inc/modules/widgets/dashboard-feeds.php:364
 msgid "Choose whether to show this feed on site dashboard or not."
 msgstr ""
 
-#: inc/modules/widgets/dashboard-feeds.php:371
-#: inc/modules/widgets/dashboard-widgets.php:751
+#: inc/modules/widgets/dashboard-feeds.php:374
+#: inc/modules/widgets/dashboard-widgets.php:754
 #: views/admin/modules/dashboard-widgets/tmpl/panes/visibility.php:15
 msgid "Network Dashboard"
 msgstr ""
 
-#: inc/modules/widgets/dashboard-feeds.php:372
+#: inc/modules/widgets/dashboard-feeds.php:375
 msgid "Choose whether to show this feed on the network dashboard or not."
 msgstr ""
 
-#: inc/modules/widgets/dashboard-feeds.php:429
+#: inc/modules/widgets/dashboard-feeds.php:432
 msgid "Add Dashboard Feed"
 msgstr ""
 
-#: inc/modules/widgets/dashboard-feeds.php:481
+#: inc/modules/widgets/dashboard-feeds.php:484
 msgid "Edit Dashboard Feed"
 msgstr ""
 
-#: inc/modules/widgets/dashboard-feeds.php:520
+#: inc/modules/widgets/dashboard-feeds.php:523
 msgid "Selected feed does not exists!"
 msgstr ""
 
-#: inc/modules/widgets/dashboard-feeds.php:559
+#: inc/modules/widgets/dashboard-feeds.php:562
 msgid "Selected feeds were deleted!"
 msgstr ""
 
-#: inc/modules/widgets/dashboard-feeds.php:596
-#: inc/modules/widgets/dashboard-feeds.php:609
+#: inc/modules/widgets/dashboard-feeds.php:599
+#: inc/modules/widgets/dashboard-feeds.php:612
 msgid "This field must be a proper URL!"
 msgstr ""
 
-#: inc/modules/widgets/dashboard-feeds.php:719
+#: inc/modules/widgets/dashboard-feeds.php:722
 msgid "Delete Dashboard Feeds"
 msgstr ""
 
-#: inc/modules/widgets/dashboard-feeds.php:720
+#: inc/modules/widgets/dashboard-feeds.php:723
 msgid "Are you sure you wish to permanently delete selected dashboard feeds?"
 msgstr ""
 
@@ -6383,36 +6383,36 @@ msgstr ""
 msgid "Dashboard Widget was created."
 msgstr ""
 
-#: inc/modules/widgets/dashboard-widgets.php:549
+#: inc/modules/widgets/dashboard-widgets.php:552
 msgid "Dashboard Widget was updated."
 msgstr ""
 
-#: inc/modules/widgets/dashboard-widgets.php:702
+#: inc/modules/widgets/dashboard-widgets.php:705
 msgid "Dashboard Widget was deleted."
 msgstr ""
 
-#: inc/modules/widgets/dashboard-widgets.php:706
+#: inc/modules/widgets/dashboard-widgets.php:709
 msgid "Selected widget does not exists!"
 msgstr ""
 
-#: inc/modules/widgets/dashboard-widgets.php:723
+#: inc/modules/widgets/dashboard-widgets.php:726
 msgid "Widget Title"
 msgstr ""
 
-#: inc/modules/widgets/dashboard-widgets.php:727
+#: inc/modules/widgets/dashboard-widgets.php:730
 msgid "Widget Content"
 msgstr ""
 
-#: inc/modules/widgets/dashboard-widgets.php:741
+#: inc/modules/widgets/dashboard-widgets.php:744
 msgid "Choose whether to show this text widget on site dashboard or not."
 msgstr ""
 
-#: inc/modules/widgets/dashboard-widgets.php:752
+#: inc/modules/widgets/dashboard-widgets.php:755
 #: views/admin/modules/dashboard-widgets/tmpl/panes/visibility.php:16
 msgid "Choose whether to show this text widget on the network dashboard or not."
 msgstr ""
 
-#: inc/modules/widgets/dashboard-widgets.php:806
+#: inc/modules/widgets/dashboard-widgets.php:809
 msgid "Selected item was successfully restored!"
 msgstr ""
 
@@ -6926,7 +6926,7 @@ msgstr ""
 
 #: views/admin/modules/admin-bar/row.php:21
 #: views/admin/modules/signup-code/row-blog.php:16
-#: views/admin/modules/signup-code/row-user.php:9
+#: views/admin/modules/signup-code/row-user.php:14
 msgid "Remove item"
 msgstr ""
 
@@ -7095,7 +7095,7 @@ msgid "Forms"
 msgstr ""
 
 #: views/admin/modules/color-schemes/dialogs/edit.php:158
-msgid "Checkbox / Radio Button￼"
+msgid "Checkbox / Radio Button"
 msgstr ""
 
 #: views/admin/modules/color-schemes/dialogs/edit.php:175
@@ -7200,11 +7200,11 @@ msgstr ""
 
 #: views/admin/modules/color-schemes/dialogs/edit.php:768
 #: views/admin/modules/color-schemes/dialogs/edit.php:856
-msgid "Progress Bar￼"
+msgid "Progress Bar"
 msgstr ""
 
 #: views/admin/modules/color-schemes/dialogs/edit.php:780
-msgid "Selected Attachment￼"
+msgid "Selected Attachment"
 msgstr ""
 
 #: views/admin/modules/color-schemes/dialogs/edit.php:797
@@ -7270,20 +7270,20 @@ msgid "Log Settings"
 msgstr ""
 
 #. translators: entry id
-#: views/admin/modules/email-logs/main-list.php:65
+#: views/admin/modules/email-logs/main-list.php:67
 #, php-format
 msgid "%1$sSelect entry number%2$s"
 msgstr ""
 
-#: views/admin/modules/email-logs/main-list.php:85
+#: views/admin/modules/email-logs/main-list.php:87
 msgid "Click to open"
 msgstr ""
 
-#: views/admin/modules/email-logs/main-list.php:147
+#: views/admin/modules/email-logs/main-list.php:149
 msgid "Export Email details"
 msgstr ""
 
-#: views/admin/modules/email-logs/main-list.php:173
+#: views/admin/modules/email-logs/main-list.php:175
 msgid "No email logs were found."
 msgstr ""
 
@@ -7479,16 +7479,16 @@ msgstr ""
 msgid "Signup Codes"
 msgstr ""
 
-#: views/admin/modules/signup-code/items.php:14
+#: views/admin/modules/signup-code/items.php:15
 msgid "Add Signup Code"
 msgstr ""
 
-#: views/admin/modules/signup-code/items.php:17
+#: views/admin/modules/signup-code/items.php:18
 msgid "Users must provide one of the codes to signup successfully, and they'll get the user role associated with the signup code they use."
 msgstr ""
 
 #: views/admin/modules/signup-code/row-blog.php:4
-#: views/admin/modules/signup-code/row-user.php:4
+#: views/admin/modules/signup-code/row-user.php:8
 msgid "Signup code"
 msgstr ""
 

@@ -155,7 +155,7 @@ $this->render(
 							<div class="sui-box">
 								<div class="sui-box-body">
 									<div class="sui-form-field">
-										<label class="sui-label"><?php esc_html_e( 'Checkbox / Radio Button￼', 'ub' ); ?></label>
+										<label class="sui-label"><?php esc_html_e( 'Checkbox / Radio Button', 'ub' ); ?></label>
 <?php
 $this->render(
 	'admin/common/options/sui-colorpicker',
@@ -765,7 +765,7 @@ $this->render(
 							<div class="sui-box">
 								<div class="sui-box-body">
 									<div class="sui-form-field">
-										<label class="sui-label"><?php esc_html_e( 'Progress Bar￼', 'ub' ); ?></label>
+										<label class="sui-label"><?php esc_html_e( 'Progress Bar', 'ub' ); ?></label>
 <?php
 $this->render(
 	'admin/common/options/sui-colorpicker',
@@ -777,7 +777,7 @@ $this->render(
 ?>
 									</div>
 									<div class="sui-form-field">
-										<label class="sui-label"><?php esc_html_e( 'Selected Attachment￼', 'ub' ); ?></label>
+										<label class="sui-label"><?php esc_html_e( 'Selected Attachment', 'ub' ); ?></label>
 <?php
 $this->render(
 	'admin/common/options/sui-colorpicker',
@@ -853,7 +853,7 @@ $this->render(
 							<div class="sui-box">
 								<div class="sui-box-body">
 									<div class="sui-form-field">
-										<label class="sui-label"><?php esc_html_e( 'Progress Bar￼', 'ub' ); ?></label>
+										<label class="sui-label"><?php esc_html_e( 'Progress Bar', 'ub' ); ?></label>
 <?php
 $this->render(
 	'admin/common/options/sui-colorpicker',

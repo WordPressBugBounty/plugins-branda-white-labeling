@@ -57,6 +57,7 @@ html body {
     min-width: 350px;
     display: flex;
     align-items: center;
+    margin: 0;
 }
 #login {
     margin: 0 auto;
@@ -71,6 +72,14 @@ html body {
 .login #login #nav,
 .login #loginform {
     max-width: 320px;
+}
+@media (max-width: 768px) {
+    .branda-login {
+        background-color: #ffffff00;
+    }
+    html body{
+        background-size: cover;
+    }
 }
 ',
 	),

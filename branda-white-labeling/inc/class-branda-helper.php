@@ -220,7 +220,7 @@ if ( ! class_exists( 'Branda_Helper' ) ) {
 		 *
 		 * @param mixed $default default value return if we do not have any.
 		 */
-		protected function get_value( $section = null, $name = null, $default = null, $escape = true ) {
+		protected function get_value( $section = '', $name = '', $default = '', $escape = true ) {
 			$this->set_data();
 			$data = $value = $this->data;
 			if ( ! empty( $section ) ) {
@@ -239,7 +239,7 @@ if ( ! class_exists( 'Branda_Helper' ) ) {
 					 * @since 1.9.5
 					 */
 					if (
-						null === $default
+						( null === $default || '' === $default )
 						&& isset( $this->options )
 						&& isset( $this->options[ $section ] )
 						&& isset( $this->options[ $section ]['fields'] )
@@ -598,7 +598,7 @@ if ( ! class_exists( 'Branda_Helper' ) ) {
 					if ( ! current_user_can( 'unfiltered_html' ) ) {
 						$value[ $section_key ][ $key ] = $current_value[ $section_key ][ $key ];
 					} else {
-						$value[ $section_key ][ $key ] = self::kses_markup( $value[ $section_key ][ $key ] );
+						$value[ $section_key ][ $key ] = self::kses_markup( wp_unslash( $value[ $section_key ][ $key ] ) );
 					}
 
 					break;

@@ -4,7 +4,7 @@
 <?php if ( $show_manage_all_modules_button ) { ?>
 		<button class="sui-button" type="button" data-modal-open="branda-manage-all-modules" data-modal-mask="true"><?php echo esc_html_x( 'Manage All Modules', 'button', 'ub' ); ?></button>
 <?php } ?>
-<?php if ( $documentation_chapter && ! empty( $helps ) ) : ?>
+<?php if ( $documentation_chapter && ! empty( $helps ) && ! apply_filters( 'wpmudev_branding_hide_doc_link', false ) ) : ?>
 		<a target="_blank" class="sui-button sui-button-ghost"
 		   href="https://wpmudev.com/docs/wpmu-dev-plugins/branda/?utm_source=branda&utm_medium=plugin&utm_campaign=branda_<?php echo esc_attr( $documentation_chapter ); ?>_docs#<?php echo esc_attr( $documentation_chapter ); ?>">
 			<i class="sui-icon-academy"></i>

@@ -1090,8 +1090,12 @@ if ( ! class_exists( 'Branda_SMTP' ) ) {
 		 * @return void
 		 */
 		protected function force_set_smtp_password( ?string $password = '', bool $encrypt = true ): string {
-			$smtp_options = branda_get_option( 'ub_smtp' );
+			$smtp_options = branda_get_option( 'ub_smtp', array() );
 			$password     = $encrypt ? $this->encrypt( $password ) : $password;
+
+			if ( ! is_array( $smtp_options ) ) {
+				$smtp_options = array();
+			}
 
 			$smtp_options['smtp_authentication']['smtp_password'] = $password;
 
@@ -1120,7 +1124,12 @@ if ( ! class_exists( 'Branda_SMTP' ) ) {
 		 */
 		protected function set_encryption_method( string $method = '' ): void {
 			if ( in_array( $method, array( 'sodium', 'openssl' ) ) ) {
-				$smtp_options                                             = branda_get_option( 'ub_smtp' );
+				$smtp_options = branda_get_option( 'ub_smtp', array() );
+
+				if ( ! is_array( $smtp_options ) ) {
+					$smtp_options = array();
+				}
+
 				$smtp_options['smtp_authentication']['encryption_method'] = $method;
 
 				branda_update_option( 'ub_smtp', $smtp_options );

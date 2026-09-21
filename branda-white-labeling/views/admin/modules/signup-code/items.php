@@ -4,7 +4,8 @@
 		<div class="sui-box-builder-fields">
 <?php
 foreach ( $items as $id => $item ) {
-	$item['roles'] = $roles;
+	$item['roles']          = $roles;
+	$item['roles_disabled'] = isset( $roles_disabled ) ? (array) $roles_disabled : array();
 	$this->render( $row, $item );
 }
 ?>

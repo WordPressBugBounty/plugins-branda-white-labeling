@@ -542,6 +542,9 @@ if ( ! class_exists( 'Branda_Dashboard_Widgets' ) ) {
 			$message      = __( 'Dashboard Widget was created.', 'ub' );
 			$this->check_input_data( $nonce_action, array( 'id', 'title', 'content' ) );
 			$items = branda_get_option_filtered( $this->items_name );
+			if ( ! is_array( $items ) ) {
+				$items = array();
+			}
 			if ( 'new' === $id ) {
 				$id = $this->generate_id( $_POST );
 			}

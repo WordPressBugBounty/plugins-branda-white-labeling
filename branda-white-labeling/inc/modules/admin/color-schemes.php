@@ -388,7 +388,8 @@ if ( ! class_exists( 'Branda_Color_Schemes' ) ) {
 		 */
 		public function set_custom_color_scheme() {
 			header( 'Content-type: text/css' );
-			$args     = array_merge( $this->defaults, $this->get_value( 'settings', 'ultimate' ) );
+			$ultimate = $this->get_value( 'settings', 'ultimate' ) ? : array();
+			$args     = array_merge( $this->defaults, $ultimate );
 			$template = $this->get_template_name( 'css' );
 			$this->render( $template, $args );
 		}

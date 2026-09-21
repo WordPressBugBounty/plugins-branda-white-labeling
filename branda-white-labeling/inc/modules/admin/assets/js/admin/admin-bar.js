@@ -13,6 +13,16 @@ var Branda = Branda || {};
 Branda.admin_bar_dialog_edit = 'branda-admin-bar-edit';
 Branda.admin_bar_dialog_delete = 'branda-admin-bar-delete';
 var $branda_admin_bar_entries_parent;
+var branda_admin_bar_saving = false;
+/**
+ * Close the current modal, only when one is still open.
+ */
+function branda_admin_bar_close_modal( dialog_id ) {
+    if ( ! jQuery( '#' + dialog_id ).hasClass( 'sui-content-fade-in' ) ) {
+        return;
+    }
+    SUI.closeModal();
+}
 jQuery( document ).ready( function( $ ) {
     $branda_admin_bar_entries_parent = $( '.branda-settings-tab-content-admin-bar .branda-admin-bar-items-custom-entries' );
 });
@@ -28,6 +38,10 @@ jQuery('.branda-admin-bar-items-custom-entries').on( 'click', '.branda-admin-bar
         };
         var template, nonce;
         e.preventDefault();
+        branda_admin_bar_saving = false;
+        jQuery( '.branda-admin-bar-save', jQuerydialog )
+            .prop( 'disabled', false )
+            .removeClass( 'sui-button-onload' );
         /**
          * Dialog class
          */
@@ -244,10 +258,17 @@ jQuery( window.document ).ready( function( $ ){
      * Open add/edit modal
      */
     $('.branda-admin-bar-save').on( 'click', function() {
-        var parent = $('.sui-box-body', $(this).closest( '.sui-box' ) );
-        var $dialog = $(this).closest( '.sui-modal' );
+        var $button = $(this);
+        var parent = $('.sui-box-body', $button.closest( '.sui-box' ) );
+        var $dialog = $button.closest( '.sui-modal' );
         var reqired = false;
-        var id = $(this).data('id');
+        var id = $button.data('id');
+        /**
+         * Do not submit again while a request is already in progress.
+         */
+        if ( branda_admin_bar_saving || $button.prop( 'disabled' ) ) {
+            return;
+        }
         $('[data-required=required]', parent ).each( function() {
             if ( '' === $(this).val() ) {
                 var local_parent = $(this).parent();
@@ -280,7 +301,7 @@ jQuery( window.document ).ready( function( $ ){
         }
         var data = {
             action: 'branda_admin_bar_menu_save',
-            _wpnonce: $(this).data('nonce'),
+            _wpnonce: $button.data('nonce'),
             id: id,
         };
         $('input, textarea', parent).each( function() {
@@ -296,20 +317,33 @@ jQuery( window.document ).ready( function( $ ){
                     data[n] = $(this).val();
             }
         });
+        /**
+         * Keep the save lock until the modal is opened again.
+         */
+        branda_admin_bar_saving = true;
+        $button.prop( 'disabled', true ).addClass( 'sui-button-onload' );
+        var save_succeeded = false;
         $.post( ajaxurl, data, function( response ) {
             if ( response.success ) {
+                save_succeeded = true;
                 var $row = $('[data-id=' + response.data.id + ']', $branda_admin_bar_entries_parent );
                 if ( 0 < $row.length ) {
                     $( '.sui-builder-field-label', $row ).html( response.data.title_to_show );
                     $( '.sui-builder-field', $row ).data( 'nonce', response.data.nonce );
-                    SUI.closeModal();
+                    branda_admin_bar_close_modal( Branda.admin_bar_dialog_edit );
                 } else {
                     var template = wp.template( Branda.admin_bar_dialog_edit + '-row' );
                     $('.sui-box-builder-fields', $branda_admin_bar_entries_parent ).append( template( response.data ) );
-                    SUI.closeModal();
+                    branda_admin_bar_close_modal( Branda.admin_bar_dialog_edit );
                 }
             } else {
+                branda_admin_bar_saving = false;
                 SUI.openFloatNotice( response.data.message );
+            }
+        }).always( function() {
+            if ( ! save_succeeded ) {
+                branda_admin_bar_saving = false;
+                $button.prop( 'disabled', false ).removeClass( 'sui-button-onload' );
             }
         });
     });
@@ -321,7 +355,10 @@ jQuery( window.document ).ready( function( $ ){
 	 * Set data on delete modal
 	 */
 	var $parent = jQuery(this).closest( '.sui-builder-field' );
+	branda_admin_bar_saving = false;
 	jQuery( 'button.branda-admin-bar-delete', jQuery('#'+ Branda.admin_bar_dialog_delete ) )
+		.prop( 'disabled', false )
+		.removeClass( 'sui-button-onload' )
 		.data( 'nonce', $parent.data( 'nonce' ) )
 		.data( 'id', $parent.data( 'id' ) )
 	;
@@ -333,18 +370,35 @@ jQuery( window.document ).ready( function( $ ){
 	);
     });
     $('.branda-admin-bar-delete').on( 'click', function() {
+        var $button = $(this);
         var data = {
             action: 'branda_admin_bar_delete',
-            _wpnonce: $(this).data('nonce'),
-            id: $(this).data('id' )
+            _wpnonce: $button.data('nonce'),
+            id: $button.data('id' )
         };
+        /**
+         * Do not submit again while a request is already in progress.
+         */
+        if ( branda_admin_bar_saving || $button.prop( 'disabled' ) ) {
+            return;
+        }
+        branda_admin_bar_saving = true;
+        $button.prop( 'disabled', true ).addClass( 'sui-button-onload' );
+        var delete_succeeded = false;
         $.post( ajaxurl, data, function( response ) {
             if ( response.success ) {
+                delete_succeeded = true;
                 $( '[data-id=' + data.id + ']', $branda_admin_bar_entries_parent ).detach();
-                SUI.closeModal();
+                branda_admin_bar_close_modal( Branda.admin_bar_dialog_delete );
                 SUI.openFloatNotice( response.data.message, 'success' );
             } else {
+                branda_admin_bar_saving = false;
                 SUI.openFloatNotice( response.data.message );
+            }
+        }).always( function() {
+            if ( ! delete_succeeded ) {
+                branda_admin_bar_saving = false;
+                $button.prop( 'disabled', false ).removeClass( 'sui-button-onload' );
             }
         });
     });
@@ -389,7 +443,7 @@ jQuery( window.document ).ready( function( $ ){
         $( '#builders textarea' ).val( value );
         $('#branda-popular-builders', $dialog ).val('').trigger( 'change' );
 
-        SUI.closeModal();
+        branda_admin_bar_close_modal( 'branda-admin-bar-add-popular-builders' );
     });
 });
 /**

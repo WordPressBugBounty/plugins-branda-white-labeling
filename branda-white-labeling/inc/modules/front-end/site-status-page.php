@@ -346,7 +346,6 @@ if ( ! class_exists( 'Branda_Site_Status_Pages' ) ) {
 		 */
 		private function check() {
 			$this->db_error_dir  = dirname( get_theme_root() );
-			$this->db_error_file = $this->db_error_dir . '/db-error.php';
 			if ( ! is_dir( $this->db_error_dir ) || ! is_writable( $this->db_error_dir ) ) {
 				return;
 			}

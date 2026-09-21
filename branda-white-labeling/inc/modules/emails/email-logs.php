@@ -26,6 +26,14 @@ if ( ! class_exists( 'Branda_Email_Logs' ) ) {
 		}
 
 		/**
+		 * Skip module assets.
+		 *
+		 * @return void
+		 */
+		public function enqueue_admin_assets() {
+		}
+
+		/**
 		 * Show upsell page for the main module content.
 		 *
 		 * @param string $content Current module content.

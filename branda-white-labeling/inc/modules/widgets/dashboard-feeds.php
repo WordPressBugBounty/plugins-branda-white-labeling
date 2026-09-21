@@ -219,6 +219,9 @@ if ( ! class_exists( 'Branda_Dashboard_Feeds' ) ) {
 		 */
 		public function get_df_feed_widgets_items() {
 			$df_widgets = branda_get_option_filtered( $this->items_name );
+			if ( empty( $df_widgets ) ) {
+				$df_widgets = array();
+			}
 			return $df_widgets;
 		}
 

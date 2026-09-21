@@ -632,7 +632,7 @@ if ( ! class_exists( 'Branda_Login_Screen' ) ) {
 			 *
 			 * @since 2.3.0
 			 */
-			$this->css_background_common( 'body' );
+			$this->css_background_common( 'html body.login' );
 			$args     = array(
 				'colors' => $this->get_value( 'colors' ),
 				'design' => $this->get_value( 'design' ),

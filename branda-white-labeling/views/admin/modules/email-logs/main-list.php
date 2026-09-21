@@ -6,6 +6,8 @@
  * @subpackage Emails
  */
 
+$delete_dialogs = '';
+
 // Notice is SMTP module is disabled.
 $notice = static::maybe_add_smtp_notice();
 if ( $notice ) {
@@ -157,7 +159,7 @@ if ( $notice ) {
 
 						</div>
 
-						<?php echo $this->get_dialog_delete( $_id ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+						<?php $delete_dialogs .= $this->get_dialog_delete( $_id ); ?>
 
 					</td>
 
@@ -184,3 +186,5 @@ if ( $notice ) {
 <?php
 	// Filter Bar.
 	echo $filter_bar_bottom; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+
+	echo $delete_dialogs; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped

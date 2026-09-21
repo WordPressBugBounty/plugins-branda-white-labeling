@@ -4,7 +4,7 @@ Plugin Name: Branda
 Plugin URI: https://wpmudev.com/project/ultimate-branding/
 Description: A complete white label and branding solution for multisite. Login images, favicons, remove WordPress links and branding, and much more.
 Author: WPMU DEV
-Version: 3.4.31
+Version: 3.4.32
 Author URI: https://wpmudev.com/
 Requires PHP: 7.4
 Text_domain: ub
@@ -26,6 +26,43 @@ this program; if not, write to the Free Software Foundation, Inc., 51 Franklin
 St, Fifth Floor, Boston, MA 02110-1301 USA
 
  */
+
+if ( ! function_exists( 'branda_deactivate_plugin' ) ) {
+	/**
+	 * Keep only one Branda copy active.
+	 *
+	 * @param string $keep_file Absolute path of the copy that should remain active.
+	 */
+	function branda_deactivate_plugin( $keep_file ) {
+		if ( ! function_exists( 'deactivate_plugins' ) ) {
+			require_once ABSPATH . 'wp-admin/includes/plugin.php';
+		}
+
+		$keep = plugin_basename( $keep_file );
+
+		foreach (
+			array(
+				'branda-white-labeling/ultimate-branding.php',
+				'ultimate-branding/ultimate-branding.php'
+			) as $plugin
+		) {
+			if ( $plugin !== $keep ) {
+				deactivate_plugins( $plugin, true );
+			}
+		}
+	}
+}
+
+add_action(
+	'activated_plugin',
+	function ( $plugin ) {
+		if ( plugin_basename( __FILE__ ) === $plugin ) {
+			branda_deactivate_plugin( __FILE__ );
+		}
+	}
+);
+
+
 
 if ( defined( 'BRANDA_BUILD_TYPE' ) ) {
 	// Another version of the plugin must be active already, abort

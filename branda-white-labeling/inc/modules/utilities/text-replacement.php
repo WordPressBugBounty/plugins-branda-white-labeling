@@ -209,6 +209,11 @@ if ( ! class_exists( 'Branda_Text_Replacement' ) ) {
 			if ( empty( $data ) ) {
 				return $transtext;
 			}
+			
+			if ( is_string( $transtext ) && preg_match( '#^(?:https?:)?//#i', ltrim( $transtext ) ) ) {
+				return $transtext;
+			}
+
 			$re = $this->re;
 			if ( empty( $re ) || ! isset( $re[ $domain ] ) ) {
 				foreach ( $data as $one ) {

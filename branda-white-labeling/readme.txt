@@ -1,14 +1,14 @@
 === Branda – White Label & Branding, Free Login Page Customizer ===
 Plugin Name: Branda – White Label & Branding, Custom Login Page Customizer
-Version: 3.4.31
+Version: 3.4.32
 Plugin URI: https://wpmudev.com/project/ultimate-branding/
 Author: WPMU DEV
 Author URI: https://wpmudev.com/
 Contributors: WPMUDEV
 Tags: White label,rebranding WordPress,custom login page,login-page-customizer,Custom dashboard
 Requires at least: 6.4
-Tested up to: 7.0
-Stable tag: 3.4.31
+Tested up to: 7.1
+Stable tag: 3.4.32
 Requires PHP: 7.4
 License: GPL v2 - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
@@ -170,6 +170,19 @@ We take plugin security incredibly seriously; if you have a bug or vulnerability
 4. Build amazing Coming Soon and Maintenance pages
 
 == Changelog ==
+
+= 3.4.32 ( 2026-09-21 ) =
+- Fix: Fatal errors when selecting Custom Color in Color Schemes.
+- Fix: Custom Login Page styling and background issues.
+- Fix: PHP 8 fatal error when text replacements contain spaces.
+- Fix: HTML styling in Email Templates.
+- Fix: PHP deprecation issues across Branda, including SMTP, Dashboard Widgets, dynamic properties, and Email Logs.
+- Fix: JavaScript error in Email Logs.
+- Fix: Edit Color Scheme modal display issue.
+- Fix: Hyperlink popover closing when adding links to text widgets or help content.
+- Fix: Duplicate Admin Bar items when clicking Add multiple times.
+- Fix: Email Logs controls appearing behind the Delete Log modal.
+- Fix: Documentation link incorrectly appearing in the White Label modal.
 
 = 3.4.31 ( 2026-06-11 ) =
 - Fix: Security improvements

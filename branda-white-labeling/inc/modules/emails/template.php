@@ -893,7 +893,7 @@ if ( ! class_exists( 'Branda_Email_Template' ) ) {
 
 			$allow_word_break = array( $this, 'allow_break_word' );
 			add_filter( 'safe_style_css', $allow_word_break );
-			$content = wp_kses_post( $content );
+			$content = self::kses_markup( $content );
 			remove_filter( 'safe_style_css', $allow_word_break );
 
 			/**

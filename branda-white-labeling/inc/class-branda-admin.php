@@ -431,6 +431,13 @@ if ( ! class_exists( 'Branda_Admin' ) ) {
 				$this->build,
 				true
 			);
+			wp_enqueue_script(
+				'branda-tinymce-modal-focus',
+				branda_url( 'external/tinymce-modal-focus.js' ),
+				array( 'sui-scripts' ),
+				$this->build,
+				true
+			);
 			wp_enqueue_style( 'wp-color-picker' );
 			$file = branda_url( 'external/wp-color-picker-alpha/wp-color-picker-alpha.min.js' );
 			wp_enqueue_script( 'wp-color-picker-alpha', $file, array( 'wp-color-picker' ), '2.1.3', true );
