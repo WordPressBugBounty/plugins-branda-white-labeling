@@ -317,5 +317,21 @@ if ( ! class_exists( 'Branda_Base' ) ) {
 			}
 			return apply_filters( 'branda_can_load_module', true, $module );
 		}
+
+		/**
+		 * Hide admin_only modules from users without manage_options.
+		 *
+		 * @since 3.4.33
+		 *
+		 * @param array $module Module data.
+		 *
+		 * @return boolean
+		 */
+		protected function current_user_can_configure_module( $module ) {
+			if ( empty( $module['admin_only'] ) ) {
+				return true;
+			}
+			return current_user_can( 'manage_options' );
+		}
 	}
 }

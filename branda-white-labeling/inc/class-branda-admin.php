@@ -542,6 +542,9 @@ if ( ! class_exists( 'Branda_Admin' ) ) {
 				if ( isset( $module['instant'] ) && $module['instant'] ) {
 					continue;
 				}
+				if ( ! $this->current_user_can_configure_module( $module ) ) {
+					continue;
+				}
 				$is_active = branda_is_active_module( $key );
 				if ( in_array( $module['module'], $modules ) ) {
 					if ( ! $is_active ) {
@@ -910,6 +913,9 @@ if ( ! class_exists( 'Branda_Admin' ) ) {
 					if ( false === $show ) {
 						continue;
 					}
+				}
+				if ( ! $this->current_user_can_configure_module( $module ) ) {
+					continue;
 				}
 				if ( ! isset( $modules[ $module['group'] ] ) ) {
 					$modules[ $module['group'] ] = array();
@@ -1521,6 +1527,9 @@ if ( ! class_exists( 'Branda_Admin' ) ) {
 					continue;
 				}
 				if ( $group == $module['group'] ) {
+					if ( ! $this->current_user_can_configure_module( $module ) ) {
+						continue;
+					}
 					$modules[ $key ] = $module;
 				}
 			}
@@ -1595,9 +1604,12 @@ if ( ! class_exists( 'Branda_Admin' ) ) {
 			$this->load_permissions();
 
 			$this->module = '';
+
+			$page = isset( $_GET['page'] ) ? wp_unslash( $_GET['page'] ) : '';
 			if (
-				isset( $_REQUEST['page'] )
-				&& preg_match( '/branding_group_(.+)$/', $_REQUEST['page'], $matches )
+				is_string( $page )
+				&& preg_match( '/branding_group_(.+)$/', $page, $matches )
+				&& Branda_Permissions::get_instance()->current_user_has_access()
 			) {
 				if ( array_key_exists( $matches[1], $this->submenu ) ) {
 					$this->group = $matches[1];

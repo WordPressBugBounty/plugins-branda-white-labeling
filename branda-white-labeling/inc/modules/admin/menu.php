@@ -273,6 +273,10 @@ if ( ! class_exists( 'Branda_Admin_Menu' ) ) {
 				return;
 			}
 
+			if ( ! Branda_Permissions::get_instance()->current_user_has_access() ) {
+				return;
+			}
+
 			if ( ! wp_script_is( 'branda-dashicon-picker' ) ) {
 				$dashicon_select = branda_files_url( 'modules/admin/assets/js/admin/dashicon-picker.js' );
 				wp_enqueue_script( 'branda-dashicon-picker', $dashicon_select, array( 'jquery' ), $this->build, true );
@@ -461,6 +465,31 @@ if ( ! class_exists( 'Branda_Admin_Menu' ) ) {
 			}
 
 			return $roles;
+		}
+
+		/**
+		 * Whether the current user may read or write this custom admin menu.
+		 *
+		 * @param string $menu_key Role key or user menu key.
+		 * @return bool
+		 */
+		private function user_can_edit_menu_key( $menu_key ) {
+			if ( ! Branda_Permissions::get_instance()->current_user_has_access() ) {
+				return false;
+			}
+
+			$allowed_roles = $this->get_subordinates_roles();
+			if ( $this->is_user_menu_key( $menu_key ) ) {
+				$user = get_user_by( 'id', $this->get_user_id_from_key( $menu_key ) );
+				if ( ! $user instanceof WP_User ) {
+					return false;
+				}
+
+				$role = $this->get_user_role( $user->ID );
+				return is_string( $role ) && isset( $allowed_roles[ $role ] );
+			}
+
+			return isset( $allowed_roles[ $menu_key ] );
 		}
 
 		/**
@@ -890,14 +919,14 @@ if ( ! class_exists( 'Branda_Admin_Menu' ) ) {
 		public function ajax_load_menu() {
 			check_ajax_referer( 'branda-custom-admin-menu' );
 
-			if ( ! Branda_Permissions::get_instance()->current_user_has_access() ) {
-				wp_send_json_error( array( 'message' => esc_html__( 'Access denied', 'ub' ) ) );
-			}
-
 			$data     = stripslashes_deep( $_POST );
 			$menu_key = sanitize_key( branda_get_array_value( $data, 'key' ) );
 			if ( empty( $menu_key ) ) {
 				wp_send_json_error( array( 'message' => esc_html__( 'Something went wrong', 'ub' ) ) );
+			}
+
+			if ( ! $this->user_can_edit_menu_key( $menu_key ) ) {
+				wp_send_json_error( array( 'message' => esc_html__( 'Access denied', 'ub' ) ) );
 			}
 
 			if ( $this->is_user_menu_key( $menu_key ) ) {
@@ -1118,19 +1147,20 @@ if ( ! class_exists( 'Branda_Admin_Menu' ) ) {
 
 			if ( empty( $menu_key ) || empty( $menu_json ) ) {
 				wp_send_json_error( array( 'message' => esc_html__( 'Something went wrong', 'ub' ) ) );
-				return;
+			}
+
+			if ( ! $this->user_can_edit_menu_key( $menu_key ) ) {
+				wp_send_json_error( array( 'message' => esc_html__( 'Access denied', 'ub' ) ) );
 			}
 
 			$menu = json_decode( $menu_json, true );
 			if ( empty( $menu ) ) {
 				wp_send_json_error( array( 'message' => esc_html__( 'Could not parse menu data', 'ub' ) ) );
-				return;
 			}
 
 			$menu = $this->sanitize_custom_admin_menu( $menu );
 			if ( empty( $menu ) ) {
 				wp_send_json_error( array( 'message' => esc_html__( 'Invalid data', 'ub' ) ) );
-				return;
 			}
 
 			$this->set_menu_settings( $menu_key, $menu );
@@ -1144,7 +1174,10 @@ if ( ! class_exists( 'Branda_Admin_Menu' ) ) {
 			$menu_key = sanitize_key( branda_get_array_value( $data, 'key' ) );
 			if ( empty( $menu_key ) ) {
 				wp_send_json_error( array( 'message' => esc_html__( 'Something went wrong', 'ub' ) ) );
-				return;
+			}
+
+			if ( ! $this->user_can_edit_menu_key( $menu_key ) ) {
+				wp_send_json_error( array( 'message' => esc_html__( 'Access denied', 'ub' ) ) );
 			}
 
 			$this->delete_menu_settings( $menu_key );
@@ -1160,8 +1193,8 @@ if ( ! class_exists( 'Branda_Admin_Menu' ) ) {
 				// Sanitize each setting value
 				foreach ( $menu_item_settings as $setting_key => $setting_value ) {
 					if ( $setting_key !== 'submenu' ) {
-						if ( $setting_key === 'custom_url' && ! empty( $setting_value ) ) {
-							if ( sanitize_url( $setting_value ) !== $setting_value ) {
+						if ( ( 'custom_url' === $setting_key || 'icon_url' === $setting_key ) && ! empty( $setting_value ) ) {
+							if ( ! is_string( $setting_value ) || sanitize_url( $setting_value ) !== $setting_value ) {
 								return array();
 							}
 							$sanitized_setting_value = sanitize_url( $setting_value );
@@ -1176,9 +1209,9 @@ if ( ! class_exists( 'Branda_Admin_Menu' ) ) {
 					$this->menu_item_extras(),
 					$this->build_menu_item_settings_array()
 				);
-				// Remove any 'extra' items not meant for saving
+				// Remove any 'extra' items not meant for saving. Keep the sanitized values.
 				$menu[ $menu_item_id ] = array_diff_key(
-					$menu_item_settings,
+					$menu[ $menu_item_id ],
 					$extras
 				);
 

@@ -74,6 +74,16 @@ if ( ! class_exists( 'Branda_Signup_Codes' ) ) {
 		}
 
 		/**
+		 * Save module settings (Administrators only).
+		 */
+		public function update( $status ) {
+			if ( ! current_user_can( 'manage_options' ) ) {
+				return $status;
+			}
+			return parent::update( $status );
+		}
+
+		/**
 		 * Add settings sections to prevent delete on save.
 		 *
 		 * Add settings sections (virtual options not included in
@@ -737,15 +747,18 @@ if ( ! class_exists( 'Branda_Signup_Codes' ) ) {
 			if ( ! is_string( $role ) || in_array( $role, array( '', '-', 'wp-default' ), true ) ) {
 				return true;
 			}
-			if ( is_multisite() && is_super_admin() ) {
-				return true;
-			}
 			if ( 'super' === $role ) {
-				return false;
+				return is_multisite() && is_super_admin();
 			}
 			$role_object = wp_roles()->get_role( $role );
-			$user        = wp_get_current_user();
-			if ( ! is_a( $role_object, 'WP_Role' ) || ! $user->exists() ) {
+			if ( ! is_a( $role_object, 'WP_Role' ) ) {
+				return false;
+			}
+			if ( ! empty( $role_object->capabilities['manage_options'] ) && ! current_user_can( 'manage_options' ) ) {
+				return false;
+			}
+			$user = wp_get_current_user();
+			if ( ! $user->exists() ) {
 				return false;
 			}
 			foreach ( $role_object->capabilities as $capability => $granted ) {
@@ -762,6 +775,9 @@ if ( ! class_exists( 'Branda_Signup_Codes' ) ) {
 		 * @since 3.1.0
 		 */
 		public function update_items( $status ) {
+			if ( ! current_user_can( 'manage_options' ) ) {
+				return $status;
+			}
 			if ( ! isset( $_POST['simple_options'] ) ) {
 				return $status;
 			}

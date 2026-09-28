@@ -2,21 +2,21 @@
 # This file is distributed under the same license as the Branda Pro plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Branda Pro 3.4.32\n"
+"Project-Id-Version: Branda Pro 3.4.33\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/build\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-15T05:03:42+00:00\n"
+"POT-Creation-Date: 2026-09-28T04:29:12+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: ub\n"
 
 #. Plugin Name of the plugin
 #: ultimate-branding.php
-#: inc/class-branda-admin.php:695
+#: inc/class-branda-admin.php:698
 #: inc/class-branda-base.php:84
 #: views/admin/dashboard/modules/upsell.php:15
 msgid "Branda Pro"
@@ -162,7 +162,7 @@ msgid "Choose which color schemes will be available within the user profile, for
 msgstr ""
 
 #: etc/config.php:263
-#: inc/class-branda-helper.php:4665
+#: inc/class-branda-helper.php:4672
 #: inc/modules/admin/bar.php:578
 msgid "Custom CSS"
 msgstr ""
@@ -269,78 +269,78 @@ msgstr ""
 msgid "Customize the default signup functionality with this module. With the Signup Code feature, you can restrict the user and blog registrations to the user with a specific signup code."
 msgstr ""
 
-#: etc/config.php:539
+#: etc/config.php:540
 msgid "DB Error Page"
 msgstr ""
 
-#: etc/config.php:540
+#: etc/config.php:541
 msgid "Create a custom database error page so next time your visitors don’t just see the “Error Establishing a Database Connection” text error."
 msgstr ""
 
-#: etc/config.php:555
+#: etc/config.php:556
 msgid "Site Status Pages"
 msgstr ""
 
-#: etc/config.php:556
+#: etc/config.php:557
 msgid "Create custom pages for deleted, inactive, archived, or spammed blogs."
 msgstr ""
 
-#: etc/config.php:563
+#: etc/config.php:564
 msgid "Header Content"
 msgstr ""
 
-#: etc/config.php:564
+#: etc/config.php:565
 msgid "Insert any content that you like into the header of every page of your website. For example, you can put some news/notification for your visitors on top of the regular website header."
 msgstr ""
 
-#: etc/config.php:581
+#: etc/config.php:582
 msgid "Footer Content"
 msgstr ""
 
-#: etc/config.php:582
+#: etc/config.php:583
 msgid "Insert any content that you like into the footer of every blog or site in your network. For example, You can add embeds,  terms of service links etc."
 msgstr ""
 
-#: etc/config.php:596
+#: etc/config.php:597
 msgid "Cookie Notice"
 msgstr ""
 
-#: etc/config.php:597
+#: etc/config.php:598
 msgid "Cookie Notice allows you to elegantly inform users that your site uses cookies and to comply with the EU cookie law GDPR regulations."
 msgstr ""
 
-#: etc/config.php:610
+#: etc/config.php:611
 #: inc/modules/front-end/class-author-box-widget.php:18
 #: inc/modules/front-end/class-author-box-widget.php:20
 msgid "Author Box"
 msgstr ""
 
-#: etc/config.php:611
+#: etc/config.php:612
 msgid "Adds a responsive author box at the end of your posts, showing the author name, author gravatar and author description and social profiles."
 msgstr ""
 
-#: etc/config.php:626
+#: etc/config.php:627
 msgid "Registration Email"
 msgstr ""
 
-#: etc/config.php:627
+#: etc/config.php:628
 msgid "MultiSite Registration Emails"
 msgstr ""
 
-#: etc/config.php:628
+#: etc/config.php:629
 msgid "Customize the content of new blog notification email, new user signup email or the welcome email sent after site activation in your multisite network."
 msgstr ""
 
-#: etc/config.php:649
+#: etc/config.php:650
 #: views/admin/modules/accessibility/header.php:9
 msgid "Accessibility"
 msgstr ""
 
-#: etc/config.php:650
+#: etc/config.php:651
 msgid "Enable support for any available accessibility enhancements."
 msgstr ""
 
-#: etc/config.php:666
+#: etc/config.php:667
 #: inc/modules/emails/email-logs.php:283
 #: inc/modules/utilities/export.php:227
 #: inc/modules/utilities/export.php:245
@@ -349,94 +349,94 @@ msgstr ""
 msgid "Export"
 msgstr ""
 
-#: etc/config.php:667
+#: etc/config.php:668
 msgid "Use this tool to export the Branda configurations."
 msgstr ""
 
-#: etc/config.php:680
+#: etc/config.php:681
 #: inc/modules/utilities/import.php:433
 #: inc/modules/utilities/import.php:448
 msgid "Import"
 msgstr ""
 
-#: etc/config.php:681
+#: etc/config.php:682
 #: inc/modules/utilities/import.php:434
 msgid "Use this tool to import the Branda configurations."
 msgstr ""
 
-#: etc/config.php:695
+#: etc/config.php:696
 msgid "Dashboard Widgets"
 msgstr ""
 
-#: etc/config.php:696
+#: etc/config.php:697
 msgid "Remove default widgets from the dashboard, customize the dashboard welcome message or add new text widgets in the dashboard."
 msgstr ""
 
-#: etc/config.php:721
+#: etc/config.php:722
 msgid "Dashboard Feeds"
 msgstr ""
 
-#: etc/config.php:722
+#: etc/config.php:723
 msgid "Customize the dashboard for every user in a flash with this straightforward dashboard feed replacement widget. No more WP development news or Matt's latest photo set."
 msgstr ""
 
-#: etc/config.php:739
+#: etc/config.php:740
 msgid "Meta Widget"
 msgstr ""
 
-#: etc/config.php:740
+#: etc/config.php:741
 msgid "Rebrand the default meta widget in all multisite blogs with one that has the \"Powered By\" link branded for your site. It will replace the “WordPress.org” link in the meta widget with your website’s title that links back to your site."
 msgstr ""
 
-#: etc/config.php:754
+#: etc/config.php:755
 #: inc/modules/emails/template.php:197
 #: inc/modules/emails/template.php:710
 msgid "Blog Description"
 msgstr ""
 
-#: etc/config.php:755
+#: etc/config.php:756
 msgid "Blog Description on Blog Creation"
 msgstr ""
 
-#: etc/config.php:756
+#: etc/config.php:757
 msgid "Allows new bloggers to be able to set their tagline when they create a blog in Multisite."
 msgstr ""
 
-#: etc/config.php:771
+#: etc/config.php:772
 msgid "SMTP"
 msgstr ""
 
-#: etc/config.php:772
+#: etc/config.php:773
 msgid "SMTP Configuration"
 msgstr ""
 
-#: etc/config.php:773
+#: etc/config.php:774
 msgid "SMTP allows you to configure and send all outgoing emails via a SMTP server. This will prevent your emails from going into the junk/spam folder of the recipients."
 msgstr ""
 
-#: etc/config.php:787
 #: etc/config.php:788
+#: etc/config.php:789
 msgid "Email Logs"
 msgstr ""
 
-#: etc/config.php:789
+#: etc/config.php:790
 msgid "Get detailed information about your emails with Branda Pro. You can check recipients information and export all log history."
 msgstr ""
 
-#: etc/config.php:805
-#: inc/class-branda-helper.php:3180
+#: etc/config.php:806
+#: inc/class-branda-helper.php:3183
 msgid "Document"
 msgstr ""
 
-#: etc/config.php:806
+#: etc/config.php:807
 msgid "Allow to change defaults for entry display."
 msgstr ""
 
-#: etc/config.php:820
+#: etc/config.php:821
 msgid "Customizer"
 msgstr ""
 
-#: etc/config.php:821
+#: etc/config.php:822
 #: inc/modules/admin/theme-additional-css.php:33
 msgid "This feature allows subsite admins to add custom CSS via the Theme Customizer tool."
 msgstr ""
@@ -510,9 +510,9 @@ msgstr ""
 
 #: inc/class-branda-admin-free.php:109
 #: inc/class-branda-admin.php:110
-#: inc/class-branda-helper.php:408
-#: inc/class-branda-helper.php:1748
-#: inc/class-branda-helper.php:3748
+#: inc/class-branda-helper.php:411
+#: inc/class-branda-helper.php:1751
+#: inc/class-branda-helper.php:3751
 #: inc/class-simple-options.php:1199
 #: inc/class-simple-options.php:1764
 #: inc/class-simple-options.php:1834
@@ -520,9 +520,9 @@ msgid "Something went wrong!"
 msgstr ""
 
 #: inc/class-branda-admin-free.php:110
-#: inc/class-branda-admin-free.php:1688
+#: inc/class-branda-admin-free.php:1700
 #: inc/class-branda-admin.php:111
-#: inc/class-branda-admin.php:1775
+#: inc/class-branda-admin.php:1787
 #: inc/class-simple-options.php:1807
 #: inc/class-simple-options.php:1868
 msgid "Nope! Security check failed!"
@@ -553,11 +553,11 @@ msgid " &lsaquo; "
 msgstr ""
 
 #: inc/class-branda-admin-free.php:230
-#: inc/class-branda-admin-free.php:696
-#: inc/class-branda-admin-free.php:697
+#: inc/class-branda-admin-free.php:699
+#: inc/class-branda-admin-free.php:700
 #: inc/class-branda-admin.php:231
-#: inc/class-branda-admin.php:710
-#: inc/class-branda-admin.php:711
+#: inc/class-branda-admin.php:713
+#: inc/class-branda-admin.php:714
 #: inc/modules/widgets/dashboard-feeds.php:392
 #: views/admin/dashboard.php:9
 #: views/admin/dashboard/subsite.php:3
@@ -573,11 +573,11 @@ msgid "Docs"
 msgstr ""
 
 #: inc/class-branda-admin-free.php:235
-#: inc/class-branda-admin-free.php:732
-#: inc/class-branda-admin-free.php:733
+#: inc/class-branda-admin-free.php:735
+#: inc/class-branda-admin-free.php:736
 #: inc/class-branda-admin.php:241
-#: inc/class-branda-admin.php:747
-#: inc/class-branda-admin.php:748
+#: inc/class-branda-admin.php:750
+#: inc/class-branda-admin.php:751
 msgid "Get Branda Pro"
 msgstr ""
 
@@ -619,7 +619,7 @@ msgstr ""
 
 #: inc/class-branda-admin-free.php:447
 #: inc/class-branda-admin.php:461
-#: inc/class-branda-helper.php:2780
+#: inc/class-branda-helper.php:2783
 #: inc/modules/content/footer.php:126
 #: inc/modules/content/footer.php:234
 #: inc/modules/content/header.php:114
@@ -706,116 +706,116 @@ msgid "Whoops, only images are allowed."
 msgstr ""
 
 #: inc/class-branda-admin-free.php:488
-#: inc/class-branda-admin-free.php:1328
-#: inc/class-branda-admin-free.php:1470
-#: inc/class-branda-admin-free.php:1822
+#: inc/class-branda-admin-free.php:1334
+#: inc/class-branda-admin-free.php:1476
+#: inc/class-branda-admin-free.php:1834
 #: inc/class-branda-admin.php:502
-#: inc/class-branda-admin.php:1344
-#: inc/class-branda-admin.php:1527
-#: inc/class-branda-admin.php:1909
+#: inc/class-branda-admin.php:1350
+#: inc/class-branda-admin.php:1533
+#: inc/class-branda-admin.php:1921
 msgid "Save Changes"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:561
-#: inc/class-branda-admin.php:575
+#: inc/class-branda-admin-free.php:564
+#: inc/class-branda-admin.php:578
 #, php-format
 msgid "%d new module was activated successfully."
 msgid_plural "%d new modules was activated successfully."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/class-branda-admin-free.php:575
-#: inc/class-branda-admin.php:589
+#: inc/class-branda-admin-free.php:578
+#: inc/class-branda-admin.php:592
 #, php-format
 msgid "%d module was deactivated successfully."
 msgid_plural "%d modules was deactivated successfully."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/class-branda-admin-free.php:593
-#: inc/class-branda-admin.php:607
+#: inc/class-branda-admin-free.php:596
+#: inc/class-branda-admin.php:610
 msgid "42: The answer to life, the universe and everything."
 msgstr ""
 
-#: inc/class-branda-admin-free.php:594
-#: inc/class-branda-admin.php:608
+#: inc/class-branda-admin-free.php:597
+#: inc/class-branda-admin.php:611
 msgid "Douglas Adams"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:598
-#: inc/class-branda-admin.php:612
+#: inc/class-branda-admin-free.php:601
+#: inc/class-branda-admin.php:615
 msgid "Nothing was changed, nothing to activate or deactivate."
 msgstr ""
 
-#: inc/class-branda-admin-free.php:681
-#: inc/class-branda-admin.php:695
+#: inc/class-branda-admin-free.php:684
+#: inc/class-branda-admin.php:698
 #: inc/class-branda-public.php:54
 #: inc/modules/admin/color-schemes.php:529
 msgid "Branda"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:939
-#: inc/class-branda-admin.php:955
+#: inc/class-branda-admin-free.php:945
+#: inc/class-branda-admin.php:961
 msgid "none"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:1314
-#: inc/class-branda-admin.php:1330
+#: inc/class-branda-admin-free.php:1320
+#: inc/class-branda-admin.php:1336
 #: inc/modules/utilities/tracking-codes-list-table.php:113
 #: views/admin/modules/smtp/plugins-list.php:5
 #: views/admin/modules/smtp/plugins-list.php:13
 msgid "Deactivate"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:1351
-#: inc/class-branda-admin.php:1367
+#: inc/class-branda-admin-free.php:1357
+#: inc/class-branda-admin.php:1373
 #: inc/modules/utilities/tracking-codes-list-table.php:112
 msgid "Activate"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:1451
-#: inc/class-branda-admin.php:1502
+#: inc/class-branda-admin-free.php:1457
+#: inc/class-branda-admin.php:1508
 #, php-format
 msgid "Made with %s by WPMU DEV"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:1544
-#: inc/class-branda-admin.php:1601
+#: inc/class-branda-admin-free.php:1553
+#: inc/class-branda-admin.php:1610
 msgid "There is no modules in selected group!"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:1703
-#: inc/class-branda-admin.php:1790
+#: inc/class-branda-admin-free.php:1715
+#: inc/class-branda-admin.php:1802
 #, php-format
 msgid "%s module is active now."
 msgstr ""
 
-#: inc/class-branda-admin-free.php:1714
-#: inc/class-branda-admin.php:1801
+#: inc/class-branda-admin-free.php:1726
+#: inc/class-branda-admin.php:1813
 #, php-format
 msgid "Module %s was deactivated without errors."
 msgstr ""
 
-#: inc/class-branda-admin-free.php:1750
-#: inc/class-branda-admin.php:1837
+#: inc/class-branda-admin-free.php:1762
+#: inc/class-branda-admin.php:1849
 msgid "This module is not active!"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:2050
-#: inc/class-branda-admin.php:2137
+#: inc/class-branda-admin-free.php:2062
+#: inc/class-branda-admin.php:2149
 #, php-format
 msgid "%s module was reset."
 msgstr ""
 
-#: inc/class-branda-admin-free.php:2379
-#: inc/class-branda-admin.php:2466
-#: inc/class-branda-helper.php:1758
-#: inc/class-branda-helper.php:2322
-#: inc/class-branda-helper.php:2709
-#: inc/class-branda-helper.php:2737
+#: inc/class-branda-admin-free.php:2391
+#: inc/class-branda-admin.php:2478
+#: inc/class-branda-helper.php:1761
+#: inc/class-branda-helper.php:2325
+#: inc/class-branda-helper.php:2712
 #: inc/class-branda-helper.php:2740
-#: inc/class-branda-helper.php:2767
-#: inc/class-branda-helper.php:2867
+#: inc/class-branda-helper.php:2743
+#: inc/class-branda-helper.php:2770
+#: inc/class-branda-helper.php:2870
 #: inc/modules/content/footer.php:114
 #: inc/modules/content/footer.php:222
 #: inc/modules/content/header.php:102
@@ -833,10 +833,10 @@ msgstr ""
 msgid "Background"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:2380
-#: inc/class-branda-admin.php:2467
-#: inc/class-branda-helper.php:1882
-#: inc/class-branda-helper.php:2196
+#: inc/class-branda-admin-free.php:2392
+#: inc/class-branda-admin.php:2479
+#: inc/class-branda-helper.php:1885
+#: inc/class-branda-helper.php:2199
 #: inc/modules/admin/bar.php:489
 #: inc/modules/front-end/db-error-page.php:656
 #: inc/modules/login-screen/login-screen.php:2811
@@ -844,60 +844,60 @@ msgstr ""
 msgid "Logo"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:2381
-#: inc/class-branda-admin.php:2468
-#: inc/class-branda-helper.php:2907
+#: inc/class-branda-admin-free.php:2393
+#: inc/class-branda-admin.php:2480
+#: inc/class-branda-helper.php:2910
 msgid "Social Media Settings"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:2382
-#: inc/class-branda-admin.php:2469
+#: inc/class-branda-admin-free.php:2394
+#: inc/class-branda-admin.php:2481
 #: inc/modules/front-end/author-box.php:1569
 #: inc/modules/front-end/db-error-page.php:655
 #: inc/modules/utilities/maintenance.php:999
 msgid "Social Media"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:2434
-#: inc/class-branda-admin.php:2521
+#: inc/class-branda-admin-free.php:2446
+#: inc/class-branda-admin.php:2533
 msgid "Please configure source module first!"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:2531
-#: inc/class-branda-admin.php:2618
+#: inc/class-branda-admin-free.php:2543
+#: inc/class-branda-admin.php:2630
 #, php-format
 msgid "Module %s was updated."
 msgstr ""
 
-#: inc/class-branda-admin-free.php:2581
-#: inc/class-branda-admin.php:2668
+#: inc/class-branda-admin-free.php:2593
+#: inc/class-branda-admin.php:2680
 msgid "Activate Modules"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:2582
-#: inc/class-branda-admin.php:2669
+#: inc/class-branda-admin-free.php:2594
+#: inc/class-branda-admin.php:2681
 msgid "Choose the modules you want to activate. Each module helps you white label a specific part of your website. If you’re not sure or forget to activate any module now, you can always do that later."
 msgstr ""
 
-#: inc/class-branda-admin-free.php:2826
-#: inc/class-branda-admin.php:2913
+#: inc/class-branda-admin-free.php:2838
+#: inc/class-branda-admin.php:2925
 msgctxt "Post Type General Name"
 msgid "Email Logs"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:2827
-#: inc/class-branda-admin.php:2914
+#: inc/class-branda-admin-free.php:2839
+#: inc/class-branda-admin.php:2926
 msgctxt "Post Type Singular Name"
 msgid "Email Log"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:2830
-#: inc/class-branda-admin.php:2917
+#: inc/class-branda-admin-free.php:2842
+#: inc/class-branda-admin.php:2929
 msgid "Email Log"
 msgstr ""
 
-#: inc/class-branda-admin-free.php:2831
-#: inc/class-branda-admin.php:2918
+#: inc/class-branda-admin-free.php:2843
+#: inc/class-branda-admin.php:2930
 msgid "Post Type Description"
 msgstr ""
 
@@ -914,7 +914,7 @@ msgid "Premium Support"
 msgstr ""
 
 #: inc/class-branda-base.php:170
-#: inc/class-branda-helper.php:3142
+#: inc/class-branda-helper.php:3145
 #: inc/modules/emails/google-oauth.php:146
 #: inc/modules/emails/smtp.php:622
 #: inc/modules/utilities/tracking-codes-list-table.php:45
@@ -927,180 +927,180 @@ msgstr ""
 msgid "Module does not exists."
 msgstr ""
 
-#: inc/class-branda-helper.php:743
+#: inc/class-branda-helper.php:746
 #: views/admin/modules/email-logs/dialogs/settings.php:13
 msgid "Save Settings"
 msgstr ""
 
-#: inc/class-branda-helper.php:926
+#: inc/class-branda-helper.php:929
 msgid "Amazon"
 msgstr ""
 
-#: inc/class-branda-helper.php:927
+#: inc/class-branda-helper.php:930
 msgid "Blogger"
 msgstr ""
 
-#: inc/class-branda-helper.php:928
+#: inc/class-branda-helper.php:931
 msgid "CodePen"
 msgstr ""
 
-#: inc/class-branda-helper.php:929
+#: inc/class-branda-helper.php:932
 msgid "Dribbble"
 msgstr ""
 
-#: inc/class-branda-helper.php:930
+#: inc/class-branda-helper.php:933
 msgid "Dropbox"
 msgstr ""
 
-#: inc/class-branda-helper.php:931
+#: inc/class-branda-helper.php:934
 msgid "Eventbrite"
 msgstr ""
 
-#: inc/class-branda-helper.php:932
+#: inc/class-branda-helper.php:935
 msgid "Facebook"
 msgstr ""
 
-#: inc/class-branda-helper.php:933
+#: inc/class-branda-helper.php:936
 msgid "Flickr"
 msgstr ""
 
-#: inc/class-branda-helper.php:934
+#: inc/class-branda-helper.php:937
 msgid "Foursquare"
 msgstr ""
 
-#: inc/class-branda-helper.php:935
+#: inc/class-branda-helper.php:938
 msgid "Ghost"
 msgstr ""
 
-#: inc/class-branda-helper.php:936
+#: inc/class-branda-helper.php:939
 msgid "Github"
 msgstr ""
 
-#: inc/class-branda-helper.php:937
+#: inc/class-branda-helper.php:940
 msgid "Instagram"
 msgstr ""
 
-#: inc/class-branda-helper.php:938
+#: inc/class-branda-helper.php:941
 msgid "LinkedIn"
 msgstr ""
 
-#: inc/class-branda-helper.php:939
+#: inc/class-branda-helper.php:942
 msgid "Mail"
 msgstr ""
 
-#: inc/class-branda-helper.php:940
+#: inc/class-branda-helper.php:943
 msgid "Pinterest"
 msgstr ""
 
-#: inc/class-branda-helper.php:941
+#: inc/class-branda-helper.php:944
 msgid "Pocket"
 msgstr ""
 
-#: inc/class-branda-helper.php:942
+#: inc/class-branda-helper.php:945
 msgid "Polldaddy"
 msgstr ""
 
-#: inc/class-branda-helper.php:943
+#: inc/class-branda-helper.php:946
 msgid "Reddit"
 msgstr ""
 
-#: inc/class-branda-helper.php:944
+#: inc/class-branda-helper.php:947
 msgid "Skype"
 msgstr ""
 
-#: inc/class-branda-helper.php:945
+#: inc/class-branda-helper.php:948
 msgid "Spotify"
 msgstr ""
 
-#: inc/class-branda-helper.php:946
+#: inc/class-branda-helper.php:949
 msgid "Squarespace"
 msgstr ""
 
-#: inc/class-branda-helper.php:947
+#: inc/class-branda-helper.php:950
 msgid "Stumbleupon"
 msgstr ""
 
-#: inc/class-branda-helper.php:948
+#: inc/class-branda-helper.php:951
 msgid "Telegram"
 msgstr ""
 
-#: inc/class-branda-helper.php:949
+#: inc/class-branda-helper.php:952
 msgid "Tumblr"
 msgstr ""
 
-#: inc/class-branda-helper.php:950
+#: inc/class-branda-helper.php:953
 msgid "Twitter"
 msgstr ""
 
-#: inc/class-branda-helper.php:951
+#: inc/class-branda-helper.php:954
 msgid "Vimeo"
 msgstr ""
 
-#: inc/class-branda-helper.php:952
+#: inc/class-branda-helper.php:955
 msgid "Whatsapp"
 msgstr ""
 
-#: inc/class-branda-helper.php:953
+#: inc/class-branda-helper.php:956
 msgid "WordPress"
 msgstr ""
 
-#: inc/class-branda-helper.php:954
+#: inc/class-branda-helper.php:957
 msgid "Xanga"
 msgstr ""
 
-#: inc/class-branda-helper.php:955
+#: inc/class-branda-helper.php:958
 msgid "Youtube"
 msgstr ""
 
-#: inc/class-branda-helper.php:998
+#: inc/class-branda-helper.php:1001
 msgid "Dotted"
 msgstr ""
 
-#: inc/class-branda-helper.php:999
+#: inc/class-branda-helper.php:1002
 msgid "Dashed"
 msgstr ""
 
-#: inc/class-branda-helper.php:1000
+#: inc/class-branda-helper.php:1003
 msgid "Solid"
 msgstr ""
 
-#: inc/class-branda-helper.php:1001
+#: inc/class-branda-helper.php:1004
 msgid "Double"
 msgstr ""
 
-#: inc/class-branda-helper.php:1002
+#: inc/class-branda-helper.php:1005
 msgid "3D grooved"
 msgstr ""
 
-#: inc/class-branda-helper.php:1003
+#: inc/class-branda-helper.php:1006
 msgid "3D ridged"
 msgstr ""
 
-#: inc/class-branda-helper.php:1004
+#: inc/class-branda-helper.php:1007
 msgid "3D inset"
 msgstr ""
 
-#: inc/class-branda-helper.php:1005
+#: inc/class-branda-helper.php:1008
 msgid "3D outset"
 msgstr ""
 
-#: inc/class-branda-helper.php:1762
-#: inc/class-branda-helper.php:3224
+#: inc/class-branda-helper.php:1765
+#: inc/class-branda-helper.php:3227
 msgid "Background Color"
 msgstr ""
 
-#: inc/class-branda-helper.php:1767
+#: inc/class-branda-helper.php:1770
 msgid "Display Background Images"
 msgstr ""
 
-#: inc/class-branda-helper.php:1768
+#: inc/class-branda-helper.php:1771
 msgid "Would you like to use background images?"
 msgstr ""
 
-#: inc/class-branda-helper.php:1770
-#: inc/class-branda-helper.php:1920
-#: inc/class-branda-helper.php:2621
-#: inc/class-branda-helper.php:2914
+#: inc/class-branda-helper.php:1773
+#: inc/class-branda-helper.php:1923
+#: inc/class-branda-helper.php:2624
+#: inc/class-branda-helper.php:2917
 #: inc/modules/admin/bar.php:563
 #: inc/modules/front-end/author-box.php:856
 #: inc/modules/front-end/author-box.php:868
@@ -1128,12 +1128,12 @@ msgstr ""
 msgid "Hide"
 msgstr ""
 
-#: inc/class-branda-helper.php:1771
-#: inc/class-branda-helper.php:1921
-#: inc/class-branda-helper.php:2619
+#: inc/class-branda-helper.php:1774
+#: inc/class-branda-helper.php:1924
 #: inc/class-branda-helper.php:2622
-#: inc/class-branda-helper.php:2911
-#: inc/class-branda-helper.php:2915
+#: inc/class-branda-helper.php:2625
+#: inc/class-branda-helper.php:2914
+#: inc/class-branda-helper.php:2918
 #: inc/modules/admin/bar.php:564
 #: inc/modules/front-end/author-box.php:857
 #: inc/modules/front-end/author-box.php:869
@@ -1160,44 +1160,44 @@ msgstr ""
 msgid "Show"
 msgstr ""
 
-#: inc/class-branda-helper.php:1779
+#: inc/class-branda-helper.php:1782
 msgid "Multiple Images Mode"
 msgstr ""
 
-#: inc/class-branda-helper.php:1781
-#: inc/class-branda-helper.php:2315
+#: inc/class-branda-helper.php:1784
+#: inc/class-branda-helper.php:2318
 msgid "Slideshow"
 msgstr ""
 
-#: inc/class-branda-helper.php:1782
-#: inc/class-branda-helper.php:2316
+#: inc/class-branda-helper.php:1785
+#: inc/class-branda-helper.php:2319
 msgid "Random"
 msgstr ""
 
-#: inc/class-branda-helper.php:1789
-#: inc/class-branda-helper.php:1931
+#: inc/class-branda-helper.php:1792
+#: inc/class-branda-helper.php:1934
 #: inc/modules/login-screen/login-screen.php:1574
 msgid "Background image"
 msgstr ""
 
-#: inc/class-branda-helper.php:1790
+#: inc/class-branda-helper.php:1793
 msgid "You can upload a background image here. The image will stretch to fit the page, and will automatically resize as the window size changes. You'll have the best results by using images with a minimum width of 1024px."
 msgstr ""
 
-#: inc/class-branda-helper.php:1795
+#: inc/class-branda-helper.php:1798
 msgid "Slideshow Duration"
 msgstr ""
 
-#: inc/class-branda-helper.php:1796
+#: inc/class-branda-helper.php:1799
 msgid "Duration in minutes, we strongly recommended do not use less than 5 minutes."
 msgstr ""
 
-#: inc/class-branda-helper.php:1800
+#: inc/class-branda-helper.php:1803
 #: views/front-end/modules/maintenance/timer/final-countdown/body.php:31
 msgid "Minutes"
 msgstr ""
 
-#: inc/class-branda-helper.php:1849
+#: inc/class-branda-helper.php:1852
 #: inc/class-simple-options.php:1641
 #: inc/modules/admin/help-content.php:435
 #: inc/modules/utilities/data.php:89
@@ -1205,23 +1205,23 @@ msgstr ""
 msgid "Reset"
 msgstr ""
 
-#: inc/class-branda-helper.php:1884
+#: inc/class-branda-helper.php:1887
 msgid "Preferred width of logo is 320px for best results."
 msgstr ""
 
-#: inc/class-branda-helper.php:1893
+#: inc/class-branda-helper.php:1896
 msgid "Logo &amp; Background"
 msgstr ""
 
-#: inc/class-branda-helper.php:1898
-#: inc/class-branda-helper.php:2004
-#: inc/class-branda-helper.php:2144
+#: inc/class-branda-helper.php:1901
+#: inc/class-branda-helper.php:2007
+#: inc/class-branda-helper.php:2147
 #: inc/modules/admin/bar.php:860
 #: inc/modules/admin/bar.php:986
 #: inc/modules/admin/bar.php:999
 #: inc/modules/admin/bar.php:1006
-#: inc/modules/admin/menu.php:636
-#: inc/modules/admin/menu.php:686
+#: inc/modules/admin/menu.php:665
+#: inc/modules/admin/menu.php:715
 #: views/admin/modules/admin-bar/dialogs/submenu.php:42
 #: views/admin/modules/admin-bar/dialogs/submenu.php:54
 #: views/admin/modules/admin-bar/dialogs/submenu.php:58
@@ -1229,46 +1229,46 @@ msgstr ""
 msgid "URL"
 msgstr ""
 
-#: inc/class-branda-helper.php:1900
+#: inc/class-branda-helper.php:1903
 msgid "Users will get redirected to this link when they click on logo."
 msgstr ""
 
-#: inc/class-branda-helper.php:1910
+#: inc/class-branda-helper.php:1913
 msgid "Alt Text"
 msgstr ""
 
-#: inc/class-branda-helper.php:1918
+#: inc/class-branda-helper.php:1921
 msgid "Logo visibility"
 msgstr ""
 
-#: inc/class-branda-helper.php:1933
+#: inc/class-branda-helper.php:1936
 msgid "For best results, image should have a minimum width of 1024px. You can upload multiple images and create a slide-show in the design section."
 msgstr ""
 
-#: inc/class-branda-helper.php:1961
+#: inc/class-branda-helper.php:1964
 #: inc/modules/front-end/site-status-page.php:502
 #: inc/modules/front-end/site-status-page.php:531
 #: inc/modules/utilities/maintenance.php:740
 msgid "Title (optional)"
 msgstr ""
 
-#: inc/class-branda-helper.php:1965
+#: inc/class-branda-helper.php:1968
 #: inc/modules/front-end/db-error-page.php:575
 #: inc/modules/front-end/db-error-page.php:613
 #: inc/modules/front-end/site-status-page.php:506
 #: inc/modules/front-end/site-status-page.php:578
-#: inc/modules/login-screen/signup-code.php:129
-#: inc/modules/login-screen/signup-code.php:188
+#: inc/modules/login-screen/signup-code.php:139
+#: inc/modules/login-screen/signup-code.php:198
 msgid "Error Message"
 msgstr ""
 
-#: inc/class-branda-helper.php:1970
+#: inc/class-branda-helper.php:1973
 msgid "Description (optional)"
 msgstr ""
 
-#: inc/class-branda-helper.php:2003
-#: inc/class-branda-helper.php:2143
-#: inc/class-branda-helper.php:3993
+#: inc/class-branda-helper.php:2006
+#: inc/class-branda-helper.php:2146
+#: inc/class-branda-helper.php:3996
 #: inc/class-simple-options.php:2084
 #: views/admin/modules/admin-bar/dialogs/submenu.php:8
 #: views/admin/modules/admin-bar/tmpl/panes/submenu.php:44
@@ -1285,27 +1285,27 @@ msgstr ""
 msgid "Open item"
 msgstr ""
 
-#: inc/class-branda-helper.php:2033
-#: inc/class-branda-helper.php:2112
+#: inc/class-branda-helper.php:2036
+#: inc/class-branda-helper.php:2115
 #: inc/modules/front-end/author-box.php:1411
 #: inc/modules/front-end/author-box.php:1490
 msgid "Add Accounts"
 msgstr ""
 
-#: inc/class-branda-helper.php:2056
-#: inc/class-branda-helper.php:2627
+#: inc/class-branda-helper.php:2059
+#: inc/class-branda-helper.php:2630
 #: inc/modules/front-end/author-box.php:1290
 #: inc/modules/front-end/author-box.php:1432
 msgid "Social Accounts"
 msgstr ""
 
-#: inc/class-branda-helper.php:2068
+#: inc/class-branda-helper.php:2071
 #: inc/modules/front-end/author-box.php:1445
 msgid "Choose the platforms to insert into your social sharing module."
 msgstr ""
 
-#: inc/class-branda-helper.php:2104
-#: inc/class-branda-helper.php:3908
+#: inc/class-branda-helper.php:2107
+#: inc/class-branda-helper.php:3911
 #: inc/class-simple-options.php:1393
 #: inc/modules/admin/bar.php:713
 #: inc/modules/admin/bar.php:1714
@@ -1326,28 +1326,28 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: inc/class-branda-helper.php:2131
+#: inc/class-branda-helper.php:2134
 #: inc/modules/front-end/author-box.php:1506
 msgid "Add Social Account"
 msgstr ""
 
-#: inc/class-branda-helper.php:2187
-#: inc/class-branda-helper.php:2327
-#: inc/class-branda-helper.php:2347
-#: inc/class-branda-helper.php:2383
-#: inc/class-branda-helper.php:2422
-#: inc/class-branda-helper.php:2567
-#: inc/class-branda-helper.php:3238
+#: inc/class-branda-helper.php:2190
+#: inc/class-branda-helper.php:2330
+#: inc/class-branda-helper.php:2350
+#: inc/class-branda-helper.php:2386
+#: inc/class-branda-helper.php:2425
+#: inc/class-branda-helper.php:2570
+#: inc/class-branda-helper.php:3241
 #: inc/modules/login-screen/login-screen.php:2125
 #: inc/modules/login-screen/login-screen.php:2971
 msgid "Width"
 msgstr ""
 
-#: inc/class-branda-helper.php:2191
-#: inc/class-branda-helper.php:2272
-#: inc/class-branda-helper.php:2348
-#: inc/class-branda-helper.php:2359
-#: inc/class-branda-helper.php:2590
+#: inc/class-branda-helper.php:2194
+#: inc/class-branda-helper.php:2275
+#: inc/class-branda-helper.php:2351
+#: inc/class-branda-helper.php:2362
+#: inc/class-branda-helper.php:2593
 #: inc/modules/content/footer.php:82
 #: inc/modules/content/footer.php:194
 #: inc/modules/content/header.php:67
@@ -1368,23 +1368,23 @@ msgstr ""
 msgid "px"
 msgstr ""
 
-#: inc/class-branda-helper.php:2199
+#: inc/class-branda-helper.php:2202
 msgid "It should be smaller than the form canvas (320px)."
 msgstr ""
 
-#: inc/class-branda-helper.php:2205
+#: inc/class-branda-helper.php:2208
 #: inc/modules/login-screen/login-screen.php:2028
 msgid "Opacity"
 msgstr ""
 
-#: inc/class-branda-helper.php:2215
+#: inc/class-branda-helper.php:2218
 #: inc/modules/front-end/author-box.php:248
 #: inc/modules/login-screen/login-screen.php:2108
 msgid "Position"
 msgstr ""
 
-#: inc/class-branda-helper.php:2217
-#: inc/class-branda-helper.php:2258
+#: inc/class-branda-helper.php:2220
+#: inc/class-branda-helper.php:2261
 #: inc/modules/login-screen/login-screen.php:1861
 #: inc/modules/login-screen/login-screen.php:1905
 #: inc/modules/login-screen/login-screen.php:2111
@@ -1394,12 +1394,12 @@ msgstr ""
 msgid "Left"
 msgstr ""
 
-#: inc/class-branda-helper.php:2218
+#: inc/class-branda-helper.php:2221
 msgid "Center"
 msgstr ""
 
-#: inc/class-branda-helper.php:2219
-#: inc/class-branda-helper.php:2242
+#: inc/class-branda-helper.php:2222
+#: inc/class-branda-helper.php:2245
 #: inc/modules/login-screen/login-screen.php:1845
 #: inc/modules/login-screen/login-screen.php:1889
 #: inc/modules/login-screen/login-screen.php:2112
@@ -1409,7 +1409,7 @@ msgstr ""
 msgid "Right"
 msgstr ""
 
-#: inc/class-branda-helper.php:2225
+#: inc/class-branda-helper.php:2228
 #: inc/modules/front-end/author-box.php:251
 #: inc/modules/front-end/cookie-notice.php:219
 #: inc/modules/login-screen/login-screen.php:1827
@@ -1420,13 +1420,13 @@ msgstr ""
 msgid "Top"
 msgstr ""
 
-#: inc/class-branda-helper.php:2232
+#: inc/class-branda-helper.php:2235
 #: inc/modules/login-screen/login-screen.php:1879
 #: inc/modules/login-screen/login-screen.php:2197
 msgid "Margin"
 msgstr ""
 
-#: inc/class-branda-helper.php:2250
+#: inc/class-branda-helper.php:2253
 #: inc/modules/front-end/author-box.php:250
 #: inc/modules/front-end/cookie-notice.php:220
 #: inc/modules/login-screen/login-screen.php:1853
@@ -1437,41 +1437,41 @@ msgstr ""
 msgid "Bottom"
 msgstr ""
 
-#: inc/class-branda-helper.php:2269
-#: inc/class-branda-helper.php:2587
+#: inc/class-branda-helper.php:2272
+#: inc/class-branda-helper.php:2590
 #: inc/modules/front-end/author-box.php:931
 #: inc/modules/front-end/author-box.php:1097
 #: inc/modules/login-screen/login-screen.php:1808
 msgid "Corner radius"
 msgstr ""
 
-#: inc/class-branda-helper.php:2299
+#: inc/class-branda-helper.php:2302
 msgid "Duration"
 msgstr ""
 
-#: inc/class-branda-helper.php:2300
+#: inc/class-branda-helper.php:2303
 msgid "seconds"
 msgstr ""
 
-#: inc/class-branda-helper.php:2302
+#: inc/class-branda-helper.php:2305
 msgid "We strongly recommend duration of at least 5 seconds."
 msgstr ""
 
-#: inc/class-branda-helper.php:2313
+#: inc/class-branda-helper.php:2316
 msgid "Multiple images mode"
 msgstr ""
 
-#: inc/class-branda-helper.php:2328
-#: inc/class-branda-helper.php:2338
-#: inc/class-branda-helper.php:2423
-#: inc/class-branda-helper.php:2439
+#: inc/class-branda-helper.php:2331
+#: inc/class-branda-helper.php:2341
+#: inc/class-branda-helper.php:2426
+#: inc/class-branda-helper.php:2442
 msgid "%"
 msgstr ""
 
-#: inc/class-branda-helper.php:2337
-#: inc/class-branda-helper.php:2358
-#: inc/class-branda-helper.php:2379
-#: inc/class-branda-helper.php:2438
+#: inc/class-branda-helper.php:2340
+#: inc/class-branda-helper.php:2361
+#: inc/class-branda-helper.php:2382
+#: inc/class-branda-helper.php:2441
 #: inc/modules/content/footer.php:81
 #: inc/modules/content/footer.php:95
 #: inc/modules/content/footer.php:193
@@ -1484,16 +1484,16 @@ msgstr ""
 msgid "Height"
 msgstr ""
 
-#: inc/class-branda-helper.php:2369
+#: inc/class-branda-helper.php:2372
 msgid "Background crop"
 msgstr ""
 
-#: inc/class-branda-helper.php:2371
+#: inc/class-branda-helper.php:2374
 msgid "This setting work only with images added to WordPress Media Library."
 msgstr ""
 
-#: inc/class-branda-helper.php:2375
-#: inc/class-branda-helper.php:2461
+#: inc/class-branda-helper.php:2378
+#: inc/class-branda-helper.php:2464
 #: inc/modules/content/footer.php:99
 #: inc/modules/content/footer.php:207
 #: inc/modules/content/header.php:87
@@ -1501,100 +1501,100 @@ msgstr ""
 msgid "Auto"
 msgstr ""
 
-#: inc/class-branda-helper.php:2376
+#: inc/class-branda-helper.php:2379
 msgid "Do not change crop."
 msgstr ""
 
-#: inc/class-branda-helper.php:2380
+#: inc/class-branda-helper.php:2383
 msgid "Crop proportional, change height."
 msgstr ""
 
-#: inc/class-branda-helper.php:2384
+#: inc/class-branda-helper.php:2387
 msgid "Crop proportional, change width."
 msgstr ""
 
-#: inc/class-branda-helper.php:2387
-#: inc/class-branda-helper.php:2406
+#: inc/class-branda-helper.php:2390
+#: inc/class-branda-helper.php:2409
 msgid "Fixed"
 msgstr ""
 
-#: inc/class-branda-helper.php:2388
+#: inc/class-branda-helper.php:2391
 msgid "Crop to fixed size"
 msgstr ""
 
-#: inc/class-branda-helper.php:2396
+#: inc/class-branda-helper.php:2399
 msgid "Background attachment"
 msgstr ""
 
-#: inc/class-branda-helper.php:2398
+#: inc/class-branda-helper.php:2401
 msgid "This CSS property sets whether a background image position is fixed within the viewport, or scrolls with its containing block."
 msgstr ""
 
-#: inc/class-branda-helper.php:2402
+#: inc/class-branda-helper.php:2405
 msgid "Unset"
 msgstr ""
 
-#: inc/class-branda-helper.php:2403
+#: inc/class-branda-helper.php:2406
 msgid "Do not change."
 msgstr ""
 
-#: inc/class-branda-helper.php:2407
+#: inc/class-branda-helper.php:2410
 msgid "The background is fixed relative to the viewport. Even if an element has a scrolling mechanism, the background doesn't move with the element."
 msgstr ""
 
-#: inc/class-branda-helper.php:2410
+#: inc/class-branda-helper.php:2413
 msgid "Scroll"
 msgstr ""
 
-#: inc/class-branda-helper.php:2411
+#: inc/class-branda-helper.php:2414
 msgid "The background is fixed relative to the element itself and does not scroll with its contents."
 msgstr ""
 
-#: inc/class-branda-helper.php:2419
-#: inc/class-branda-helper.php:2435
+#: inc/class-branda-helper.php:2422
+#: inc/class-branda-helper.php:2438
 msgid "Leave \"0\" to \"auto\" value."
 msgstr ""
 
-#: inc/class-branda-helper.php:2450
+#: inc/class-branda-helper.php:2453
 msgid "Background size"
 msgstr ""
 
-#: inc/class-branda-helper.php:2453
+#: inc/class-branda-helper.php:2456
 #: inc/modules/login-screen/login-screen.php:1989
 msgid "Cover"
 msgstr ""
 
-#: inc/class-branda-helper.php:2454
+#: inc/class-branda-helper.php:2457
 msgid "Resize the background image to cover the entire container, even if it has to stretch the image or cut a little bit off one of the edges."
 msgstr ""
 
-#: inc/class-branda-helper.php:2457
+#: inc/class-branda-helper.php:2460
 #: inc/modules/login-screen/login-screen.php:1991
 msgid "Contain"
 msgstr ""
 
-#: inc/class-branda-helper.php:2458
+#: inc/class-branda-helper.php:2461
 msgid "Resize the background image to make sure the image is fully visible."
 msgstr ""
 
-#: inc/class-branda-helper.php:2462
+#: inc/class-branda-helper.php:2465
 msgid "The background image is displayed in its original size."
 msgstr ""
 
-#: inc/class-branda-helper.php:2465
+#: inc/class-branda-helper.php:2468
 msgid "Length"
 msgstr ""
 
-#: inc/class-branda-helper.php:2466
+#: inc/class-branda-helper.php:2469
 msgid "Sets the width and height of the background image."
 msgstr ""
 
-#: inc/class-branda-helper.php:2474
+#: inc/class-branda-helper.php:2477
 msgid "Horizontal background position"
 msgstr ""
 
-#: inc/class-branda-helper.php:2486
-#: inc/class-branda-helper.php:2512
+#: inc/class-branda-helper.php:2489
+#: inc/class-branda-helper.php:2515
 #: inc/modules/content/footer.php:100
 #: inc/modules/content/footer.php:208
 #: inc/modules/content/header.php:88
@@ -1608,45 +1608,45 @@ msgstr ""
 msgid "Custom"
 msgstr ""
 
-#: inc/class-branda-helper.php:2500
+#: inc/class-branda-helper.php:2503
 msgid "Vertical background position"
 msgstr ""
 
-#: inc/class-branda-helper.php:2569
+#: inc/class-branda-helper.php:2572
 msgid "It should preferably be less than 1024 for best results."
 msgstr ""
 
-#: inc/class-branda-helper.php:2578
-#: inc/class-branda-helper.php:2870
+#: inc/class-branda-helper.php:2581
+#: inc/class-branda-helper.php:2873
 msgid "Content Wrapper"
 msgstr ""
 
-#: inc/class-branda-helper.php:2633
+#: inc/class-branda-helper.php:2636
 msgid "Options below are not affected."
 msgstr ""
 
-#: inc/class-branda-helper.php:2639
-#: inc/class-branda-helper.php:3327
+#: inc/class-branda-helper.php:2642
+#: inc/class-branda-helper.php:3330
 msgid "Open link"
 msgstr ""
 
-#: inc/class-branda-helper.php:2641
-#: inc/class-branda-helper.php:2938
+#: inc/class-branda-helper.php:2644
+#: inc/class-branda-helper.php:2941
 msgid "New"
 msgstr ""
 
-#: inc/class-branda-helper.php:2642
-#: inc/class-branda-helper.php:2939
+#: inc/class-branda-helper.php:2645
+#: inc/class-branda-helper.php:2942
 msgid "The same"
 msgstr ""
 
-#: inc/class-branda-helper.php:2648
+#: inc/class-branda-helper.php:2651
 msgid "Icon style"
 msgstr ""
 
-#: inc/class-branda-helper.php:2650
-#: inc/class-branda-helper.php:2923
+#: inc/class-branda-helper.php:2653
 #: inc/class-branda-helper.php:2926
+#: inc/class-branda-helper.php:2929
 #: inc/modules/content/footer.php:122
 #: inc/modules/content/footer.php:230
 #: inc/modules/content/header.php:110
@@ -1661,29 +1661,29 @@ msgstr ""
 msgid "Colors"
 msgstr ""
 
-#: inc/class-branda-helper.php:2651
-#: inc/class-branda-helper.php:2927
+#: inc/class-branda-helper.php:2654
+#: inc/class-branda-helper.php:2930
 #: inc/modules/front-end/author-box.php:1298
 msgid "Monochrome"
 msgstr ""
 
-#: inc/class-branda-helper.php:2700
-#: inc/class-branda-helper.php:3219
+#: inc/class-branda-helper.php:2703
+#: inc/class-branda-helper.php:3222
 #: views/admin/modules/color-schemes/dialogs/edit.php:639
 msgid "Color"
 msgstr ""
 
-#: inc/class-branda-helper.php:2703
+#: inc/class-branda-helper.php:2706
 msgid "Logo & Background"
 msgstr ""
 
-#: inc/class-branda-helper.php:2770
+#: inc/class-branda-helper.php:2773
 #: inc/modules/login-screen/login-screen.php:1622
 #: inc/modules/login-screen/login-screen.php:2035
 msgid "Error Messages"
 msgstr ""
 
-#: inc/class-branda-helper.php:2786
+#: inc/class-branda-helper.php:2789
 #: inc/modules/front-end/author-box.php:954
 #: inc/modules/front-end/author-box.php:1120
 #: inc/modules/front-end/author-box.php:1206
@@ -1696,7 +1696,7 @@ msgstr ""
 msgid "Border"
 msgstr ""
 
-#: inc/class-branda-helper.php:2791
+#: inc/class-branda-helper.php:2794
 #: inc/modules/content/footer.php:106
 #: inc/modules/content/footer.php:214
 #: inc/modules/content/header.php:94
@@ -1717,10 +1717,10 @@ msgstr ""
 msgid "Text"
 msgstr ""
 
-#: inc/class-branda-helper.php:2796
-#: inc/class-branda-helper.php:2807
-#: inc/class-branda-helper.php:2820
-#: inc/class-branda-helper.php:2833
+#: inc/class-branda-helper.php:2799
+#: inc/class-branda-helper.php:2810
+#: inc/class-branda-helper.php:2823
+#: inc/class-branda-helper.php:2836
 #: inc/modules/utilities/site-generator.php:71
 #: views/admin/modules/color-schemes/dialogs/edit.php:414
 #: views/admin/modules/color-schemes/dialogs/edit.php:500
@@ -1729,7 +1729,7 @@ msgstr ""
 msgid "Link"
 msgstr ""
 
-#: inc/class-branda-helper.php:2810
+#: inc/class-branda-helper.php:2813
 #: inc/modules/front-end/cookie-notice.php:642
 #: inc/modules/front-end/cookie-notice.php:759
 #: inc/modules/login-screen/login-screen.php:2351
@@ -1740,7 +1740,7 @@ msgstr ""
 msgid "Active"
 msgstr ""
 
-#: inc/class-branda-helper.php:2823
+#: inc/class-branda-helper.php:2826
 #: inc/modules/front-end/cookie-notice.php:665
 #: inc/modules/login-screen/login-screen.php:2391
 #: inc/modules/login-screen/login-screen.php:2557
@@ -1749,54 +1749,54 @@ msgstr ""
 msgid "Focus"
 msgstr ""
 
-#: inc/class-branda-helper.php:2836
+#: inc/class-branda-helper.php:2839
 msgid "hover"
 msgstr ""
 
-#: inc/class-branda-helper.php:2912
+#: inc/class-branda-helper.php:2915
 msgid "Would you like to show social media?"
 msgstr ""
 
-#: inc/class-branda-helper.php:2924
+#: inc/class-branda-helper.php:2927
 msgid "Would you like show colored icons?"
 msgstr ""
 
-#: inc/class-branda-helper.php:2935
+#: inc/class-branda-helper.php:2938
 msgid "Open Links"
 msgstr ""
 
-#: inc/class-branda-helper.php:2936
+#: inc/class-branda-helper.php:2939
 msgid "Would you like open link in new or the same window/tab?"
 msgstr ""
 
-#: inc/class-branda-helper.php:3114
+#: inc/class-branda-helper.php:3117
 msgid "-- Copy from --"
 msgstr ""
 
-#: inc/class-branda-helper.php:3126
+#: inc/class-branda-helper.php:3129
 msgid "Copy"
 msgstr ""
 
-#: inc/class-branda-helper.php:3184
+#: inc/class-branda-helper.php:3187
 msgid "Show Title"
 msgstr ""
 
-#: inc/class-branda-helper.php:3185
+#: inc/class-branda-helper.php:3188
 msgid "Would you like to show title?"
 msgstr ""
 
-#: inc/class-branda-helper.php:3187
-#: inc/class-branda-helper.php:3204
+#: inc/class-branda-helper.php:3190
+#: inc/class-branda-helper.php:3207
 #: inc/modules/utilities/maintenance.php:225
 msgid "Off"
 msgstr ""
 
-#: inc/class-branda-helper.php:3188
-#: inc/class-branda-helper.php:3205
+#: inc/class-branda-helper.php:3191
+#: inc/class-branda-helper.php:3208
 msgid "On"
 msgstr ""
 
-#: inc/class-branda-helper.php:3195
+#: inc/class-branda-helper.php:3198
 #: inc/modules/admin/bar.php:954
 #: inc/modules/admin/help-content.php:416
 #: inc/modules/front-end/author-box.php:1240
@@ -1812,15 +1812,15 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
-#: inc/class-branda-helper.php:3201
+#: inc/class-branda-helper.php:3204
 msgid "Show Content"
 msgstr ""
 
-#: inc/class-branda-helper.php:3202
+#: inc/class-branda-helper.php:3205
 msgid "Would you like to show content?"
 msgstr ""
 
-#: inc/class-branda-helper.php:3213
+#: inc/class-branda-helper.php:3216
 #: inc/modules/admin/custom-css.php:73
 #: inc/modules/admin/help-content.php:419
 #: inc/modules/content/footer.php:77
@@ -1846,31 +1846,31 @@ msgstr ""
 msgid "Content"
 msgstr ""
 
-#: inc/class-branda-helper.php:3229
+#: inc/class-branda-helper.php:3232
 msgid "Background Transparency"
 msgstr ""
 
-#: inc/class-branda-helper.php:3329
+#: inc/class-branda-helper.php:3332
 #: inc/modules/admin/bar.php:876
 #: inc/modules/admin/bar.php:967
-#: inc/modules/admin/menu.php:710
+#: inc/modules/admin/menu.php:739
 #: views/admin/modules/admin-bar/dialogs/submenu.php:26
 #: views/admin/modules/admin-bar/tmpl/panes/general.php:53
 #: views/admin/modules/admin-bar/tmpl/panes/submenu.php:67
 msgid "Same Tab"
 msgstr ""
 
-#: inc/class-branda-helper.php:3330
+#: inc/class-branda-helper.php:3333
 #: inc/modules/admin/bar.php:875
 #: inc/modules/admin/bar.php:966
-#: inc/modules/admin/menu.php:711
+#: inc/modules/admin/menu.php:740
 #: views/admin/modules/admin-bar/dialogs/submenu.php:25
 #: views/admin/modules/admin-bar/tmpl/panes/general.php:51
 #: views/admin/modules/admin-bar/tmpl/panes/submenu.php:65
 msgid "New Tab"
 msgstr ""
 
-#: inc/class-branda-helper.php:3378
+#: inc/class-branda-helper.php:3381
 #: views/admin/common/copy.php:12
 #: views/admin/common/dialogs/reset-module.php:7
 #: views/admin/common/dialogs/reset.php:7
@@ -1890,7 +1890,7 @@ msgstr ""
 msgid "Close this modal"
 msgstr ""
 
-#: inc/class-branda-helper.php:3768
+#: inc/class-branda-helper.php:3771
 #: views/admin/modules/admin-bar/dialogs/submenu.php:17
 #: views/admin/modules/admin-bar/tmpl/panes/general.php:7
 #: views/admin/modules/admin-bar/tmpl/panes/submenu.php:56
@@ -1898,16 +1898,16 @@ msgstr ""
 msgid "This field can not be empty!"
 msgstr ""
 
-#: inc/class-branda-helper.php:3889
+#: inc/class-branda-helper.php:3892
 msgid "Do you really want to delete selected item?"
 msgstr ""
 
-#: inc/class-branda-helper.php:3890
+#: inc/class-branda-helper.php:3893
 #: inc/modules/admin/bar.php:731
 msgid "Are you sure?"
 msgstr ""
 
-#: inc/class-branda-helper.php:3916
+#: inc/class-branda-helper.php:3919
 #: inc/class-branda-list-table.php:163
 #: inc/modules/utilities/tracking-codes-list-table.php:114
 #: inc/modules/widgets/dashboard-feeds-table.php:107
@@ -1918,29 +1918,29 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
-#: inc/class-branda-helper.php:4656
+#: inc/class-branda-helper.php:4663
 msgid "For more advanced customization options use custom CSS."
 msgstr ""
 
-#: inc/class-branda-helper.php:4717
+#: inc/class-branda-helper.php:4724
 msgid "Template file does not exists!"
 msgstr ""
 
-#: inc/class-branda-helper.php:4721
+#: inc/class-branda-helper.php:4728
 #, php-format
 msgid "Template file %s does not exists!"
 msgstr ""
 
-#: inc/class-branda-helper.php:4746
+#: inc/class-branda-helper.php:4753
 msgid "Pro"
 msgstr ""
 
-#: inc/class-branda-helper.php:4857
+#: inc/class-branda-helper.php:4864
 #, php-format
 msgid "User registration has been disabled. Click <a href=\"%s\">here</a> to enable the user registration for your site."
 msgstr ""
 
-#: inc/class-branda-helper.php:4889
+#: inc/class-branda-helper.php:4896
 msgid "Network Administrator"
 msgstr ""
 
@@ -2272,7 +2272,7 @@ msgid "You can also paste the full URL of an image instead of text title. For e.
 msgstr ""
 
 #: inc/modules/admin/bar.php:837
-#: inc/modules/admin/menu.php:671
+#: inc/modules/admin/menu.php:700
 #: views/admin/modules/admin-bar/tmpl/panes/general.php:13
 #: views/admin/modules/color-schemes/dialogs/edit.php:438
 #: views/admin/modules/color-schemes/dialogs/edit.php:562
@@ -2291,8 +2291,8 @@ msgid "Redirect users to"
 msgstr ""
 
 #: inc/modules/admin/bar.php:850
-#: inc/modules/admin/menu.php:679
-#: inc/modules/admin/menu.php:698
+#: inc/modules/admin/menu.php:708
+#: inc/modules/admin/menu.php:727
 #: inc/modules/emails/smtp.php:460
 #: inc/modules/login-screen/login-screen.php:1992
 #: inc/modules/utilities/permissions.php:162
@@ -2301,7 +2301,7 @@ msgid "None"
 msgstr ""
 
 #: inc/modules/admin/bar.php:851
-#: inc/modules/admin/menu.php:699
+#: inc/modules/admin/menu.php:728
 #: inc/modules/content/footer.php:280
 #: inc/modules/content/header.php:271
 #: inc/modules/utilities/images.php:231
@@ -2315,12 +2315,12 @@ msgid "Current Site"
 msgstr ""
 
 #: inc/modules/admin/bar.php:853
-#: inc/modules/admin/menu.php:700
+#: inc/modules/admin/menu.php:729
 msgid "WP Admin Area"
 msgstr ""
 
 #: inc/modules/admin/bar.php:854
-#: inc/modules/admin/menu.php:701
+#: inc/modules/admin/menu.php:730
 #: views/admin/modules/admin-bar/tmpl/panes/general.php:36
 msgid "Custom URL"
 msgstr ""
@@ -2336,7 +2336,7 @@ msgstr ""
 
 #: inc/modules/admin/bar.php:873
 #: inc/modules/admin/bar.php:964
-#: inc/modules/admin/menu.php:708
+#: inc/modules/admin/menu.php:737
 #: views/admin/modules/admin-bar/dialogs/submenu.php:22
 #: views/admin/modules/admin-bar/tmpl/panes/general.php:47
 #: views/admin/modules/admin-bar/tmpl/panes/submenu.php:61
@@ -2490,15 +2490,15 @@ msgstr ""
 msgid "Collapse menu"
 msgstr ""
 
-#: inc/modules/admin/custom-admin-menu/branda-admin-menu-builder.php:439
+#: inc/modules/admin/custom-admin-menu/branda-admin-menu-builder.php:440
 msgid "Main menu"
 msgstr ""
 
-#: inc/modules/admin/custom-admin-menu/branda-admin-menu-builder.php:440
+#: inc/modules/admin/custom-admin-menu/branda-admin-menu-builder.php:441
 msgid "Skip to main content"
 msgstr ""
 
-#: inc/modules/admin/custom-admin-menu/branda-admin-menu-builder.php:441
+#: inc/modules/admin/custom-admin-menu/branda-admin-menu-builder.php:442
 msgid "Skip to toolbar"
 msgstr ""
 
@@ -2625,160 +2625,162 @@ msgstr ""
 msgid "Sorry, you are not allowed to access this page."
 msgstr ""
 
-#: inc/modules/admin/menu.php:329
+#: inc/modules/admin/menu.php:333
 msgid "Are you sure you want to discard all the changes?"
 msgstr ""
 
-#: inc/modules/admin/menu.php:330
+#: inc/modules/admin/menu.php:334
 msgctxt "Duplicate item postfix - custom admin menu"
 msgid "[DUPLICATE]"
 msgstr ""
 
-#: inc/modules/admin/menu.php:335
+#: inc/modules/admin/menu.php:339
 msgid "Your settings have been updated!"
 msgstr ""
 
-#: inc/modules/admin/menu.php:336
+#: inc/modules/admin/menu.php:340
 msgid "Title the item to continue."
 msgstr ""
 
-#: inc/modules/admin/menu.php:450
+#: inc/modules/admin/menu.php:454
 msgid "Super admin"
 msgstr ""
 
-#: inc/modules/admin/menu.php:495
+#: inc/modules/admin/menu.php:524
 msgid "Custom Admin menu"
 msgstr ""
 
-#: inc/modules/admin/menu.php:496
+#: inc/modules/admin/menu.php:525
 msgid "Customize the admin menu by user roles or by custom user. You can add, hide and reorder the menu items as needed."
 msgstr ""
 
-#: inc/modules/admin/menu.php:500
+#: inc/modules/admin/menu.php:529
 msgid "Customize"
 msgstr ""
 
-#: inc/modules/admin/menu.php:510
+#: inc/modules/admin/menu.php:539
 msgid "Dashboard Link"
 msgstr ""
 
-#: inc/modules/admin/menu.php:511
+#: inc/modules/admin/menu.php:540
 msgid "Remove \"Dashboard\" link from admin panel for users without site (in WP Multisite)."
 msgstr ""
 
-#: inc/modules/admin/menu.php:514
+#: inc/modules/admin/menu.php:543
 msgid "Remove link for users without site"
 msgstr ""
 
-#: inc/modules/admin/menu.php:521
+#: inc/modules/admin/menu.php:550
 msgid "Link Manager"
 msgstr ""
 
-#: inc/modules/admin/menu.php:522
+#: inc/modules/admin/menu.php:551
 msgid "Enables the Link Manager that existed in WordPress until version 3.5."
 msgstr ""
 
-#: inc/modules/admin/menu.php:525
+#: inc/modules/admin/menu.php:554
 msgid "Enable link manager"
 msgstr ""
 
-#: inc/modules/admin/menu.php:532
+#: inc/modules/admin/menu.php:561
 msgid "Admin Tips"
 msgstr ""
 
-#: inc/modules/admin/menu.php:533
+#: inc/modules/admin/menu.php:562
 msgid "Provide your users with helpful random tips, or promotions/news in their admin panels."
 msgstr ""
 
-#: inc/modules/admin/menu.php:536
+#: inc/modules/admin/menu.php:565
 msgid "Enable Admin Tips"
 msgstr ""
 
-#: inc/modules/admin/menu.php:539
+#: inc/modules/admin/menu.php:568
 msgid "Add a custom post type “Tips” in the WordPress menu and start adding tips for the users."
 msgstr ""
 
-#: inc/modules/admin/menu.php:590
+#: inc/modules/admin/menu.php:619
 msgid "Menu item title"
 msgstr ""
 
-#: inc/modules/admin/menu.php:592
+#: inc/modules/admin/menu.php:621
 msgid "Give this menu item a title."
 msgstr ""
 
-#: inc/modules/admin/menu.php:601
+#: inc/modules/admin/menu.php:630
 msgid "ID attribute"
 msgstr ""
 
-#: inc/modules/admin/menu.php:603
+#: inc/modules/admin/menu.php:632
 msgid "Must be unique."
 msgstr ""
 
-#: inc/modules/admin/menu.php:614
+#: inc/modules/admin/menu.php:643
 msgid "CSS Classes"
 msgstr ""
 
-#: inc/modules/admin/menu.php:616
+#: inc/modules/admin/menu.php:645
 msgid "Add your own CSS class. Separate multiple classes with a space."
 msgstr ""
 
-#: inc/modules/admin/menu.php:628
+#: inc/modules/admin/menu.php:657
 msgid "SVG code"
 msgstr ""
 
-#: inc/modules/admin/menu.php:641
+#: inc/modules/admin/menu.php:670
 msgid "Enter the URL of your icon. This should preferably be a PNG file."
 msgstr ""
 
-#: inc/modules/admin/menu.php:655
+#: inc/modules/admin/menu.php:684
 #, php-format
 msgid "Upload an icon to override the default menu item icon. The recommended size is %s."
 msgstr ""
 
-#: inc/modules/admin/menu.php:673
+#: inc/modules/admin/menu.php:702
 msgid "Dashicon"
 msgstr ""
 
-#: inc/modules/admin/menu.php:677
+#: inc/modules/admin/menu.php:706
 msgid "URL link"
 msgstr ""
 
-#: inc/modules/admin/menu.php:678
+#: inc/modules/admin/menu.php:707
 msgid "Upload"
 msgstr ""
 
-#: inc/modules/admin/menu.php:687
+#: inc/modules/admin/menu.php:716
 msgid "{{ data.custom_url_default }}"
 msgstr ""
 
-#: inc/modules/admin/menu.php:696
+#: inc/modules/admin/menu.php:725
 #: views/admin/modules/admin-bar/tmpl/panes/general.php:20
 msgid "Link to"
 msgstr ""
 
-#: inc/modules/admin/menu.php:738
+#: inc/modules/admin/menu.php:767
 msgid "Paste a base64-encoded SVG using a data URI, which will be colored to match the color scheme. This should begin with 'data:image/svg+xml;base64,'"
 msgstr ""
 
-#: inc/modules/admin/menu.php:894
-msgid "Access denied"
-msgstr ""
-
-#: inc/modules/admin/menu.php:900
-#: inc/modules/admin/menu.php:1120
-#: inc/modules/admin/menu.php:1146
+#: inc/modules/admin/menu.php:925
+#: inc/modules/admin/menu.php:1149
+#: inc/modules/admin/menu.php:1176
 msgid "Something went wrong"
 msgstr ""
 
-#: inc/modules/admin/menu.php:1126
+#: inc/modules/admin/menu.php:929
+#: inc/modules/admin/menu.php:1153
+#: inc/modules/admin/menu.php:1180
+msgid "Access denied"
+msgstr ""
+
+#: inc/modules/admin/menu.php:1158
 msgid "Could not parse menu data"
 msgstr ""
 
-#: inc/modules/admin/menu.php:1132
+#: inc/modules/admin/menu.php:1163
 msgid "Invalid data"
 msgstr ""
 
-#: inc/modules/admin/menu.php:1451
+#: inc/modules/admin/menu.php:1484
 msgid "Profile"
 msgstr ""
 
@@ -3622,7 +3624,7 @@ msgid "New %1$s Site: %2$s"
 msgstr ""
 
 #: inc/modules/emails/registration.php:292
-#: inc/modules/login-screen/signup-code.php:224
+#: inc/modules/login-screen/signup-code.php:234
 #, php-format
 msgid "Blog registration has been disabled. Click <a href=\"%s\">here</a> to enable the site registration for your network."
 msgstr ""
@@ -5124,83 +5126,83 @@ msgstr ""
 msgid "<strong>ERROR</strong>: Please enter the same password in both password fields."
 msgstr ""
 
-#: inc/modules/login-screen/signup-code.php:105
+#: inc/modules/login-screen/signup-code.php:115
 msgid "User Registration"
 msgstr ""
 
-#: inc/modules/login-screen/signup-code.php:106
+#: inc/modules/login-screen/signup-code.php:116
 msgid "Choose whether anyone can register to your site or you want to restrict registration with a signup code only."
 msgstr ""
 
-#: inc/modules/login-screen/signup-code.php:117
-#: inc/modules/login-screen/signup-code.php:176
+#: inc/modules/login-screen/signup-code.php:127
+#: inc/modules/login-screen/signup-code.php:186
 msgid "Field Description"
 msgstr ""
 
-#: inc/modules/login-screen/signup-code.php:119
-#: inc/modules/login-screen/signup-code.php:131
-#: inc/modules/login-screen/signup-code.php:178
-#: inc/modules/login-screen/signup-code.php:190
+#: inc/modules/login-screen/signup-code.php:129
+#: inc/modules/login-screen/signup-code.php:141
+#: inc/modules/login-screen/signup-code.php:188
+#: inc/modules/login-screen/signup-code.php:200
 msgid "This will appear under the input field on the signup form."
 msgstr ""
 
-#: inc/modules/login-screen/signup-code.php:122
+#: inc/modules/login-screen/signup-code.php:132
 msgid "You need to enter the code to create a user."
 msgstr ""
 
-#: inc/modules/login-screen/signup-code.php:134
+#: inc/modules/login-screen/signup-code.php:144
 msgid "<strong>ERROR</strong>: User create code is invalid."
 msgstr ""
 
-#: inc/modules/login-screen/signup-code.php:142
-#: inc/modules/login-screen/signup-code.php:201
+#: inc/modules/login-screen/signup-code.php:152
+#: inc/modules/login-screen/signup-code.php:211
 msgid "Anyone"
 msgstr ""
 
-#: inc/modules/login-screen/signup-code.php:143
-#: inc/modules/login-screen/signup-code.php:202
+#: inc/modules/login-screen/signup-code.php:153
+#: inc/modules/login-screen/signup-code.php:212
 msgid "With Signup Code"
 msgstr ""
 
-#: inc/modules/login-screen/signup-code.php:151
+#: inc/modules/login-screen/signup-code.php:161
 msgid "Blog Registration"
 msgstr ""
 
-#: inc/modules/login-screen/signup-code.php:152
+#: inc/modules/login-screen/signup-code.php:162
 msgid "Choose if anyone can register a blog to your site or you want to restrict registration with a signup code only."
 msgstr ""
 
-#: inc/modules/login-screen/signup-code.php:164
+#: inc/modules/login-screen/signup-code.php:174
 msgid "Field Label"
 msgstr ""
 
-#: inc/modules/login-screen/signup-code.php:166
+#: inc/modules/login-screen/signup-code.php:176
 msgid "This label will appear on the signup form with the signup code field."
 msgstr ""
 
-#: inc/modules/login-screen/signup-code.php:169
-#: inc/modules/login-screen/signup-code.php:579
+#: inc/modules/login-screen/signup-code.php:179
+#: inc/modules/login-screen/signup-code.php:589
 msgid "Blog Create Code"
 msgstr ""
 
-#: inc/modules/login-screen/signup-code.php:181
+#: inc/modules/login-screen/signup-code.php:191
 msgid "You need to enter the code to create a blog."
 msgstr ""
 
-#: inc/modules/login-screen/signup-code.php:193
+#: inc/modules/login-screen/signup-code.php:203
 msgid "Blog create code is invalid."
 msgstr ""
 
-#: inc/modules/login-screen/signup-code.php:383
+#: inc/modules/login-screen/signup-code.php:393
 msgid "User Create Code"
 msgstr ""
 
-#: inc/modules/login-screen/signup-code.php:615
-#: inc/modules/login-screen/signup-code.php:690
+#: inc/modules/login-screen/signup-code.php:625
+#: inc/modules/login-screen/signup-code.php:700
 msgid "Choose a user role"
 msgstr ""
 
-#: inc/modules/login-screen/signup-code.php:663
+#: inc/modules/login-screen/signup-code.php:673
 msgctxt "button"
 msgid "Add Signup Code"
 msgstr ""

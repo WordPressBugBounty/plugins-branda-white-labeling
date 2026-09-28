@@ -70,7 +70,7 @@ class Branda_Admin_Menu_Builder {
 		?>
 		<li <?php echo $class; ?> id="<?php echo esc_attr( $id_attribute ); ?>">
 
-			<a href="<?php echo esc_attr( $url ); ?>" <?php echo $class; ?> <?php echo $aria_attributes; ?>
+			<a href="<?php echo esc_url( $url ); ?>" <?php echo $class; ?> <?php echo $aria_attributes; ?>
 			   target="<?php echo esc_attr( $link_target ); ?>">
 				<div class="wp-menu-arrow">
 					<div></div>
@@ -127,7 +127,7 @@ class Branda_Admin_Menu_Builder {
 		<li <?php echo $class; ?>>
 
 			<a id="<?php echo esc_attr( $id_attribute ); ?>"
-				href="<?php echo esc_attr( $url ); ?>" <?php echo $class; ?> <?php echo $aria_attributes; ?>
+				href="<?php echo esc_url( $url ); ?>" <?php echo $class; ?> <?php echo $aria_attributes; ?>
 				target="<?php echo esc_attr( $link_target ); ?>">
 				<?php echo $image; ?>
 				<?php echo wp_kses_post( $title ); ?>
@@ -376,6 +376,7 @@ class Branda_Admin_Menu_Builder {
 			}
 		} elseif ( $icon_type === 'url' ) {
 			$icon_url = $this->get_menu_item_setting( $menu_item_settings, 'icon_url' );
+			$icon_url = is_string( $icon_url ) ? esc_url( $icon_url ) : '';
 
 			if ( $icon_url ) {
 				$image_exists = true;
@@ -399,9 +400,9 @@ class Branda_Admin_Menu_Builder {
 					restore_current_blog();
 				}
 
-				if ( ! empty( $icon_url ) ) {
+				if ( ! empty( $icon_url[0] ) ) {
 					$image_exists = true;
-					$image        = '<img src="' . $icon_url[0] . '" alt="" />';
+					$image        = '<img src="' . esc_url( $icon_url[0] ) . '" alt="" />';
 					$image_class  = 'dashicons-before';
 				}
 			}

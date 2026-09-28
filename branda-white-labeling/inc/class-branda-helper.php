@@ -262,6 +262,9 @@ if ( ! class_exists( 'Branda_Helper' ) ) {
 						}
 					} elseif ( empty( $name ) ) {
 						$value[ $section ] = array();
+						if ( ! is_array( $data ) ) {
+							$data = array();
+						}
 						/**
 						 * Add defaults
 						 */
@@ -4026,6 +4029,10 @@ if ( ! class_exists( 'Branda_Helper' ) ) {
 		 * @since 3.0.0
 		 */
 		public function enqueue_admin_assets() {
+			if ( ! class_exists( 'Branda_Permissions' ) || ! Branda_Permissions::get_instance()->current_user_has_access() ) {
+				return;
+			}
+
 			$module = $this->get_module_by_module( $this->module );
 			if ( ! isset( $module['group'] ) ) {
 				return;

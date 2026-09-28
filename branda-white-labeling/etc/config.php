@@ -508,6 +508,7 @@ function branda_get_modules_list( $mode = 'full' ) {
 			'group'          => 'front-end',
 			'options'        => array( 'ub_signup_codes' ),
 			'allow-override' => 'no', // Global only
+			'admin_only'     => true,
 		),
 		/**
 		 * Gmail API using Google OAuth2
