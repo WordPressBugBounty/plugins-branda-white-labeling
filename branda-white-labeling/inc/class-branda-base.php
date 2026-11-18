@@ -107,6 +107,39 @@ if ( ! class_exists( 'Branda_Base' ) ) {
 				$this->register_cross_sell_page();
 				$GLOBALS['branda_submodules_loaded']['cross_sell'] = true;
 			}
+
+			// Load the Black Friday campaign.
+			$this->register_black_friday_campaign();
+		}
+
+		/**
+		 * Register the WPMU DEV Black Friday campaign sub module.
+		 *
+		 * Free version only: the Pro build skips it here and the sub module
+		 * is excluded from the Pro package in Gruntfile.js. Dates, locations,
+		 * dismissals, user capability and the WPMU DEV Dashboard check (site
+		 * connected to a WPMU DEV account) are handled by the sub module.
+		 *
+		 * @since 3.4.33.1
+		 *
+		 * @return void
+		 */
+		public function register_black_friday_campaign() {
+			
+
+			// Another WPMU DEV plugin may have already loaded the module.
+			if ( class_exists( '\WPMUDEV\Modules\BlackFriday\Campaign' ) ) {
+				return;
+			}
+
+			$black_friday_path = WPMUDEV_BRANDA_DIR . 'external/wpmudev-black-friday/campaign.php';
+
+			if ( ! file_exists( $black_friday_path ) ) {
+				return;
+			}
+
+			require_once $black_friday_path;
+			new \WPMUDEV\Modules\BlackFriday\Campaign();
 		}
 
 		/**
